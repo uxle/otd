@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Helium (He) — real density 0.00018 g/cm³. rod format, like lab stock.
+scene "Helium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #d9ffff
+simulate: drop

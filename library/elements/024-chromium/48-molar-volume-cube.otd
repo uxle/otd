@@ -1,0 +1,7 @@
+# Molar Volume Cube
+# Chromium (Cr) — real density 7.19 g/cm³. V = M/ρ = 51.996/7.19 = 7.2 cm³ per mole.
+scene "Chromium Molar Volume Cube"
+
+mole_cube = cube 1.93cm material: chrome at (0, 0.97cm, 0)
+ask "mass?"
+# one mole of atoms: 6.022e23 atoms of Chromium, 51.996 g, drawn at true scale

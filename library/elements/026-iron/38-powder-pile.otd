@@ -1,0 +1,5 @@
+# Powder Pile
+# Iron (Fe) — real density 7.874 g/cm³. a poured heap.
+scene "Iron Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) material: iron

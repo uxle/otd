@@ -1,0 +1,7 @@
+# Hands-on lab: measure a chrome sample.
+scene "Material Lab: Chrome"
+
+sample1 = cylinder(r: 2cm, h: 5cm) material: chrome
+ask "mass?"
+ask "density?"
+ask "will it float?"

@@ -1,0 +1,6 @@
+# A concrete ramp 4 wide, 8 deep, 6 high.
+scene "Ramp 4"
+
+ramp1 = wedge(w: 4cm, d: 8cm, h: 6cm) material: concrete
+simulate: collapse
+ask "mass?"

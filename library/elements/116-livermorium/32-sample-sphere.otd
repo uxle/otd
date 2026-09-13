@@ -1,0 +1,6 @@
+# Sample Sphere
+# Livermorium (Lv) — real density 12.9 g/cm³. 5 mm radius ball.
+scene "Livermorium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ff9040 at (0, 5mm, 0)
+simulate: drop

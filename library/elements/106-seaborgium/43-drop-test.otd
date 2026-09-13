@@ -1,0 +1,6 @@
+# Drop Test
+# Seaborgium (Sg) — real density 35 g/cm³. v = √(2gh) — watch the physics console.
+scene "Seaborgium Drop Test"
+
+test_cube = cube 20mm color: #80a0ff # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

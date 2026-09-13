@@ -1,0 +1,5 @@
+# Powder Pile
+# Bismuth (Bi) — real density 9.78 g/cm³. a poured heap.
+scene "Bismuth Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #9c7ac7

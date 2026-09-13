@@ -1,0 +1,16 @@
+[package]
+name = "reasoning-verifier"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Reasoning AI — verifier crate (Rust port of the Python reasoning-ai project)"
+
+[dependencies]
+reasoning-common = { path = "../common" }
+reasoning-symbolic = { path = "../symbolic" }
+regex = { workspace = true }
+
+[dev-dependencies]
+# test-only cycle: the injection-resistance test exercises domain
+# constructors from search (Cargo permits dev-dependency cycles)
+reasoning-search = { path = "../search" }

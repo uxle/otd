@@ -1,0 +1,7 @@
+# V-belt pulley with a groove cut by a torus — aluminum.
+scene "Belt Pulley"
+
+pulley = cylinder(r: 40mm, h: 20mm) - torus(R: 41mm, tube: 5mm) at (0, 10mm, 0) material: aluminum
+bore = cylinder(r: 8mm, h: 40mm) material: aluminum
+ask "mass?"
+simulate: drop

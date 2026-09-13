@@ -1,0 +1,6 @@
+# Sample Sphere
+# Radon (Rn) — real density 0.0097 g/cm³. 5 mm radius ball.
+scene "Radon Sample Sphere"
+
+sample_sphere = sphere 5mm color: #cc0080 at (0, 5mm, 0)
+simulate: drop

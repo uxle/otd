@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Iridium (Ir) — real density 22.56 g/cm³. rod format, like lab stock.
+scene "Iridium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #d4d4ff
+simulate: drop

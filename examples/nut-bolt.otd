@@ -1,0 +1,28 @@
+# OTD3 — THE NUT & BOLT: the machine that trades turns for force.
+# An M12 bolt stands on its hex head; a brass nut rides the thread down.
+#
+# Render the film (8 cameras, real AVC/H.264 video):
+#   otd --video nut-bolt.otd nut-bolt.mp4 --screw nut=6@y:1.75 --frames 48 --cams 8
+#
+# Or a single frame of the eight-camera panel:
+#   otd --png nut-bolt.otd panel.png --cams 8
+#
+# One turn of a screw advances it exactly one pitch — Archimedes' law,
+# 2300 years old, still holding every bridge together.
+
+scene "Nut & Bolt — the screw machine"
+
+# ---- the M12 bolt: hex head, shaft, and 20 ISO thread turns ----
+# (three solid parts standing together; the thread ridges ride the shaft)
+head = prism(sides: 6, r: 11mm, h: 8mm) at (0, 0, 0) material: steel
+shaft = cylinder(r: 6mm, h: 60mm) at (0, 8mm, 0) material: steel
+threads = thread(radius: 5.4mm, pitch: 1.75mm, turns: 20) at (0, 10mm, 0) material: steel
+
+# ---- the hex nut: brass ring, clearance hole for the thread crest ----
+nut = subtract(prism(sides: 6, r: 10mm, h: 7mm) at (0, 41mm, 0), cylinder(r: 7mm, h: 9mm) at (0, 40mm, 0)) material: brass
+
+# ---- the physics ----
+simulate: energy
+simulate: sound
+
+ask "mass?"

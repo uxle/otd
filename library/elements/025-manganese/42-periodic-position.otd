@@ -1,0 +1,8 @@
+# Periodic Position
+# Manganese (Mn) — real density 7.21 g/cm³. period 4, group 7.
+scene "Manganese Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #9c7ac7 at (144mm, 3mm, 72mm)
+label = text "Mn" at (138mm, 4mm, 67mm)
+numtext = text "25" at (151mm, 4mm, 78mm)

@@ -1,0 +1,8 @@
+# Display Card
+# Erbium (Er) — real density 9.066 g/cm³. periodic-table tile.
+scene "Erbium Display Card"
+
+tile = cube(w: 64mm, d: 6mm, h: 64mm) color: #94d9ff at (0, 3mm, 0)
+sym = text "Er" at (-14mm, 6mm, -8mm)
+znum = text "68" at (22mm, 6mm, 22mm)
+nmass = text "167" at (-22mm, 6mm, 22mm)

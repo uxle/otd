@@ -1,0 +1,6 @@
+# Sample Sphere
+# Berkelium (Bk) — real density 14.78 g/cm³. 5 mm radius ball.
+scene "Berkelium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #80ff40 at (0, 5mm, 0)
+simulate: drop

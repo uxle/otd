@@ -1,0 +1,5 @@
+# Granules
+# Calcium (Ca) — real density 1.55 g/cm³. small pieces scatter like real granules.
+scene "Calcium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 20) sphere 2.5mm color: #3dff00

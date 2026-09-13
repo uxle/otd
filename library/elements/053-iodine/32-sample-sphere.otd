@@ -1,0 +1,6 @@
+# Sample Sphere
+# Iodine (I) — real density 4.93 g/cm³. 5 mm radius ball.
+scene "Iodine Sample Sphere"
+
+sample_sphere = sphere 5mm color: #940094 at (0, 5mm, 0)
+simulate: drop

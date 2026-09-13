@@ -1,0 +1,8 @@
+# Periodic Position
+# Tungsten (W) — real density 19.25 g/cm³. period 6, group 6.
+scene "Tungsten Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm material: tungsten at (120mm, 3mm, 120mm)
+label = text "W" at (114mm, 4mm, 115mm)
+numtext = text "74" at (127mm, 4mm, 126mm)

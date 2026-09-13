@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Holmium (Ho) — real density 8.79 g/cm³. rod format, like lab stock.
+scene "Holmium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #a6d9ff
+simulate: drop

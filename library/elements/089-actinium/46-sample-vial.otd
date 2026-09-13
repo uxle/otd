@@ -1,0 +1,8 @@
+# Sample Vial
+# Actinium (Ac) — real density 10.07 g/cm³. museum storage: glass tube, labelled.
+scene "Actinium Sample Vial"
+
+sample = cylinder(r: 6mm, h: 18mm) color: #007fff at (0, 8mm, 0)
+vial = cylinder(r: 9mm, h: 30mm) - hollow(wall: 1.5mm, open: top) material: glass at (0, 0, 0)
+cap = cylinder(r: 10mm, h: 4mm) material: oak at (0, 30mm, 0)
+label = text "Ac" at (14mm, 2mm, -3mm)

@@ -1,0 +1,6 @@
+# Drop Test
+# Mendelevium (Md) — real density 10.3 g/cm³. v = √(2gh) — watch the physics console.
+scene "Mendelevium Drop Test"
+
+test_cube = cube 20mm color: #00ff80 # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

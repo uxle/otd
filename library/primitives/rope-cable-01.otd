@@ -1,0 +1,7 @@
+# A real catenary cable hung between two posts.
+scene "Hanging Cable 1"
+
+cable1 = rope(from: (0, 33cm, 0), to: (25cm, 31cm, 0), thickness: 3.4mm, sag: 5.4cm)
+postL = cylinder(r: 1cm, h: 36cm) at (0, 0, 0)
+postR = cylinder(r: 1cm, h: 37cm) at (25cm, 0, 0)
+ask "cable sag?"

@@ -1,0 +1,5 @@
+# Seed-controlled hills.
+scene "terrain Landscapes — Lesson 36"
+
+land1 = terrain(size: 30cm, peaks: 5cm, roughness: 0.6, seed: 7)
+ask "triangle count?"

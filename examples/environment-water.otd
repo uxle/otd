@@ -1,0 +1,18 @@
+# ENVIRONMENTS — P1420b. `environment:` sets the medium the whole scene
+# lives in. Gravity becomes APPARENT gravity g_eff = g·(1 − ρmed/ρbody):
+# light bodies drift UP, dense bodies sink — with drag and terminal
+# velocity. Try: air (default), vacuum, water, oil, or density 1200.
+scene "Water tank — who floats, who sinks"
+
+gravity: earth
+environment: water
+
+# released underwater at the same depth — each goes its own way
+log   = cube(w: 6cm, d: 6cm, h: 6cm) at (-10cm, 15cm, 0) material: oak
+brick = cube(w: 6cm, d: 6cm, h: 6cm) at (0, 15cm, 0) material: concrete
+ingot = cube(w: 5cm, d: 5cm, h: 5cm) at (10cm, 15cm, 0) material: steel
+ice   = cube(w: 5cm, d: 5cm, h: 5cm) at (-10cm, 35cm, 0) material: ice
+
+# settle in water: oak and ice rise to the surface, concrete and steel
+# sink to the floor — and NOTHING interpenetrates on the way
+simulate: settle

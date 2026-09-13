@@ -1,0 +1,27 @@
+# Chess corner: board + pawns, rooks and a queen for both sides
+scene "Chess"
+
+board = cube(w: 40cm, d: 40cm, h: 2cm) material: wood color: burlywood
+# checkerboard: two offset grids of dark squares
+darkA = grid(nx: 4, nz: 4, spacing: (10cm, 10cm)) cube(5cm, 3mm, 5cm) at (7.5cm, 2cm, 2.5cm) color: saddlebrown
+darkB = grid(nx: 4, nz: 4, spacing: (10cm, 10cm)) cube(5cm, 3mm, 5cm) at (2.5cm, 2cm, 7.5cm) color: saddlebrown
+
+define pawn = revolve [(0, 0), (13mm, 0), (13mm, 4mm), (9mm, 8mm), (9mm, 28mm),
+                       (14mm, 33mm), (6mm, 36mm)] + sphere(r: 9mm) at (0, 36mm, 0)
+define rook = group(cylinder(r: 14mm, h: 42mm),
+                    ring(n: 4, radius: 10mm) cube(6mm, 6mm, 6mm) at (0, 42mm, 0))
+define queen = revolve [(0, 0), (15mm, 0), (15mm, 5mm), (10mm, 12mm), (10mm, 42mm),
+                        (16mm, 50mm), (5mm, 58mm)] + sphere(r: 6mm) at (0, 58mm, 0)
+
+use pawn at (12.5cm, 2.3cm, 12.5cm) color: black
+use pawn at (17.5cm, 2.3cm, 17.5cm) color: black
+use pawn at (27.5cm, 2.3cm, 12.5cm) color: ivory
+use pawn at (22.5cm, 2.3cm, 17.5cm) color: ivory
+use rook at (2.5cm, 2.3cm, 2.5cm) color: black
+use rook at (37.5cm, 2.3cm, 2.5cm) color: black
+use rook at (2.5cm, 2.3cm, 37.5cm) color: ivory
+use rook at (37.5cm, 2.3cm, 37.5cm) color: ivory
+use queen at (17.5cm, 2.3cm, 2.5cm) color: black
+use queen at (22.5cm, 2.3cm, 37.5cm) color: ivory
+
+ask "mass?"

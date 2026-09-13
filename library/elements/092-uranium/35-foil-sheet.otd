@@ -1,0 +1,5 @@
+# Foil Sheet
+# Uranium (U) — real density 19.1 g/cm³. 0.1 mm foil.
+scene "Uranium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #00c8c8 at (0, 0.1mm, 0)

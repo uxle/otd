@@ -1,0 +1,7 @@
+# Ingot
+# Lead (Pb) — real density 11.34 g/cm³. cast bar format.
+scene "Lead Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) material: lead at (0, 5.5mm, 0)
+ask "mass?"
+simulate: drop

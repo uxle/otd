@@ -1,0 +1,7 @@
+# for x in [...] visits every element.
+scene "Walking Lists — Lesson 18"
+
+for r in [1cm, 2cm, 3cm]
+  sphere r at (0, 0, 0)
+end
+ask "how many objects?"

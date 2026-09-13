@@ -1,0 +1,5 @@
+# A sphere melted into a rock with Taubin smoothing.
+scene "Smooth Rock 4"
+
+rock1 = sphere(r: 4.2cm) smooth(n: 3, strength: 0.6) material: concrete color: dimgray
+ask "mass?"

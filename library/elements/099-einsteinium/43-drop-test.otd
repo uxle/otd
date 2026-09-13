@@ -1,0 +1,6 @@
+# Drop Test
+# Einsteinium (Es) — real density 8.84 g/cm³. v = √(2gh) — watch the physics console.
+scene "Einsteinium Drop Test"
+
+test_cube = cube 20mm color: #40ff10 # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

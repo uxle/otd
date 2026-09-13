@@ -1,0 +1,8 @@
+# Periodic Position
+# Nitrogen (N) — real density 0.00125 g/cm³. period 2, group 15.
+scene "Nitrogen Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #3050f8 at (336mm, 3mm, 24mm)
+label = text "N" at (330mm, 4mm, 19mm)
+numtext = text "7" at (343mm, 4mm, 30mm)

@@ -1,0 +1,9 @@
+# Bohr Model
+# Ytterbium (Yb) — real density 6.9 g/cm³. nucleus + first shells, tilted for depth.
+scene "Ytterbium Bohr Model"
+
+define electron = sphere 1.1mm color: #ffffff
+nucleus = sphere 3mm color: #bfbfe8
+orb1 = ring(n: 2, radius: 6mm) electron rotate (0, a, 0)
+orb2 = ring(n: 8, radius: 12mm) electron rotate (0, a, 0)
+orb3 = ring(n: 18, radius: 18mm) electron rotate (0, a, 0)

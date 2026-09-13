@@ -1,0 +1,6 @@
+# Drop Test
+# Gallium (Ga) — real density 5.91 g/cm³. v = √(2gh) — watch the physics console.
+scene "Gallium Drop Test"
+
+test_cube = cube 20mm color: #c28f8f # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

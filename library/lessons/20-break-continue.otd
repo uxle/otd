@@ -1,0 +1,13 @@
+# Skip some, stop early.
+scene "break & continue — Lesson 20"
+
+for i in 1..12
+  if i mod 3 is 0
+    continue
+  end
+  if i > 8
+    break
+  end
+  sphere 6mm at (i * 2cm, 0, 0)
+end
+ask "how many objects?"

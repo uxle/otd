@@ -1,0 +1,7 @@
+# Sample Cube
+# Thallium (Tl) — real density 11.85 g/cm³. a 1 cm cube — the reference sample.
+scene "Thallium Sample Cube"
+
+sample_cube = cube 10mm color: #a6544d at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

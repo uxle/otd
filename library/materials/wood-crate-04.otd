@@ -1,0 +1,7 @@
+# A hollow wooden shipping crate.
+scene "Wooden Crate 4"
+
+material: oak
+crate = cube(w: 21cm, d: 28cm, h: 20cm) - hollow(wall: 8mm)
+ask "mass?"
+ask "watertight?"

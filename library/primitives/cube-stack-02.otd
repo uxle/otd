@@ -1,0 +1,8 @@
+# A tapering stack of three boxes.
+scene "Box Stack 2"
+
+base1 = cube(w: 8cm, d: 8cm, h: 8cm)
+mid1 = cube(w: 6cm, d: 6cm, h: 6cm) at (1cm, 8cm, 1cm)
+top1 = cube(w: 4cm, d: 4cm, h: 4cm) at (2cm, 14cm, 2cm)
+simulate: collapse
+ask "center of mass?"

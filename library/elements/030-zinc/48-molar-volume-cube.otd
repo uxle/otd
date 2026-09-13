@@ -1,0 +1,7 @@
+# Molar Volume Cube
+# Zinc (Zn) — real density 7.14 g/cm³. V = M/ρ = 65.38/7.14 = 9.2 cm³ per mole.
+scene "Zinc Molar Volume Cube"
+
+mole_cube = cube 2.09cm material: zinc at (0, 1.05cm, 0)
+ask "mass?"
+# one mole of atoms: 6.022e23 atoms of Zinc, 65.38 g, drawn at true scale

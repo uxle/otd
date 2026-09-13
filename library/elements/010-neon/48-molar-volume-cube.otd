@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Neon (Ne) — real density 0.0009 g/cm³. V = M/ρ = 20.18/0.0009 = 22422.2 cm³ per mole.
+scene "Neon Molar Volume Cube"
+
+mole_cube = cube 28.20cm color: #b3e3f5 at (0, 14.10cm, 0)
+# one mole of atoms: 6.022e23 atoms of Neon, 20.18 g, drawn at true scale

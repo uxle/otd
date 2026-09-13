@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Dubnium (Db) — real density 29.3 g/cm³. rod format, like lab stock.
+scene "Dubnium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #60c0ff
+simulate: drop

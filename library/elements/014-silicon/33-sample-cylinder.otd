@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Silicon (Si) — real density 2.329 g/cm³. rod format, like lab stock.
+scene "Silicon Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #f0c8a0
+simulate: drop

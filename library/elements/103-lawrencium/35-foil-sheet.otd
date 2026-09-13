@@ -1,0 +1,5 @@
+# Foil Sheet
+# Lawrencium (Lr) — real density 15.6 g/cm³. 0.1 mm foil.
+scene "Lawrencium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #00ffd0 at (0, 0.1mm, 0)

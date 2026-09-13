@@ -1,0 +1,12 @@
+# Cast-iron flywheel: heavy rim, 8 spokes — spin it with
+# otd render flywheel.otd spin.png --spin flywheel=90@x
+scene "Flywheel"
+
+define spoke = cylinder(r: 4mm, h: 90mm) rotate (0, 0, -90deg) at (0, 4mm, 0)
+flywheelrim = group(torus(R: 100mm, tube: 16mm),
+                    cylinder(r: 28mm, h: 32mm),
+                    ring(n: 8, radius: 0.5mm) spoke rotate (0, a, 0))
+flywheel = flywheelrim rotate (0, 0, -90deg) at (0, 116mm, 0) material: iron
+hide flywheelrim
+ask "mass?"
+ask "inertia?"

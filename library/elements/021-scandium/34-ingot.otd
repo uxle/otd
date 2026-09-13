@@ -1,0 +1,6 @@
+# Ingot
+# Scandium (Sc) — real density 2.985 g/cm³. cast bar format.
+scene "Scandium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #ffe08a at (0, 5.5mm, 0)
+simulate: drop

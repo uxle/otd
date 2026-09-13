@@ -1,0 +1,6 @@
+# A solid glass cube — see the refraction tint.
+scene "Glass Cube"
+
+cube1 = cube 6cm material: glass
+ask "mass?"
+ask "density?"

@@ -1,0 +1,26 @@
+# REAL SOLIDITY + the floating fix — P1420b.
+# Every part starts in mid-air; `simulate: settle` drops them under real
+# gravity until each one is supported: the ground, or another part. Parts
+# push each other out along the shallowest axis, so one item can never
+# insert into another item. Nothing floats unless physics says so.
+scene "Solidity — a settled stack"
+
+gravity: earth
+
+# the tower: three cubes released at different heights
+base = cube(w: 6cm, d: 6cm, h: 6cm) at (0, 18cm, 0) material: steel
+mid  = cube(w: 6cm, d: 6cm, h: 6cm) at (0, 32cm, 0) material: oak
+top  = cube(w: 6cm, d: 6cm, h: 6cm) at (0, 48cm, 0) material: glass
+
+# a nut falling beside the tower, and a bouncing ball
+nut  = cylinder(r: 8mm, h: 6mm) at (12cm, 25cm, 0) material: brass
+ball = sphere(r: 2.5cm) at (-12cm, 30cm, 0) material: rubber
+
+# interlopers that USED to hang in the air forever:
+# now they fall and land where physics puts them
+plate = cube(w: 14cm, d: 14cm, h: 1.5cm) at (0, 70cm, 0) material: aluminum
+
+# drop everything until it rests — and verify zero interpenetration:
+simulate: settle
+# then audit the final state:
+simulate: solidity

@@ -1,0 +1,5 @@
+# Granules
+# Flerovium (Fl) — real density 14 g/cm³. small pieces scatter like real granules.
+scene "Flerovium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 114) sphere 2.5mm color: #ff5050

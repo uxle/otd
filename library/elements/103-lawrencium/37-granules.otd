@@ -1,0 +1,5 @@
+# Granules
+# Lawrencium (Lr) — real density 15.6 g/cm³. small pieces scatter like real granules.
+scene "Lawrencium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 103) sphere 2.5mm color: #00ffd0

@@ -1,0 +1,7 @@
+# Sample Cube
+# Protactinium (Pa) — real density 15.37 g/cm³. a 1 cm cube — the reference sample.
+scene "Protactinium Sample Cube"
+
+sample_cube = cube 10mm color: #00bfff at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

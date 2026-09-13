@@ -1,0 +1,5 @@
+# Granules
+# Manganese (Mn) — real density 7.21 g/cm³. small pieces scatter like real granules.
+scene "Manganese Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 25) sphere 2.5mm color: #9c7ac7

@@ -1,0 +1,5 @@
+# A pill-shaped capsule.
+scene "Basic Capsule"
+
+capsule
+ask "volume?"

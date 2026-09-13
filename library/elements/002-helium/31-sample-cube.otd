@@ -1,0 +1,7 @@
+# Sample Cube
+# Helium (He) — real density 0.00018 g/cm³. a 1 cm cube — the reference sample.
+scene "Helium Sample Cube"
+
+sample_cube = cube 10mm color: #d9ffff at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

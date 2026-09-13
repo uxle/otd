@@ -1,0 +1,12 @@
+# Electron Shells
+# Thulium (Tm) — real density 9.32 g/cm³. configuration [Xe] 4f13 6s2.
+scene "Thulium Electron Shells"
+
+define electron = sphere 1mm color: #ffffff
+nucleus = sphere 2.5mm color: #8ccbe0
+shell1 = ring(n: 2, radius: 5mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell2 = ring(n: 8, radius: 10mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell3 = ring(n: 18, radius: 15mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell4 = ring(n: 31, radius: 20mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell5 = ring(n: 8, radius: 25mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell6 = ring(n: 2, radius: 30mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)

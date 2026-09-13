@@ -1,0 +1,5 @@
+# Granules
+# Polonium (Po) — real density 9.2 g/cm³. small pieces scatter like real granules.
+scene "Polonium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 84) sphere 2.5mm color: #d8004d

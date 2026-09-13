@@ -1,0 +1,6 @@
+# Ingot
+# Holmium (Ho) — real density 8.79 g/cm³. cast bar format.
+scene "Holmium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #a6d9ff at (0, 5.5mm, 0)
+simulate: drop

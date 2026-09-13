@@ -1,0 +1,7 @@
+# Sample Cube
+# Lithium (Li) — real density 0.534 g/cm³. a 1 cm cube — the reference sample.
+scene "Lithium Sample Cube"
+
+sample_cube = cube 10mm color: #cc80ff at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

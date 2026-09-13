@@ -1,0 +1,7 @@
+# Density Compare
+# Livermorium (Lv) — real density 12.9 g/cm³. equal masses: Livermorium vs water — sides ∝ (1/ρ)^(1/3).
+scene "Livermorium Density Compare"
+
+element_cube = cube 8.5mm color: #ff9040 at (-20mm, 4.3mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 102.9 g — the water cube is the reference

@@ -1,0 +1,5 @@
+# Wire Coil
+# Palladium (Pd) — real density 12.02 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Palladium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #d0a0a0

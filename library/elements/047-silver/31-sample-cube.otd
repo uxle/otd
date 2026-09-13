@@ -1,0 +1,7 @@
+# Sample Cube
+# Silver (Ag) — real density 10.49 g/cm³. a 1 cm cube — the reference sample.
+scene "Silver Sample Cube"
+
+sample_cube = cube 10mm material: silver at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

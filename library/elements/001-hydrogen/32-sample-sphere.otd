@@ -1,0 +1,6 @@
+# Sample Sphere
+# Hydrogen (H) — real density 9e-05 g/cm³. 5 mm radius ball.
+scene "Hydrogen Sample Sphere"
+
+sample_sphere = sphere 5mm color: #88ff88 at (0, 5mm, 0)
+simulate: drop

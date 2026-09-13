@@ -1,0 +1,8 @@
+# Periodic Position
+# Ytterbium (Yb) — real density 6.9 g/cm³. period 6, group 3.
+scene "Ytterbium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #bfbfe8 at (48mm, 3mm, 120mm)
+label = text "Yb" at (42mm, 4mm, 115mm)
+numtext = text "70" at (55mm, 4mm, 126mm)

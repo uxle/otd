@@ -1,0 +1,5 @@
+# Circle layouts — and the angle a.
+scene "ring Pattern — Lesson 28"
+
+petals1 = ring(n: 10, radius: 4cm) sphere 1cm color: pink
+ask "how many objects?"

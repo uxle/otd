@@ -1,0 +1,5 @@
+# Wire Coil
+# Germanium (Ge) — real density 5.323 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Germanium Wire Coil"
+
+wire = cylinder(r: 1.2mm, h: 70mm) rotate (0, 0, -90deg) color: #668f8f

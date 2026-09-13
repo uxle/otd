@@ -1,0 +1,19 @@
+# A 9-course staggered brick wall built row by row.
+scene "Staggered Brick Wall 5"
+
+brickW = 9.5cm
+brickH = 5.7cm
+course = 19cm
+material: concrete
+color: firebrick
+for row = 0 to 8
+  x0 = 0cm
+  if row mod 2 is 1
+    x0 = 5.25cm
+  end
+  for col = 0 to 8
+    x = x0 + col * 10.5cm
+    cube(w: brickW, d: course, h: brickH) at (x, row * brickH, 0)
+  end
+end
+ask "mass?"

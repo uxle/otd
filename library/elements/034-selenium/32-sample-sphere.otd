@@ -1,0 +1,6 @@
+# Sample Sphere
+# Selenium (Se) — real density 4.81 g/cm³. 5 mm radius ball.
+scene "Selenium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ffa100 at (0, 5mm, 0)
+simulate: drop

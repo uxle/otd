@@ -1,0 +1,5 @@
+# Powder Pile
+# Neptunium (Np) — real density 20.45 g/cm³. a poured heap.
+scene "Neptunium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #00d0ff

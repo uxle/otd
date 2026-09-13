@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Xenon (Xe) — real density 0.0059 g/cm³. rod format, like lab stock.
+scene "Xenon Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #429eb0
+simulate: drop

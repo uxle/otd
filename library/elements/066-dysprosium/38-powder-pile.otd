@@ -1,0 +1,5 @@
+# Powder Pile
+# Dysprosium (Dy) — real density 8.54 g/cm³. a poured heap.
+scene "Dysprosium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #a6ffff

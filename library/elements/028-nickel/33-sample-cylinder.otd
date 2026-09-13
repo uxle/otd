@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Nickel (Ni) — real density 8.908 g/cm³. rod format, like lab stock.
+scene "Nickel Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #50d050
+simulate: drop

@@ -1,0 +1,6 @@
+# Ingot
+# Iodine (I) — real density 4.93 g/cm³. cast bar format.
+scene "Iodine Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #940094 at (0, 5.5mm, 0)
+simulate: drop

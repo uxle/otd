@@ -1,0 +1,8 @@
+# Sample Vial
+# Ruthenium (Ru) — real density 12.45 g/cm³. museum storage: glass tube, labelled.
+scene "Ruthenium Sample Vial"
+
+sample = cylinder(r: 6mm, h: 18mm) color: #a0c0c0 at (0, 8mm, 0)
+vial = cylinder(r: 9mm, h: 30mm) - hollow(wall: 1.5mm, open: top) material: glass at (0, 0, 0)
+cap = cylinder(r: 10mm, h: 4mm) material: oak at (0, 30mm, 0)
+label = text "Ru" at (14mm, 2mm, -3mm)

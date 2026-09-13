@@ -1,0 +1,5 @@
+# A metaball blob — molten plastic.
+scene "Plastic Blob 3"
+
+blob1 = metaball [(0cm, 0cm, 0), (2cm, 1cm, 0), (4cm, 2cm, 0)] r: 1.3cm material: plastic color: mediumpurple
+ask "mass?"

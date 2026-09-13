@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Radon (Rn) — real density 0.0097 g/cm³. rod format, like lab stock.
+scene "Radon Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #cc0080
+simulate: drop

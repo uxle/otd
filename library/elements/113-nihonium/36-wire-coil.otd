@@ -1,0 +1,5 @@
+# Wire Coil
+# Nihonium (Nh) — real density 16 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Nihonium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #ff3060

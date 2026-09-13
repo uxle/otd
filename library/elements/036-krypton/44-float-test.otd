@@ -1,0 +1,7 @@
+# Float Test
+# Krypton (Kr) — real density 0.0037 g/cm³. Archimedes decides: ρ vs 0.997 g/cm³.
+scene "Krypton Float Test"
+
+# a gas like Krypton does not float as a solid — bubbles rise THROUGH water
+tank = cube(w: 80mm, d: 80mm, h: 50mm) material: water at (0, 25mm, 0)
+bubbles = scatter(n: 10, radius: 20mm, seed: 36) sphere 3mm color: #5cb8d1

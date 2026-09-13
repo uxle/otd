@@ -1,0 +1,7 @@
+# Float Test
+# Chlorine (Cl) — real density 0.0032 g/cm³. Archimedes decides: ρ vs 0.997 g/cm³.
+scene "Chlorine Float Test"
+
+# a gas like Chlorine does not float as a solid — bubbles rise THROUGH water
+tank = cube(w: 80mm, d: 80mm, h: 50mm) material: water at (0, 25mm, 0)
+bubbles = scatter(n: 10, radius: 20mm, seed: 17) sphere 3mm color: #1ff01f

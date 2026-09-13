@@ -1,0 +1,8 @@
+# Periodic Position
+# Technetium (Tc) — real density 11 g/cm³. period 5, group 7.
+scene "Technetium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #3b9e9e at (144mm, 3mm, 96mm)
+label = text "Tc" at (138mm, 4mm, 91mm)
+numtext = text "43" at (151mm, 4mm, 102mm)

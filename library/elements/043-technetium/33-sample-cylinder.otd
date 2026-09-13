@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Technetium (Tc) — real density 11 g/cm³. rod format, like lab stock.
+scene "Technetium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #3b9e9e
+simulate: drop

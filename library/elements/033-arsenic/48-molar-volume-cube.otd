@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Arsenic (As) — real density 5.727 g/cm³. V = M/ρ = 74.922/5.727 = 13.1 cm³ per mole.
+scene "Arsenic Molar Volume Cube"
+
+mole_cube = cube 2.36cm color: #bd80e3 at (0, 1.18cm, 0)
+# one mole of atoms: 6.022e23 atoms of Arsenic, 74.922 g, drawn at true scale

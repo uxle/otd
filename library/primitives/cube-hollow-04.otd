@@ -1,0 +1,7 @@
+# A shelled box with a known wall thickness.
+scene "Hollow Box 4"
+
+material: bronze
+shell = cube(w: 5cm, d: 6cm, h: 7cm) - hollow(wall: 2mm)
+ask "mass?"
+ask "watertight?"

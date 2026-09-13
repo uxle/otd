@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Protactinium (Pa) — real density 15.37 g/cm³. rod format, like lab stock.
+scene "Protactinium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #00bfff
+simulate: drop

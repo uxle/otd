@@ -1,0 +1,8 @@
+# Float Test
+# Mendelevium (Md) — real density 10.3 g/cm³. Archimedes decides: ρ vs 0.997 g/cm³.
+scene "Mendelevium Float Test"
+
+floater = cube 20mm color: #00ff80 # stand-in mass for the demo at (0, 60mm, 0)
+pool = cube(w: 90mm, d: 90mm, h: 35mm) material: water at (0, 17.5mm, 0)
+# real verdict for Mendelevium: sinks (density 10.3 g/cm³)
+simulate: float

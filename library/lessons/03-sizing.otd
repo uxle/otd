@@ -1,0 +1,6 @@
+# Bare numbers mean centimeters; suffix a unit to change that.
+scene "Sizing Things — Lesson 03"
+
+sphere 5cm
+cube 30mm at (5cm, 0, 0)
+ask "how many objects?"

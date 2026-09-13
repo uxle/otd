@@ -1,0 +1,5 @@
+# A stretched box — width, depth and height all different.
+scene "Cuboid"
+
+cube(w: 8cm, d: 4cm, h: 2cm)
+ask "volume?"

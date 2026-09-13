@@ -1,0 +1,5 @@
+# The word WATER rendered as real 3D letters.
+scene "Word WATER"
+
+labelX = text "WATER" size: 4cm depth: 10mm color: mediumturquoise
+ask "mass?"

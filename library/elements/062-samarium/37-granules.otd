@@ -1,0 +1,5 @@
+# Granules
+# Samarium (Sm) — real density 7.52 g/cm³. small pieces scatter like real granules.
+scene "Samarium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 62) sphere 2.5mm color: #ff9b9b

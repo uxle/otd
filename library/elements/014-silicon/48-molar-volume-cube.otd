@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Silicon (Si) — real density 2.329 g/cm³. V = M/ρ = 28.085/2.329 = 12.1 cm³ per mole.
+scene "Silicon Molar Volume Cube"
+
+mole_cube = cube 2.29cm color: #f0c8a0 at (0, 1.15cm, 0)
+# one mole of atoms: 6.022e23 atoms of Silicon, 28.085 g, drawn at true scale

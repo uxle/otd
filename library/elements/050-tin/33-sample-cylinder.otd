@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Tin (Sn) — real density 7.31 g/cm³. rod format, like lab stock.
+scene "Tin Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #668080
+simulate: drop

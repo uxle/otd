@@ -1,0 +1,7 @@
+# A classical column with a square capital.
+scene "Stone Column 2"
+
+material: concrete
+column = cylinder(r: 4.2cm, h: 49.1cm, smooth: 32)
+cap = cube(w: 11cm, d: 10cm, h: 4cm) at (0, 53cm, 0)
+ask "mass?"

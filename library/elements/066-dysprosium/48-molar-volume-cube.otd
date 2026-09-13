@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Dysprosium (Dy) — real density 8.54 g/cm³. V = M/ρ = 162.5/8.54 = 19.0 cm³ per mole.
+scene "Dysprosium Molar Volume Cube"
+
+mole_cube = cube 2.67cm color: #a6ffff at (0, 1.33cm, 0)
+# one mole of atoms: 6.022e23 atoms of Dysprosium, 162.5 g, drawn at true scale

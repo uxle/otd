@@ -1,0 +1,6 @@
+# A tapered cylinder (frustum) — top 3 cm, bottom 2 cm.
+scene "Taper 2→3"
+
+cup1 = cylinder(top: 3cm, bottom: 2cm, height: 16cm)
+ask "volume?"
+ask "mass?"

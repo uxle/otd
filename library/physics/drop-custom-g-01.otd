@@ -1,0 +1,7 @@
+# A drop under g = 11.5 m/s².
+scene "Custom Gravity 1"
+
+cube1 = cube 4cm at (0, 54cm, 0)
+gravity 11.5
+simulate: drop
+print "dropped from {h}"

@@ -1,0 +1,5 @@
+# Powder Pile
+# Nitrogen (N) — real density 0.00125 g/cm³. a poured heap.
+scene "Nitrogen Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #3050f8

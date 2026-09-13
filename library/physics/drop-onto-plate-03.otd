@@ -1,0 +1,8 @@
+# A ball released above a wooden plate.
+scene "Drop Onto Plate 3"
+
+stack1 = cube(w: 6cm, d: 6cm, h: 2cm) at (0, 75cm, 0) material: wood
+stone1 = sphere(r: 2.5cm) at (0, 100cm, 0) material: concrete
+gravity: earth
+simulate: drop
+ask "mass?"

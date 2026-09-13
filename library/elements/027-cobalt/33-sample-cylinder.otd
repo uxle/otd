@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Cobalt (Co) — real density 8.9 g/cm³. rod format, like lab stock.
+scene "Cobalt Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #f090a0
+simulate: drop

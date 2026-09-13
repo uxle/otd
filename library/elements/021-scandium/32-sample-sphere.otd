@@ -1,0 +1,6 @@
+# Sample Sphere
+# Scandium (Sc) — real density 2.985 g/cm³. 5 mm radius ball.
+scene "Scandium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ffe08a at (0, 5mm, 0)
+simulate: drop

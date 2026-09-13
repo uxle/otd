@@ -1,0 +1,5 @@
+# Foil Sheet
+# Lutetium (Lu) — real density 9.841 g/cm³. 0.1 mm foil.
+scene "Lutetium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #a6a6ff at (0, 0.1mm, 0)

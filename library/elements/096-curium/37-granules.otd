@@ -1,0 +1,5 @@
+# Granules
+# Curium (Cm) — real density 13.51 g/cm³. small pieces scatter like real granules.
+scene "Curium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 96) sphere 2.5mm color: #80ffa0

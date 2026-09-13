@@ -1,0 +1,8 @@
+# Display Card
+# Phosphorus (P) — real density 1.823 g/cm³. periodic-table tile.
+scene "Phosphorus Display Card"
+
+tile = cube(w: 64mm, d: 6mm, h: 64mm) color: #ff8000 at (0, 3mm, 0)
+sym = text "P" at (-14mm, 6mm, -8mm)
+znum = text "15" at (22mm, 6mm, 22mm)
+nmass = text "31" at (-22mm, 6mm, 22mm)

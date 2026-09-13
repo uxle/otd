@@ -1,0 +1,6 @@
+# Sample Sphere
+# Caesium (Cs) — real density 1.879 g/cm³. 5 mm radius ball.
+scene "Caesium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #57178f at (0, 5mm, 0)
+simulate: drop

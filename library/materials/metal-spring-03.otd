@@ -1,0 +1,7 @@
+# A coiled silver spring.
+scene "Silver Spring"
+
+material: silver
+spring = helix(radius: 3.2cm, pitch: 0.8cm, turns: 5, tube: 2.7mm)
+ask "mass?"
+ask "inertia?"

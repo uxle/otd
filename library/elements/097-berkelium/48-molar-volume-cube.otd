@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Berkelium (Bk) — real density 14.78 g/cm³. V = M/ρ = 247.0/14.78 = 16.7 cm³ per mole.
+scene "Berkelium Molar Volume Cube"
+
+mole_cube = cube 2.56cm color: #80ff40 at (0, 1.28cm, 0)
+# one mole of atoms: 6.022e23 atoms of Berkelium, 247.0 g, drawn at true scale

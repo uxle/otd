@@ -1,0 +1,5 @@
+# Patterns inject counters into copies.
+scene "Magic i, j, a — Lesson 30"
+
+stairs1 = repeat(n: 6) cube(w: 4cm, h: 2cm, d: 2cm) at (i * 4cm, i * 2cm, 0)
+ask "how many objects?"

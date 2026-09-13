@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Barium (Ba) — real density 3.51 g/cm³. rod format, like lab stock.
+scene "Barium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #00c900
+simulate: drop

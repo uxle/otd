@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Polonium (Po) — real density 9.2 g/cm³. V = M/ρ = 209.0/9.2 = 22.7 cm³ per mole.
+scene "Polonium Molar Volume Cube"
+
+mole_cube = cube 2.83cm color: #d8004d at (0, 1.42cm, 0)
+# one mole of atoms: 6.022e23 atoms of Polonium, 209.0 g, drawn at true scale

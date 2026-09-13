@@ -1,0 +1,8 @@
+# Ball bearing: outer ring, inner ring, 8 chrome balls, bronze cage.
+scene "Ball Bearing"
+
+define ball = sphere 3mm material: chrome
+outring = cylinder(r: 26mm, h: 10mm) - cylinder(r: 21mm, h: 20mm) material: steel
+innerring = cylinder(r: 15mm, h: 10mm) - cylinder(r: 10mm, h: 20mm) material: steel
+cage = ring(n: 8, radius: 18mm) ball rotate (0, a, 0) material: bronze
+ask "mass?"

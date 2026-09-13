@@ -1,0 +1,8 @@
+# Display Card
+# Lead (Pb) — real density 11.34 g/cm³. periodic-table tile.
+scene "Lead Display Card"
+
+tile = cube(w: 64mm, d: 6mm, h: 64mm) color: #575961 at (0, 3mm, 0)
+sym = text "Pb" at (-14mm, 6mm, -8mm)
+znum = text "82" at (22mm, 6mm, 22mm)
+nmass = text "207" at (-22mm, 6mm, 22mm)

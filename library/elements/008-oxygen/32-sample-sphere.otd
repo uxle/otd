@@ -1,0 +1,6 @@
+# Sample Sphere
+# Oxygen (O) — real density 0.00143 g/cm³. 5 mm radius ball.
+scene "Oxygen Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ff0d0d at (0, 5mm, 0)
+simulate: drop

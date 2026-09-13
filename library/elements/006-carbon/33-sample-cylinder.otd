@@ -1,0 +1,7 @@
+# Sample Cylinder
+# Carbon (C) — real density 2.267 g/cm³. rod format, like lab stock.
+scene "Carbon Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) material: carbon
+ask "mass?"
+simulate: drop

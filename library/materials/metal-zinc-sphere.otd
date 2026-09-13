@@ -1,0 +1,6 @@
+# A polished zinc ball.
+scene "Zinc Sphere"
+
+ball = sphere(r: 2.5cm) material: zinc
+ask "mass?"
+ask "will it float?"

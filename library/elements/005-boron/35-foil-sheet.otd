@@ -1,0 +1,5 @@
+# Foil Sheet
+# Boron (B) — real density 2.34 g/cm³. 0.1 mm foil.
+scene "Boron Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #ffb5b5 at (0, 0.1mm, 0)

@@ -1,0 +1,8 @@
+# Bohr Model
+# Nitrogen (N) — real density 0.00125 g/cm³. nucleus + first shells, tilted for depth.
+scene "Nitrogen Bohr Model"
+
+define electron = sphere 1.1mm color: #ffffff
+nucleus = sphere 3mm color: #3050f8
+orb1 = ring(n: 2, radius: 6mm) electron rotate (0, a, 0)
+orb2 = ring(n: 5, radius: 12mm) electron rotate (0, a, 0)

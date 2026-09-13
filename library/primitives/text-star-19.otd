@@ -1,0 +1,5 @@
+# The word STAR rendered as real 3D letters.
+scene "Word STAR"
+
+labelX = text "STAR" size: 1.6cm depth: 10mm color: navy
+ask "mass?"

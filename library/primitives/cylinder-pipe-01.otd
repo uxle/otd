@@ -1,0 +1,6 @@
+# A bent pipe swept through a spline path.
+scene "Pipe Run 1"
+
+material: carbon
+pipe = tube(r: 7.2mm, path: [(0, 0, 0), (0, 14cm, 0), (12cm, 19cm, 0)])
+ask "mass?"

@@ -1,0 +1,7 @@
+# Sample Cube
+# Krypton (Kr) — real density 0.0037 g/cm³. a 1 cm cube — the reference sample.
+scene "Krypton Sample Cube"
+
+sample_cube = cube 10mm color: #5cb8d1 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

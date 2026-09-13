@@ -1,0 +1,5 @@
+# A ring of pearls laid out in a circle.
+scene "Pearl Ring 6"
+
+pearls = ring(n: 12, radius: 6.9cm) sphere(r: 4.4mm) color: white
+ask "how many objects?"

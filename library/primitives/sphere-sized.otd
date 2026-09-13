@@ -1,0 +1,5 @@
+# A five-centimeter sphere.
+scene "Sized Sphere"
+
+sphere 5cm
+ask "volume?"

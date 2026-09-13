@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Neptunium (Np) — real density 20.45 g/cm³. V = M/ρ = 237.0/20.45 = 11.6 cm³ per mole.
+scene "Neptunium Molar Volume Cube"
+
+mole_cube = cube 2.26cm color: #00d0ff at (0, 1.13cm, 0)
+# one mole of atoms: 6.022e23 atoms of Neptunium, 237.0 g, drawn at true scale

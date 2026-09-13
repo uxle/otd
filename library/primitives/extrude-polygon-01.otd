@@ -1,0 +1,5 @@
+# An irregular 5-sided polygon pulled into a solid.
+scene "Extruded 5-gon"
+
+poly1 = extrude [(3.8cm, 0.0cm), (1.2cm, 3.6cm), (-2.3cm, 1.7cm), (-2.3cm, -1.7cm), (1.2cm, -3.8cm)] depth: 1.2cm
+ask "volume?"

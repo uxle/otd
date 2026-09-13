@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Meitnerium (Mt) — real density 37.4 g/cm³. V = M/ρ = 278.0/37.4 = 7.4 cm³ per mole.
+scene "Meitnerium Molar Volume Cube"
+
+mole_cube = cube 1.95cm color: #d040ff at (0, 0.98cm, 0)
+# one mole of atoms: 6.022e23 atoms of Meitnerium, 278.0 g, drawn at true scale

@@ -1,0 +1,7 @@
+# A rubber ball — drop it to watch the 0.85 restitution bounce.
+scene "Rubber Ball"
+
+ball = sphere(r: 3cm) material: rubber
+gravity: earth
+simulate: drop
+ask "mass?"

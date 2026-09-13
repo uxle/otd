@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Sulfur (S) — real density 2.07 g/cm³. rod format, like lab stock.
+scene "Sulfur Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #ffff30
+simulate: drop

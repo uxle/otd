@@ -1,0 +1,6 @@
+# Ingot
+# Hafnium (Hf) — real density 13.31 g/cm³. cast bar format.
+scene "Hafnium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #90b0b0 at (0, 5.5mm, 0)
+simulate: drop

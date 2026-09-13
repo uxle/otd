@@ -1,0 +1,6 @@
+# Sample Sphere
+# Einsteinium (Es) — real density 8.84 g/cm³. 5 mm radius ball.
+scene "Einsteinium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #40ff10 at (0, 5mm, 0)
+simulate: drop

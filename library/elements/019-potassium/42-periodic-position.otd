@@ -1,0 +1,8 @@
+# Periodic Position
+# Potassium (K) — real density 0.862 g/cm³. period 4, group 1.
+scene "Potassium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #8f40d4 at (0mm, 3mm, 72mm)
+label = text "K" at (-6mm, 4mm, 67mm)
+numtext = text "19" at (7mm, 4mm, 78mm)

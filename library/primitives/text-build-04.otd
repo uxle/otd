@@ -1,0 +1,5 @@
+# The word BUILD rendered as real 3D letters.
+scene "Word BUILD"
+
+labelX = text "BUILD" size: 3cm depth: 10mm color: slateblue
+ask "mass?"

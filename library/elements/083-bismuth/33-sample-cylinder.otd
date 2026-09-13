@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Bismuth (Bi) — real density 9.78 g/cm³. rod format, like lab stock.
+scene "Bismuth Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #9c7ac7
+simulate: drop

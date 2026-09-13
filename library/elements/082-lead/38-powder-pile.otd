@@ -1,0 +1,5 @@
+# Powder Pile
+# Lead (Pb) — real density 11.34 g/cm³. a poured heap.
+scene "Lead Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) material: lead

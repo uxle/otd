@@ -1,0 +1,6 @@
+# Sample Sphere
+# Nitrogen (N) — real density 0.00125 g/cm³. 5 mm radius ball.
+scene "Nitrogen Sample Sphere"
+
+sample_sphere = sphere 5mm color: #3050f8 at (0, 5mm, 0)
+simulate: drop

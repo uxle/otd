@@ -1,0 +1,8 @@
+# Periodic Position
+# Gold (Au) — real density 19.32 g/cm³. period 6, group 11.
+scene "Gold Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm material: gold at (240mm, 3mm, 120mm)
+label = text "Au" at (234mm, 4mm, 115mm)
+numtext = text "79" at (247mm, 4mm, 126mm)

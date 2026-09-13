@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Hydrogen (H) — real density 9e-05 g/cm³. V = M/ρ = 1.008/9e-05 = 11200.0 cm³ per mole.
+scene "Hydrogen Molar Volume Cube"
+
+mole_cube = cube 22.37cm color: #88ff88 at (0, 11.19cm, 0)
+# one mole of atoms: 6.022e23 atoms of Hydrogen, 1.008 g, drawn at true scale

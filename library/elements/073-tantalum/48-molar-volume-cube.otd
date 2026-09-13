@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Tantalum (Ta) — real density 16.69 g/cm³. V = M/ρ = 180.95/16.69 = 10.8 cm³ per mole.
+scene "Tantalum Molar Volume Cube"
+
+mole_cube = cube 2.21cm color: #a0c8c8 at (0, 1.11cm, 0)
+# one mole of atoms: 6.022e23 atoms of Tantalum, 180.95 g, drawn at true scale

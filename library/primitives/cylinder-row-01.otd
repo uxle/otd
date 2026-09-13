@@ -1,0 +1,8 @@
+# A row of 4 cylinders of varied height.
+scene "Cylinder Row 1"
+
+material: pine
+for i = 0 to 3
+  cylinder(r: 2cm, h: 4.7cm) at (i * 4cm, 0, 0)
+end
+ask "how many objects?"

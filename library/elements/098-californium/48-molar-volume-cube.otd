@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Californium (Cf) — real density 15.1 g/cm³. V = M/ρ = 251.0/15.1 = 16.6 cm³ per mole.
+scene "Californium Molar Volume Cube"
+
+mole_cube = cube 2.55cm color: #60ff30 at (0, 1.28cm, 0)
+# one mole of atoms: 6.022e23 atoms of Californium, 251.0 g, drawn at true scale

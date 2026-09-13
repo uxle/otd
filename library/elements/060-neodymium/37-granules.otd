@@ -1,0 +1,5 @@
+# Granules
+# Neodymium (Nd) — real density 7.01 g/cm³. small pieces scatter like real granules.
+scene "Neodymium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 60) sphere 2.5mm color: #8affde

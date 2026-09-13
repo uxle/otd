@@ -1,0 +1,5 @@
+# mirror x flips across the plane.
+scene "Mirroring — Lesson 10"
+
+text "OTD" mirror x
+ask "mass?"

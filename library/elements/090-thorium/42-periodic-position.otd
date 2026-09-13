@@ -1,0 +1,8 @@
+# Periodic Position
+# Thorium (Th) — real density 11.72 g/cm³. period 7, group 4.
+scene "Thorium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #00a0ff at (72mm, 3mm, 144mm)
+label = text "Th" at (66mm, 4mm, 139mm)
+numtext = text "90" at (79mm, 4mm, 150mm)

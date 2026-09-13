@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Hassium (Hs) — real density 40.7 g/cm³. rod format, like lab stock.
+scene "Hassium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #c060ff
+simulate: drop

@@ -1,0 +1,6 @@
+# Ingot
+# Argon (Ar) — real density 0.0018 g/cm³. cast bar format.
+scene "Argon Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #80d1e3 at (0, 5.5mm, 0)
+simulate: drop

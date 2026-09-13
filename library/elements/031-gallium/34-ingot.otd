@@ -1,0 +1,6 @@
+# Ingot
+# Gallium (Ga) — real density 5.91 g/cm³. cast bar format.
+scene "Gallium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #c28f8f at (0, 5.5mm, 0)
+simulate: drop

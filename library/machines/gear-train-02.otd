@@ -1,0 +1,10 @@
+# Three gears in a row.
+scene "Gear Train 2"
+
+material: steel
+define tooth = cube(w: 4mm, h: 7mm, d: 5mm)
+define gearX(r, n) = group(cylinder(r: r, height: 5mm), ring(n: n, radius: r + 2.5mm) tooth rotate (0, a, 0))
+g1 = gearX(r: 14mm, n: 16) at (0mm, 0, 0) color: gray
+g2 = gearX(r: 27mm, n: 13) at (33mm, 0, 0) color: silver
+g3 = gearX(r: 28mm, n: 12) at (92mm, 0, 0) color: gray
+ask "how many objects?"

@@ -1,0 +1,6 @@
+# A chrome ingot with chamfered proportions.
+scene "Chrome Ingot"
+
+ingot = wedge(w: 8cm, d: 4cm, h: 3cm) material: chrome
+ask "mass?"
+ask "density?"

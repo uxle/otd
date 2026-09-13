@@ -1,0 +1,5 @@
+# Granules
+# Niobium (Nb) — real density 8.57 g/cm³. small pieces scatter like real granules.
+scene "Niobium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 41) sphere 2.5mm color: #73c2c9

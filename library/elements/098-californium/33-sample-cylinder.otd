@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Californium (Cf) — real density 15.1 g/cm³. rod format, like lab stock.
+scene "Californium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #60ff30
+simulate: drop

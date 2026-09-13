@@ -1,0 +1,6 @@
+# Sample Sphere
+# Bohrium (Bh) — real density 37.1 g/cm³. 5 mm radius ball.
+scene "Bohrium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #a080ff at (0, 5mm, 0)
+simulate: drop

@@ -1,0 +1,5 @@
+# Powder Pile
+# Erbium (Er) — real density 9.066 g/cm³. a poured heap.
+scene "Erbium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #94d9ff

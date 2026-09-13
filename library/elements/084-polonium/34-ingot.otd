@@ -1,0 +1,6 @@
+# Ingot
+# Polonium (Po) — real density 9.2 g/cm³. cast bar format.
+scene "Polonium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #d8004d at (0, 5.5mm, 0)
+simulate: drop

@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Oganesson (Og) — real density 5 g/cm³. V = M/ρ = 294.0/5 = 58.8 cm³ per mole.
+scene "Oganesson Molar Volume Cube"
+
+mole_cube = cube 3.89cm color: #ffd040 at (0, 1.94cm, 0)
+# one mole of atoms: 6.022e23 atoms of Oganesson, 294.0 g, drawn at true scale

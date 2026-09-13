@@ -1,0 +1,7 @@
+# Hands-on lab: measure a tungsten sample.
+scene "Material Lab: Tungsten"
+
+sample1 = sphere 3cm material: tungsten
+ask "mass?"
+ask "density?"
+ask "will it float?"

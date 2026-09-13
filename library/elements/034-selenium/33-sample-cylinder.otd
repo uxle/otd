@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Selenium (Se) — real density 4.81 g/cm³. rod format, like lab stock.
+scene "Selenium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #ffa100
+simulate: drop

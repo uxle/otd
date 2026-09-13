@@ -1,0 +1,269 @@
+# library/materials
+
+Real-physics material demos — brick, wood, metal, stone, glass, ceramic, soft & water/float studies.
+
+**263 files.**
+
+- `brick-arch-01.otd` — A half-circle brick arch built from a partial ring.
+- `brick-arch-02.otd` — A half-circle brick arch built from a partial ring.
+- `brick-arch-03.otd` — A half-circle brick arch built from a partial ring.
+- `brick-arch-04.otd` — A half-circle brick arch built from a partial ring.
+- `brick-arch-05.otd` — A half-circle brick arch built from a partial ring.
+- `brick-hut-01.otd` — A small brick hut with a pitched roof and chimney.
+- `brick-hut-02.otd` — A small brick hut with a pitched roof and chimney.
+- `brick-hut-03.otd` — A small brick hut with a pitched roof and chimney.
+- `brick-hut-04.otd` — A small brick hut with a pitched roof and chimney.
+- `brick-hut-05.otd` — A small brick hut with a pitched roof and chimney.
+- `brick-pile-01.otd` — A scattered pile of loose bricks.
+- `brick-pile-02.otd` — A scattered pile of loose bricks.
+- `brick-pile-03.otd` — A scattered pile of loose bricks.
+- `brick-pile-04.otd` — A scattered pile of loose bricks.
+- `brick-pile-05.otd` — A scattered pile of loose bricks.
+- `brick-tower-01.otd` — A 14-course brick tower that narrows as it rises.
+- `brick-tower-02.otd` — A 11-course brick tower that narrows as it rises.
+- `brick-tower-03.otd` — A 14-course brick tower that narrows as it rises.
+- `brick-tower-04.otd` — A 10-course brick tower that narrows as it rises.
+- `brick-tower-05.otd` — A 13-course brick tower that narrows as it rises.
+- `brick-wall-01.otd` — A 11-course staggered brick wall built row by row.
+- `brick-wall-02.otd` — A 9-course staggered brick wall built row by row.
+- `brick-wall-03.otd` — A 8-course staggered brick wall built row by row.
+- `brick-wall-04.otd` — A 9-course staggered brick wall built row by row.
+- `brick-wall-05.otd` — A 9-course staggered brick wall built row by row.
+- `brick-wall-06.otd` — A 8-course staggered brick wall built row by row.
+- `brick-wall-07.otd` — A 9-course staggered brick wall built row by row.
+- `brick-wall-08.otd` — A 10-course staggered brick wall built row by row.
+- `brick-wall-09.otd` — A 8-course staggered brick wall built row by row.
+- `brick-wall-10.otd` — A 6-course staggered brick wall built row by row.
+- `brick.otd` — A single clay brick with true brick proportions.
+- `carbon.otd` — A thin carbon-fiber panel.
+- `ceramic-bowl-01.otd` — A round-bottomed ceramic bowl.
+- `ceramic-bowl-02.otd` — A round-bottomed ceramic bowl.
+- `ceramic-bowl-03.otd` — A round-bottomed ceramic bowl.
+- `ceramic-bowl-04.otd` — A round-bottomed ceramic bowl.
+- `ceramic-bowl-05.otd` — A round-bottomed ceramic bowl.
+- `ceramic-bowl-06.otd` — A round-bottomed ceramic bowl.
+- `ceramic-flowerpot-01.otd` — A tapered ceramic flower pot.
+- `ceramic-flowerpot-02.otd` — A tapered ceramic flower pot.
+- `ceramic-flowerpot-03.otd` — A tapered ceramic flower pot.
+- `ceramic-flowerpot-04.otd` — A tapered ceramic flower pot.
+- `ceramic-flowerpot-05.otd` — A tapered ceramic flower pot.
+- `ceramic-flowerpot-06.otd` — A tapered ceramic flower pot.
+- `ceramic-flowerpot-07.otd` — A tapered ceramic flower pot.
+- `ceramic-plates-01.otd` — A stack of ceramic dinner plates.
+- `ceramic-plates-02.otd` — A stack of ceramic dinner plates.
+- `ceramic-plates-03.otd` — A stack of ceramic dinner plates.
+- `ceramic-plates-04.otd` — A stack of ceramic dinner plates.
+- `ceramic-plates-05.otd` — A stack of ceramic dinner plates.
+- `ceramic-tiles-01.otd` — A field of ceramic floor tiles.
+- `ceramic-tiles-02.otd` — A field of ceramic floor tiles.
+- `ceramic-tiles-03.otd` — A field of ceramic floor tiles.
+- `ceramic-tiles-04.otd` — A field of ceramic floor tiles.
+- `ceramic-tiles-05.otd` — A field of ceramic floor tiles.
+- `ceramic.otd` — The classic coffee cup — hollowed cylinder with a torus handle.
+- `fabric-roll-01.otd` — A rolled bolt of fabric.
+- `fabric-roll-02.otd` — A rolled bolt of fabric.
+- `fabric-roll-03.otd` — A rolled bolt of fabric.
+- `fabric-roll-04.otd` — A rolled bolt of fabric.
+- `fabric-roll-05.otd` — A rolled bolt of fabric.
+- `glass-dome-01.otd` — A display dome with an open bottom.
+- `glass-dome-02.otd` — A display dome with an open bottom.
+- `glass-dome-03.otd` — A display dome with an open bottom.
+- `glass-dome-04.otd` — A display dome with an open bottom.
+- `glass-dome-05.otd` — A display dome with an open bottom.
+- `glass-jar-01.otd` — An open-topped glass jar.
+- `glass-jar-02.otd` — An open-topped glass jar.
+- `glass-jar-03.otd` — An open-topped glass jar.
+- `glass-jar-04.otd` — An open-topped glass jar.
+- `glass-jar-05.otd` — An open-topped glass jar.
+- `glass-jar-06.otd` — An open-topped glass jar.
+- `glass-marbles-01.otd` — Three glass marbles of different sizes.
+- `glass-marbles-02.otd` — Three glass marbles of different sizes.
+- `glass-marbles-03.otd` — Three glass marbles of different sizes.
+- `glass-vase-01.otd` — A lofted glass vase with a waisted profile.
+- `glass-vase-02.otd` — A lofted glass vase with a waisted profile.
+- `glass-vase-03.otd` — A lofted glass vase with a waisted profile.
+- `glass-vase-04.otd` — A lofted glass vase with a waisted profile.
+- `glass-vase-05.otd` — A lofted glass vase with a waisted profile.
+- `glass-window-01.otd` — A thin window pane floating at height.
+- `glass-window-02.otd` — A thin window pane floating at height.
+- `glass-window-03.otd` — A thin window pane floating at height.
+- `glass-window-04.otd` — A thin window pane floating at height.
+- `glass-window-05.otd` — A thin window pane floating at height.
+- `glass.otd` — A solid glass cube — see the refraction tint.
+- `metal-aluminum-ingot.otd` — A aluminum ingot with chamfered proportions.
+- `metal-aluminum-rod.otd` — A round aluminum bar standing on end.
+- `metal-aluminum-sphere.otd` — A polished aluminum ball.
+- `metal-brass-ingot.otd` — A brass ingot with chamfered proportions.
+- `metal-brass-rod.otd` — A round brass bar standing on end.
+- `metal-brass-sphere.otd` — A polished brass ball.
+- `metal-bronze-ingot.otd` — A bronze ingot with chamfered proportions.
+- `metal-bronze-rod.otd` — A round bronze bar standing on end.
+- `metal-bronze-sphere.otd` — A polished bronze ball.
+- `metal-chrome-ingot.otd` — A chrome ingot with chamfered proportions.
+- `metal-chrome-rod.otd` — A round chrome bar standing on end.
+- `metal-chrome-sphere.otd` — A polished chrome ball.
+- `metal-copper-ingot.otd` — A copper ingot with chamfered proportions.
+- `metal-copper-rod.otd` — A round copper bar standing on end.
+- `metal-copper-sphere.otd` — A polished copper ball.
+- `metal-gear-01.otd` — A gold gear wheel with 20 teeth.
+- `metal-gear-02.otd` — A titanium gear wheel with 20 teeth.
+- `metal-gear-03.otd` — A brass gear wheel with 20 teeth.
+- `metal-gear-04.otd` — A stainless gear wheel with 20 teeth.
+- `metal-gear-05.otd` — A stainless gear wheel with 20 teeth.
+- `metal-gear-06.otd` — A gold gear wheel with 20 teeth.
+- `metal-gear-07.otd` — A titanium gear wheel with 20 teeth.
+- `metal-gold-ingot.otd` — A gold ingot with chamfered proportions.
+- `metal-gold-rod.otd` — A round gold bar standing on end.
+- `metal-gold-sphere.otd` — A polished gold ball.
+- `metal-iron-ingot.otd` — A iron ingot with chamfered proportions.
+- `metal-iron-rod.otd` — A round iron bar standing on end.
+- `metal-iron-sphere.otd` — A polished iron ball.
+- `metal-lead-ingot.otd` — A lead ingot with chamfered proportions.
+- `metal-lead-rod.otd` — A round lead bar standing on end.
+- `metal-lead-sphere.otd` — A polished lead ball.
+- `metal-plate-01.otd` — A stainless plate drilled with a grid of holes.
+- `metal-plate-02.otd` — A gold plate drilled with a grid of holes.
+- `metal-plate-03.otd` — A aluminum plate drilled with a grid of holes.
+- `metal-plate-04.otd` — A zinc plate drilled with a grid of holes.
+- `metal-plate-05.otd` — A zinc plate drilled with a grid of holes.
+- `metal-plate-06.otd` — A stainless plate drilled with a grid of holes.
+- `metal-plate-07.otd` — A lead plate drilled with a grid of holes.
+- `metal-plate-08.otd` — A aluminum plate drilled with a grid of holes.
+- `metal-plate-09.otd` — A zinc plate drilled with a grid of holes.
+- `metal-plate-10.otd` — A tungsten plate drilled with a grid of holes.
+- `metal-silver-ingot.otd` — A silver ingot with chamfered proportions.
+- `metal-silver-rod.otd` — A round silver bar standing on end.
+- `metal-silver-sphere.otd` — A polished silver ball.
+- `metal-spring-01.otd` — A coiled chrome spring.
+- `metal-spring-02.otd` — A coiled bronze spring.
+- `metal-spring-03.otd` — A coiled silver spring.
+- `metal-spring-04.otd` — A coiled aluminum spring.
+- `metal-spring-05.otd` — A coiled copper spring.
+- `metal-spring-06.otd` — A coiled aluminum spring.
+- `metal-spring-07.otd` — A coiled titanium spring.
+- `metal-spring-08.otd` — A coiled chrome spring.
+- `metal-stainless-ingot.otd` — A stainless ingot with chamfered proportions.
+- `metal-stainless-rod.otd` — A round stainless bar standing on end.
+- `metal-stainless-sphere.otd` — A polished stainless ball.
+- `metal-steel-ingot.otd` — A steel ingot with chamfered proportions.
+- `metal-steel-rod.otd` — A round steel bar standing on end.
+- `metal-steel-sphere.otd` — A polished steel ball.
+- `metal-titanium-ingot.otd` — A titanium ingot with chamfered proportions.
+- `metal-titanium-rod.otd` — A round titanium bar standing on end.
+- `metal-titanium-sphere.otd` — A polished titanium ball.
+- `metal-tungsten-ingot.otd` — A tungsten ingot with chamfered proportions.
+- `metal-tungsten-rod.otd` — A round tungsten bar standing on end.
+- `metal-tungsten-sphere.otd` — A polished tungsten ball.
+- `metal-zinc-ingot.otd` — A zinc ingot with chamfered proportions.
+- `metal-zinc-rod.otd` — A round zinc bar standing on end.
+- `metal-zinc-sphere.otd` — A polished zinc ball.
+- `plastic-blob-01.otd` — A metaball blob — molten plastic.
+- `plastic-blob-02.otd` — A metaball blob — molten plastic.
+- `plastic-blob-03.otd` — A metaball blob — molten plastic.
+- `plastic-blob-04.otd` — A metaball blob — molten plastic.
+- `plastic-toy-01.otd` — A small plastic toy built from a group.
+- `plastic-toy-02.otd` — A small plastic toy built from a group.
+- `plastic-toy-03.otd` — A small plastic toy built from a group.
+- `plastic-toy-04.otd` — A small plastic toy built from a group.
+- `plastic-toy-05.otd` — A small plastic toy built from a group.
+- `plastic-toy-06.otd` — A small plastic toy built from a group.
+- `plastic.otd` — A toy building brick with studs.
+- `rubber-drop-01.otd` — A rubber ball drop test from height.
+- `rubber-drop-02.otd` — A rubber ball drop test from height.
+- `rubber-drop-03.otd` — A rubber ball drop test from height.
+- `rubber-drop-04.otd` — A rubber ball drop test from height.
+- `rubber-drop-05.otd` — A rubber ball drop test from height.
+- `rubber-drop-06.otd` — A rubber ball drop test from height.
+- `rubber-drop-07.otd` — A rubber ball drop test from height.
+- `rubber.otd` — A rubber ball — drop it to watch the 0.85 restitution bounce.
+- `stone-cairn-01.otd` — A balanced cairn of 3 smoothed stones.
+- `stone-cairn-02.otd` — A balanced cairn of 4 smoothed stones.
+- `stone-cairn-03.otd` — A balanced cairn of 3 smoothed stones.
+- `stone-cairn-04.otd` — A balanced cairn of 5 smoothed stones.
+- `stone-cairn-05.otd` — A balanced cairn of 4 smoothed stones.
+- `stone-cairn-06.otd` — A balanced cairn of 5 smoothed stones.
+- `stone-column-01.otd` — A classical column with a square capital.
+- `stone-column-02.otd` — A classical column with a square capital.
+- `stone-column-03.otd` — A classical column with a square capital.
+- `stone-column-04.otd` — A classical column with a square capital.
+- `stone-column-05.otd` — A classical column with a square capital.
+- `stone-column-06.otd` — A classical column with a square capital.
+- `stone-column-07.otd` — A classical column with a square capital.
+- `stone-column-08.otd` — A classical column with a square capital.
+- `stone-pebbles-01.otd` — A field of smooth pebbles.
+- `stone-pebbles-02.otd` — A field of smooth pebbles.
+- `stone-pebbles-03.otd` — A field of smooth pebbles.
+- `stone-pebbles-04.otd` — A field of smooth pebbles.
+- `stone-pebbles-05.otd` — A field of smooth pebbles.
+- `stone-pebbles-06.otd` — A field of smooth pebbles.
+- `stone-retaining-wall-01.otd` — A hollow stone retaining wall.
+- `stone-retaining-wall-02.otd` — A hollow stone retaining wall.
+- `stone-retaining-wall-03.otd` — A hollow stone retaining wall.
+- `stone-slab-01.otd` — A polished marble floor slab.
+- `stone-slab-02.otd` — A polished marble floor slab.
+- `stone-slab-03.otd` — A polished marble floor slab.
+- `stone-slab-04.otd` — A polished marble floor slab.
+- `stone-slab-05.otd` — A polished marble floor slab.
+- `stone-slab-06.otd` — A polished marble floor slab.
+- `stone.otd` — Three dressed stone blocks in a row.
+- `water-boat-01.otd` — A hollow wooden boat hull floating in a tank.
+- `water-boat-02.otd` — A hollow wooden boat hull floating in a tank.
+- `water-boat-03.otd` — A hollow wooden boat hull floating in a tank.
+- `water-boat-04.otd` — A hollow wooden boat hull floating in a tank.
+- `water-boat-05.otd` — A hollow wooden boat hull floating in a tank.
+- `water-boat-06.otd` — A hollow wooden boat hull floating in a tank.
+- `water-buoy-01.otd` — A plastic buoy bobbing on the water plane.
+- `water-buoy-02.otd` — A plastic buoy bobbing on the water plane.
+- `water-buoy-03.otd` — A plastic buoy bobbing on the water plane.
+- `water-buoy-04.otd` — A plastic buoy bobbing on the water plane.
+- `water-buoy-05.otd` — A plastic buoy bobbing on the water plane.
+- `water-float-fabric-04.otd` — A fabric cube dropped into water — floats or sinks?
+- `water-float-fabric-08.otd` — A fabric cube dropped into water — floats or sinks?
+- `water-float-oak-01.otd` — A oak cube dropped into water — floats or sinks?
+- `water-float-oak-03.otd` — A oak cube dropped into water — floats or sinks?
+- `water-float-pine-05.otd` — A pine cube dropped into water — floats or sinks?
+- `water-float-pine-07.otd` — A pine cube dropped into water — floats or sinks?
+- `water-float-plastic-02.otd` — A plastic cube dropped into water — floats or sinks?
+- `water-float-wood-06.otd` — A wood cube dropped into water — floats or sinks?
+- `water-ice-cube.otd` — An ice-cube float test using a white plastic stand-in.
+- `water-island-01.otd` — A terrain island rising out of the water plane.
+- `water-island-02.otd` — A terrain island rising out of the water plane.
+- `water-island-03.otd` — A terrain island rising out of the water plane.
+- `water-island-04.otd` — A terrain island rising out of the water plane.
+- `water-sink-brass-04.otd` — A brass ball dropped into water — it sinks.
+- `water-sink-bronze-01.otd` — A bronze ball dropped into water — it sinks.
+- `water-sink-bronze-06.otd` — A bronze ball dropped into water — it sinks.
+- `water-sink-chrome-02.otd` — A chrome ball dropped into water — it sinks.
+- `water-sink-stainless-05.otd` — A stainless ball dropped into water — it sinks.
+- `water-sink-steel-03.otd` — A steel ball dropped into water — it sinks.
+- `water.otd` — A water surface with a wooden block — simulate: float decides the waterline.
+- `wood-crate-01.otd` — A hollow wooden shipping crate.
+- `wood-crate-02.otd` — A hollow wooden shipping crate.
+- `wood-crate-03.otd` — A hollow wooden shipping crate.
+- `wood-crate-04.otd` — A hollow wooden shipping crate.
+- `wood-crate-05.otd` — A hollow wooden shipping crate.
+- `wood-crate-06.otd` — A hollow wooden shipping crate.
+- `wood-cutting-board-01.otd` — A thick oak cutting-board slab.
+- `wood-cutting-board-02.otd` — A thick oak cutting-board slab.
+- `wood-cutting-board-03.otd` — A thick oak cutting-board slab.
+- `wood-cutting-board-04.otd` — A thick oak cutting-board slab.
+- `wood-cutting-board-05.otd` — A thick oak cutting-board slab.
+- `wood-fence-01.otd` — A fence run with 7 posts and one rail.
+- `wood-fence-02.otd` — A fence run with 8 posts and one rail.
+- `wood-fence-03.otd` — A fence run with 5 posts and one rail.
+- `wood-fence-04.otd` — A fence run with 7 posts and one rail.
+- `wood-log-pile-01.otd` — A firewood pile of horizontal logs.
+- `wood-log-pile-02.otd` — A firewood pile of horizontal logs.
+- `wood-log-pile-03.otd` — A firewood pile of horizontal logs.
+- `wood-log-pile-04.otd` — A firewood pile of horizontal logs.
+- `wood-log-pile-05.otd` — A firewood pile of horizontal logs.
+- `wood-log-pile-06.otd` — A firewood pile of horizontal logs.
+- `wood-plank-stack-01.otd` — A slightly offset stack of 6 planks.
+- `wood-plank-stack-02.otd` — A slightly offset stack of 3 planks.
+- `wood-plank-stack-03.otd` — A slightly offset stack of 5 planks.
+- `wood-plank-stack-04.otd` — A slightly offset stack of 3 planks.
+- `wood-plank-stack-05.otd` — A slightly offset stack of 5 planks.
+- `wood-plank-stack-06.otd` — A slightly offset stack of 4 planks.
+- `wood-plank-stack-07.otd` — A slightly offset stack of 6 planks.
+- `wood-plank-stack-08.otd` — A slightly offset stack of 6 planks.
+- `wood.otd` — A neat stack of oak planks — the classic lumber-yard scene.

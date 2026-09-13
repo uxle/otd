@@ -1,0 +1,5 @@
+# The word WORLD rendered as real 3D letters.
+scene "Word WORLD"
+
+labelX = text "WORLD" size: 2.5cm depth: 12mm color: lightskyblue
+ask "mass?"

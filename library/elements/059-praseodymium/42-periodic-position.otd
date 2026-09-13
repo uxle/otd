@@ -1,0 +1,8 @@
+# Periodic Position
+# Praseodymium (Pr) — real density 6.773 g/cm³. period 6, group 3.
+scene "Praseodymium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #dfffaf at (48mm, 3mm, 120mm)
+label = text "Pr" at (42mm, 4mm, 115mm)
+numtext = text "59" at (55mm, 4mm, 126mm)

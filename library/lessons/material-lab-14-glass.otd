@@ -1,0 +1,7 @@
+# Hands-on lab: measure a glass sample.
+scene "Material Lab: Glass"
+
+sample1 = cylinder(r: 2cm, h: 5cm) material: glass
+ask "mass?"
+ask "density?"
+ask "will it float?"

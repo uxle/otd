@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Magnesium (Mg) — real density 1.738 g/cm³. V = M/ρ = 24.305/1.738 = 14.0 cm³ per mole.
+scene "Magnesium Molar Volume Cube"
+
+mole_cube = cube 2.41cm color: #8aff00 at (0, 1.20cm, 0)
+# one mole of atoms: 6.022e23 atoms of Magnesium, 24.305 g, drawn at true scale

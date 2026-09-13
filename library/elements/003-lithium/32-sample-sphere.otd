@@ -1,0 +1,6 @@
+# Sample Sphere
+# Lithium (Li) — real density 0.534 g/cm³. 5 mm radius ball.
+scene "Lithium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #cc80ff at (0, 5mm, 0)
+simulate: drop

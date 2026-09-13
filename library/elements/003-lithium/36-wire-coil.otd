@@ -1,0 +1,5 @@
+# Wire Coil
+# Lithium (Li) — real density 0.534 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Lithium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #cc80ff

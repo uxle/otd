@@ -1,0 +1,6 @@
+# Sample Sphere
+# Samarium (Sm) — real density 7.52 g/cm³. 5 mm radius ball.
+scene "Samarium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ff9b9b at (0, 5mm, 0)
+simulate: drop

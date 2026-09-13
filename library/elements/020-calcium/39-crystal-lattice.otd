@@ -1,0 +1,5 @@
+# Crystal Lattice
+# Calcium (Ca) — real density 1.55 g/cm³. simple cubic lattice — packing 50% vs close-packed 74%.
+scene "Calcium Crystal Lattice"
+
+lattice = grid(nx: 3, nz: 3, spacing: (8mm, 8mm)) sphere 2.5mm color: #3dff00

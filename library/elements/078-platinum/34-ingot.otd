@@ -1,0 +1,6 @@
+# Ingot
+# Platinum (Pt) — real density 21.45 g/cm³. cast bar format.
+scene "Platinum Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #d0d0e0 at (0, 5.5mm, 0)
+simulate: drop

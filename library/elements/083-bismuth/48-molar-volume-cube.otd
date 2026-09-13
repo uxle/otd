@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Bismuth (Bi) — real density 9.78 g/cm³. V = M/ρ = 208.98/9.78 = 21.4 cm³ per mole.
+scene "Bismuth Molar Volume Cube"
+
+mole_cube = cube 2.77cm color: #9c7ac7 at (0, 1.39cm, 0)
+# one mole of atoms: 6.022e23 atoms of Bismuth, 208.98 g, drawn at true scale

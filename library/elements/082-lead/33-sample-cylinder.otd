@@ -1,0 +1,7 @@
+# Sample Cylinder
+# Lead (Pb) — real density 11.34 g/cm³. rod format, like lab stock.
+scene "Lead Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) material: lead
+ask "mass?"
+simulate: drop

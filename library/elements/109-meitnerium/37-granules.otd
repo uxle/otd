@@ -1,0 +1,5 @@
+# Granules
+# Meitnerium (Mt) — real density 37.4 g/cm³. small pieces scatter like real granules.
+scene "Meitnerium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 109) sphere 2.5mm color: #d040ff

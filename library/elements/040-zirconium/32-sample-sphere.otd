@@ -1,0 +1,6 @@
+# Sample Sphere
+# Zirconium (Zr) — real density 6.52 g/cm³. 5 mm radius ball.
+scene "Zirconium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #94e0e0 at (0, 5mm, 0)
+simulate: drop

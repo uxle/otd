@@ -1,0 +1,5 @@
+# A square drawn flat and pulled up.
+scene "Extruded Square"
+
+plate1 = extrude [(0, 0), (6cm, 0), (6cm, 6cm), (0, 6cm)] depth: 1cm
+ask "volume?"

@@ -1,0 +1,5 @@
+# Crystal Lattice
+# Scandium (Sc) — real density 2.985 g/cm³. simple cubic lattice — packing 50% vs close-packed 74%.
+scene "Scandium Crystal Lattice"
+
+lattice = grid(nx: 3, nz: 3, spacing: (8mm, 8mm)) sphere 2.5mm color: #ffe08a

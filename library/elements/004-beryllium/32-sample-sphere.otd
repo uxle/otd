@@ -1,0 +1,6 @@
+# Sample Sphere
+# Beryllium (Be) — real density 1.85 g/cm³. 5 mm radius ball.
+scene "Beryllium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #c2ff00 at (0, 5mm, 0)
+simulate: drop

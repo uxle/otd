@@ -1,0 +1,5 @@
+# A Loop-subdivided sphere — triangles quadrupled.
+scene "Subdivided 3"
+
+fine1 = sphere(r: 2cm) subdiv(n: 1) color: navajowhite
+ask "triangle count?"

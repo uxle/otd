@@ -1,0 +1,6 @@
+# Sample Sphere
+# Argon (Ar) — real density 0.0018 g/cm³. 5 mm radius ball.
+scene "Argon Sample Sphere"
+
+sample_sphere = sphere 5mm color: #80d1e3 at (0, 5mm, 0)
+simulate: drop

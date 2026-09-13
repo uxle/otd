@@ -1,0 +1,8 @@
+# Periodic Position
+# Fluorine (F) — real density 0.0017 g/cm³. period 2, group 17.
+scene "Fluorine Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #90e050 at (384mm, 3mm, 24mm)
+label = text "F" at (378mm, 4mm, 19mm)
+numtext = text "9" at (391mm, 4mm, 30mm)

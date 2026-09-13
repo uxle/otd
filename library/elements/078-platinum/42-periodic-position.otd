@@ -1,0 +1,8 @@
+# Periodic Position
+# Platinum (Pt) — real density 21.45 g/cm³. period 6, group 10.
+scene "Platinum Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #d0d0e0 at (216mm, 3mm, 120mm)
+label = text "Pt" at (210mm, 4mm, 115mm)
+numtext = text "78" at (223mm, 4mm, 126mm)

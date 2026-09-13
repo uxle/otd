@@ -1,0 +1,5 @@
+# Wire Coil
+# Chlorine (Cl) — real density 0.0032 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Chlorine Wire Coil"
+
+wire = cylinder(r: 1.2mm, h: 70mm) rotate (0, 0, -90deg) color: #1ff01f

@@ -1,0 +1,5 @@
+# Granules
+# Osmium (Os) — real density 22.59 g/cm³. small pieces scatter like real granules.
+scene "Osmium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 76) sphere 2.5mm color: #a0a0b0

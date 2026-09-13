@@ -1,0 +1,5 @@
+# Granules
+# Holmium (Ho) — real density 8.79 g/cm³. small pieces scatter like real granules.
+scene "Holmium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 67) sphere 2.5mm color: #a6d9ff

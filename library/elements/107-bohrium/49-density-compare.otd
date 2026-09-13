@@ -1,0 +1,7 @@
+# Density Compare
+# Bohrium (Bh) — real density 37.1 g/cm³. equal masses: Bohrium vs water — sides ∝ (1/ρ)^(1/3).
+scene "Bohrium Density Compare"
+
+element_cube = cube 6.0mm color: #a080ff at (-20mm, 3.0mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 295.9 g — the water cube is the reference

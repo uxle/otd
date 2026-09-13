@@ -1,0 +1,6 @@
+# A bronze ingot with chamfered proportions.
+scene "Bronze Ingot"
+
+ingot = wedge(w: 8cm, d: 4cm, h: 3cm) material: bronze
+ask "mass?"
+ask "density?"

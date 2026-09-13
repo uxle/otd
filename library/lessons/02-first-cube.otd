@@ -1,0 +1,5 @@
+# A cube with default size 2 cm.
+scene "Your First Cube — Lesson 02"
+
+cube
+ask "volume?"

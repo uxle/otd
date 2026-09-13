@@ -1,0 +1,6 @@
+# Sample Sphere
+# Curium (Cm) — real density 13.51 g/cm³. 5 mm radius ball.
+scene "Curium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #80ffa0 at (0, 5mm, 0)
+simulate: drop

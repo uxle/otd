@@ -1,0 +1,5 @@
+# Granules
+# Einsteinium (Es) — real density 8.84 g/cm³. small pieces scatter like real granules.
+scene "Einsteinium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 99) sphere 2.5mm color: #40ff10

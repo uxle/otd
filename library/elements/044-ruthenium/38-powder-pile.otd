@@ -1,0 +1,5 @@
+# Powder Pile
+# Ruthenium (Ru) — real density 12.45 g/cm³. a poured heap.
+scene "Ruthenium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #a0c0c0

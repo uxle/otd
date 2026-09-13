@@ -1,0 +1,8 @@
+# A tall tower on a wide base.
+scene "Narrow Tower 1"
+
+material: concrete
+baseW = cube(w: 17.8cm, d: 16.3cm, h: 2cm)
+towerC = cube(w: 5.4cm, d: 4.8cm, h: 26cm) at (-1.5cm, 2cm, 0)
+simulate: collapse
+ask "height?"

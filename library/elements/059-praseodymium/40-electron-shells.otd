@@ -1,0 +1,12 @@
+# Electron Shells
+# Praseodymium (Pr) — real density 6.773 g/cm³. configuration [Xe] 4f3 6s2.
+scene "Praseodymium Electron Shells"
+
+define electron = sphere 1mm color: #ffffff
+nucleus = sphere 2.5mm color: #dfffaf
+shell1 = ring(n: 2, radius: 5mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell2 = ring(n: 8, radius: 10mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell3 = ring(n: 18, radius: 15mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell4 = ring(n: 21, radius: 20mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell5 = ring(n: 8, radius: 25mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell6 = ring(n: 2, radius: 30mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)

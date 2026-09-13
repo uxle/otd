@@ -1,0 +1,5 @@
+# The word OTD rendered as real 3D letters.
+scene "Word OTD"
+
+labelX = text "OTD" size: 2.5cm depth: 6mm color: salmon
+ask "mass?"

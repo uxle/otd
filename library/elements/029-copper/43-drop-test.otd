@@ -1,0 +1,7 @@
+# Drop Test
+# Copper (Cu) — real density 8.96 g/cm³. v = √(2gh) — watch the physics console.
+scene "Copper Drop Test"
+
+test_cube = cube 20mm material: copper at (0, 50mm, 0)
+ask "mass?"
+simulate: drop

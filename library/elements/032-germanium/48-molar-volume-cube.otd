@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Germanium (Ge) — real density 5.323 g/cm³. V = M/ρ = 72.63/5.323 = 13.6 cm³ per mole.
+scene "Germanium Molar Volume Cube"
+
+mole_cube = cube 2.39cm color: #668f8f at (0, 1.19cm, 0)
+# one mole of atoms: 6.022e23 atoms of Germanium, 72.63 g, drawn at true scale

@@ -1,0 +1,7 @@
+# Stack Test
+# Nihonium (Nh) — real density 16 g/cm³. three cubes stacked — simulate: collapse checks the load path.
+scene "Nihonium Stack Test"
+
+bottom = cube 20mm color: #ff3060 at (0, 10mm, 0)
+middle = cube 20mm color: #ff3060 at (0, 30mm, 0)
+top = cube 20mm color: #ff3060 at (0, 50mm, 0)

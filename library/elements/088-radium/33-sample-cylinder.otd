@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Radium (Ra) — real density 5.5 g/cm³. rod format, like lab stock.
+scene "Radium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #00ff9d
+simulate: drop

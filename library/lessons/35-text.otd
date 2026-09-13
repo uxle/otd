@@ -1,0 +1,5 @@
+# Real letters, real mass.
+scene "3D Text — Lesson 35"
+
+label1 = text "HELLO" size: 3cm depth: 6mm color: steelblue
+ask "mass?"

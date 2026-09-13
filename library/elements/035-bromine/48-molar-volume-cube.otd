@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Bromine (Br) — real density 3.12 g/cm³. V = M/ρ = 79.904/3.12 = 25.6 cm³ per mole.
+scene "Bromine Molar Volume Cube"
+
+mole_cube = cube 2.95cm color: #a62929 at (0, 1.47cm, 0)
+# one mole of atoms: 6.022e23 atoms of Bromine, 79.904 g, drawn at true scale

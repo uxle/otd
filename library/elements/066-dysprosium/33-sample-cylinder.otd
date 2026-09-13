@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Dysprosium (Dy) — real density 8.54 g/cm³. rod format, like lab stock.
+scene "Dysprosium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #a6ffff
+simulate: drop

@@ -1,0 +1,6 @@
+# A terrain island rising out of the water plane.
+scene "Tiny Island 4"
+
+water = plane(w: 30cm, d: 30cm, t: 2mm) color: deepskyblue
+island = terrain(size: 12cm, peaks: 4cm, roughness: 0.6, seed: 42)
+ask "how many objects?"

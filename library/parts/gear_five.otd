@@ -1,0 +1,9 @@
+# Spur gear with exactly 5 teeth — steel, named gear_five.
+scene "Gear Five"
+
+define tooth = cube(w: 4.5mm, h: 7mm, d: 5.5mm)
+gear_five = group(cylinder(r: 27mm, h: 6mm),
+                    ring(n: 5, radius: 29.5mm) tooth rotate (0, a, 0)) material: steel
+ask "mass?"
+ask "how many objects?"
+simulate: drop

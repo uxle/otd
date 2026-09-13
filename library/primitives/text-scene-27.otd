@@ -1,0 +1,5 @@
+# The word SCENE rendered as real 3D letters.
+scene "Word SCENE"
+
+labelX = text "SCENE" size: 3.1cm depth: 10mm color: moccasin
+ask "mass?"

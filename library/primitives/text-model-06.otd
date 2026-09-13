@@ -1,0 +1,5 @@
+# The word MODEL rendered as real 3D letters.
+scene "Word MODEL"
+
+labelX = text "MODEL" size: 2.8cm depth: 8mm color: lightcoral
+ask "mass?"

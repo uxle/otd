@@ -1,0 +1,7 @@
+# Drop Test
+# Mercury (Hg) — real density 13.534 g/cm³. v = √(2gh) — watch the physics console.
+scene "Mercury Drop Test"
+
+test_cube = cube 20mm material: mercury at (0, 50mm, 0)
+ask "mass?"
+simulate: drop

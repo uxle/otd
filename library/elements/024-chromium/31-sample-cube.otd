@@ -1,0 +1,7 @@
+# Sample Cube
+# Chromium (Cr) — real density 7.19 g/cm³. a 1 cm cube — the reference sample.
+scene "Chromium Sample Cube"
+
+sample_cube = cube 10mm material: chrome at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

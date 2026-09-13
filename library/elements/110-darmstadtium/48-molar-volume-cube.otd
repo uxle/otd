@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Darmstadtium (Ds) — real density 34.8 g/cm³. V = M/ρ = 281.0/34.8 = 8.1 cm³ per mole.
+scene "Darmstadtium Molar Volume Cube"
+
+mole_cube = cube 2.01cm color: #ff30d0 at (0, 1.00cm, 0)
+# one mole of atoms: 6.022e23 atoms of Darmstadtium, 281.0 g, drawn at true scale

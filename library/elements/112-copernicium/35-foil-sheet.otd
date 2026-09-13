@@ -1,0 +1,5 @@
+# Foil Sheet
+# Copernicium (Cn) — real density 23.7 g/cm³. 0.1 mm foil.
+scene "Copernicium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #ff1050 at (0, 0.1mm, 0)

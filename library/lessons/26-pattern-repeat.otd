@@ -1,0 +1,5 @@
+# Copy along a step vector.
+scene "repeat Pattern — Lesson 26"
+
+row1 = repeat(n: 6, step: (4cm, 0, 0)) cylinder(r: 5mm, h: 4cm)
+ask "how many objects?"

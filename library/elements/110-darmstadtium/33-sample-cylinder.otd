@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Darmstadtium (Ds) — real density 34.8 g/cm³. rod format, like lab stock.
+scene "Darmstadtium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #ff30d0
+simulate: drop

@@ -1,0 +1,5 @@
+# A sphere and cube soldered with a smooth fillet.
+scene "Blended Pair 5"
+
+fused1 = blend(sphere(r: 3cm), cube 4cm at (3cm, 0, 0), gap: 7mm)
+ask "mass?"

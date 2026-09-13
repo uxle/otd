@@ -1,0 +1,8 @@
+# Periodic Position
+# Palladium (Pd) — real density 12.02 g/cm³. period 5, group 10.
+scene "Palladium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #d0a0a0 at (216mm, 3mm, 96mm)
+label = text "Pd" at (210mm, 4mm, 91mm)
+numtext = text "46" at (223mm, 4mm, 102mm)

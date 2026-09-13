@@ -1,0 +1,8 @@
+# Periodic Position
+# Lead (Pb) — real density 11.34 g/cm³. period 6, group 14.
+scene "Lead Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm material: lead at (312mm, 3mm, 120mm)
+label = text "Pb" at (306mm, 4mm, 115mm)
+numtext = text "82" at (319mm, 4mm, 126mm)

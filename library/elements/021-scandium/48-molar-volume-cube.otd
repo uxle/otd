@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Scandium (Sc) — real density 2.985 g/cm³. V = M/ρ = 44.956/2.985 = 15.1 cm³ per mole.
+scene "Scandium Molar Volume Cube"
+
+mole_cube = cube 2.47cm color: #ffe08a at (0, 1.23cm, 0)
+# one mole of atoms: 6.022e23 atoms of Scandium, 44.956 g, drawn at true scale

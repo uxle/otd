@@ -1,0 +1,9 @@
+# A chrome ball drop with an assert sanity gate.
+scene "Impact Test 5"
+
+# impact speed check: v = √(2gh)
+ball1 = sphere(r: 2cm) at (0, 39cm, 0) material: chrome
+gravity: earth
+simulate: drop
+assert true, "checked"
+ask "mass?"

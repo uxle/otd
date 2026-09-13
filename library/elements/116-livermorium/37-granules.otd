@@ -1,0 +1,5 @@
+# Granules
+# Livermorium (Lv) — real density 12.9 g/cm³. small pieces scatter like real granules.
+scene "Livermorium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 116) sphere 2.5mm color: #ff9040

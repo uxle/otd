@@ -1,0 +1,7 @@
+# Density Compare
+# Nickel (Ni) — real density 8.908 g/cm³. equal masses: Nickel vs water — sides ∝ (1/ρ)^(1/3).
+scene "Nickel Density Compare"
+
+element_cube = cube 9.6mm color: #50d050 at (-20mm, 4.8mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 71.1 g — the water cube is the reference

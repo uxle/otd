@@ -1,0 +1,6 @@
+# Sample Sphere
+# Neon (Ne) — real density 0.0009 g/cm³. 5 mm radius ball.
+scene "Neon Sample Sphere"
+
+sample_sphere = sphere 5mm color: #b3e3f5 at (0, 5mm, 0)
+simulate: drop

@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Platinum (Pt) — real density 21.45 g/cm³. V = M/ρ = 195.08/21.45 = 9.1 cm³ per mole.
+scene "Platinum Molar Volume Cube"
+
+mole_cube = cube 2.09cm color: #d0d0e0 at (0, 1.04cm, 0)
+# one mole of atoms: 6.022e23 atoms of Platinum, 195.08 g, drawn at true scale

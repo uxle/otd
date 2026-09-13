@@ -1,0 +1,5 @@
+# Granules
+# Iron (Fe) — real density 7.874 g/cm³. small pieces scatter like real granules.
+scene "Iron Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 26) sphere 2.5mm material: iron

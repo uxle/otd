@@ -1,0 +1,7 @@
+# Density Compare
+# Osmium (Os) — real density 22.59 g/cm³. equal masses: Osmium vs water — sides ∝ (1/ρ)^(1/3).
+scene "Osmium Density Compare"
+
+element_cube = cube 7.1mm color: #a0a0b0 at (-20mm, 3.5mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 180.2 g — the water cube is the reference

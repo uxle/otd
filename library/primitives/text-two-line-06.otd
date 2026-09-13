@@ -1,0 +1,6 @@
+# Two text lines set side by side.
+scene "Two Lines 6"
+
+line1 = text "OTD" size: 2.5cm depth: 5mm color: steelblue
+line2 = text "2026" size: 2.5cm depth: 5mm color: gray at (0, 0, 6cm)
+ask "how many objects?"

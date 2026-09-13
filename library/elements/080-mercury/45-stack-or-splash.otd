@@ -1,0 +1,7 @@
+# Splash Test
+# Mercury (Hg) — real density 13.534 g/cm³. liquids splash — ripples obey c = √(gH).
+scene "Mercury Splash Test"
+
+pool = cube(w: 90mm, d: 90mm, h: 30mm) material: mercury
+ball = sphere 12mm material: steel at (0, 70mm, 0)
+simulate: splash

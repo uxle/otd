@@ -1,0 +1,6 @@
+# Sample Sphere
+# Vanadium (V) — real density 6.11 g/cm³. 5 mm radius ball.
+scene "Vanadium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #a6a6ab at (0, 5mm, 0)
+simulate: drop

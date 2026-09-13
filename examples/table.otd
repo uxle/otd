@@ -1,0 +1,14 @@
+# Oak dining table with four tapered legs
+scene "Dining Table"
+
+define leg = cylinder(top: 3cm, bottom: 4cm, height: 70cm) material: oak
+
+top = cube(w: 90cm, d: 60cm, h: 4cm) at (0, 70cm, 0) material: oak
+
+use leg at (-40cm, 0, -25cm)
+use leg at (40cm, 0, -25cm)
+use leg at (-40cm, 0, 25cm)
+use leg at (40cm, 0, 25cm)
+
+ask "mass?"
+ask "height?"

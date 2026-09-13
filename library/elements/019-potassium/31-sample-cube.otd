@@ -1,0 +1,7 @@
+# Sample Cube
+# Potassium (K) — real density 0.862 g/cm³. a 1 cm cube — the reference sample.
+scene "Potassium Sample Cube"
+
+sample_cube = cube 10mm color: #8f40d4 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Sulfur (S) — real density 2.07 g/cm³. V = M/ρ = 32.06/2.07 = 15.5 cm³ per mole.
+scene "Sulfur Molar Volume Cube"
+
+mole_cube = cube 2.49cm color: #ffff30 at (0, 1.25cm, 0)
+# one mole of atoms: 6.022e23 atoms of Sulfur, 32.06 g, drawn at true scale

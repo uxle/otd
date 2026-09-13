@@ -1,0 +1,7 @@
+# Sample Cube
+# Sodium (Na) — real density 0.971 g/cm³. a 1 cm cube — the reference sample.
+scene "Sodium Sample Cube"
+
+sample_cube = cube 10mm color: #ab5cf2 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

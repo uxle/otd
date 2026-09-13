@@ -1,0 +1,6 @@
+# A vase skinned from 2 equal-corner sections.
+scene "Loft Vase 2"
+
+vaseX = loft(sections: [[(3.3cm, 0.0cm), (1.0cm, 3.1cm), (-2.7cm, 1.9cm), (-2.7cm, -1.9cm), (1.0cm, -3.1cm), (3.3cm, -0.0cm)], [(2.5cm, 7.0cm), (0.8cm, 9.4cm), (-2.0cm, 8.5cm), (-2.0cm, 5.5cm), (0.8cm, 4.6cm), (2.5cm, 7.0cm)]])
+ask "mass?"
+ask "height?"

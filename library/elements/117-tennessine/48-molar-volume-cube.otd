@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Tennessine (Ts) — real density 7.2 g/cm³. V = M/ρ = 294.0/7.2 = 40.8 cm³ per mole.
+scene "Tennessine Molar Volume Cube"
+
+mole_cube = cube 3.44cm color: #ffb040 at (0, 1.72cm, 0)
+# one mole of atoms: 6.022e23 atoms of Tennessine, 294.0 g, drawn at true scale

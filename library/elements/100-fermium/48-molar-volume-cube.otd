@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Fermium (Fm) — real density 9.7 g/cm³. V = M/ρ = 257.0/9.7 = 26.5 cm³ per mole.
+scene "Fermium Molar Volume Cube"
+
+mole_cube = cube 2.98cm color: #20ff00 at (0, 1.49cm, 0)
+# one mole of atoms: 6.022e23 atoms of Fermium, 257.0 g, drawn at true scale

@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Platinum (Pt) — real density 21.45 g/cm³. rod format, like lab stock.
+scene "Platinum Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #d0d0e0
+simulate: drop

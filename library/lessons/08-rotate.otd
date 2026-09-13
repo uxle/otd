@@ -1,0 +1,6 @@
+# rotate (x, y, z) spins in place.
+scene "Rotating — Lesson 08"
+
+cube(w: 6cm, d: 1cm, h: 2cm) rotate (0, 45deg, 0)
+cube(w: 6cm, d: 1cm, h: 2cm) rotate (0, 0, 90deg) at (0, 0, 5cm)
+ask "how many objects?"

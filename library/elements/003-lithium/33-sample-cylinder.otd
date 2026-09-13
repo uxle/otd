@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Lithium (Li) — real density 0.534 g/cm³. rod format, like lab stock.
+scene "Lithium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #cc80ff
+simulate: drop

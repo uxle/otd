@@ -1,0 +1,5 @@
+# The word HOUSE rendered as real 3D letters.
+scene "Word HOUSE"
+
+labelX = text "HOUSE" size: 2.6cm depth: 11mm color: dodgerblue
+ask "mass?"

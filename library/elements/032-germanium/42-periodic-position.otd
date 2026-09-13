@@ -1,0 +1,8 @@
+# Periodic Position
+# Germanium (Ge) — real density 5.323 g/cm³. period 4, group 14.
+scene "Germanium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #668f8f at (312mm, 3mm, 72mm)
+label = text "Ge" at (306mm, 4mm, 67mm)
+numtext = text "32" at (319mm, 4mm, 78mm)

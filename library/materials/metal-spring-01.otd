@@ -1,0 +1,7 @@
+# A coiled chrome spring.
+scene "Chrome Spring"
+
+material: chrome
+spring = helix(radius: 2.1cm, pitch: 0.8cm, turns: 4.6, tube: 2mm)
+ask "mass?"
+ask "inertia?"

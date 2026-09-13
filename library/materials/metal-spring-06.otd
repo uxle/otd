@@ -1,0 +1,7 @@
+# A coiled aluminum spring.
+scene "Aluminum Spring"
+
+material: aluminum
+spring = helix(radius: 3.5cm, pitch: 0.6cm, turns: 5.7, tube: 2.5mm)
+ask "mass?"
+ask "inertia?"

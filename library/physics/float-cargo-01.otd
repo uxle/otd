@@ -1,0 +1,8 @@
+# A loaded hull — does it still float?
+scene "Cargo Boat 1"
+
+water1 = plane(w: 40cm, d: 25cm, t: 2mm) color: deepskyblue
+hull1 = cube(w: 18cm, d: 9cm, h: 5cm) - hollow(wall: 6mm, open: top) at (0, 13cm, 0) material: wood
+cargo1 = sphere(r: 2cm) at (0, 17cm, 0) material: gold
+simulate: float
+ask "will it float?"

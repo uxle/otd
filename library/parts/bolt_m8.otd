@@ -1,0 +1,7 @@
+# Hex bolt M8 — one material (steel), named part, real physics.
+scene "Hex Bolt M8"
+
+shank = cylinder(r: 4.0mm, h: 48mm) material: steel
+head = prism(sides: 6, r: 7.6mm, h: 5.2mm) at (0, 48mm, 0) material: steel
+ask "mass?"
+simulate: drop

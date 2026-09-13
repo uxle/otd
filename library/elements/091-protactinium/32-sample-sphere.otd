@@ -1,0 +1,6 @@
+# Sample Sphere
+# Protactinium (Pa) — real density 15.37 g/cm³. 5 mm radius ball.
+scene "Protactinium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #00bfff at (0, 5mm, 0)
+simulate: drop

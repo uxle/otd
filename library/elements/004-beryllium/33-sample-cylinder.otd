@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Beryllium (Be) — real density 1.85 g/cm³. rod format, like lab stock.
+scene "Beryllium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #c2ff00
+simulate: drop

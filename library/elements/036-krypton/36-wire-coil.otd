@@ -1,0 +1,5 @@
+# Wire Coil
+# Krypton (Kr) — real density 0.0037 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Krypton Wire Coil"
+
+wire = cylinder(r: 1.2mm, h: 70mm) rotate (0, 0, -90deg) color: #5cb8d1

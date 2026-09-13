@@ -1,0 +1,6 @@
+# A brass ingot with chamfered proportions.
+scene "Brass Ingot"
+
+ingot = wedge(w: 8cm, d: 4cm, h: 3cm) material: brass
+ask "mass?"
+ask "density?"

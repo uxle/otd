@@ -1,0 +1,93 @@
+# library/physics
+
+drop / float / collapse simulation experiments.
+
+**87 files.**
+
+- `collapse-narrow-01.otd` — A tall tower on a wide base.
+- `collapse-narrow-02.otd` — A tall tower on a wide base.
+- `collapse-narrow-03.otd` — A tall tower on a wide base.
+- `collapse-narrow-04.otd` — A tall tower on a wide base.
+- `collapse-narrow-05.otd` — A tall tower on a wide base.
+- `collapse-narrow-06.otd` — A tall tower on a wide base.
+- `collapse-pyramid-01.otd` — 4 levels of blocks tested for stability.
+- `collapse-pyramid-02.otd` — 5 levels of blocks tested for stability.
+- `collapse-pyramid-03.otd` — 4 levels of blocks tested for stability.
+- `collapse-pyramid-04.otd` — 5 levels of blocks tested for stability.
+- `collapse-pyramid-05.otd` — 3 levels of blocks tested for stability.
+- `collapse-pyramid-06.otd` — 3 levels of blocks tested for stability.
+- `collapse-seesaw-01.otd` — A plank on a wedge fulcrum with a weight.
+- `collapse-seesaw-02.otd` — A plank on a wedge fulcrum with a weight.
+- `collapse-seesaw-03.otd` — A plank on a wedge fulcrum with a weight.
+- `collapse-seesaw-04.otd` — A plank on a wedge fulcrum with a weight.
+- `collapse-seesaw-05.otd` — A plank on a wedge fulcrum with a weight.
+- `collapse-seesaw-06.otd` — A plank on a wedge fulcrum with a weight.
+- `collapse-stack-01.otd` — 5 blocks with drift — stable or tips?
+- `collapse-stack-02.otd` — 6 blocks with drift — stable or tips?
+- `collapse-stack-03.otd` — 8 blocks with drift — stable or tips?
+- `collapse-stack-04.otd` — 8 blocks — stable or tips?
+- `collapse-stack-05.otd` — 8 blocks with drift — stable or tips?
+- `collapse-stack-06.otd` — 5 blocks with drift — stable or tips?
+- `collapse-stack-07.otd` — 8 blocks — stable or tips?
+- `drop-basic.otd` — Drop a rubber ball from one meter — v = √(2gh).
+- `drop-bounce-race-01.otd` — Rubber vs wood vs glass — restitution decides.
+- `drop-bounce-race-02.otd` — Rubber vs wood vs glass — restitution decides.
+- `drop-bounce-race-03.otd` — Rubber vs wood vs glass — restitution decides.
+- `drop-bounce-race-04.otd` — Rubber vs wood vs glass — restitution decides.
+- `drop-bounce-race-05.otd` — Rubber vs wood vs glass — restitution decides.
+- `drop-bounce-race-06.otd` — Rubber vs wood vs glass — restitution decides.
+- `drop-ceramic-01.otd` — A ceramic ball dropped from 45 cm.
+- `drop-ceramic-06.otd` — A ceramic ball dropped from 91 cm.
+- `drop-copper-05.otd` — A copper ball dropped from 70 cm.
+- `drop-custom-g-01.otd` — A drop under g = 11.5 m/s².
+- `drop-custom-g-02.otd` — A drop under g = 11.7 m/s².
+- `drop-custom-g-03.otd` — A drop under g = 3.8 m/s².
+- `drop-custom-g-04.otd` — A drop under g = 14.6 m/s².
+- `drop-custom-g-05.otd` — A drop under g = 12 m/s².
+- `drop-custom-g-06.otd` — A drop under g = 8.3 m/s².
+- `drop-impact-01.otd` — A fabric ball drop with an assert sanity gate.
+- `drop-impact-02.otd` — A teak ball drop with an assert sanity gate.
+- `drop-impact-03.otd` — A stainless ball drop with an assert sanity gate.
+- `drop-impact-04.otd` — A stainless ball drop with an assert sanity gate.
+- `drop-impact-05.otd` — A chrome ball drop with an assert sanity gate.
+- `drop-lead-04.otd` — A lead ball dropped from 30 cm.
+- `drop-lead-08.otd` — A lead ball dropped from 72 cm.
+- `drop-oak-02.otd` — A oak ball dropped from 92 cm.
+- `drop-onto-plate-01.otd` — A ball released above a wooden plate.
+- `drop-onto-plate-02.otd` — A ball released above a wooden plate.
+- `drop-onto-plate-03.otd` — A ball released above a wooden plate.
+- `drop-onto-plate-04.otd` — A ball released above a wooden plate.
+- `drop-onto-plate-05.otd` — A ball released above a wooden plate.
+- `drop-pine-07.otd` — A pine ball dropped from 98 cm.
+- `drop-teak-03.otd` — A teak ball dropped from 36 cm.
+- `float-aluminum-01.otd` — A aluminum cube meets the waterline.
+- `float-basic.otd` — Wood floats, iron sinks — Archimedes on real meshes.
+- `float-cargo-01.otd` — A loaded hull — does it still float?
+- `float-cargo-02.otd` — A loaded hull — does it still float?
+- `float-cargo-03.otd` — A loaded hull — does it still float?
+- `float-cargo-04.otd` — A loaded hull — does it still float?
+- `float-cargo-05.otd` — A loaded hull — does it still float?
+- `float-cargo-06.otd` — A loaded hull — does it still float?
+- `float-iceberg-01.otd` — How much of the berg sits below water?
+- `float-iceberg-02.otd` — How much of the berg sits below water?
+- `float-iceberg-03.otd` — How much of the berg sits below water?
+- `float-iceberg-04.otd` — How much of the berg sits below water?
+- `float-iceberg-05.otd` — How much of the berg sits below water?
+- `float-iceberg-06.otd` — How much of the berg sits below water?
+- `float-silver-08.otd` — A silver cube meets the waterline.
+- `float-stainless-05.otd` — A stainless cube meets the waterline.
+- `float-submarine-01.otd` — A steel body with a floatation bladder.
+- `float-submarine-02.otd` — A steel body with a floatation bladder.
+- `float-submarine-03.otd` — A steel body with a floatation bladder.
+- `float-submarine-04.otd` — A steel body with a floatation bladder.
+- `float-submarine-05.otd` — A steel body with a floatation bladder.
+- `float-teak-07.otd` — A teak cube meets the waterline.
+- `float-titanium-04.otd` — A titanium cube meets the waterline.
+- `float-titanium-06.otd` — A titanium cube meets the waterline.
+- `float-triptych-01.otd` — Three materials, one waterline test.
+- `float-triptych-02.otd` — Three materials, one waterline test.
+- `float-triptych-03.otd` — Three materials, one waterline test.
+- `float-triptych-04.otd` — Three materials, one waterline test.
+- `float-triptych-05.otd` — Three materials, one waterline test.
+- `float-wood-02.otd` — A wood cube meets the waterline.
+- `float-zinc-03.otd` — A zinc cube meets the waterline.

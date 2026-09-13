@@ -1,0 +1,5 @@
+# Granules
+# Dysprosium (Dy) — real density 8.54 g/cm³. small pieces scatter like real granules.
+scene "Dysprosium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 66) sphere 2.5mm color: #a6ffff

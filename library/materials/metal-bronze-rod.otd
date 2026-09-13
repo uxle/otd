@@ -1,0 +1,5 @@
+# A round bronze bar standing on end.
+scene "Bronze Rod"
+
+rod = cylinder(r: 1.5cm, h: 20cm) material: bronze
+ask "mass?"

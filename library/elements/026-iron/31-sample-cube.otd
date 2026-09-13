@@ -1,0 +1,7 @@
+# Sample Cube
+# Iron (Fe) — real density 7.874 g/cm³. a 1 cm cube — the reference sample.
+scene "Iron Sample Cube"
+
+sample_cube = cube 10mm material: iron at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

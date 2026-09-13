@@ -1,0 +1,5 @@
+# Granules
+# Darmstadtium (Ds) — real density 34.8 g/cm³. small pieces scatter like real granules.
+scene "Darmstadtium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 110) sphere 2.5mm color: #ff30d0

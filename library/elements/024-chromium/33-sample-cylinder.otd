@@ -1,0 +1,7 @@
+# Sample Cylinder
+# Chromium (Cr) — real density 7.19 g/cm³. rod format, like lab stock.
+scene "Chromium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) material: chrome
+ask "mass?"
+simulate: drop

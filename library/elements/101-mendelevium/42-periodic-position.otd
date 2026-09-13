@@ -1,0 +1,8 @@
+# Periodic Position
+# Mendelevium (Md) — real density 10.3 g/cm³. period 7, group 15.
+scene "Mendelevium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #00ff80 at (336mm, 3mm, 144mm)
+label = text "Md" at (330mm, 4mm, 139mm)
+numtext = text "101" at (343mm, 4mm, 150mm)

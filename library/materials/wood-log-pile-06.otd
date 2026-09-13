@@ -1,0 +1,11 @@
+# A firewood pile of horizontal logs.
+scene "Log Pile 6"
+
+material: pine
+define log = capsule(r: 2.3cm, h: 31.9cm)
+for lvl = 0 to 2
+  for k = 0 to 2
+    use log at (k * 5.5cm, lvl * 5cm, 0) rotate (0, 0, 90deg)
+  end
+end
+ask "mass?"

@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Gadolinium (Gd) — real density 7.9 g/cm³. rod format, like lab stock.
+scene "Gadolinium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #e6ffa6
+simulate: drop

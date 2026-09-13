@@ -1,0 +1,6 @@
+# Drop Test
+# Plutonium (Pu) — real density 19.85 g/cm³. v = √(2gh) — watch the physics console.
+scene "Plutonium Drop Test"
+
+test_cube = cube 20mm color: #00e080 # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

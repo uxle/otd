@@ -1,0 +1,6 @@
+# A stainless ingot with chamfered proportions.
+scene "Stainless Ingot"
+
+ingot = wedge(w: 8cm, d: 4cm, h: 3cm) material: stainless
+ask "mass?"
+ask "density?"

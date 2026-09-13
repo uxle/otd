@@ -1,0 +1,5 @@
+# Granules
+# Rutherfordium (Rf) — real density 23.2 g/cm³. small pieces scatter like real granules.
+scene "Rutherfordium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 104) sphere 2.5mm color: #50d0ff

@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Ytterbium (Yb) — real density 6.9 g/cm³. V = M/ρ = 173.05/6.9 = 25.1 cm³ per mole.
+scene "Ytterbium Molar Volume Cube"
+
+mole_cube = cube 2.93cm color: #bfbfe8 at (0, 1.46cm, 0)
+# one mole of atoms: 6.022e23 atoms of Ytterbium, 173.05 g, drawn at true scale

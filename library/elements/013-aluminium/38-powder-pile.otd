@@ -1,0 +1,5 @@
+# Powder Pile
+# Aluminium (Al) — real density 2.7 g/cm³. a poured heap.
+scene "Aluminium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) material: aluminum

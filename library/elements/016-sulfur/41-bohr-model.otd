@@ -1,0 +1,9 @@
+# Bohr Model
+# Sulfur (S) — real density 2.07 g/cm³. nucleus + first shells, tilted for depth.
+scene "Sulfur Bohr Model"
+
+define electron = sphere 1.1mm color: #ffffff
+nucleus = sphere 3mm color: #ffff30
+orb1 = ring(n: 2, radius: 6mm) electron rotate (0, a, 0)
+orb2 = ring(n: 8, radius: 12mm) electron rotate (0, a, 0)
+orb3 = ring(n: 6, radius: 18mm) electron rotate (0, a, 0)

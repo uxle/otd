@@ -1,0 +1,8 @@
+# Periodic Position
+# Radon (Rn) — real density 0.0097 g/cm³. period 6, group 18.
+scene "Radon Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #cc0080 at (408mm, 3mm, 120mm)
+label = text "Rn" at (402mm, 4mm, 115mm)
+numtext = text "86" at (415mm, 4mm, 126mm)

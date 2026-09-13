@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Gallium (Ga) — real density 5.91 g/cm³. rod format, like lab stock.
+scene "Gallium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #c28f8f
+simulate: drop

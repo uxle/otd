@@ -1,0 +1,6 @@
+# Ingot
+# Cobalt (Co) — real density 8.9 g/cm³. cast bar format.
+scene "Cobalt Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #f090a0 at (0, 5.5mm, 0)
+simulate: drop

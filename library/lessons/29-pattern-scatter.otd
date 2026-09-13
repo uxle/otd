@@ -1,0 +1,5 @@
+# Deterministic randomness with seed.
+scene "scatter Pattern — Lesson 29"
+
+stars1 = scatter(n: 25, radius: 10cm, seed: 42) sphere 3mm color: gold
+ask "how many objects?"

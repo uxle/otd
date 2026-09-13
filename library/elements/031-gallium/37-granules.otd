@@ -1,0 +1,5 @@
+# Granules
+# Gallium (Ga) — real density 5.91 g/cm³. small pieces scatter like real granules.
+scene "Gallium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 31) sphere 2.5mm color: #c28f8f

@@ -1,0 +1,5 @@
+# The word TOWER rendered as real 3D letters.
+scene "Word TOWER"
+
+labelX = text "TOWER" size: 1.8cm depth: 9mm color: chocolate
+ask "mass?"

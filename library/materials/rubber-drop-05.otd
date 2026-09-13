@@ -1,0 +1,8 @@
+# A rubber ball drop test from height.
+scene "Rubber Drop 5"
+
+material: rubber
+ball = sphere(r: 3.4cm) at (0, 44cm, 0)
+gravity: earth
+simulate: drop
+ask "mass?"

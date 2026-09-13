@@ -1,0 +1,8 @@
+# Periodic Position
+# Chromium (Cr) — real density 7.19 g/cm³. period 4, group 6.
+scene "Chromium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm material: chrome at (120mm, 3mm, 72mm)
+label = text "Cr" at (114mm, 4mm, 67mm)
+numtext = text "24" at (127mm, 4mm, 78mm)

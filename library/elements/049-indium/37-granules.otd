@@ -1,0 +1,5 @@
+# Granules
+# Indium (In) — real density 7.31 g/cm³. small pieces scatter like real granules.
+scene "Indium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 49) sphere 2.5mm color: #a67573

@@ -1,0 +1,7 @@
+# Copies are independent and placeable.
+scene "use + placement — Lesson 22"
+
+define post = cylinder(r: 1cm, h: 20cm)
+use post at (-10cm, 0, 0)
+use post at (10cm, 0, 0)
+ask "how many objects?"

@@ -1,0 +1,7 @@
+# A scattered pile of loose bricks.
+scene "Brick Pile 4"
+
+material: concrete
+color: firebrick
+pile = scatter(n: 21, radius: 10.8cm, seed: 63) cube(w: 9.5cm, d: 19cm, h: 5.7cm)
+ask "how many objects?"

@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Palladium (Pd) — real density 12.02 g/cm³. V = M/ρ = 106.42/12.02 = 8.9 cm³ per mole.
+scene "Palladium Molar Volume Cube"
+
+mole_cube = cube 2.07cm color: #d0a0a0 at (0, 1.03cm, 0)
+# one mole of atoms: 6.022e23 atoms of Palladium, 106.42 g, drawn at true scale

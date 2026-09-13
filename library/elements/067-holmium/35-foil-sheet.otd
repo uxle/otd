@@ -1,0 +1,5 @@
+# Foil Sheet
+# Holmium (Ho) — real density 8.79 g/cm³. 0.1 mm foil.
+scene "Holmium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #a6d9ff at (0, 0.1mm, 0)

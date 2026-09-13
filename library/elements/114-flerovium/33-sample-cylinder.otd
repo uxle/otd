@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Flerovium (Fl) — real density 14 g/cm³. rod format, like lab stock.
+scene "Flerovium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #ff5050
+simulate: drop

@@ -1,0 +1,5 @@
+# Granules
+# Iridium (Ir) — real density 22.56 g/cm³. small pieces scatter like real granules.
+scene "Iridium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 77) sphere 2.5mm color: #d4d4ff

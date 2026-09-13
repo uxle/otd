@@ -1,0 +1,5 @@
+# Foil Sheet
+# Hafnium (Hf) — real density 13.31 g/cm³. 0.1 mm foil.
+scene "Hafnium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #90b0b0 at (0, 0.1mm, 0)

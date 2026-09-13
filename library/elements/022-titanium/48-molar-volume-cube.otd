@@ -1,0 +1,7 @@
+# Molar Volume Cube
+# Titanium (Ti) — real density 4.506 g/cm³. V = M/ρ = 47.867/4.506 = 10.6 cm³ per mole.
+scene "Titanium Molar Volume Cube"
+
+mole_cube = cube 2.20cm material: titanium at (0, 1.10cm, 0)
+ask "mass?"
+# one mole of atoms: 6.022e23 atoms of Titanium, 47.867 g, drawn at true scale

@@ -1,0 +1,6 @@
+# Sample Sphere
+# Erbium (Er) — real density 9.066 g/cm³. 5 mm radius ball.
+scene "Erbium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #94d9ff at (0, 5mm, 0)
+simulate: drop

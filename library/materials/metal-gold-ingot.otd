@@ -1,0 +1,6 @@
+# A gold ingot with chamfered proportions.
+scene "Gold Ingot"
+
+ingot = wedge(w: 8cm, d: 4cm, h: 3cm) material: gold
+ask "mass?"
+ask "density?"

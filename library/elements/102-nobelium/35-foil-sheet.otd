@@ -1,0 +1,5 @@
+# Foil Sheet
+# Nobelium (No) — real density 9.9 g/cm³. 0.1 mm foil.
+scene "Nobelium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #00ffa0 at (0, 0.1mm, 0)

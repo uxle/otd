@@ -1,0 +1,6 @@
+# Sample Sphere
+# Meitnerium (Mt) — real density 37.4 g/cm³. 5 mm radius ball.
+scene "Meitnerium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #d040ff at (0, 5mm, 0)
+simulate: drop

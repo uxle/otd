@@ -1,0 +1,5 @@
+# Granules
+# Bohrium (Bh) — real density 37.1 g/cm³. small pieces scatter like real granules.
+scene "Bohrium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 107) sphere 2.5mm color: #a080ff

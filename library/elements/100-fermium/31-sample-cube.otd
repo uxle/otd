@@ -1,0 +1,7 @@
+# Sample Cube
+# Fermium (Fm) — real density 9.7 g/cm³. a 1 cm cube — the reference sample.
+scene "Fermium Sample Cube"
+
+sample_cube = cube 10mm color: #20ff00 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

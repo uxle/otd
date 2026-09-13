@@ -1,0 +1,6 @@
+# Sample Sphere
+# Arsenic (As) — real density 5.727 g/cm³. 5 mm radius ball.
+scene "Arsenic Sample Sphere"
+
+sample_sphere = sphere 5mm color: #bd80e3 at (0, 5mm, 0)
+simulate: drop

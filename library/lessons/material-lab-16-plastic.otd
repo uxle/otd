@@ -1,0 +1,7 @@
+# Hands-on lab: measure a plastic sample.
+scene "Material Lab: Plastic"
+
+sample1 = sphere 3cm material: plastic
+ask "mass?"
+ask "density?"
+ask "will it float?"

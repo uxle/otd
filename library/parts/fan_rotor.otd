@@ -1,0 +1,10 @@
+# 5-blade fan rotor — aluminum hub and blades.
+scene "Fan Rotor"
+
+hub = cylinder(r: 12mm, h: 24mm) material: aluminum
+blade1 = cube(w: 40mm, d: 2mm, h: 18mm) at (12mm, 3mm, -9mm) rotate (20deg, 0, 0) material: aluminum
+blade2 = cube(w: 40mm, d: 2mm, h: 18mm) at (12mm, 3mm, -9mm) rotate (20deg, 72deg, 0) material: aluminum
+blade3 = cube(w: 40mm, d: 2mm, h: 18mm) at (12mm, 3mm, -9mm) rotate (20deg, 144deg, 0) material: aluminum
+blade4 = cube(w: 40mm, d: 2mm, h: 18mm) at (12mm, 3mm, -9mm) rotate (20deg, 216deg, 0) material: aluminum
+blade5 = cube(w: 40mm, d: 2mm, h: 18mm) at (12mm, 3mm, -9mm) rotate (20deg, 288deg, 0) material: aluminum
+ask "mass?"

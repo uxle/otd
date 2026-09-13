@@ -1,0 +1,6 @@
+# Sample Sphere
+# Holmium (Ho) — real density 8.79 g/cm³. 5 mm radius ball.
+scene "Holmium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #a6d9ff at (0, 5mm, 0)
+simulate: drop

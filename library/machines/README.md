@@ -1,0 +1,143 @@
+# library/machines
+
+Gears, robots, vehicles and tools.
+
+**137 files.**
+
+- `gear-mesh-01.otd` — Gears with 18 teeth each, rotated to interlock.
+- `gear-mesh-02.otd` — Gears with 13 teeth each, rotated to interlock.
+- `gear-mesh-03.otd` — Gears with 23 teeth each, rotated to interlock.
+- `gear-mesh-04.otd` — Gears with 13 teeth each, rotated to interlock.
+- `gear-mesh-05.otd` — Gears with 13 teeth each, rotated to interlock.
+- `gear-mesh-06.otd` — Gears with 18 teeth each, rotated to interlock.
+- `gear-mesh-07.otd` — Gears with 22 teeth each, rotated to interlock.
+- `gear-mesh-08.otd` — Gears with 17 teeth each, rotated to interlock.
+- `gear-pair.otd` — Two meshing 20-tooth steel gears, half a tooth-pitch apart.
+- `gear-pulley-01.otd` — Two pulleys joined by a belt.
+- `gear-pulley-02.otd` — Two pulleys joined by a belt.
+- `gear-pulley-03.otd` — Two pulleys joined by a belt.
+- `gear-pulley-04.otd` — Two pulleys joined by a belt.
+- `gear-pulley-05.otd` — Two pulleys joined by a belt.
+- `gear-pulley-06.otd` — Two pulleys joined by a belt.
+- `gear-train-01.otd` — Three gears in a row.
+- `gear-train-02.otd` — Three gears in a row.
+- `gear-train-03.otd` — Three gears in a row.
+- `gear-train-04.otd` — Three gears in a row.
+- `gear-train-05.otd` — Three gears in a row.
+- `gear-train-06.otd` — Three gears in a row.
+- `gear-winch-01.otd` — A frame with an axle drum.
+- `gear-winch-02.otd` — A frame with an axle drum.
+- `gear-winch-03.otd` — A frame with an axle drum.
+- `gear-winch-04.otd` — A frame with an axle drum.
+- `gear-worm-01.otd` — A helical worm beside its wheel.
+- `gear-worm-02.otd` — A helical worm beside its wheel.
+- `gear-worm-03.otd` — A helical worm beside its wheel.
+- `gear-worm-04.otd` — A helical worm beside its wheel.
+- `gear-worm-05.otd` — A helical worm beside its wheel.
+- `gear-worm-06.otd` — A helical worm beside its wheel.
+- `robot-arm-basic.otd` — A six-joint robot arm with sphere joints and capsule links.
+- `robot-boxy-01.otd` — A friendly boxy robot with sphere eyes.
+- `robot-boxy-02.otd` — A friendly boxy robot with sphere eyes.
+- `robot-boxy-03.otd` — A friendly boxy robot with sphere eyes.
+- `robot-boxy-04.otd` — A friendly boxy robot with sphere eyes.
+- `robot-boxy-05.otd` — A friendly boxy robot with sphere eyes.
+- `robot-boxy-06.otd` — A friendly boxy robot with sphere eyes.
+- `robot-boxy-07.otd` — A friendly boxy robot with sphere eyes.
+- `robot-crane-01.otd` — A crane with two boom segments and a claw.
+- `robot-crane-02.otd` — A crane with two boom segments and a claw.
+- `robot-crane-03.otd` — A crane with two boom segments and a claw.
+- `robot-crane-04.otd` — A crane with two boom segments and a claw.
+- `robot-crane-05.otd` — A crane with two boom segments and a claw.
+- `robot-crane-06.otd` — A crane with two boom segments and a claw.
+- `robot-drone-01.otd` — A hub with rotor planes.
+- `robot-drone-02.otd` — A hub with rotor planes.
+- `robot-drone-03.otd` — A hub with rotor planes.
+- `robot-drone-04.otd` — A hub with rotor planes.
+- `robot-drone-05.otd` — A hub with rotor planes.
+- `robot-drone-06.otd` — A hub with rotor planes.
+- `robot-rover-01.otd` — A four-wheeled rover with a camera mast.
+- `robot-rover-02.otd` — A four-wheeled rover with a camera mast.
+- `robot-rover-03.otd` — A four-wheeled rover with a camera mast.
+- `robot-rover-04.otd` — A four-wheeled rover with a camera mast.
+- `robot-rover-05.otd` — A four-wheeled rover with a camera mast.
+- `robot-rover-06.otd` — A four-wheeled rover with a camera mast.
+- `robot-rover-07.otd` — A four-wheeled rover with a camera mast.
+- `tool-bolt-01.otd` — A bolt shaft with a hex head.
+- `tool-bolt-02.otd` — A bolt shaft with a hex head.
+- `tool-bolt-03.otd` — A bolt shaft with a hex head.
+- `tool-bolt-04.otd` — A bolt shaft with a hex head.
+- `tool-bolt-05.otd` — A bolt shaft with a hex head.
+- `tool-bolt-06.otd` — A bolt shaft with a hex head.
+- `tool-bracket-01.otd` — A shelled U-bracket.
+- `tool-bracket-02.otd` — A shelled U-bracket.
+- `tool-bracket-03.otd` — A shelled U-bracket.
+- `tool-bracket-04.otd` — A shelled U-bracket.
+- `tool-hammer-01.otd` — A hammer with wooden handle and iron head.
+- `tool-hammer-02.otd` — A hammer with wooden handle and iron head.
+- `tool-hammer-03.otd` — A hammer with wooden handle and iron head.
+- `tool-hammer-04.otd` — A hammer with wooden handle and iron head.
+- `tool-hammer-05.otd` — A hammer with wooden handle and iron head.
+- `tool-hammer-06.otd` — A hammer with wooden handle and iron head.
+- `tool-ladder-01.otd` — A ladder with 5 rungs.
+- `tool-ladder-02.otd` — A ladder with 7 rungs.
+- `tool-ladder-03.otd` — A ladder with 4 rungs.
+- `tool-ladder-04.otd` — A ladder with 7 rungs.
+- `tool-ladder-05.otd` — A ladder with 7 rungs.
+- `tool-ladder-06.otd` — A ladder with 6 rungs.
+- `tool-nut-01.otd` — A hex nut with a bored hole.
+- `tool-nut-02.otd` — A hex nut with a bored hole.
+- `tool-nut-03.otd` — A hex nut with a bored hole.
+- `tool-nut-04.otd` — A hex nut with a bored hole.
+- `tool-nut-05.otd` — A hex nut with a bored hole.
+- `tool-saw-01.otd` — A saw blade with a rubber grip.
+- `tool-saw-02.otd` — A saw blade with a rubber grip.
+- `tool-saw-03.otd` — A saw blade with a rubber grip.
+- `tool-saw-04.otd` — A saw blade with a rubber grip.
+- `tool-saw-05.otd` — A saw blade with a rubber grip.
+- `tool-saw-06.otd` — A saw blade with a rubber grip.
+- `tool-screw-01.otd` — A screw with a helical thread.
+- `tool-screw-02.otd` — A screw with a helical thread.
+- `tool-screw-03.otd` — A screw with a helical thread.
+- `tool-screw-04.otd` — A screw with a helical thread.
+- `tool-screw-05.otd` — A screw with a helical thread.
+- `tool-screw-06.otd` — A screw with a helical thread.
+- `vehicle-balloon-01.otd` — A basket under a great sphere envelope.
+- `vehicle-balloon-02.otd` — A basket under a great sphere envelope.
+- `vehicle-balloon-03.otd` — A basket under a great sphere envelope.
+- `vehicle-balloon-04.otd` — A basket under a great sphere envelope.
+- `vehicle-car-01.otd` — A car body with cabin and four wheels.
+- `vehicle-car-02.otd` — A car body with cabin and four wheels.
+- `vehicle-car-03.otd` — A car body with cabin and four wheels.
+- `vehicle-car-04.otd` — A car body with cabin and four wheels.
+- `vehicle-car-05.otd` — A car body with cabin and four wheels.
+- `vehicle-car-06.otd` — A car body with cabin and four wheels.
+- `vehicle-car-07.otd` — A car body with cabin and four wheels.
+- `vehicle-car-08.otd` — A car body with cabin and four wheels.
+- `vehicle-plane-01.otd` — A capsule fuselage with wings and tail.
+- `vehicle-plane-02.otd` — A capsule fuselage with wings and tail.
+- `vehicle-plane-03.otd` — A capsule fuselage with wings and tail.
+- `vehicle-plane-04.otd` — A capsule fuselage with wings and tail.
+- `vehicle-plane-05.otd` — A capsule fuselage with wings and tail.
+- `vehicle-plane-06.otd` — A capsule fuselage with wings and tail.
+- `vehicle-sailboat-01.otd` — A lofted hull with mast and sail.
+- `vehicle-sailboat-02.otd` — A lofted hull with mast and sail.
+- `vehicle-sailboat-03.otd` — A lofted hull with mast and sail.
+- `vehicle-sailboat-04.otd` — A lofted hull with mast and sail.
+- `vehicle-sailboat-05.otd` — A lofted hull with mast and sail.
+- `vehicle-sailboat-06.otd` — A lofted hull with mast and sail.
+- `vehicle-tank-01.otd` — A tracked vehicle with turret and barrel.
+- `vehicle-tank-02.otd` — A tracked vehicle with turret and barrel.
+- `vehicle-tank-03.otd` — A tracked vehicle with turret and barrel.
+- `vehicle-tank-04.otd` — A tracked vehicle with turret and barrel.
+- `vehicle-train-01.otd` — A locomotive pulling 4 wagons.
+- `vehicle-train-02.otd` — A locomotive pulling 2 wagons.
+- `vehicle-train-03.otd` — A locomotive pulling 2 wagons.
+- `vehicle-train-04.otd` — A locomotive pulling 2 wagons.
+- `vehicle-train-05.otd` — A locomotive pulling 4 wagons.
+- `vehicle-train-06.otd` — A locomotive pulling 2 wagons.
+- `vehicle-truck-01.otd` — A truck with cab and flat bed.
+- `vehicle-truck-02.otd` — A truck with cab and flat bed.
+- `vehicle-truck-03.otd` — A truck with cab and flat bed.
+- `vehicle-truck-04.otd` — A truck with cab and flat bed.
+- `vehicle-truck-05.otd` — A truck with cab and flat bed.
+- `vehicle-truck-06.otd` — A truck with cab and flat bed.

@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Holmium (Ho) — real density 8.79 g/cm³. V = M/ρ = 164.93/8.79 = 18.8 cm³ per mole.
+scene "Holmium Molar Volume Cube"
+
+mole_cube = cube 2.66cm color: #a6d9ff at (0, 1.33cm, 0)
+# one mole of atoms: 6.022e23 atoms of Holmium, 164.93 g, drawn at true scale

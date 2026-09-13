@@ -1,0 +1,7 @@
+# Density Compare
+# Magnesium (Mg) — real density 1.738 g/cm³. equal masses: Magnesium vs water — sides ∝ (1/ρ)^(1/3).
+scene "Magnesium Density Compare"
+
+element_cube = cube 16.6mm color: #8aff00 at (-20mm, 8.3mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 13.9 g — the water cube is the reference

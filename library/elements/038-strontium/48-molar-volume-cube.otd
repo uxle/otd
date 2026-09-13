@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Strontium (Sr) — real density 2.64 g/cm³. V = M/ρ = 87.62/2.64 = 33.2 cm³ per mole.
+scene "Strontium Molar Volume Cube"
+
+mole_cube = cube 3.21cm color: #00ff00 at (0, 1.61cm, 0)
+# one mole of atoms: 6.022e23 atoms of Strontium, 87.62 g, drawn at true scale

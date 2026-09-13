@@ -1,0 +1,6 @@
+# Drop Test
+# Thorium (Th) — real density 11.72 g/cm³. v = √(2gh) — watch the physics console.
+scene "Thorium Drop Test"
+
+test_cube = cube 20mm color: #00a0ff # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

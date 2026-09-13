@@ -1,0 +1,6 @@
+# Sample Sphere
+# Promethium (Pm) — real density 7.26 g/cm³. 5 mm radius ball.
+scene "Promethium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #6aff6a at (0, 5mm, 0)
+simulate: drop

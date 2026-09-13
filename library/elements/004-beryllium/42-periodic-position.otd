@@ -1,0 +1,8 @@
+# Periodic Position
+# Beryllium (Be) — real density 1.85 g/cm³. period 2, group 2.
+scene "Beryllium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #c2ff00 at (24mm, 3mm, 24mm)
+label = text "Be" at (18mm, 4mm, 19mm)
+numtext = text "4" at (31mm, 4mm, 30mm)

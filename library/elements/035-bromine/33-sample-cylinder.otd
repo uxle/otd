@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Bromine (Br) — real density 3.12 g/cm³. rod format, like lab stock.
+scene "Bromine Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #a62929
+simulate: drop

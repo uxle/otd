@@ -1,0 +1,5 @@
+# Wire Coil
+# Helium (He) — real density 0.00018 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Helium Wire Coil"
+
+wire = cylinder(r: 1.2mm, h: 70mm) rotate (0, 0, -90deg) color: #d9ffff

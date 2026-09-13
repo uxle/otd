@@ -1,0 +1,6 @@
+# Drop Test
+# Gadolinium (Gd) — real density 7.9 g/cm³. v = √(2gh) — watch the physics console.
+scene "Gadolinium Drop Test"
+
+test_cube = cube 20mm color: #e6ffa6 # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

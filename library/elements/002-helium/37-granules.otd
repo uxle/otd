@@ -1,0 +1,5 @@
+# Granules
+# Helium (He) — real density 0.00018 g/cm³. small pieces scatter like real granules.
+scene "Helium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 2) sphere 2.5mm color: #d9ffff

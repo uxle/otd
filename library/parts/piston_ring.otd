@@ -1,0 +1,6 @@
+# One piston compression ring — spring steel torus.
+scene "Piston Ring"
+
+piston_ring = torus(R: 20mm, tube: 1.2mm) material: steel
+ask "mass?"
+simulate: drop

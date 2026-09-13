@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Americium (Am) — real density 12 g/cm³. rod format, like lab stock.
+scene "Americium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #00ff80
+simulate: drop

@@ -1,0 +1,5 @@
+# A landscape of peaks 4.9 cm with roughness 0.5.
+scene "Hills 3"
+
+landX = terrain(size: 17cm, peaks: 4cm, roughness: 0.3, seed: 34)
+ask "triangle count?"

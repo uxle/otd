@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Chlorine (Cl) — real density 0.0032 g/cm³. V = M/ρ = 35.45/0.0032 = 11078.1 cm³ per mole.
+scene "Chlorine Molar Volume Cube"
+
+mole_cube = cube 22.29cm color: #1ff01f at (0, 11.15cm, 0)
+# one mole of atoms: 6.022e23 atoms of Chlorine, 35.45 g, drawn at true scale

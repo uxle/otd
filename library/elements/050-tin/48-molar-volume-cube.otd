@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Tin (Sn) — real density 7.31 g/cm³. V = M/ρ = 118.71/7.31 = 16.2 cm³ per mole.
+scene "Tin Molar Volume Cube"
+
+mole_cube = cube 2.53cm color: #668080 at (0, 1.27cm, 0)
+# one mole of atoms: 6.022e23 atoms of Tin, 118.71 g, drawn at true scale

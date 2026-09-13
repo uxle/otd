@@ -1,0 +1,7 @@
+# for i = from to to — inclusive both ends.
+scene "for Loops — Lesson 17"
+
+for i = 1 to 6
+  cube(w: 2cm, h: i * 1cm, d: 2cm) at (i * 3cm, 0, 0)
+end
+ask "how many objects?"

@@ -1,0 +1,8 @@
+# Periodic Position
+# Nickel (Ni) — real density 8.908 g/cm³. period 4, group 10.
+scene "Nickel Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #50d050 at (216mm, 3mm, 72mm)
+label = text "Ni" at (210mm, 4mm, 67mm)
+numtext = text "28" at (223mm, 4mm, 78mm)

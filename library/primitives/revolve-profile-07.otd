@@ -1,0 +1,6 @@
+# A vessel revolved from a stepped profile.
+scene "Turned Vessel 7"
+
+vase1 = revolve [(15mm, 0mm), (15mm, 9mm), (8mm, 9mm), (8mm, 26mm), (8mm, 26mm), (8mm, 36mm), (15mm, 36mm), (15mm, 42mm), (17mm, 42mm), (17mm, 59mm), (11mm, 59mm), (11mm, 65mm)]
+ask "mass?"
+ask "height?"

@@ -1,0 +1,5 @@
+# Powder Pile
+# Strontium (Sr) — real density 2.64 g/cm³. a poured heap.
+scene "Strontium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #00ff00

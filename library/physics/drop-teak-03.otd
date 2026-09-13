@@ -1,0 +1,7 @@
+# A teak ball dropped from 36 cm.
+scene "Teak Drop 3"
+
+test1 = sphere(r: 2.7cm) at (0, 36cm, 0) material: teak
+gravity: mars
+simulate: drop
+ask "mass?"

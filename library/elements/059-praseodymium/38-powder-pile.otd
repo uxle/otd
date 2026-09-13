@@ -1,0 +1,5 @@
+# Powder Pile
+# Praseodymium (Pr) — real density 6.773 g/cm³. a poured heap.
+scene "Praseodymium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #dfffaf

@@ -1,0 +1,5 @@
+# Granules
+# Radium (Ra) — real density 5.5 g/cm³. small pieces scatter like real granules.
+scene "Radium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 88) sphere 2.5mm color: #00ff9d

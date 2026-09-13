@@ -1,0 +1,7 @@
+# Sample Sphere
+# Lead (Pb) — real density 11.34 g/cm³. 5 mm radius ball.
+scene "Lead Sample Sphere"
+
+sample_sphere = sphere 5mm material: lead at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

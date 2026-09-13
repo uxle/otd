@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Tellurium (Te) — real density 6.24 g/cm³. rod format, like lab stock.
+scene "Tellurium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #d47a00
+simulate: drop

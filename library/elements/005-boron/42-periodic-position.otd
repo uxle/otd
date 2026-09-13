@@ -1,0 +1,8 @@
+# Periodic Position
+# Boron (B) — real density 2.34 g/cm³. period 2, group 13.
+scene "Boron Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #ffb5b5 at (288mm, 3mm, 24mm)
+label = text "B" at (282mm, 4mm, 19mm)
+numtext = text "5" at (295mm, 4mm, 30mm)

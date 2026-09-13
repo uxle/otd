@@ -1,0 +1,6 @@
+# Sample Sphere
+# Cobalt (Co) — real density 8.9 g/cm³. 5 mm radius ball.
+scene "Cobalt Sample Sphere"
+
+sample_sphere = sphere 5mm color: #f090a0 at (0, 5mm, 0)
+simulate: drop

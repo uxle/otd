@@ -1,0 +1,7 @@
+# Density Compare
+# Potassium (K) — real density 0.862 g/cm³. equal masses: Potassium vs water — sides ∝ (1/ρ)^(1/3).
+scene "Potassium Density Compare"
+
+element_cube = cube 21.0mm color: #8f40d4 at (-20mm, 10.5mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 6.9 g — the water cube is the reference

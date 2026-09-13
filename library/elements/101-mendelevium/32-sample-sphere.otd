@@ -1,0 +1,6 @@
+# Sample Sphere
+# Mendelevium (Md) — real density 10.3 g/cm³. 5 mm radius ball.
+scene "Mendelevium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #00ff80 at (0, 5mm, 0)
+simulate: drop

@@ -1,0 +1,8 @@
+# Motor rotor: laminated core + shaft. Spin it live:
+# otd render motor_rotor.otd spin.png --spin rotor=90@x
+scene "Motor Rotor"
+
+rotor = cylinder(r: 20mm, h: 60mm) material: steel
+shaft = cylinder(r: 5mm, h: 100mm) rotate (0, 0, -90deg) at (0, 30mm, 0) material: chrome
+ask "mass?"
+simulate: drop

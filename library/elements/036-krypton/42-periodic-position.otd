@@ -1,0 +1,8 @@
+# Periodic Position
+# Krypton (Kr) — real density 0.0037 g/cm³. period 4, group 18.
+scene "Krypton Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #5cb8d1 at (408mm, 3mm, 72mm)
+label = text "Kr" at (402mm, 4mm, 67mm)
+numtext = text "36" at (415mm, 4mm, 78mm)

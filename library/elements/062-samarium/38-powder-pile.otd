@@ -1,0 +1,5 @@
+# Powder Pile
+# Samarium (Sm) — real density 7.52 g/cm³. a poured heap.
+scene "Samarium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #ff9b9b

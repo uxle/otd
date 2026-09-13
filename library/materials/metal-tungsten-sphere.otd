@@ -1,0 +1,6 @@
+# A polished tungsten ball.
+scene "Tungsten Sphere"
+
+ball = sphere(r: 3.6cm) material: tungsten
+ask "mass?"
+ask "will it float?"

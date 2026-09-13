@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Lanthanum (La) — real density 6.162 g/cm³. rod format, like lab stock.
+scene "Lanthanum Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #4d6fff
+simulate: drop

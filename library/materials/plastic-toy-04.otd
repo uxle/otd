@@ -1,0 +1,7 @@
+# A small plastic toy built from a group.
+scene "Plastic Toy 4"
+
+material: plastic
+color: lightgray
+toy = group(cube(w: 4cm, d: 2cm, h: 2cm), sphere(r: 1cm) at (0, 2.5cm, 0))
+ask "mass?"

@@ -1,0 +1,9 @@
+# Float Test
+# Copper (Cu) — real density 8.96 g/cm³. Archimedes decides: ρ vs 0.997 g/cm³.
+scene "Copper Float Test"
+
+floater = cube 20mm material: copper at (0, 60mm, 0)
+pool = cube(w: 90mm, d: 90mm, h: 35mm) material: water at (0, 17.5mm, 0)
+# real verdict for Copper: sinks (density 8.96 g/cm³)
+ask "will it float?"
+simulate: float

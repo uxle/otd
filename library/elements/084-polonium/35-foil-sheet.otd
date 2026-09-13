@@ -1,0 +1,5 @@
+# Foil Sheet
+# Polonium (Po) — real density 9.2 g/cm³. 0.1 mm foil.
+scene "Polonium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #d8004d at (0, 0.1mm, 0)

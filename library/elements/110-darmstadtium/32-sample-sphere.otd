@@ -1,0 +1,6 @@
+# Sample Sphere
+# Darmstadtium (Ds) — real density 34.8 g/cm³. 5 mm radius ball.
+scene "Darmstadtium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ff30d0 at (0, 5mm, 0)
+simulate: drop

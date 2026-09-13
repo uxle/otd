@@ -1,0 +1,7 @@
+# Sample Cylinder
+# Gold (Au) — real density 19.32 g/cm³. rod format, like lab stock.
+scene "Gold Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) material: gold
+ask "mass?"
+simulate: drop

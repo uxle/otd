@@ -1,0 +1,5 @@
+# The word MOON rendered as real 3D letters.
+scene "Word MOON"
+
+labelX = text "MOON" size: 3.9cm depth: 7mm color: lightgray
+ask "mass?"

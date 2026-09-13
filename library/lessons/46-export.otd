@@ -1,0 +1,7 @@
+# STL, OBJ, GLTF, USDZ, PNG, SCAD.
+scene "export Everything — Lesson 46"
+
+cube 4cm material: steel
+export stl "cube.stl"
+export obj "cube.obj"
+export scad "cube.scad"

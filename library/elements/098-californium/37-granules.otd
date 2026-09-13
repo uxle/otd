@@ -1,0 +1,5 @@
+# Granules
+# Californium (Cf) — real density 15.1 g/cm³. small pieces scatter like real granules.
+scene "Californium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 98) sphere 2.5mm color: #60ff30

@@ -1,0 +1,6 @@
+# Sample Sphere
+# Cerium (Ce) — real density 6.77 g/cm³. 5 mm radius ball.
+scene "Cerium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ffd1d1 at (0, 5mm, 0)
+simulate: drop

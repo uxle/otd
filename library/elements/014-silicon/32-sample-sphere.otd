@@ -1,0 +1,6 @@
+# Sample Sphere
+# Silicon (Si) — real density 2.329 g/cm³. 5 mm radius ball.
+scene "Silicon Sample Sphere"
+
+sample_sphere = sphere 5mm color: #f0c8a0 at (0, 5mm, 0)
+simulate: drop

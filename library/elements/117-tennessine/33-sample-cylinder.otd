@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Tennessine (Ts) — real density 7.2 g/cm³. rod format, like lab stock.
+scene "Tennessine Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #ffb040
+simulate: drop

@@ -1,0 +1,6 @@
+# Ingot
+# Osmium (Os) — real density 22.59 g/cm³. cast bar format.
+scene "Osmium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #a0a0b0 at (0, 5.5mm, 0)
+simulate: drop

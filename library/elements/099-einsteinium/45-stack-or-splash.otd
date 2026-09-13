@@ -1,0 +1,7 @@
+# Stack Test
+# Einsteinium (Es) — real density 8.84 g/cm³. three cubes stacked — simulate: collapse checks the load path.
+scene "Einsteinium Stack Test"
+
+bottom = cube 20mm color: #40ff10 at (0, 10mm, 0)
+middle = cube 20mm color: #40ff10 at (0, 30mm, 0)
+top = cube 20mm color: #40ff10 at (0, 50mm, 0)

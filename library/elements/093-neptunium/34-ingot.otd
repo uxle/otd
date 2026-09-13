@@ -1,0 +1,6 @@
+# Ingot
+# Neptunium (Np) — real density 20.45 g/cm³. cast bar format.
+scene "Neptunium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #00d0ff at (0, 5.5mm, 0)
+simulate: drop

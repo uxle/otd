@@ -1,0 +1,6 @@
+# Sample Sphere
+# Actinium (Ac) — real density 10.07 g/cm³. 5 mm radius ball.
+scene "Actinium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #007fff at (0, 5mm, 0)
+simulate: drop

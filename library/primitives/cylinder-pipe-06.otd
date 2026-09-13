@@ -1,0 +1,6 @@
+# A bent pipe swept through a spline path.
+scene "Pipe Run 6"
+
+material: iron
+pipe = tube(r: 7.3mm, path: [(0, 0, 0), (0, 15cm, 0), (9cm, 25cm, 0)])
+ask "mass?"

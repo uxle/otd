@@ -1,0 +1,5 @@
+# An irregular 7-sided polygon pulled into a solid.
+scene "Extruded 7-gon"
+
+poly1 = extrude [(2.6cm, 0.0cm), (1.8cm, 2.3cm), (-0.9cm, 4.0cm), (-2.8cm, 1.4cm), (-3.0cm, -1.5cm), (-0.6cm, -2.5cm), (2.8cm, -3.5cm)] depth: 0.9cm
+ask "volume?"

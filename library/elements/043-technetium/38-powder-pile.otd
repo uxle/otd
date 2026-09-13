@@ -1,0 +1,5 @@
+# Powder Pile
+# Technetium (Tc) — real density 11 g/cm³. a poured heap.
+scene "Technetium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #3b9e9e

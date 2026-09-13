@@ -1,0 +1,7 @@
+# A row of cubes, each turned a little more.
+scene "Rotating Row 4"
+
+for i = 0 to 3
+  cube(w: 4cm, d: 4cm, h: 4cm) at (i * 5cm, 0, 0) rotate (0, i * 18deg, 0)
+end
+ask "how many objects?"

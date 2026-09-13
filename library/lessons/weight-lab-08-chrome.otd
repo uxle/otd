@@ -1,0 +1,6 @@
+# Weigh a chrome ingot — mass times g.
+scene "Weight Lab: Chrome"
+
+ingot1 = wedge(w: 8cm, d: 4cm, h: 3cm) material: chrome
+ask "mass?"
+ask "weight?"

@@ -1,0 +1,7 @@
+# Density Compare
+# Silver (Ag) — real density 10.49 g/cm³. equal masses: Silver vs water — sides ∝ (1/ρ)^(1/3).
+scene "Silver Density Compare"
+
+element_cube = cube 9.1mm material: silver at (-20mm, 4.6mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 83.7 g — the water cube is the reference

@@ -1,0 +1,6 @@
+# Weigh a tungsten ingot — mass times g.
+scene "Weight Lab: Tungsten"
+
+ingot1 = wedge(w: 8cm, d: 4cm, h: 3cm) material: tungsten
+ask "mass?"
+ask "weight?"

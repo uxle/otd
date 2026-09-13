@@ -1,0 +1,8 @@
+# Display Card
+# Boron (B) — real density 2.34 g/cm³. periodic-table tile.
+scene "Boron Display Card"
+
+tile = cube(w: 64mm, d: 6mm, h: 64mm) color: #ffb5b5 at (0, 3mm, 0)
+sym = text "B" at (-14mm, 6mm, -8mm)
+znum = text "5" at (22mm, 6mm, 22mm)
+nmass = text "11" at (-22mm, 6mm, 22mm)

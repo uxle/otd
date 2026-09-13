@@ -1,0 +1,6 @@
+# A polished copper ball.
+scene "Copper Sphere"
+
+ball = sphere(r: 3.5cm) material: copper
+ask "mass?"
+ask "will it float?"

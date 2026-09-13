@@ -1,0 +1,8 @@
+# Float Test
+# Palladium (Pd) — real density 12.02 g/cm³. Archimedes decides: ρ vs 0.997 g/cm³.
+scene "Palladium Float Test"
+
+floater = cube 20mm color: #d0a0a0 # stand-in mass for the demo at (0, 60mm, 0)
+pool = cube(w: 90mm, d: 90mm, h: 35mm) material: water at (0, 17.5mm, 0)
+# real verdict for Palladium: sinks (density 12.02 g/cm³)
+simulate: float

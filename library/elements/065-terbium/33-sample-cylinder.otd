@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Terbium (Tb) — real density 8.23 g/cm³. rod format, like lab stock.
+scene "Terbium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #c9ffa6
+simulate: drop

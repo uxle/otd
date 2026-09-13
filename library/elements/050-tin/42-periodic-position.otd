@@ -1,0 +1,8 @@
+# Periodic Position
+# Tin (Sn) — real density 7.31 g/cm³. period 5, group 14.
+scene "Tin Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #668080 at (312mm, 3mm, 96mm)
+label = text "Sn" at (306mm, 4mm, 91mm)
+numtext = text "50" at (319mm, 4mm, 102mm)

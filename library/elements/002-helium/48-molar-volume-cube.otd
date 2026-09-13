@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Helium (He) — real density 0.00018 g/cm³. V = M/ρ = 4.0026/0.00018 = 22236.7 cm³ per mole.
+scene "Helium Molar Volume Cube"
+
+mole_cube = cube 28.12cm color: #d9ffff at (0, 14.06cm, 0)
+# one mole of atoms: 6.022e23 atoms of Helium, 4.0026 g, drawn at true scale

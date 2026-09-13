@@ -1,0 +1,6 @@
+# Sample Sphere
+# Rubidium (Rb) — real density 1.532 g/cm³. 5 mm radius ball.
+scene "Rubidium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #702eb0 at (0, 5mm, 0)
+simulate: drop

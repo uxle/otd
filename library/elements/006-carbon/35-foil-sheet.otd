@@ -1,0 +1,6 @@
+# Foil Sheet
+# Carbon (C) — real density 2.267 g/cm³. 0.1 mm foil.
+scene "Carbon Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) material: carbon at (0, 0.1mm, 0)
+ask "mass?"

@@ -1,0 +1,5 @@
+# Granules
+# Plutonium (Pu) — real density 19.85 g/cm³. small pieces scatter like real granules.
+scene "Plutonium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 94) sphere 2.5mm color: #00e080

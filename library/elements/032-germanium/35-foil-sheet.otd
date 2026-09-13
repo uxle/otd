@@ -1,0 +1,5 @@
+# Foil Sheet
+# Germanium (Ge) — real density 5.323 g/cm³. 0.1 mm foil.
+scene "Germanium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #668f8f at (0, 0.1mm, 0)

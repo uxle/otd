@@ -1,0 +1,7 @@
+# A lead ball dropped from 72 cm.
+scene "Lead Drop 8"
+
+test1 = sphere(r: 3.8cm) at (0, 72cm, 0) material: lead
+gravity: moon
+simulate: drop
+ask "mass?"

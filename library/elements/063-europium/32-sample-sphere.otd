@@ -1,0 +1,6 @@
+# Sample Sphere
+# Europium (Eu) — real density 5.244 g/cm³. 5 mm radius ball.
+scene "Europium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ff00ff at (0, 5mm, 0)
+simulate: drop

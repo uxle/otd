@@ -1,0 +1,7 @@
+# A hollow wooden shipping crate.
+scene "Wooden Crate 2"
+
+material: teak
+crate = cube(w: 27cm, d: 25cm, h: 29cm) - hollow(wall: 8mm)
+ask "mass?"
+ask "watertight?"

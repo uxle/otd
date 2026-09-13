@@ -1,0 +1,7 @@
+# A shelled box with a known wall thickness.
+scene "Hollow Box 3"
+
+material: steel
+shell = cube(w: 10cm, d: 9cm, h: 10cm) - hollow(wall: 2mm)
+ask "mass?"
+ask "watertight?"

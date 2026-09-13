@@ -1,0 +1,7 @@
+# Sample Cube
+# Silicon (Si) — real density 2.329 g/cm³. a 1 cm cube — the reference sample.
+scene "Silicon Sample Cube"
+
+sample_cube = cube 10mm color: #f0c8a0 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

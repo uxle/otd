@@ -1,0 +1,7 @@
+# Drop Test
+# Titanium (Ti) — real density 4.506 g/cm³. v = √(2gh) — watch the physics console.
+scene "Titanium Drop Test"
+
+test_cube = cube 20mm material: titanium at (0, 50mm, 0)
+ask "mass?"
+simulate: drop

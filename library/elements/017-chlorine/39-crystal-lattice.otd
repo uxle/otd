@@ -1,0 +1,5 @@
+# Crystal Lattice
+# Chlorine (Cl) — real density 0.0032 g/cm³. simple cubic lattice — packing 50% vs close-packed 74%.
+scene "Chlorine Crystal Lattice"
+
+lattice = grid(nx: 3, nz: 3, spacing: (8mm, 8mm)) sphere 2.5mm color: #1ff01f

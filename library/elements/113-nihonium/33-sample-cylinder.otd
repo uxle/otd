@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Nihonium (Nh) — real density 16 g/cm³. rod format, like lab stock.
+scene "Nihonium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #ff3060
+simulate: drop

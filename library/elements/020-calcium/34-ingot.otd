@@ -1,0 +1,6 @@
+# Ingot
+# Calcium (Ca) — real density 1.55 g/cm³. cast bar format.
+scene "Calcium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #3dff00 at (0, 5.5mm, 0)
+simulate: drop

@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Thulium (Tm) — real density 9.32 g/cm³. V = M/ρ = 168.93/9.32 = 18.1 cm³ per mole.
+scene "Thulium Molar Volume Cube"
+
+mole_cube = cube 2.63cm color: #8ccbe0 at (0, 1.31cm, 0)
+# one mole of atoms: 6.022e23 atoms of Thulium, 168.93 g, drawn at true scale

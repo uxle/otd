@@ -1,0 +1,5 @@
+# Crystal Lattice
+# Meitnerium (Mt) — real density 37.4 g/cm³. simple cubic lattice — packing 50% vs close-packed 74%.
+scene "Meitnerium Crystal Lattice"
+
+lattice = grid(nx: 3, nz: 3, spacing: (8mm, 8mm)) sphere 2.5mm color: #d040ff

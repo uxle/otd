@@ -1,0 +1,12 @@
+[package]
+name = "reasoning-search"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Reasoning AI — MCTS, heuristic search, and math/number domains"
+
+[dependencies]
+reasoning-common = { path = "../common" }
+reasoning-symbolic = { path = "../symbolic" }
+reasoning-verifier = { path = "../verifier" }
+rand = { workspace = true }

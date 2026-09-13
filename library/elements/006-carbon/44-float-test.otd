@@ -1,0 +1,9 @@
+# Float Test
+# Carbon (C) — real density 2.267 g/cm³. Archimedes decides: ρ vs 0.997 g/cm³.
+scene "Carbon Float Test"
+
+floater = cube 20mm material: carbon at (0, 60mm, 0)
+pool = cube(w: 90mm, d: 90mm, h: 35mm) material: water at (0, 17.5mm, 0)
+# real verdict for Carbon: sinks (density 2.267 g/cm³)
+ask "will it float?"
+simulate: float

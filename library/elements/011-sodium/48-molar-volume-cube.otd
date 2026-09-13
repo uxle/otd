@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Sodium (Na) — real density 0.971 g/cm³. V = M/ρ = 22.99/0.971 = 23.7 cm³ per mole.
+scene "Sodium Molar Volume Cube"
+
+mole_cube = cube 2.87cm color: #ab5cf2 at (0, 1.44cm, 0)
+# one mole of atoms: 6.022e23 atoms of Sodium, 22.99 g, drawn at true scale

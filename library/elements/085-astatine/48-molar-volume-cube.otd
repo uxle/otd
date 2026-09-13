@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Astatine (At) — real density 7 g/cm³. V = M/ρ = 210.0/7 = 30.0 cm³ per mole.
+scene "Astatine Molar Volume Cube"
+
+mole_cube = cube 3.11cm color: #cc0066 at (0, 1.55cm, 0)
+# one mole of atoms: 6.022e23 atoms of Astatine, 210.0 g, drawn at true scale

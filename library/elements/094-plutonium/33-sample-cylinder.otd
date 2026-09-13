@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Plutonium (Pu) — real density 19.85 g/cm³. rod format, like lab stock.
+scene "Plutonium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #00e080
+simulate: drop

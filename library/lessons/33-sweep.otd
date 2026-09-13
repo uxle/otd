@@ -1,0 +1,5 @@
+# A 2D profile dragged through 3D space.
+scene "sweep: Profile Along a Path — Lesson 33"
+
+rail1 = sweep(profile: [(0, 0), (1cm, 0), (0, 1cm)], path: [(0, 0, 0), (0, 8cm, 0)])
+ask "mass?"

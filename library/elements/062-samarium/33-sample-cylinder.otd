@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Samarium (Sm) — real density 7.52 g/cm³. rod format, like lab stock.
+scene "Samarium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #ff9b9b
+simulate: drop

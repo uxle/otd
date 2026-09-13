@@ -1,0 +1,11 @@
+# 5 blocks with drift — stable or tips?
+scene "Stack 1"
+
+material: ceramic
+block1 = cube(w: 6cm, d: 6cm, h: 3cm) at (0.0cm, 0cm, 0)
+block2 = cube(w: 6cm, d: 6cm, h: 3cm) at (0.6cm, 3cm, 0)
+block3 = cube(w: 6cm, d: 6cm, h: 3cm) at (1.2cm, 6cm, 0)
+block4 = cube(w: 6cm, d: 6cm, h: 3cm) at (1.8cm, 9cm, 0)
+block5 = cube(w: 6cm, d: 6cm, h: 3cm) at (2.4cm, 12cm, 0)
+simulate: collapse
+ask "center of mass?"

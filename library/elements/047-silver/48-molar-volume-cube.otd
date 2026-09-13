@@ -1,0 +1,7 @@
+# Molar Volume Cube
+# Silver (Ag) — real density 10.49 g/cm³. V = M/ρ = 107.87/10.49 = 10.3 cm³ per mole.
+scene "Silver Molar Volume Cube"
+
+mole_cube = cube 2.17cm material: silver at (0, 1.09cm, 0)
+ask "mass?"
+# one mole of atoms: 6.022e23 atoms of Silver, 107.87 g, drawn at true scale

@@ -1,0 +1,18 @@
+# Robot arm: base, column, two arm segments, gripper
+scene "Robot Arm"
+material: steel
+
+base = cylinder(r: 9cm, h: 3cm) color: dimgray
+column = cylinder(r: 3.5cm, h: 30cm) at (0, 3cm, 0)
+shoulder = sphere(r: 4.5cm) at (0, 33cm, 0) color: gold
+
+lowerArm = capsule(r: 3cm, h: 28cm) rotate (0, 0, -60deg) at (0, 36cm, 0)
+elbow = sphere(r: 4cm) at (14cm, 48cm, 0) color: gold
+upperArm = capsule(r: 2.5cm, h: 24cm) rotate (0, 0, -25deg) at (12cm, 52cm, 0)
+wrist = sphere(r: 3cm) at (24cm, 62cm, 0) color: gold
+
+gripL = cube(w: 1.5cm, h: 9cm, d: 3cm) at (26cm, 62cm, -2.6cm)
+gripR = cube(w: 1.5cm, h: 9cm, d: 3cm) at (26cm, 62cm, 2.6cm)
+
+ask "mass?"
+ask "how many objects?"

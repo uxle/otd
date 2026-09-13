@@ -1,0 +1,6 @@
+# A cube with a cylinder bored straight through.
+scene "Drilled Cube 3"
+
+cut1 = cube(w: 6cm, d: 6cm, h: 6cm) - cylinder(r: 2cm, h: 8cm)
+ask "mass?"
+ask "watertight?"

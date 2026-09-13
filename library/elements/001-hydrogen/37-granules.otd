@@ -1,0 +1,5 @@
+# Granules
+# Hydrogen (H) — real density 9e-05 g/cm³. small pieces scatter like real granules.
+scene "Hydrogen Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 1) sphere 2.5mm color: #88ff88

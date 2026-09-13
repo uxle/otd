@@ -1,0 +1,5 @@
+# Crystal Lattice
+# Germanium (Ge) — real density 5.323 g/cm³. simple cubic lattice — packing 50% vs close-packed 74%.
+scene "Germanium Crystal Lattice"
+
+lattice = grid(nx: 3, nz: 3, spacing: (8mm, 8mm)) sphere 2.5mm color: #668f8f

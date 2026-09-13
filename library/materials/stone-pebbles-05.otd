@@ -1,0 +1,6 @@
+# A field of smooth pebbles.
+scene "Pebble Field 5"
+
+material: concrete
+rocks = scatter(n: 18, radius: 14cm, seed: 7) sphere(r: 2.4cm) smooth(n: 2)
+ask "how many objects?"

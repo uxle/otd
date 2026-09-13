@@ -1,0 +1,7 @@
+# Drop Test
+# Iron (Fe) — real density 7.874 g/cm³. v = √(2gh) — watch the physics console.
+scene "Iron Drop Test"
+
+test_cube = cube 20mm material: iron at (0, 50mm, 0)
+ask "mass?"
+simulate: drop

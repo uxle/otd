@@ -1,0 +1,13 @@
+# Electron Shells
+# Nobelium (No) — real density 9.9 g/cm³. configuration [Rn] 5f14 7s2.
+scene "Nobelium Electron Shells"
+
+define electron = sphere 1mm color: #ffffff
+nucleus = sphere 2.5mm color: #00ffa0
+shell1 = ring(n: 2, radius: 5mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell2 = ring(n: 8, radius: 10mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell3 = ring(n: 18, radius: 15mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell4 = ring(n: 32, radius: 20mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell5 = ring(n: 32, radius: 25mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell6 = ring(n: 8, radius: 30mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell7 = ring(n: 2, radius: 35mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)

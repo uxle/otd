@@ -1,0 +1,8 @@
+# Display Card
+# Technetium (Tc) — real density 11 g/cm³. periodic-table tile.
+scene "Technetium Display Card"
+
+tile = cube(w: 64mm, d: 6mm, h: 64mm) color: #3b9e9e at (0, 3mm, 0)
+sym = text "Tc" at (-14mm, 6mm, -8mm)
+znum = text "43" at (22mm, 6mm, 22mm)
+nmass = text "98" at (-22mm, 6mm, 22mm)

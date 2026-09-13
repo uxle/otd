@@ -1,0 +1,5 @@
+# Granules
+# Barium (Ba) — real density 3.51 g/cm³. small pieces scatter like real granules.
+scene "Barium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 56) sphere 2.5mm color: #00c900

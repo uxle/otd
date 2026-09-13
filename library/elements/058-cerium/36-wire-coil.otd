@@ -1,0 +1,5 @@
+# Wire Coil
+# Cerium (Ce) — real density 6.77 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Cerium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #ffd1d1

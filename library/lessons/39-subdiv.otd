@@ -1,0 +1,5 @@
+# Loop subdivision: 4x triangles per level.
+scene "subdiv: More Triangles — Lesson 39"
+
+fine1 = sphere(r: 2cm) subdiv(n: 1)
+ask "triangle count?"

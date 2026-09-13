@@ -1,0 +1,5 @@
+# Wire Coil
+# Neodymium (Nd) — real density 7.01 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Neodymium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #8affde

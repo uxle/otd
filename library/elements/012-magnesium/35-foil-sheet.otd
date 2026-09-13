@@ -1,0 +1,5 @@
+# Foil Sheet
+# Magnesium (Mg) — real density 1.738 g/cm³. 0.1 mm foil.
+scene "Magnesium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #8aff00 at (0, 0.1mm, 0)

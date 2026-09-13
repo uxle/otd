@@ -1,0 +1,8 @@
+# Periodic Position
+# Calcium (Ca) — real density 1.55 g/cm³. period 4, group 2.
+scene "Calcium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #3dff00 at (24mm, 3mm, 72mm)
+label = text "Ca" at (18mm, 4mm, 67mm)
+numtext = text "20" at (31mm, 4mm, 78mm)

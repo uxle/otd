@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Technetium (Tc) — real density 11 g/cm³. V = M/ρ = 98.0/11 = 8.9 cm³ per mole.
+scene "Technetium Molar Volume Cube"
+
+mole_cube = cube 2.07cm color: #3b9e9e at (0, 1.04cm, 0)
+# one mole of atoms: 6.022e23 atoms of Technetium, 98.0 g, drawn at true scale

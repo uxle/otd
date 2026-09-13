@@ -1,0 +1,7 @@
+# Sample Cube
+# Uranium (U) — real density 19.1 g/cm³. a 1 cm cube — the reference sample.
+scene "Uranium Sample Cube"
+
+sample_cube = cube 10mm color: #00c8c8 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

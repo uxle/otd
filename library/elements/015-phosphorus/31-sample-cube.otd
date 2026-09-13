@@ -1,0 +1,7 @@
+# Sample Cube
+# Phosphorus (P) — real density 1.823 g/cm³. a 1 cm cube — the reference sample.
+scene "Phosphorus Sample Cube"
+
+sample_cube = cube 10mm color: #ff8000 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

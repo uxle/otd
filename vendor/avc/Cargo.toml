@@ -1,0 +1,37 @@
+[package]
+name = "avc"
+version = "4.0.0"
+edition = "2021"
+description = "Artificial Visual Cortex v4 - real-time stereo metric world model engine (Rust edition)"
+license = "MIT"
+readme = "README.md"
+keywords = ["stereo", "vision", "slam", "3d", "perception"]
+categories = ["computer-vision", "science"]
+
+[dependencies]
+nalgebra = "0.33"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rayon = "1.10"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+overflow-checks = false
+
+[profile.test]
+opt-level = 1
+
+[[bin]]
+name = "avc-demo-synthetic"
+path = "src/bin/avc_demo_synthetic.rs"
+
+[[bin]]
+name = "avc-process-pair"
+path = "src/bin/avc_process_pair.rs"
+
+[[bin]]
+name = "avc-bench"
+path = "src/bin/avc_bench.rs"

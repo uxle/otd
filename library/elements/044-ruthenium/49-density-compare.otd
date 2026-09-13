@@ -1,0 +1,7 @@
+# Density Compare
+# Ruthenium (Ru) — real density 12.45 g/cm³. equal masses: Ruthenium vs water — sides ∝ (1/ρ)^(1/3).
+scene "Ruthenium Density Compare"
+
+element_cube = cube 8.6mm color: #a0c0c0 at (-20mm, 4.3mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 99.3 g — the water cube is the reference

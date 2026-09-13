@@ -1,0 +1,6 @@
+# Sample Sphere
+# Fermium (Fm) — real density 9.7 g/cm³. 5 mm radius ball.
+scene "Fermium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #20ff00 at (0, 5mm, 0)
+simulate: drop

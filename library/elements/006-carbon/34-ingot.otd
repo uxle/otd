@@ -1,0 +1,7 @@
+# Ingot
+# Carbon (C) — real density 2.267 g/cm³. cast bar format.
+scene "Carbon Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) material: carbon at (0, 5.5mm, 0)
+ask "mass?"
+simulate: drop

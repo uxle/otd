@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Potassium (K) — real density 0.862 g/cm³. rod format, like lab stock.
+scene "Potassium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #8f40d4
+simulate: drop

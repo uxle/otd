@@ -1,0 +1,7 @@
+# Drop Test
+# Krypton (Kr) — real density 0.0037 g/cm³. v = √(2gh) — watch the physics console.
+scene "Krypton Drop Test"
+
+# gases cannot be dropped as a solid — a puff of Krypton drifts instead
+puff = sphere 14mm scale (1, 0.6, 1) color: #5cb8d1 at (0, 60mm, 0)
+simulate: drop

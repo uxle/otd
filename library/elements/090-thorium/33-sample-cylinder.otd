@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Thorium (Th) — real density 11.72 g/cm³. rod format, like lab stock.
+scene "Thorium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #00a0ff
+simulate: drop

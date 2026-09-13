@@ -1,0 +1,8 @@
+# A slightly offset stack of 3 planks.
+scene "Plank Stack 4"
+
+material: oak
+for i = 0 to 2
+  cube(w: 54cm, d: 22cm, h: 2.5cm) at (i * 1cm, i * 2.5cm, i * 0.5cm) rotate (0, i * 4deg, 0)
+end
+ask "mass?"

@@ -1,0 +1,7 @@
+# Ingot
+# Copper (Cu) — real density 8.96 g/cm³. cast bar format.
+scene "Copper Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) material: copper at (0, 5.5mm, 0)
+ask "mass?"
+simulate: drop

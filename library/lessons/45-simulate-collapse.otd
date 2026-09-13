@@ -1,0 +1,6 @@
+# Static stability: center of mass vs base.
+scene "simulate: collapse — Lesson 45"
+
+blockA = cube(w: 6cm, d: 6cm, h: 3cm)
+blockB = cube(w: 6cm, d: 6cm, h: 3cm) at (2cm, 3cm, 0)
+simulate: collapse

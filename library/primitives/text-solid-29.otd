@@ -1,0 +1,5 @@
+# The word SOLID rendered as real 3D letters.
+scene "Word SOLID"
+
+labelX = text "SOLID" size: 2.8cm depth: 9mm color: palegreen
+ask "mass?"

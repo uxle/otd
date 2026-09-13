@@ -1,0 +1,7 @@
+# Hands-on lab: measure a wood sample.
+scene "Material Lab: Wood"
+
+sample1 = cylinder(r: 2cm, h: 5cm) material: wood
+ask "mass?"
+ask "density?"
+ask "will it float?"

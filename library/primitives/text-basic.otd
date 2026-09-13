@@ -1,0 +1,5 @@
+# The word HELLO standing on the ground.
+scene "3D Text"
+
+label1 = text "HELLO" size: 3cm depth: 6mm color: steelblue
+ask "mass?"

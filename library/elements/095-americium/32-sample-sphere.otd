@@ -1,0 +1,6 @@
+# Sample Sphere
+# Americium (Am) — real density 12 g/cm³. 5 mm radius ball.
+scene "Americium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #00ff80 at (0, 5mm, 0)
+simulate: drop

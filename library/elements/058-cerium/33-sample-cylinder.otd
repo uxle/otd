@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Cerium (Ce) — real density 6.77 g/cm³. rod format, like lab stock.
+scene "Cerium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #ffd1d1
+simulate: drop

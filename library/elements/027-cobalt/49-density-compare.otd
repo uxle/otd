@@ -1,0 +1,7 @@
+# Density Compare
+# Cobalt (Co) — real density 8.9 g/cm³. equal masses: Cobalt vs water — sides ∝ (1/ρ)^(1/3).
+scene "Cobalt Density Compare"
+
+element_cube = cube 9.6mm color: #f090a0 at (-20mm, 4.8mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 71.0 g — the water cube is the reference

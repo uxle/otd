@@ -1,0 +1,9 @@
+# A neat stack of oak planks — the classic lumber-yard scene.
+scene "Wood Stack"
+
+material: oak
+define plank = cube(w: 60cm, d: 20cm, h: 3cm)
+for lvl = 0 to 4
+  use plank at (0, lvl * 3cm, 0) rotate (0, lvl * 2deg, 0)
+end
+ask "mass?"

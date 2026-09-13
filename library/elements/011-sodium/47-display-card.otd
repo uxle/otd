@@ -1,0 +1,8 @@
+# Display Card
+# Sodium (Na) — real density 0.971 g/cm³. periodic-table tile.
+scene "Sodium Display Card"
+
+tile = cube(w: 64mm, d: 6mm, h: 64mm) color: #ab5cf2 at (0, 3mm, 0)
+sym = text "Na" at (-14mm, 6mm, -8mm)
+znum = text "11" at (22mm, 6mm, 22mm)
+nmass = text "23" at (-22mm, 6mm, 22mm)

@@ -1,0 +1,6 @@
+# A single clay brick with true brick proportions.
+scene "Single Brick"
+
+brick = cube(w: 9.5cm, d: 19cm, h: 5.7cm) material: concrete color: firebrick
+ask "mass?"
+ask "volume?"

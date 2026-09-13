@@ -1,0 +1,5 @@
+# Powder Pile
+# Lanthanum (La) — real density 6.162 g/cm³. a poured heap.
+scene "Lanthanum Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #4d6fff

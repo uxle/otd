@@ -1,0 +1,5 @@
+# Granules
+# Boron (B) — real density 2.34 g/cm³. small pieces scatter like real granules.
+scene "Boron Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 5) sphere 2.5mm color: #ffb5b5

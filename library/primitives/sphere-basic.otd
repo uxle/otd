@@ -1,0 +1,5 @@
+# The hello-world of 3D — one sphere on the ground.
+scene "Basic Sphere"
+
+sphere
+ask "mass?"

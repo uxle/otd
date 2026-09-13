@@ -1,0 +1,7 @@
+# Stack Test
+# Erbium (Er) — real density 9.066 g/cm³. three cubes stacked — simulate: collapse checks the load path.
+scene "Erbium Stack Test"
+
+bottom = cube 20mm color: #94d9ff at (0, 10mm, 0)
+middle = cube 20mm color: #94d9ff at (0, 30mm, 0)
+top = cube 20mm color: #94d9ff at (0, 50mm, 0)

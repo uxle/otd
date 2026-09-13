@@ -1,0 +1,7 @@
+# Float Test
+# Nitrogen (N) — real density 0.00125 g/cm³. Archimedes decides: ρ vs 0.997 g/cm³.
+scene "Nitrogen Float Test"
+
+# a gas like Nitrogen does not float as a solid — bubbles rise THROUGH water
+tank = cube(w: 80mm, d: 80mm, h: 50mm) material: water at (0, 25mm, 0)
+bubbles = scatter(n: 10, radius: 20mm, seed: 7) sphere 3mm color: #3050f8

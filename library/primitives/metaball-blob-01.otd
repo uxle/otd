@@ -1,0 +1,5 @@
+# A 3-ball metaball in chrome.
+scene "Chrome Blob 1"
+
+blobX = metaball [(0cm, 0cm, 0cm), (2cm, 1cm, -1cm), (4cm, 2cm, -2cm)] r: 1.1cm material: chrome
+ask "mass?"

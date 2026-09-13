@@ -1,0 +1,7 @@
+# Hands-on lab: measure a concrete sample.
+scene "Material Lab: Concrete"
+
+sample1 = sphere 3cm material: concrete
+ask "mass?"
+ask "density?"
+ask "will it float?"

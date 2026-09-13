@@ -1,0 +1,6 @@
+# A screw with a helical thread.
+scene "Machine Screw 5"
+
+screw1 = cylinder(r: 1cm, h: 6.4cm) material: steel
+thread1 = helix(radius: 0.8cm, pitch: 0.4cm, turns: 4, tube: 1mm) at (0, 2.4cm, 0) material: steel
+ask "mass?"

@@ -1,0 +1,8 @@
+# Periodic Position
+# Selenium (Se) — real density 4.81 g/cm³. period 4, group 16.
+scene "Selenium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #ffa100 at (360mm, 3mm, 72mm)
+label = text "Se" at (354mm, 4mm, 67mm)
+numtext = text "34" at (367mm, 4mm, 78mm)

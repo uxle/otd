@@ -1,0 +1,7 @@
+# A rolled bolt of fabric.
+scene "Fabric Roll 1"
+
+material: fabric
+color: moccasin
+roll = capsule(r: 5.5cm, h: 17.9cm) rotate (0, 0, 90deg)
+ask "mass?"

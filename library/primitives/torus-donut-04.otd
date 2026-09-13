@@ -1,0 +1,5 @@
+# A torus with ring radius 4.8 cm and tube 0.7 cm.
+scene "Donut R4.8 t0.7"
+
+donut = torus(R: 4.8cm, tube: 0.7cm) material: titanium
+ask "volume?"

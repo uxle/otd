@@ -1,0 +1,8 @@
+# Periodic Position
+# Bohrium (Bh) — real density 37.1 g/cm³. period 7, group 7.
+scene "Bohrium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #a080ff at (144mm, 3mm, 144mm)
+label = text "Bh" at (138mm, 4mm, 139mm)
+numtext = text "107" at (151mm, 4mm, 150mm)

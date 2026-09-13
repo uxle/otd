@@ -1,0 +1,5 @@
+# Granules
+# Platinum (Pt) — real density 21.45 g/cm³. small pieces scatter like real granules.
+scene "Platinum Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 78) sphere 2.5mm color: #d0d0e0

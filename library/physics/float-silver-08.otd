@@ -1,0 +1,8 @@
+# A silver cube meets the waterline.
+scene "Buoyancy: Silver"
+
+water1 = plane(w: 25cm, d: 25cm, t: 2mm) color: deepskyblue
+test1 = cube(w: 5cm, d: 5cm, h: 5cm) at (0, 12cm, 0) material: silver
+simulate: float
+ask "will it float?"
+ask "density?"

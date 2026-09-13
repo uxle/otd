@@ -1,0 +1,5 @@
+# The word BRICK rendered as real 3D letters.
+scene "Word BRICK"
+
+labelX = text "BRICK" size: 2.2cm depth: 9mm color: bisque
+ask "mass?"

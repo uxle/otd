@@ -1,0 +1,8 @@
+# Display Card
+# Chromium (Cr) — real density 7.19 g/cm³. periodic-table tile.
+scene "Chromium Display Card"
+
+tile = cube(w: 64mm, d: 6mm, h: 64mm) color: #8a99c7 at (0, 3mm, 0)
+sym = text "Cr" at (-14mm, 6mm, -8mm)
+znum = text "24" at (22mm, 6mm, 22mm)
+nmass = text "52" at (-22mm, 6mm, 22mm)

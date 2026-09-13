@@ -1,0 +1,7 @@
+# Sample Cube
+# Zinc (Zn) — real density 7.14 g/cm³. a 1 cm cube — the reference sample.
+scene "Zinc Sample Cube"
+
+sample_cube = cube 10mm material: zinc at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

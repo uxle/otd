@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Rubidium (Rb) — real density 1.532 g/cm³. V = M/ρ = 85.468/1.532 = 55.8 cm³ per mole.
+scene "Rubidium Molar Volume Cube"
+
+mole_cube = cube 3.82cm color: #702eb0 at (0, 1.91cm, 0)
+# one mole of atoms: 6.022e23 atoms of Rubidium, 85.468 g, drawn at true scale

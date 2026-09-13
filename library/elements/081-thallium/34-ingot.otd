@@ -1,0 +1,6 @@
+# Ingot
+# Thallium (Tl) — real density 11.85 g/cm³. cast bar format.
+scene "Thallium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #a6544d at (0, 5.5mm, 0)
+simulate: drop

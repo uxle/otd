@@ -1,0 +1,5 @@
+# Draw a polygon, pull it up.
+scene "extrude: 2D to 3D — Lesson 31"
+
+plate1 = extrude [(0, 0), (8cm, 0), (8cm, 8cm), (0, 8cm)] depth: 1cm
+ask "volume?"

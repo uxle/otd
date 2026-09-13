@@ -1,0 +1,6 @@
+# Compression spring — a real helix of spring steel.
+scene "Compression Spring"
+
+spring_coil = helix(radius: 14mm, pitch: 8mm, turns: 6, tube: 2.5mm) material: steel
+ask "mass?"
+simulate: drop

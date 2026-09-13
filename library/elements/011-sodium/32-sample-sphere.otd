@@ -1,0 +1,6 @@
+# Sample Sphere
+# Sodium (Na) — real density 0.971 g/cm³. 5 mm radius ball.
+scene "Sodium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ab5cf2 at (0, 5mm, 0)
+simulate: drop

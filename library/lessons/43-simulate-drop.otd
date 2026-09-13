@@ -1,0 +1,6 @@
+# Falls, bounces, settles.
+scene "simulate: drop — Lesson 43"
+
+ball1 = sphere 3cm at (0, 80cm, 0) material: rubber
+gravity: earth
+simulate: drop

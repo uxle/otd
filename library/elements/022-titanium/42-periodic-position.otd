@@ -1,0 +1,8 @@
+# Periodic Position
+# Titanium (Ti) — real density 4.506 g/cm³. period 4, group 4.
+scene "Titanium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm material: titanium at (72mm, 3mm, 72mm)
+label = text "Ti" at (66mm, 4mm, 67mm)
+numtext = text "22" at (79mm, 4mm, 78mm)

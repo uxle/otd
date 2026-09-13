@@ -1,0 +1,5 @@
+# Granules
+# Bromine (Br) — real density 3.12 g/cm³. small pieces scatter like real granules.
+scene "Bromine Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 35) sphere 2.5mm color: #a62929

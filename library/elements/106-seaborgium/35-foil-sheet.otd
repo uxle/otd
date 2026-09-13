@@ -1,0 +1,5 @@
+# Foil Sheet
+# Seaborgium (Sg) — real density 35 g/cm³. 0.1 mm foil.
+scene "Seaborgium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #80a0ff at (0, 0.1mm, 0)

@@ -1,0 +1,7 @@
+# A practice exercise: a row of sphere objects.
+scene "Exercise 1"
+
+for i = 1 to 3
+  sphere 1.6cm at (i * 4cm, 0, 0)
+end
+ask "how many objects?"

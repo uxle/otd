@@ -1,0 +1,8 @@
+# Sample Vial
+# Thulium (Tm) — real density 9.32 g/cm³. museum storage: glass tube, labelled.
+scene "Thulium Sample Vial"
+
+sample = cylinder(r: 6mm, h: 18mm) color: #8ccbe0 at (0, 8mm, 0)
+vial = cylinder(r: 9mm, h: 30mm) - hollow(wall: 1.5mm, open: top) material: glass at (0, 0, 0)
+cap = cylinder(r: 10mm, h: 4mm) material: oak at (0, 30mm, 0)
+label = text "Tm" at (14mm, 2mm, -3mm)

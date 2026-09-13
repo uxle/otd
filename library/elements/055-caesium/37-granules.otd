@@ -1,0 +1,5 @@
+# Granules
+# Caesium (Cs) — real density 1.879 g/cm³. small pieces scatter like real granules.
+scene "Caesium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 55) sphere 2.5mm color: #57178f

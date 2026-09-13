@@ -1,0 +1,5 @@
+# Granules
+# Nitrogen (N) — real density 0.00125 g/cm³. small pieces scatter like real granules.
+scene "Nitrogen Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 7) sphere 2.5mm color: #3050f8

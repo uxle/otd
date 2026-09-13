@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Germanium (Ge) — real density 5.323 g/cm³. rod format, like lab stock.
+scene "Germanium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #668f8f
+simulate: drop

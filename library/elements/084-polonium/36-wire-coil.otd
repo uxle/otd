@@ -1,0 +1,5 @@
+# Wire Coil
+# Polonium (Po) — real density 9.2 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Polonium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #d8004d

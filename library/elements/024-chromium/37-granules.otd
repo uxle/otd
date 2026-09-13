@@ -1,0 +1,5 @@
+# Granules
+# Chromium (Cr) — real density 7.19 g/cm³. small pieces scatter like real granules.
+scene "Chromium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 24) sphere 2.5mm material: chrome

@@ -1,0 +1,5 @@
+# Crystal Lattice
+# Curium (Cm) — real density 13.51 g/cm³. simple cubic lattice — packing 50% vs close-packed 74%.
+scene "Curium Crystal Lattice"
+
+lattice = grid(nx: 3, nz: 3, spacing: (8mm, 8mm)) sphere 2.5mm color: #80ffa0

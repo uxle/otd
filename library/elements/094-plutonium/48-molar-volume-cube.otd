@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Plutonium (Pu) — real density 19.85 g/cm³. V = M/ρ = 244.0/19.85 = 12.3 cm³ per mole.
+scene "Plutonium Molar Volume Cube"
+
+mole_cube = cube 2.31cm color: #00e080 at (0, 1.15cm, 0)
+# one mole of atoms: 6.022e23 atoms of Plutonium, 244.0 g, drawn at true scale

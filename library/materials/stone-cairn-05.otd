@@ -1,0 +1,8 @@
+# A balanced cairn of 4 smoothed stones.
+scene "Stone Cairn 5"
+
+material: marble
+for i = 0 to 3
+  sphere(r: 6cm) smooth(n: 3) at (i * 1.5cm, i * 8.5cm, 0)
+end
+ask "center of mass?"

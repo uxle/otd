@@ -1,0 +1,8 @@
+# Electron Shells
+# Fluorine (F) — real density 0.0017 g/cm³. configuration [He] 2s2 2p5.
+scene "Fluorine Electron Shells"
+
+define electron = sphere 1mm color: #ffffff
+nucleus = sphere 2.5mm color: #90e050
+shell1 = ring(n: 2, radius: 5mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell2 = ring(n: 7, radius: 10mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)

@@ -1,0 +1,5 @@
+# A capsule standing on its rounded end.
+scene "Pill 6"
+
+pill = capsule(r: 1cm, h: 7cm) at (0, 1cm, 0) color: cyan
+ask "volume?"

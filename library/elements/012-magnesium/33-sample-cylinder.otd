@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Magnesium (Mg) — real density 1.738 g/cm³. rod format, like lab stock.
+scene "Magnesium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #8aff00
+simulate: drop

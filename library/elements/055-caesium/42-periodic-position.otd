@@ -1,0 +1,8 @@
+# Periodic Position
+# Caesium (Cs) — real density 1.879 g/cm³. period 6, group 1.
+scene "Caesium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #57178f at (0mm, 3mm, 120mm)
+label = text "Cs" at (-6mm, 4mm, 115mm)
+numtext = text "55" at (7mm, 4mm, 126mm)

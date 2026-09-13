@@ -1,0 +1,5 @@
+# Rows and columns in one word.
+scene "grid Pattern — Lesson 27"
+
+field1 = grid(nx: 4, nz: 3, spacing: (4cm, 4cm)) sphere 8mm
+ask "how many objects?"

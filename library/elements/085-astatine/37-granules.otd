@@ -1,0 +1,5 @@
+# Granules
+# Astatine (At) — real density 7 g/cm³. small pieces scatter like real granules.
+scene "Astatine Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 85) sphere 2.5mm color: #cc0066

@@ -1,0 +1,5 @@
+# Powder Pile
+# Selenium (Se) — real density 4.81 g/cm³. a poured heap.
+scene "Selenium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #ffa100

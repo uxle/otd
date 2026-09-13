@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Manganese (Mn) — real density 7.21 g/cm³. V = M/ρ = 54.938/7.21 = 7.6 cm³ per mole.
+scene "Manganese Molar Volume Cube"
+
+mole_cube = cube 1.97cm color: #9c7ac7 at (0, 0.98cm, 0)
+# one mole of atoms: 6.022e23 atoms of Manganese, 54.938 g, drawn at true scale

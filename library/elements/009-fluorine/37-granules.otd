@@ -1,0 +1,5 @@
+# Granules
+# Fluorine (F) — real density 0.0017 g/cm³. small pieces scatter like real granules.
+scene "Fluorine Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 9) sphere 2.5mm color: #90e050

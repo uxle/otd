@@ -1,0 +1,7 @@
+# A classical column with a square capital.
+scene "Stone Column 8"
+
+material: ceramic
+column = cylinder(r: 3.7cm, h: 51.5cm, smooth: 32)
+cap = cube(w: 14cm, d: 14cm, h: 4cm) at (0, 71cm, 0)
+ask "mass?"

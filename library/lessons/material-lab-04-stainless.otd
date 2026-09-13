@@ -1,0 +1,7 @@
+# Hands-on lab: measure a stainless sample.
+scene "Material Lab: Stainless"
+
+sample1 = cube 4cm material: stainless
+ask "mass?"
+ask "density?"
+ask "will it float?"

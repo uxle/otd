@@ -1,0 +1,5 @@
+# The plus fuses two solids into one mesh.
+scene "Boolean + — Lesson 11"
+
+snowman = sphere 3cm + sphere 2cm at (0, 4cm, 0)
+ask "mass?"

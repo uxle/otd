@@ -1,0 +1,7 @@
+# A practice exercise: a row of cube objects.
+scene "Exercise 9"
+
+for i = 1 to 6
+  cube 2.5cm at (i * 4cm, 0, 0)
+end
+ask "how many objects?"

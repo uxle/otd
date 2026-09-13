@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Cadmium (Cd) — real density 8.65 g/cm³. rod format, like lab stock.
+scene "Cadmium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #ffd98f
+simulate: drop

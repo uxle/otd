@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Neptunium (Np) — real density 20.45 g/cm³. rod format, like lab stock.
+scene "Neptunium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #00d0ff
+simulate: drop

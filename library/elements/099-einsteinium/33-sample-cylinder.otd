@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Einsteinium (Es) — real density 8.84 g/cm³. rod format, like lab stock.
+scene "Einsteinium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #40ff10
+simulate: drop

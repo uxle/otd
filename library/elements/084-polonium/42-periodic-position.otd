@@ -1,0 +1,8 @@
+# Periodic Position
+# Polonium (Po) — real density 9.2 g/cm³. period 6, group 16.
+scene "Polonium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #d8004d at (360mm, 3mm, 120mm)
+label = text "Po" at (354mm, 4mm, 115mm)
+numtext = text "84" at (367mm, 4mm, 126mm)

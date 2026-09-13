@@ -1,0 +1,5 @@
+# Wire Coil
+# Cobalt (Co) — real density 8.9 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Cobalt Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #f090a0

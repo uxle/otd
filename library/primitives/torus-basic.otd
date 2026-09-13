@@ -1,0 +1,5 @@
+# A donut lying flat on the ground.
+scene "Basic Torus"
+
+torus
+ask "volume?"

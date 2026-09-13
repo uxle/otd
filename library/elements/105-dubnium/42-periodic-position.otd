@@ -1,0 +1,8 @@
+# Periodic Position
+# Dubnium (Db) — real density 29.3 g/cm³. period 7, group 5.
+scene "Dubnium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #60c0ff at (96mm, 3mm, 144mm)
+label = text "Db" at (90mm, 4mm, 139mm)
+numtext = text "105" at (103mm, 4mm, 150mm)

@@ -1,0 +1,5 @@
+# Powder Pile
+# Bohrium (Bh) — real density 37.1 g/cm³. a poured heap.
+scene "Bohrium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #a080ff

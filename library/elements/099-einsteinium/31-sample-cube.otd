@@ -1,0 +1,7 @@
+# Sample Cube
+# Einsteinium (Es) — real density 8.84 g/cm³. a 1 cm cube — the reference sample.
+scene "Einsteinium Sample Cube"
+
+sample_cube = cube 10mm color: #40ff10 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

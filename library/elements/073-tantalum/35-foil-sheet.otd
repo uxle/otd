@@ -1,0 +1,5 @@
+# Foil Sheet
+# Tantalum (Ta) — real density 16.69 g/cm³. 0.1 mm foil.
+scene "Tantalum Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #a0c8c8 at (0, 0.1mm, 0)

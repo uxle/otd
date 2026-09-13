@@ -1,0 +1,8 @@
+# Collection Item
+# Iodine (I) — real density 4.93 g/cm³. display stand + sphere, like an element collection.
+scene "Iodine Collection Item"
+
+stand = cylinder(r: 26mm, h: 5mm) color: #303038 at (0, 2.5mm, 0)
+pillar = cylinder(r: 5mm, h: 18mm) color: #505058 at (0, 14mm, 0)
+gem = sphere 12mm color: #940094 at (0, 44mm, 0)
+plate = text "I · 53" at (-14mm, 5mm, 30mm)

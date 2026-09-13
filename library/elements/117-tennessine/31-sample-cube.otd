@@ -1,0 +1,7 @@
+# Sample Cube
+# Tennessine (Ts) — real density 7.2 g/cm³. a 1 cm cube — the reference sample.
+scene "Tennessine Sample Cube"
+
+sample_cube = cube 10mm color: #ffb040 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

@@ -1,0 +1,8 @@
+# Display Card
+# Vanadium (V) — real density 6.11 g/cm³. periodic-table tile.
+scene "Vanadium Display Card"
+
+tile = cube(w: 64mm, d: 6mm, h: 64mm) color: #a6a6ab at (0, 3mm, 0)
+sym = text "V" at (-14mm, 6mm, -8mm)
+znum = text "23" at (22mm, 6mm, 22mm)
+nmass = text "51" at (-22mm, 6mm, 22mm)

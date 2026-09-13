@@ -1,0 +1,6 @@
+# Sample Sphere
+# Terbium (Tb) — real density 8.23 g/cm³. 5 mm radius ball.
+scene "Terbium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #c9ffa6 at (0, 5mm, 0)
+simulate: drop

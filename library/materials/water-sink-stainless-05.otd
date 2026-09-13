@@ -1,0 +1,7 @@
+# A stainless ball dropped into water — it sinks.
+scene "Sinking Stainless"
+
+water = plane(w: 20cm, d: 20cm, t: 2mm) color: steelblue
+ball = sphere(r: 3cm) at (0, 10cm, 0) material: stainless
+simulate: float
+ask "will it float?"

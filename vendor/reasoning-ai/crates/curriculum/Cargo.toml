@@ -1,0 +1,15 @@
+[package]
+name = "reasoning-curriculum"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Reasoning AI — curriculum crate (Rust port of the Python reasoning-ai project)"
+
+[dependencies]
+reasoning-common = { path = "../common" }
+reasoning-verifier = { path = "../verifier" }
+reasoning-search = { path = "../search" }
+reasoning-memory = { path = "../memory" }
+reasoning-prm = { path = "../prm" }
+rand = { workspace = true }
+regex = { workspace = true }

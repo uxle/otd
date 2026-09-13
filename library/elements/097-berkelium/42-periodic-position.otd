@@ -1,0 +1,8 @@
+# Periodic Position
+# Berkelium (Bk) — real density 14.78 g/cm³. period 7, group 11.
+scene "Berkelium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #80ff40 at (240mm, 3mm, 144mm)
+label = text "Bk" at (234mm, 4mm, 139mm)
+numtext = text "97" at (247mm, 4mm, 150mm)

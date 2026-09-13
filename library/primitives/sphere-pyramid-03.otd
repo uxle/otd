@@ -1,0 +1,7 @@
+# Three cannonballs — two below, one on top.
+scene "Ball Pyramid 3"
+
+sphere(r: 2cm)
+sphere(r: 2cm) at (4.2cm, 0, 0)
+sphere(r: 2cm) at (2.1cm, 3.4cm, 0)
+ask "center of mass?"

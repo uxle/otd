@@ -1,0 +1,7 @@
+# Sample Sphere
+# Chromium (Cr) — real density 7.19 g/cm³. 5 mm radius ball.
+scene "Chromium Sample Sphere"
+
+sample_sphere = sphere 5mm material: chrome at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

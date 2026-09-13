@@ -1,0 +1,5 @@
+# The word DESIGN rendered as real 3D letters.
+scene "Word DESIGN"
+
+labelX = text "DESIGN" size: 3.4cm depth: 8mm color: moccasin
+ask "mass?"

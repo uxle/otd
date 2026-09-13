@@ -1,0 +1,6 @@
+# A 3D signboard with raised letters.
+scene "Sign 1"
+
+sign1 = text "OPEN" size: 2.1cm depth: 7mm color: green at (0, 41cm, 0)
+board1 = plane(w: 20cm, d: 2cm, t: 20cm) rotate (90deg, 0, 0) at (0, 28cm, -2cm) material: wood
+ask "mass?"

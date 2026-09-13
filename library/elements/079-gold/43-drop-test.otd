@@ -1,0 +1,7 @@
+# Drop Test
+# Gold (Au) — real density 19.32 g/cm³. v = √(2gh) — watch the physics console.
+scene "Gold Drop Test"
+
+test_cube = cube 20mm material: gold at (0, 50mm, 0)
+ask "mass?"
+simulate: drop

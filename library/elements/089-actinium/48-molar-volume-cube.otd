@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Actinium (Ac) — real density 10.07 g/cm³. V = M/ρ = 227.0/10.07 = 22.5 cm³ per mole.
+scene "Actinium Molar Volume Cube"
+
+mole_cube = cube 2.82cm color: #007fff at (0, 1.41cm, 0)
+# one mole of atoms: 6.022e23 atoms of Actinium, 227.0 g, drawn at true scale

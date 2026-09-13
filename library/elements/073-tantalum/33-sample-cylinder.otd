@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Tantalum (Ta) — real density 16.69 g/cm³. rod format, like lab stock.
+scene "Tantalum Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #a0c8c8
+simulate: drop

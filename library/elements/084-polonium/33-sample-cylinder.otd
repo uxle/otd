@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Polonium (Po) — real density 9.2 g/cm³. rod format, like lab stock.
+scene "Polonium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #d8004d
+simulate: drop

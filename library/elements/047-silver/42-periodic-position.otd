@@ -1,0 +1,8 @@
+# Periodic Position
+# Silver (Ag) — real density 10.49 g/cm³. period 5, group 11.
+scene "Silver Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm material: silver at (240mm, 3mm, 96mm)
+label = text "Ag" at (234mm, 4mm, 91mm)
+numtext = text "47" at (247mm, 4mm, 102mm)

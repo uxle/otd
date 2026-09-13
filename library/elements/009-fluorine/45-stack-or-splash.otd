@@ -1,0 +1,7 @@
+# Gas Jar
+# Fluorine (F) — real density 0.0017 g/cm³. glass jar upside-down over the gas.
+scene "Fluorine Gas Jar"
+
+gas_puff = sphere 16mm scale (1, 0.8, 1) color: #90e050 at (0, 26mm, 0)
+jar = cube(w: 60mm, d: 60mm, h: 55mm) - hollow(wall: 2.5mm, open: bottom) material: glass at (0, 0, 0) - cube(w: 50mm, d: 50mm, h: 40mm) at (0, 0, 0)
+# the jar is transparent — the gas colour shows through (real alpha blending)

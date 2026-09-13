@@ -1,0 +1,9 @@
+# Spur gear with exactly 6 teeth — steel, named gear_six.
+scene "Gear Six"
+
+define tooth = cube(w: 4.5mm, h: 7mm, d: 5.5mm)
+gear_six = group(cylinder(r: 28mm, h: 6mm),
+                    ring(n: 6, radius: 30.5mm) tooth rotate (0, a, 0)) material: steel
+ask "mass?"
+ask "how many objects?"
+simulate: drop

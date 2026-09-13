@@ -1,0 +1,7 @@
+# Sample Cube
+# Xenon (Xe) — real density 0.0059 g/cm³. a 1 cm cube — the reference sample.
+scene "Xenon Sample Cube"
+
+sample_cube = cube 10mm color: #429eb0 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

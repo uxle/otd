@@ -1,0 +1,5 @@
+# Granules
+# Nickel (Ni) — real density 8.908 g/cm³. small pieces scatter like real granules.
+scene "Nickel Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 28) sphere 2.5mm color: #50d050

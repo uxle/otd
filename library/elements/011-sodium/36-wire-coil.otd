@@ -1,0 +1,5 @@
+# Wire Coil
+# Sodium (Na) — real density 0.971 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Sodium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #ab5cf2

@@ -1,0 +1,9 @@
+# Repeat until the condition turns false.
+scene "while Loops — Lesson 19"
+
+x = 0cm
+while x < 20cm
+  cube 1cm at (x, 0, 0)
+  x += 5cm
+end
+ask "how many objects?"

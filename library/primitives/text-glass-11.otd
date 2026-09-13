@@ -1,0 +1,5 @@
+# The word GLASS rendered as real 3D letters.
+scene "Word GLASS"
+
+labelX = text "GLASS" size: 2.7cm depth: 11mm color: brown
+ask "mass?"

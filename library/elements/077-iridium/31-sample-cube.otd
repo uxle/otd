@@ -1,0 +1,7 @@
+# Sample Cube
+# Iridium (Ir) — real density 22.56 g/cm³. a 1 cm cube — the reference sample.
+scene "Iridium Sample Cube"
+
+sample_cube = cube 10mm color: #d4d4ff at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

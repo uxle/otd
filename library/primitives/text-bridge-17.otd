@@ -1,0 +1,5 @@
+# The word BRIDGE rendered as real 3D letters.
+scene "Word BRIDGE"
+
+labelX = text "BRIDGE" size: 1.6cm depth: 8mm color: lightsteelblue
+ask "mass?"

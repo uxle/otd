@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Vanadium (V) — real density 6.11 g/cm³. rod format, like lab stock.
+scene "Vanadium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #a6a6ab
+simulate: drop

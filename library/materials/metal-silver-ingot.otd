@@ -1,0 +1,6 @@
+# A silver ingot with chamfered proportions.
+scene "Silver Ingot"
+
+ingot = wedge(w: 8cm, d: 4cm, h: 3cm) material: silver
+ask "mass?"
+ask "density?"

@@ -1,0 +1,6 @@
+# An inverted cone over a cylinder neck — a funnel.
+scene "Funnel 2"
+
+funnel = cone(r: 6cm, h: 5cm) at (0, 10cm, 0) rotate (180deg, 0, 0)
+neck = cylinder(r: 1cm, h: 10cm)
+ask "mass?"

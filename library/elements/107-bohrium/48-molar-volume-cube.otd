@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Bohrium (Bh) — real density 37.1 g/cm³. V = M/ρ = 270.0/37.1 = 7.3 cm³ per mole.
+scene "Bohrium Molar Volume Cube"
+
+mole_cube = cube 1.94cm color: #a080ff at (0, 0.97cm, 0)
+# one mole of atoms: 6.022e23 atoms of Bohrium, 270.0 g, drawn at true scale

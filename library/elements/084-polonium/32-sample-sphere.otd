@@ -1,0 +1,6 @@
+# Sample Sphere
+# Polonium (Po) — real density 9.2 g/cm³. 5 mm radius ball.
+scene "Polonium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #d8004d at (0, 5mm, 0)
+simulate: drop

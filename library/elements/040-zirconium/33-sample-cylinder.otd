@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Zirconium (Zr) — real density 6.52 g/cm³. rod format, like lab stock.
+scene "Zirconium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #94e0e0
+simulate: drop

@@ -1,0 +1,9 @@
+# Float Test
+# Gold (Au) — real density 19.32 g/cm³. Archimedes decides: ρ vs 0.997 g/cm³.
+scene "Gold Float Test"
+
+floater = cube 20mm material: gold at (0, 60mm, 0)
+pool = cube(w: 90mm, d: 90mm, h: 35mm) material: water at (0, 17.5mm, 0)
+# real verdict for Gold: sinks (density 19.32 g/cm³)
+ask "will it float?"
+simulate: float

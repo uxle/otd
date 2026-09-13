@@ -1,0 +1,27 @@
+# A spiral staircase, built one step at a time with the 2.1 for loop.
+# i counts 0, 1, 2… the steps climb and turn; every fourth one is a
+# wider crimson landing.
+scene "Spiral Staircase"
+material: steel
+
+#[ the column everything climbs around ]#
+column = cylinder(r: 3cm, h: 72cm) at (0, 0, 0) color: dimgray
+
+for i = 0 to 17
+  if i mod 4 is 3
+    continue
+  end
+  a = i * 20deg
+  cube(w: 20cm, h: 3cm, d: 8cm) at (11cm * cos(a), i * 4cm, -11cm * sin(a)) color: lightgray
+end
+
+# the landings: wider, and crimson
+for i = 3 to 17 by 4
+  a = i * 20deg
+  cube(w: 26cm, h: 3cm, d: 8cm) at (11cm * cos(a), i * 4cm, -11cm * sin(a)) color: crimson
+end
+
+# the handrail: a spring climbing beside the steps
+rail = helix(radius: 14cm, pitch: 16cm, turns: 2.5, tube: 1cm) at (0, 2cm, 0) color: crimson
+
+ask "mass?"

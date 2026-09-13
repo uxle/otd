@@ -1,0 +1,8 @@
+# Periodic Position
+# Zinc (Zn) — real density 7.14 g/cm³. period 4, group 12.
+scene "Zinc Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm material: zinc at (264mm, 3mm, 72mm)
+label = text "Zn" at (258mm, 4mm, 67mm)
+numtext = text "30" at (271mm, 4mm, 78mm)

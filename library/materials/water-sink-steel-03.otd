@@ -1,0 +1,7 @@
+# A steel ball dropped into water — it sinks.
+scene "Sinking Steel"
+
+water = plane(w: 20cm, d: 20cm, t: 2mm) color: steelblue
+ball = sphere(r: 3cm) at (0, 10cm, 0) material: steel
+simulate: float
+ask "will it float?"

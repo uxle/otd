@@ -1,0 +1,6 @@
+# Drop Test
+# Scandium (Sc) — real density 2.985 g/cm³. v = √(2gh) — watch the physics console.
+scene "Scandium Drop Test"
+
+test_cube = cube 20mm color: #ffe08a # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

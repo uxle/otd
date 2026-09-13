@@ -1,0 +1,7 @@
+# Density Compare
+# Flerovium (Fl) — real density 14 g/cm³. equal masses: Flerovium vs water — sides ∝ (1/ρ)^(1/3).
+scene "Flerovium Density Compare"
+
+element_cube = cube 8.3mm color: #ff5050 at (-20mm, 4.1mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 111.7 g — the water cube is the reference

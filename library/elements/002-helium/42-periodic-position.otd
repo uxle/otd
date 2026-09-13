@@ -1,0 +1,8 @@
+# Periodic Position
+# Helium (He) — real density 0.00018 g/cm³. period 1, group 18.
+scene "Helium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #d9ffff at (408mm, 3mm, 0mm)
+label = text "He" at (402mm, 4mm, -5mm)
+numtext = text "2" at (415mm, 4mm, 6mm)

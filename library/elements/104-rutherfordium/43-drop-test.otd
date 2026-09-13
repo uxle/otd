@@ -1,0 +1,6 @@
+# Drop Test
+# Rutherfordium (Rf) — real density 23.2 g/cm³. v = √(2gh) — watch the physics console.
+scene "Rutherfordium Drop Test"
+
+test_cube = cube 20mm color: #50d0ff # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

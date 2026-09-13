@@ -1,0 +1,6 @@
+# Sample Sphere
+# Ytterbium (Yb) — real density 6.9 g/cm³. 5 mm radius ball.
+scene "Ytterbium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #bfbfe8 at (0, 5mm, 0)
+simulate: drop

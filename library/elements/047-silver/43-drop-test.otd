@@ -1,0 +1,7 @@
+# Drop Test
+# Silver (Ag) — real density 10.49 g/cm³. v = √(2gh) — watch the physics console.
+scene "Silver Drop Test"
+
+test_cube = cube 20mm material: silver at (0, 50mm, 0)
+ask "mass?"
+simulate: drop

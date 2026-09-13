@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Livermorium (Lv) — real density 12.9 g/cm³. V = M/ρ = 293.0/12.9 = 22.7 cm³ per mole.
+scene "Livermorium Molar Volume Cube"
+
+mole_cube = cube 2.83cm color: #ff9040 at (0, 1.42cm, 0)
+# one mole of atoms: 6.022e23 atoms of Livermorium, 293.0 g, drawn at true scale

@@ -1,0 +1,5 @@
+# A round titanium bar standing on end.
+scene "Titanium Rod"
+
+rod = cylinder(r: 1.5cm, h: 39cm) material: titanium
+ask "mass?"

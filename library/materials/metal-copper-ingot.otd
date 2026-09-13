@@ -1,0 +1,6 @@
+# A copper ingot with chamfered proportions.
+scene "Copper Ingot"
+
+ingot = wedge(w: 8cm, d: 4cm, h: 3cm) material: copper
+ask "mass?"
+ask "density?"

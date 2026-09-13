@@ -1,0 +1,7 @@
+# Hex bolt M16 — one material (steel), named part, real physics.
+scene "Hex Bolt M16"
+
+shank = cylinder(r: 8.0mm, h: 96mm) material: steel
+head = prism(sides: 6, r: 15.2mm, h: 10.4mm) at (0, 96mm, 0) material: steel
+ask "mass?"
+simulate: drop

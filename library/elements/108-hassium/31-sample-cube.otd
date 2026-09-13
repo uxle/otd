@@ -1,0 +1,7 @@
+# Sample Cube
+# Hassium (Hs) — real density 40.7 g/cm³. a 1 cm cube — the reference sample.
+scene "Hassium Sample Cube"
+
+sample_cube = cube 10mm color: #c060ff at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

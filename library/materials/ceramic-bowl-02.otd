@@ -1,0 +1,6 @@
+# A round-bottomed ceramic bowl.
+scene "Ceramic Bowl 2"
+
+material: ceramic
+bowl = sphere(r: 4.7cm) - hollow(wall: 3mm, open: top) at (0, 0, 0)
+ask "mass?"

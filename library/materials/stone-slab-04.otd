@@ -1,0 +1,6 @@
+# A polished marble floor slab.
+scene "Marble Slab 4"
+
+material: marble
+slab = plane(w: 44cm, d: 40cm, t: 2.1cm)
+ask "surface area?"

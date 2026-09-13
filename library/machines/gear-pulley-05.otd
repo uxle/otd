@@ -1,0 +1,9 @@
+# Two pulleys joined by a belt.
+scene "Pulley Belt 5"
+
+material: aluminum
+pulleyA = torus(R: 4.2cm, tube: 4mm) rotate (90deg, 0, 0) at (-17cm, 24.9cm, 0)
+pulleyB = torus(R: 3.7cm, tube: 4mm) rotate (90deg, 0, 0) at (12.4cm, 19.4cm, 0)
+belt1 = rope(from: (-13.4cm, 24.9cm, 0), to: (17.9cm, 23.3cm, 0), thickness: 3mm, sag: 1cm)
+belt2 = rope(from: (-17.6cm, 18.7cm, 0), to: (17.3cm, 18cm, 0), thickness: 3mm, sag: 1cm)
+ask "cable sag?"

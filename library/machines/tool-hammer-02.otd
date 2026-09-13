@@ -1,0 +1,6 @@
+# A hammer with wooden handle and iron head.
+scene "Hammer 2"
+
+handle1 = cylinder(r: 1.2cm, h: 32.4cm) rotate (90deg, 0, 0) at (0, 12.4cm, 0) material: oak color: burlywood
+head1 = cube(w: 5cm, d: 9cm, h: 4cm) at (0, 12.2cm, 0) material: iron
+ask "mass?"

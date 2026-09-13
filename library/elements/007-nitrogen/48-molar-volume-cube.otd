@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Nitrogen (N) — real density 0.00125 g/cm³. V = M/ρ = 14.007/0.00125 = 11205.6 cm³ per mole.
+scene "Nitrogen Molar Volume Cube"
+
+mole_cube = cube 22.38cm color: #3050f8 at (0, 11.19cm, 0)
+# one mole of atoms: 6.022e23 atoms of Nitrogen, 14.007 g, drawn at true scale

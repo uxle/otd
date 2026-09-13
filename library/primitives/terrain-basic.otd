@@ -1,0 +1,5 @@
+# A default gentle landscape.
+scene "Basic Terrain"
+
+land1 = terrain
+ask "triangle count?"

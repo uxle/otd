@@ -1,0 +1,5 @@
+# Foil Sheet
+# Barium (Ba) — real density 3.51 g/cm³. 0.1 mm foil.
+scene "Barium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #00c900 at (0, 0.1mm, 0)

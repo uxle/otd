@@ -1,0 +1,5 @@
+# Wire Coil
+# Gold (Au) — real density 19.32 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Gold Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) material: gold

@@ -1,0 +1,5 @@
+# Powder Pile
+# Zirconium (Zr) — real density 6.52 g/cm³. a poured heap.
+scene "Zirconium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #94e0e0

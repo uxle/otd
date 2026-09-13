@@ -1,0 +1,5 @@
+# Granules
+# Tungsten (W) — real density 19.25 g/cm³. small pieces scatter like real granules.
+scene "Tungsten Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 74) sphere 2.5mm material: tungsten

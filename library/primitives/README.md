@@ -1,0 +1,299 @@
+# library/primitives
+
+Every primitive and builder, swept across parameter ranges.
+
+**293 files.**
+
+- `capsule-basic.otd` — A pill-shaped capsule.
+- `capsule-pill-01.otd` — A capsule standing on its rounded end.
+- `capsule-pill-02.otd` — A capsule standing on its rounded end.
+- `capsule-pill-03.otd` — A capsule standing on its rounded end.
+- `capsule-pill-04.otd` — A capsule standing on its rounded end.
+- `capsule-pill-05.otd` — A capsule standing on its rounded end.
+- `capsule-pill-06.otd` — A capsule standing on its rounded end.
+- `cone-basic.otd` — A plain cone.
+- `cone-funnel-01.otd` — An inverted cone over a cylinder neck — a funnel.
+- `cone-funnel-02.otd` — An inverted cone over a cylinder neck — a funnel.
+- `cone-funnel-03.otd` — An inverted cone over a cylinder neck — a funnel.
+- `cone-funnel-04.otd` — An inverted cone over a cylinder neck — a funnel.
+- `cone-funnel-05.otd` — An inverted cone over a cylinder neck — a funnel.
+- `cone-sided-01.otd` — A cone with only 5 sides — a pyramid cone.
+- `cone-sided-02.otd` — A cone with only 12 sides — a pyramid cone.
+- `cone-sided-03.otd` — A cone with only 5 sides — a pyramid cone.
+- `cone-sided-04.otd` — A cone with only 7 sides — a pyramid cone.
+- `cone-sided-05.otd` — A cone with only 12 sides — a pyramid cone.
+- `cone-sided-06.otd` — A cone with only 8 sides — a pyramid cone.
+- `cube-basic.otd` — A two-centimeter cube.
+- `cube-cuboid.otd` — A stretched box — width, depth and height all different.
+- `cube-drilled-01.otd` — A cube with a cylinder bored straight through.
+- `cube-drilled-02.otd` — A cube with a cylinder bored straight through.
+- `cube-drilled-03.otd` — A cube with a cylinder bored straight through.
+- `cube-drilled-04.otd` — A cube with a cylinder bored straight through.
+- `cube-hollow-01.otd` — A shelled box with a known wall thickness.
+- `cube-hollow-02.otd` — A shelled box with a known wall thickness.
+- `cube-hollow-03.otd` — A shelled box with a known wall thickness.
+- `cube-hollow-04.otd` — A shelled box with a known wall thickness.
+- `cube-hollow-05.otd` — A shelled box with a known wall thickness.
+- `cube-proportions-01.otd` — A 5 by 8 by 3 centimeter box.
+- `cube-proportions-02.otd` — A 7 by 8 by 2 centimeter box.
+- `cube-proportions-03.otd` — A 8 by 8 by 7 centimeter box.
+- `cube-proportions-04.otd` — A 5 by 8 by 5 centimeter box.
+- `cube-proportions-05.otd` — A 2 by 7 by 4 centimeter box.
+- `cube-proportions-06.otd` — A 6 by 2 by 7 centimeter box.
+- `cube-proportions-07.otd` — A 7 by 2 by 2 centimeter box.
+- `cube-rotating-row-01.otd` — A row of cubes, each turned a little more.
+- `cube-rotating-row-02.otd` — A row of cubes, each turned a little more.
+- `cube-rotating-row-03.otd` — A row of cubes, each turned a little more.
+- `cube-rotating-row-04.otd` — A row of cubes, each turned a little more.
+- `cube-rotating-row-05.otd` — A row of cubes, each turned a little more.
+- `cube-stack-01.otd` — A tapering stack of three boxes.
+- `cube-stack-02.otd` — A tapering stack of three boxes.
+- `cube-stack-03.otd` — A tapering stack of three boxes.
+- `cube-stack-04.otd` — A tapering stack of three boxes.
+- `cube-stack-05.otd` — A tapering stack of three boxes.
+- `cylinder-basic.otd` — A plain upright cylinder.
+- `cylinder-column-01.otd` — A classical column turned from three cylinders.
+- `cylinder-column-02.otd` — A classical column turned from three cylinders.
+- `cylinder-column-03.otd` — A classical column turned from three cylinders.
+- `cylinder-column-04.otd` — A classical column turned from three cylinders.
+- `cylinder-column-05.otd` — A classical column turned from three cylinders.
+- `cylinder-column-06.otd` — A classical column turned from three cylinders.
+- `cylinder-cup-01.otd` — A tapered cup shelled with a 3 mm wall.
+- `cylinder-cup-02.otd` — A tapered cup shelled with a 3 mm wall.
+- `cylinder-cup-03.otd` — A tapered cup shelled with a 3 mm wall.
+- `cylinder-cup-04.otd` — A tapered cup shelled with a 3 mm wall.
+- `cylinder-pipe-01.otd` — A bent pipe swept through a spline path.
+- `cylinder-pipe-02.otd` — A bent pipe swept through a spline path.
+- `cylinder-pipe-03.otd` — A bent pipe swept through a spline path.
+- `cylinder-pipe-04.otd` — A bent pipe swept through a spline path.
+- `cylinder-pipe-05.otd` — A bent pipe swept through a spline path.
+- `cylinder-pipe-06.otd` — A bent pipe swept through a spline path.
+- `cylinder-row-01.otd` — A row of 4 cylinders of varied height.
+- `cylinder-row-02.otd` — A row of 5 cylinders of varied height.
+- `cylinder-row-03.otd` — A row of 3 cylinders of varied height.
+- `cylinder-row-04.otd` — A row of 4 cylinders of varied height.
+- `cylinder-row-05.otd` — A row of 3 cylinders of varied height.
+- `cylinder-taper-01.otd` — A tapered cylinder (frustum) — top 3 cm, bottom 2 cm.
+- `cylinder-taper-02.otd` — A tapered cylinder (frustum) — top 3 cm, bottom 2 cm.
+- `cylinder-taper-03.otd` — A tapered cylinder (frustum) — top 2 cm, bottom 3 cm.
+- `cylinder-taper-04.otd` — A tapered cylinder (frustum) — top 5 cm, bottom 2 cm.
+- `cylinder-taper-05.otd` — A tapered cylinder (frustum) — top 5 cm, bottom 3 cm.
+- `cylinder-taper-06.otd` — A tapered cylinder (frustum) — top 3 cm, bottom 2 cm.
+- `cylinder-taper-07.otd` — A tapered cylinder (frustum) — top 2 cm, bottom 4 cm.
+- `cylinder-taper-08.otd` — A tapered cylinder (frustum) — top 5 cm, bottom 2 cm.
+- `extrude-lshape-01.otd` — An L-shaped bracket from one extrusion.
+- `extrude-lshape-02.otd` — An L-shaped bracket from one extrusion.
+- `extrude-lshape-03.otd` — An L-shaped bracket from one extrusion.
+- `extrude-lshape-04.otd` — An L-shaped bracket from one extrusion.
+- `extrude-lshape-05.otd` — An L-shaped bracket from one extrusion.
+- `extrude-lshape-06.otd` — An L-shaped bracket from one extrusion.
+- `extrude-polygon-01.otd` — An irregular 5-sided polygon pulled into a solid.
+- `extrude-polygon-02.otd` — An irregular 6-sided polygon pulled into a solid.
+- `extrude-polygon-03.otd` — An irregular 9-sided polygon pulled into a solid.
+- `extrude-polygon-04.otd` — An irregular 9-sided polygon pulled into a solid.
+- `extrude-polygon-05.otd` — An irregular 7-sided polygon pulled into a solid.
+- `extrude-polygon-06.otd` — An irregular 7-sided polygon pulled into a solid.
+- `extrude-polygon-07.otd` — An irregular 6-sided polygon pulled into a solid.
+- `extrude-polygon-08.otd` — An irregular 6-sided polygon pulled into a solid.
+- `extrude-square.otd` — A square drawn flat and pulled up.
+- `extrude-star-01.otd` — The ten-point gold star from the spec.
+- `extrude-star-02.otd` — The ten-point gold star from the spec.
+- `extrude-star-03.otd` — The ten-point gold star from the spec.
+- `extrude-star-04.otd` — The ten-point gold star from the spec.
+- `extrude-star-05.otd` — The ten-point gold star from the spec.
+- `helix-basic.otd` — A steel spring.
+- `helix-coil-01.otd` — A six-turn copper coil.
+- `helix-coil-02.otd` — A six-turn copper coil.
+- `helix-coil-03.otd` — A six-turn copper coil.
+- `helix-coil-04.otd` — A six-turn copper coil.
+- `helix-coil-05.otd` — A six-turn copper coil.
+- `helix-spring-01.otd` — A helical spring with 7.5 turns.
+- `helix-spring-02.otd` — A helical spring with 7.4 turns.
+- `helix-spring-03.otd` — A helical spring with 3.5 turns.
+- `helix-spring-04.otd` — A helical spring with 4.8 turns.
+- `helix-spring-05.otd` — A helical spring with 7.5 turns.
+- `helix-spring-06.otd` — A helical spring with 5.4 turns.
+- `helix-spring-07.otd` — A helical spring with 6.7 turns.
+- `loft-vase-01.otd` — A vase skinned from 3 equal-corner sections.
+- `loft-vase-02.otd` — A vase skinned from 2 equal-corner sections.
+- `loft-vase-03.otd` — A vase skinned from 3 equal-corner sections.
+- `loft-vase-04.otd` — A vase skinned from 2 equal-corner sections.
+- `loft-vase-05.otd` — A vase skinned from 3 equal-corner sections.
+- `loft-vase-06.otd` — A vase skinned from 3 equal-corner sections.
+- `loft-vase-07.otd` — A vase skinned from 3 equal-corner sections.
+- `metaball-blend-01.otd` — A sphere and cube soldered with a smooth fillet.
+- `metaball-blend-02.otd` — A sphere and cube soldered with a smooth fillet.
+- `metaball-blend-03.otd` — A sphere and cube soldered with a smooth fillet.
+- `metaball-blend-04.otd` — A sphere and cube soldered with a smooth fillet.
+- `metaball-blend-05.otd` — A sphere and cube soldered with a smooth fillet.
+- `metaball-blob-01.otd` — A 3-ball metaball in chrome.
+- `metaball-blob-02.otd` — A 6-ball metaball in chrome.
+- `metaball-blob-03.otd` — A 5-ball metaball in chrome.
+- `metaball-blob-04.otd` — A 6-ball metaball in chrome.
+- `metaball-blob-05.otd` — A 4-ball metaball in chrome.
+- `metaball-blob-06.otd` — A 4-ball metaball in chrome.
+- `metaball-rock-01.otd` — A sphere melted into a rock with Taubin smoothing.
+- `metaball-rock-02.otd` — A sphere melted into a rock with Taubin smoothing.
+- `metaball-rock-03.otd` — A sphere melted into a rock with Taubin smoothing.
+- `metaball-rock-04.otd` — A sphere melted into a rock with Taubin smoothing.
+- `metaball-rock-05.otd` — A sphere melted into a rock with Taubin smoothing.
+- `metaball-subdiv-01.otd` — A Loop-subdivided sphere — triangles quadrupled.
+- `metaball-subdiv-02.otd` — A Loop-subdivided sphere — triangles quadrupled.
+- `metaball-subdiv-03.otd` — A Loop-subdivided sphere — triangles quadrupled.
+- `metaball-subdiv-04.otd` — A Loop-subdivided sphere — triangles quadrupled.
+- `metaball-subdiv-05.otd` — A Loop-subdivided sphere — triangles quadrupled.
+- `plane-basic.otd` — A thin slab.
+- `plane-slab-01.otd` — A raised platform slab.
+- `plane-slab-02.otd` — A raised platform slab.
+- `plane-slab-03.otd` — A raised platform slab.
+- `plane-slab-04.otd` — A raised platform slab.
+- `plane-slab-05.otd` — A raised platform slab.
+- `revolve-bowl-01.otd` — A wide bowl with an inner cavity profile.
+- `revolve-bowl-02.otd` — A wide bowl with an inner cavity profile.
+- `revolve-bowl-03.otd` — A wide bowl with an inner cavity profile.
+- `revolve-bowl-04.otd` — A wide bowl with an inner cavity profile.
+- `revolve-bowl-05.otd` — A wide bowl with an inner cavity profile.
+- `revolve-goblet-01.otd` — A stemmed goblet revolved around the Y axis.
+- `revolve-goblet-02.otd` — A stemmed goblet revolved around the Y axis.
+- `revolve-goblet-03.otd` — A stemmed goblet revolved around the Y axis.
+- `revolve-goblet-04.otd` — A stemmed goblet revolved around the Y axis.
+- `revolve-goblet-05.otd` — A stemmed goblet revolved around the Y axis.
+- `revolve-goblet-06.otd` — A stemmed goblet revolved around the Y axis.
+- `revolve-pawn.otd` — A chess pawn spun from a profile.
+- `revolve-profile-01.otd` — A vessel revolved from a stepped profile.
+- `revolve-profile-02.otd` — A vessel revolved from a stepped profile.
+- `revolve-profile-03.otd` — A vessel revolved from a stepped profile.
+- `revolve-profile-04.otd` — A vessel revolved from a stepped profile.
+- `revolve-profile-05.otd` — A vessel revolved from a stepped profile.
+- `revolve-profile-06.otd` — A vessel revolved from a stepped profile.
+- `revolve-profile-07.otd` — A vessel revolved from a stepped profile.
+- `revolve-profile-08.otd` — A vessel revolved from a stepped profile.
+- `rope-cable-01.otd` — A real catenary cable hung between two posts.
+- `rope-cable-02.otd` — A real catenary cable hung between two posts.
+- `rope-cable-03.otd` — A real catenary cable hung between two posts.
+- `rope-cable-04.otd` — A real catenary cable hung between two posts.
+- `rope-cable-05.otd` — A real catenary cable hung between two posts.
+- `sphere-basic.otd` — The hello-world of 3D — one sphere on the ground.
+- `sphere-bubbles-01.otd` — A scattered cloud of bubble spheres.
+- `sphere-bubbles-02.otd` — A scattered cloud of bubble spheres.
+- `sphere-bubbles-03.otd` — A scattered cloud of bubble spheres.
+- `sphere-bubbles-04.otd` — A scattered cloud of bubble spheres.
+- `sphere-bubbles-05.otd` — A scattered cloud of bubble spheres.
+- `sphere-bubbles-06.otd` — A scattered cloud of bubble spheres.
+- `sphere-ladder-01.otd` — A row of 6 spheres growing step by step.
+- `sphere-ladder-02.otd` — A row of 6 spheres growing step by step.
+- `sphere-ladder-03.otd` — A row of 4 spheres growing step by step.
+- `sphere-ladder-04.otd` — A row of 6 spheres growing step by step.
+- `sphere-ladder-05.otd` — A row of 5 spheres growing step by step.
+- `sphere-ladder-06.otd` — A row of 6 spheres growing step by step.
+- `sphere-ladder-07.otd` — A row of 8 spheres growing step by step.
+- `sphere-ladder-08.otd` — A row of 5 spheres growing step by step.
+- `sphere-pearls-01.otd` — A ring of pearls laid out in a circle.
+- `sphere-pearls-02.otd` — A ring of pearls laid out in a circle.
+- `sphere-pearls-03.otd` — A ring of pearls laid out in a circle.
+- `sphere-pearls-04.otd` — A ring of pearls laid out in a circle.
+- `sphere-pearls-05.otd` — A ring of pearls laid out in a circle.
+- `sphere-pearls-06.otd` — A ring of pearls laid out in a circle.
+- `sphere-planet-01.otd` — A planet with one moon in orbit position.
+- `sphere-planet-02.otd` — A planet with one moon in orbit position.
+- `sphere-planet-03.otd` — A planet with one moon in orbit position.
+- `sphere-planet-04.otd` — A planet with one moon in orbit position.
+- `sphere-planet-05.otd` — A planet with one moon in orbit position.
+- `sphere-pyramid-01.otd` — Three cannonballs — two below, one on top.
+- `sphere-pyramid-02.otd` — Three cannonballs — two below, one on top.
+- `sphere-pyramid-03.otd` — Three cannonballs — two below, one on top.
+- `sphere-pyramid-04.otd` — Three cannonballs — two below, one on top.
+- `sphere-sized.otd` — A five-centimeter sphere.
+- `sweep-handrail-01.otd` — A 3-corner profile swept along a vertical path.
+- `sweep-handrail-02.otd` — A 3-corner profile swept along a vertical path.
+- `sweep-handrail-03.otd` — A 3-corner profile swept along a vertical path.
+- `sweep-handrail-04.otd` — A 6-corner profile swept along a vertical path.
+- `sweep-handrail-05.otd` — A 3-corner profile swept along a vertical path.
+- `sweep-handrail-06.otd` — A 6-corner profile swept along a vertical path.
+- `terrain-basic.otd` — A default gentle landscape.
+- `terrain-hills-01.otd` — A landscape of peaks 4.2 cm with roughness 0.3.
+- `terrain-hills-02.otd` — A landscape of peaks 7.7 cm with roughness 0.1.
+- `terrain-hills-03.otd` — A landscape of peaks 4.9 cm with roughness 0.5.
+- `terrain-hills-04.otd` — A landscape of peaks 4.1 cm with roughness 0.3.
+- `terrain-hills-05.otd` — A landscape of peaks 6.9 cm with roughness 0.8.
+- `terrain-hills-06.otd` — A landscape of peaks 4.4 cm with roughness 0.1.
+- `terrain-hills-07.otd` — A landscape of peaks 5 cm with roughness 0.5.
+- `terrain-hills-08.otd` — A landscape of peaks 5.7 cm with roughness 0.2.
+- `terrain-range-01.otd` — Two terrain patches forming a range.
+- `terrain-range-02.otd` — Two terrain patches forming a range.
+- `terrain-range-03.otd` — Two terrain patches forming a range.
+- `terrain-range-04.otd` — Two terrain patches forming a range.
+- `terrain-range-05.otd` — Two terrain patches forming a range.
+- `text-basic.otd` — The word HELLO standing on the ground.
+- `text-brick-09.otd` — The word BRICK rendered as real 3D letters.
+- `text-bridge-17.otd` — The word BRIDGE rendered as real 3D letters.
+- `text-build-04.otd` — The word BUILD rendered as real 3D letters.
+- `text-create-05.otd` — The word CREATE rendered as real 3D letters.
+- `text-cup-18.otd` — The word CUP rendered as real 3D letters.
+- `text-design-24.otd` — The word DESIGN rendered as real 3D letters.
+- `text-export-26.otd` — The word EXPORT rendered as real 3D letters.
+- `text-form-30.otd` — The word FORM rendered as real 3D letters.
+- `text-gear-22.otd` — The word GEAR rendered as real 3D letters.
+- `text-glass-11.otd` — The word GLASS rendered as real 3D letters.
+- `text-house-16.otd` — The word HOUSE rendered as real 3D letters.
+- `text-maker-03.otd` — The word MAKER rendered as real 3D letters.
+- `text-mars-21.otd` — The word MARS rendered as real 3D letters.
+- `text-metal-12.otd` — The word METAL rendered as real 3D letters.
+- `text-model-06.otd` — The word MODEL rendered as real 3D letters.
+- `text-moon-20.otd` — The word MOON rendered as real 3D letters.
+- `text-otd-01.otd` — The word OTD rendered as real 3D letters.
+- `text-print-25.otd` — The word PRINT rendered as real 3D letters.
+- `text-robot-08.otd` — The word ROBOT rendered as real 3D letters.
+- `text-scene-27.otd` — The word SCENE rendered as real 3D letters.
+- `text-shape-28.otd` — The word SHAPE rendered as real 3D letters.
+- `text-sign-01.otd` — A 3D signboard with raised letters.
+- `text-sign-02.otd` — A 3D signboard with raised letters.
+- `text-sign-03.otd` — A 3D signboard with raised letters.
+- `text-sign-04.otd` — A 3D signboard with raised letters.
+- `text-solid-29.otd` — The word SOLID rendered as real 3D letters.
+- `text-space-07.otd` — The word SPACE rendered as real 3D letters.
+- `text-spring-23.otd` — The word SPRING rendered as real 3D letters.
+- `text-star-19.otd` — The word STAR rendered as real 3D letters.
+- `text-stone-10.otd` — The word STONE rendered as real 3D letters.
+- `text-tower-15.otd` — The word TOWER rendered as real 3D letters.
+- `text-two-line-01.otd` — Two text lines set side by side.
+- `text-two-line-02.otd` — Two text lines set side by side.
+- `text-two-line-03.otd` — Two text lines set side by side.
+- `text-two-line-04.otd` — Two text lines set side by side.
+- `text-two-line-05.otd` — Two text lines set side by side.
+- `text-two-line-06.otd` — Two text lines set side by side.
+- `text-water-14.otd` — The word WATER rendered as real 3D letters.
+- `text-wood-13.otd` — The word WOOD rendered as real 3D letters.
+- `text-world-02.otd` — The word WORLD rendered as real 3D letters.
+- `torus-basic.otd` — A donut lying flat on the ground.
+- `torus-donut-01.otd` — A torus with ring radius 4.6 cm and tube 0.4 cm.
+- `torus-donut-02.otd` — A torus with ring radius 2.7 cm and tube 0.9 cm.
+- `torus-donut-03.otd` — A torus with ring radius 4.4 cm and tube 0.7 cm.
+- `torus-donut-04.otd` — A torus with ring radius 4.8 cm and tube 0.7 cm.
+- `torus-donut-05.otd` — A torus with ring radius 2.4 cm and tube 1 cm.
+- `torus-donut-06.otd` — A torus with ring radius 5 cm and tube 1 cm.
+- `torus-donut-07.otd` — A torus with ring radius 2.7 cm and tube 0.9 cm.
+- `torus-donut-08.otd` — A torus with ring radius 3.6 cm and tube 0.8 cm.
+- `torus-jewel-01.otd` — A gold torus ring crowned with a hex gem.
+- `torus-jewel-02.otd` — A gold torus ring crowned with a hex gem.
+- `torus-jewel-03.otd` — A gold torus ring crowned with a hex gem.
+- `torus-jewel-04.otd` — A gold torus ring crowned with a hex gem.
+- `torus-wheel-01.otd` — A torus tire standing upright on a steel hub.
+- `torus-wheel-02.otd` — A torus tire standing upright on a steel hub.
+- `torus-wheel-03.otd` — A torus tire standing upright on a steel hub.
+- `torus-wheel-04.otd` — A torus tire standing upright on a steel hub.
+- `torus-wheel-05.otd` — A torus tire standing upright on a steel hub.
+- `torus-wheel-06.otd` — A torus tire standing upright on a steel hub.
+- `tube-pipe-01.otd` — A 5-point pipe run with capped ends.
+- `tube-pipe-02.otd` — A 4-point pipe run with capped ends.
+- `tube-pipe-03.otd` — A 5-point pipe run with capped ends.
+- `tube-pipe-04.otd` — A 3-point pipe run with capped ends.
+- `tube-pipe-05.otd` — A 5-point pipe run with capped ends.
+- `tube-pipe-06.otd` — A 3-point pipe run with capped ends.
+- `wedge-basic.otd` — A right-triangle ramp.
+- `wedge-ramp-01.otd` — A concrete ramp 11 wide, 6 deep, 4 high.
+- `wedge-ramp-02.otd` — A concrete ramp 5 wide, 7 deep, 4 high.
+- `wedge-ramp-03.otd` — A concrete ramp 10 wide, 10 deep, 3 high.
+- `wedge-ramp-04.otd` — A concrete ramp 4 wide, 8 deep, 6 high.
+- `wedge-ramp-05.otd` — A concrete ramp 11 wide, 12 deep, 6 high.
+- `wedge-ramp-06.otd` — A concrete ramp 12 wide, 8 deep, 8 high.

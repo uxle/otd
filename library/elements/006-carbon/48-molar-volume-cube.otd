@@ -1,0 +1,7 @@
+# Molar Volume Cube
+# Carbon (C) — real density 2.267 g/cm³. V = M/ρ = 12.011/2.267 = 5.3 cm³ per mole.
+scene "Carbon Molar Volume Cube"
+
+mole_cube = cube 1.74cm material: carbon at (0, 0.87cm, 0)
+ask "mass?"
+# one mole of atoms: 6.022e23 atoms of Carbon, 12.011 g, drawn at true scale

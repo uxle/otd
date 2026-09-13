@@ -1,0 +1,5 @@
+# Granules
+# Moscovium (Mc) — real density 13.5 g/cm³. small pieces scatter like real granules.
+scene "Moscovium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 115) sphere 2.5mm color: #ff7040

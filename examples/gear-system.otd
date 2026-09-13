@@ -1,0 +1,13 @@
+# Two meshing steel gears with 20 teeth each
+scene "Gear System"
+material: steel
+
+define tooth = cube(w: 5mm, h: 8mm, d: 6mm)
+define gear(r) = group(cylinder(r: r, height: 6mm),
+                       ring(n: 20, radius: r + 3mm) tooth rotate (0, a, 0))
+
+gearA = gear(r: 30mm) color: silver
+# half a tooth-pitch (18deg / 2) so the teeth interlock
+gearB = gear(r: 30mm) at (66mm, 0, 0) rotate (0, 9deg, 0) color: gold
+
+ask "mass?"

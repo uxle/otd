@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Calcium (Ca) — real density 1.55 g/cm³. rod format, like lab stock.
+scene "Calcium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #3dff00
+simulate: drop

@@ -1,0 +1,7 @@
+# Sample Cube
+# Thulium (Tm) — real density 9.32 g/cm³. a 1 cm cube — the reference sample.
+scene "Thulium Sample Cube"
+
+sample_cube = cube 10mm color: #8ccbe0 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

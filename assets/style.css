@@ -1,0 +1,127 @@
+:root {
+  --bg: #14161c;
+  --bg2: #1a1d24;
+  --bg3: #20242e;
+  --fg: #e6e9ef;
+  --dim: #8b93a3;
+  --accent: #7aa2f7;
+  --accent2: #ffcf5c;
+  --ok: #6bd98a;
+  --err: #f7768e;
+  --warn: #e0af68;
+  --border: #2a2f3a;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 14px; background: var(--bg2); border-bottom: 1px solid var(--border);
+  gap: 12px; flex-wrap: wrap;
+}
+.logo { font-weight: 700; font-size: 15px; letter-spacing: .5px; white-space: nowrap; }
+.logo-mark { color: var(--accent2); }
+.logo-sub { color: var(--dim); font-weight: 400; font-size: 11px; margin-left: 6px; }
+.toolbar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+button, select {
+  background: var(--bg3); color: var(--fg); border: 1px solid var(--border);
+  border-radius: 6px; padding: 4px 10px; font: inherit; cursor: pointer;
+}
+button:hover { border-color: var(--accent); }
+.sep { width: 1px; height: 20px; background: var(--border); }
+.viewgrp, .exportgrp { display: inline-flex; gap: 4px; }
+.vw, .ex { padding: 4px 8px; font-size: 12px; }
+.ex { color: var(--accent2); }
+
+#layout {
+  flex: 1; display: flex; min-height: 0;
+}
+#editor-pane {
+  width: 42%; min-width: 320px; display: flex; flex-direction: column;
+  border-right: 1px solid var(--border); min-height: 0;
+}
+#editor-wrap { flex: 1; position: relative; min-height: 0; overflow: hidden; }
+#editor, #highlight {
+  position: absolute; inset: 0;
+  font: 13.5px/1.55 "Cascadia Code", "JetBrains Mono", Consolas, monospace;
+  padding: 14px; margin: 0; border: 0; white-space: pre-wrap; word-wrap: break-word;
+  overflow: auto; tab-size: 2;
+}
+#highlight { pointer-events: none; color: var(--fg); z-index: 1; }
+#editor {
+  background: transparent; color: transparent; caret-color: var(--fg);
+  resize: none; outline: none; z-index: 2;
+}
+#console {
+  height: 30%; min-height: 110px; overflow-y: auto;
+  border-top: 1px solid var(--border); background: var(--bg2);
+  padding: 8px 12px; font: 12.5px/1.5 "Cascadia Code", Consolas, monospace;
+}
+#console .cline { margin: 2px 0; white-space: pre-wrap; }
+#console .answer { color: var(--ok); }
+#console .warn { color: var(--warn); }
+#console .sim { color: var(--accent); }
+#console .info { color: var(--dim); }
+#console .print { color: var(--fg); }
+#console .error { color: var(--err); }
+
+#view-pane { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+#canvas-holder { flex: 1; position: relative; background: #dfe3ea; min-height: 0; overflow: hidden; }
+#preview { width: 100%; height: 100%; object-fit: contain; display: block; user-select: none; }
+#rendering-flag {
+  position: absolute; top: 10px; right: 12px; background: rgba(20,22,28,.75);
+  color: var(--accent2); font-size: 11px; padding: 3px 8px; border-radius: 4px;
+  display: none; pointer-events: none;
+}
+#statusbar {
+  display: flex; gap: 8px; padding: 8px 14px; flex-wrap: wrap;
+  background: var(--bg2); border-top: 1px solid var(--border);
+}
+.chip {
+  background: var(--bg3); border: 1px solid var(--border); border-radius: 10px;
+  padding: 2px 10px; font-size: 12px; color: var(--dim); white-space: nowrap;
+}
+.chip.ok { color: var(--ok); }
+.chip.bad { color: var(--err); }
+
+/* syntax highlight */
+.tk-kw { color: var(--accent); font-weight: 600; }
+.tk-num { color: var(--accent2); }
+.tk-str { color: #9ece6a; }
+.tk-com { color: #565f89; font-style: italic; }
+.tk-mat { color: #e0af68; }
+.tk-hex { color: #7dcfff; font-weight: 600; }
+
+dialog {
+  background: var(--bg2); color: var(--fg); border: 1px solid var(--border);
+  border-radius: 10px; padding: 0; width: min(720px, 92vw); max-height: 82vh;
+}
+dialog::backdrop { background: rgba(0,0,0,.5); }
+.modal-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px; border-bottom: 1px solid var(--border);
+}
+.modal-head h3 { margin: 0; font-size: 15px; }
+#modal-body { padding: 14px 16px; overflow-y: auto; max-height: 66vh; }
+.lesson {
+  padding: 10px 0; border-bottom: 1px solid var(--border);
+  display: flex; gap: 10px; align-items: baseline; cursor: pointer;
+}
+.lesson:hover .lt { color: var(--accent); }
+.lesson .ln { color: var(--accent2); font-weight: 700; min-width: 28px; }
+.lesson .lt { font-weight: 600; }
+.lesson .lg { color: var(--dim); font-size: 12px; }
+pre.codeblock {
+  background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+  padding: 10px; font: 12px/1.5 Consolas, monospace; overflow-x: auto; white-space: pre;
+}
+.kw-table td, .kw-table th { padding: 4px 10px; text-align: left; border-bottom: 1px solid var(--border); font-size: 13px; }
+.kw-table code { color: var(--accent2); }

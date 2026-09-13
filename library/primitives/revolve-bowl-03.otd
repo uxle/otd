@@ -1,0 +1,5 @@
+# A wide bowl with an inner cavity profile.
+scene "Stone Bowl 3"
+
+bowl1 = revolve [(0, 0), (25mm, 0), (30mm, 10mm), (28mm, 20mm), (20mm, 22mm), (19mm, 18mm), (25mm, 9mm), (18mm, 8mm)]
+ask "volume?"

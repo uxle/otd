@@ -1,0 +1,11 @@
+# The whole family in a row: five, six, seven … twelve teeth.
+scene "Gear Train 5 to 12"
+
+material: steel
+define tooth = cube(w: 4mm, h: 6mm, d: 5mm)
+define gearX(r, n) = group(cylinder(r: r, h: 5mm), ring(n: n, radius: r + 2.5mm) tooth rotate (0, a, 0))
+gear_five = gearX(r: 25mm, n: 5) at (0, 0, 0)
+gear_six = gearX(r: 26mm, n: 6) at (55mm, 0, 0)
+gear_seven = gearX(r: 27mm, n: 7) at (108mm, 0, 0)
+gear_eight = gearX(r: 28mm, n: 8) at (163mm, 0, 0)
+ask "mass?"

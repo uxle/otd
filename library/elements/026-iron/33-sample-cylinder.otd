@@ -1,0 +1,7 @@
+# Sample Cylinder
+# Iron (Fe) — real density 7.874 g/cm³. rod format, like lab stock.
+scene "Iron Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) material: iron
+ask "mass?"
+simulate: drop

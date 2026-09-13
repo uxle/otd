@@ -1,0 +1,9 @@
+# Bohr Model
+# Promethium (Pm) — real density 7.26 g/cm³. nucleus + first shells, tilted for depth.
+scene "Promethium Bohr Model"
+
+define electron = sphere 1.1mm color: #ffffff
+nucleus = sphere 3mm color: #6aff6a
+orb1 = ring(n: 2, radius: 6mm) electron rotate (0, a, 0)
+orb2 = ring(n: 8, radius: 12mm) electron rotate (0, a, 0)
+orb3 = ring(n: 18, radius: 18mm) electron rotate (0, a, 0)

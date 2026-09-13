@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Fermium (Fm) — real density 9.7 g/cm³. rod format, like lab stock.
+scene "Fermium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #20ff00
+simulate: drop

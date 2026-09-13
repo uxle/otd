@@ -1,0 +1,6 @@
+# Sample Sphere
+# Neptunium (Np) — real density 20.45 g/cm³. 5 mm radius ball.
+scene "Neptunium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #00d0ff at (0, 5mm, 0)
+simulate: drop

@@ -1,0 +1,5 @@
+# Granules
+# Oxygen (O) — real density 0.00143 g/cm³. small pieces scatter like real granules.
+scene "Oxygen Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 8) sphere 2.5mm color: #ff0d0d

@@ -1,0 +1,7 @@
+# Density Compare
+# Argon (Ar) — real density 0.0018 g/cm³. equal masses: Argon vs water — sides ∝ (1/ρ)^(1/3).
+scene "Argon Density Compare"
+
+element_cube = cube 164.2mm color: #80d1e3 at (-20mm, 82.1mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 0.0 g — the water cube is the reference

@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Strontium (Sr) — real density 2.64 g/cm³. rod format, like lab stock.
+scene "Strontium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #00ff00
+simulate: drop

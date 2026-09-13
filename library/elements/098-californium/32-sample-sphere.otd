@@ -1,0 +1,6 @@
+# Sample Sphere
+# Californium (Cf) — real density 15.1 g/cm³. 5 mm radius ball.
+scene "Californium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #60ff30 at (0, 5mm, 0)
+simulate: drop

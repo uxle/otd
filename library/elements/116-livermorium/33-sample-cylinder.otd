@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Livermorium (Lv) — real density 12.9 g/cm³. rod format, like lab stock.
+scene "Livermorium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #ff9040
+simulate: drop

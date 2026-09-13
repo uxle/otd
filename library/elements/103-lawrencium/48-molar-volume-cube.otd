@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Lawrencium (Lr) — real density 15.6 g/cm³. V = M/ρ = 266.0/15.6 = 17.1 cm³ per mole.
+scene "Lawrencium Molar Volume Cube"
+
+mole_cube = cube 2.57cm color: #00ffd0 at (0, 1.29cm, 0)
+# one mole of atoms: 6.022e23 atoms of Lawrencium, 266.0 g, drawn at true scale

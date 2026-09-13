@@ -1,0 +1,5 @@
+# Granules
+# Tin (Sn) — real density 7.31 g/cm³. small pieces scatter like real granules.
+scene "Tin Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 50) sphere 2.5mm color: #668080

@@ -1,0 +1,8 @@
+# Periodic Position
+# Copper (Cu) — real density 8.96 g/cm³. period 4, group 11.
+scene "Copper Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm material: copper at (240mm, 3mm, 72mm)
+label = text "Cu" at (234mm, 4mm, 67mm)
+numtext = text "29" at (247mm, 4mm, 78mm)

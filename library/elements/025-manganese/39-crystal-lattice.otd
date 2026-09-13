@@ -1,0 +1,5 @@
+# Crystal Lattice
+# Manganese (Mn) — real density 7.21 g/cm³. simple cubic lattice — packing 50% vs close-packed 74%.
+scene "Manganese Crystal Lattice"
+
+lattice = grid(nx: 3, nz: 3, spacing: (8mm, 8mm)) sphere 2.5mm color: #9c7ac7

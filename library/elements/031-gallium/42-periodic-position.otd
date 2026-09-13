@@ -1,0 +1,8 @@
+# Periodic Position
+# Gallium (Ga) — real density 5.91 g/cm³. period 4, group 13.
+scene "Gallium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #c28f8f at (288mm, 3mm, 72mm)
+label = text "Ga" at (282mm, 4mm, 67mm)
+numtext = text "31" at (295mm, 4mm, 78mm)

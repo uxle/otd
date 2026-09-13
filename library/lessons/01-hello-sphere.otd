@@ -1,0 +1,6 @@
+# Your first object: one sphere on the ground.
+scene "Hello, Sphere — Lesson 01"
+
+# everything starts here
+sphere
+ask "mass?"

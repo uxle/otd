@@ -1,0 +1,6 @@
+# The waterline solved on the real mesh.
+scene "simulate: float — Lesson 44"
+
+block1 = cube 6cm at (0, 10cm, 0) material: wood
+simulate: float
+ask "will it float?"

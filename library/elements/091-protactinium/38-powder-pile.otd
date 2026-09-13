@@ -1,0 +1,5 @@
+# Powder Pile
+# Protactinium (Pa) — real density 15.37 g/cm³. a poured heap.
+scene "Protactinium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #00bfff

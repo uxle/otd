@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Terbium (Tb) — real density 8.23 g/cm³. V = M/ρ = 158.93/8.23 = 19.3 cm³ per mole.
+scene "Terbium Molar Volume Cube"
+
+mole_cube = cube 2.68cm color: #c9ffa6 at (0, 1.34cm, 0)
+# one mole of atoms: 6.022e23 atoms of Terbium, 158.93 g, drawn at true scale

@@ -1,0 +1,9 @@
+# A stack of ceramic dinner plates.
+scene "Plate Stack 2"
+
+material: ceramic
+define plate = cylinder(r: 9cm, h: 1.2cm)
+for i = 1 to 3
+  use plate at (0, i * 1.5cm, 0)
+end
+ask "mass?"

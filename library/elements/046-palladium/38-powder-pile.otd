@@ -1,0 +1,5 @@
+# Powder Pile
+# Palladium (Pd) — real density 12.02 g/cm³. a poured heap.
+scene "Palladium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #d0a0a0

@@ -1,0 +1,8 @@
+# A frame with an axle drum.
+scene "Winch 4"
+
+material: steel
+frame1 = tube(r: 5mm, path: [(-8cm, 0, 0), (-8cm, 15cm, 0), (8cm, 15cm, 0), (8cm, 0, 0), (-8cm, 0, 0)])
+axle1 = cylinder(r: 4mm, h: 6.1cm) rotate (90deg, 0, 0) at (0, 9.7cm, 0)
+wheel1 = cylinder(r: 3.6cm, h: 5mm) at (0, 9.7cm, 2cm) color: gold
+ask "mass?"

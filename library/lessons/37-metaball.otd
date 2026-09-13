@@ -1,0 +1,5 @@
+# Balls that melt together.
+scene "metaball Blobs — Lesson 37"
+
+blob1 = metaball [(0, 0, 0), (3cm, 1cm, 0)] r: 2cm material: chrome
+ask "mass?"

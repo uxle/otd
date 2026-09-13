@@ -1,0 +1,6 @@
+# A shelled U-bracket.
+scene "Bracket 2"
+
+material: steel
+frameT = cube(w: 11.9cm, d: 2cm, h: 18.6cm) - hollow(wall: 3mm, open: bottom)
+ask "watertight?"

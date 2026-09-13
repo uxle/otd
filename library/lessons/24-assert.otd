@@ -1,0 +1,7 @@
+# Loud failure beats silent mistakes.
+scene "assert: Check Yourself — Lesson 24"
+
+wall = 3mm
+assert wall > 2mm, "walls too thin"
+cube 4cm
+ask "mass?"

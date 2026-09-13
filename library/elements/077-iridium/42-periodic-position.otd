@@ -1,0 +1,8 @@
+# Periodic Position
+# Iridium (Ir) — real density 22.56 g/cm³. period 6, group 9.
+scene "Iridium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #d4d4ff at (192mm, 3mm, 120mm)
+label = text "Ir" at (186mm, 4mm, 115mm)
+numtext = text "77" at (199mm, 4mm, 126mm)

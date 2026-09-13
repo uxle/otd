@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Lanthanum (La) — real density 6.162 g/cm³. V = M/ρ = 138.91/6.162 = 22.5 cm³ per mole.
+scene "Lanthanum Molar Volume Cube"
+
+mole_cube = cube 2.82cm color: #4d6fff at (0, 1.41cm, 0)
+# one mole of atoms: 6.022e23 atoms of Lanthanum, 138.91 g, drawn at true scale

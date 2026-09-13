@@ -1,0 +1,5 @@
+# Wire Coil
+# Holmium (Ho) — real density 8.79 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Holmium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #a6d9ff

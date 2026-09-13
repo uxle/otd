@@ -1,0 +1,7 @@
+# Stack Test
+# Tantalum (Ta) — real density 16.69 g/cm³. three cubes stacked — simulate: collapse checks the load path.
+scene "Tantalum Stack Test"
+
+bottom = cube 20mm color: #a0c8c8 at (0, 10mm, 0)
+middle = cube 20mm color: #a0c8c8 at (0, 30mm, 0)
+top = cube 20mm color: #a0c8c8 at (0, 50mm, 0)

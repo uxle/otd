@@ -1,0 +1,7 @@
+# Density Compare
+# Helium (He) — real density 0.00018 g/cm³. equal masses: Helium vs water — sides ∝ (1/ρ)^(1/3).
+scene "Helium Density Compare"
+
+element_cube = cube 353.9mm color: #d9ffff at (-20mm, 176.9mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 0.0 g — the water cube is the reference

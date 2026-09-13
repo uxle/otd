@@ -1,0 +1,5 @@
+# Foil Sheet
+# Fluorine (F) — real density 0.0017 g/cm³. 0.1 mm foil.
+scene "Fluorine Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #90e050 at (0, 0.1mm, 0)

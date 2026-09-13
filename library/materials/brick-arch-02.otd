@@ -1,0 +1,7 @@
+# A half-circle brick arch built from a partial ring.
+scene "Brick Arch 2"
+
+material: concrete
+color: firebrick
+arch = ring(n: 11, radius: 10cm, from: 0deg, to: 180deg, axis: x) cube(w: 9.5cm, d: 9.5cm, h: 5.7cm)
+ask "mass?"

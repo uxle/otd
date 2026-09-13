@@ -1,0 +1,5 @@
+# Foil Sheet
+# Darmstadtium (Ds) — real density 34.8 g/cm³. 0.1 mm foil.
+scene "Darmstadtium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #ff30d0 at (0, 0.1mm, 0)

@@ -1,0 +1,15 @@
+# A fence run with 8 posts and one rail.
+scene "Picket Fence 2"
+
+material: pine
+define post = cylinder(r: 2cm, h: 90cm)
+rail = capsule(r: 1.2cm, h: 84cm) rotate (0, 0, 90deg) at (0, 75cm, 0)
+use post at (0cm, 0, 0)
+use post at (12cm, 0, 0)
+use post at (24cm, 0, 0)
+use post at (36cm, 0, 0)
+use post at (48cm, 0, 0)
+use post at (60cm, 0, 0)
+use post at (72cm, 0, 0)
+use post at (84cm, 0, 0)
+ask "mass?"

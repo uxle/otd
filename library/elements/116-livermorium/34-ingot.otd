@@ -1,0 +1,6 @@
+# Ingot
+# Livermorium (Lv) — real density 12.9 g/cm³. cast bar format.
+scene "Livermorium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #ff9040 at (0, 5.5mm, 0)
+simulate: drop

@@ -1,0 +1,7 @@
+# A copper ball dropped from 70 cm.
+scene "Copper Drop 5"
+
+test1 = sphere(r: 2.9cm) at (0, 70cm, 0) material: copper
+gravity: moon
+simulate: drop
+ask "mass?"

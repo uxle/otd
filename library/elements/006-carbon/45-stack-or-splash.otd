@@ -1,0 +1,8 @@
+# Stack Test
+# Carbon (C) — real density 2.267 g/cm³. three cubes stacked — simulate: collapse checks the load path.
+scene "Carbon Stack Test"
+
+bottom = cube 20mm material: carbon at (0, 10mm, 0)
+middle = cube 20mm material: carbon at (0, 30mm, 0)
+top = cube 20mm material: carbon at (0, 50mm, 0)
+simulate: collapse

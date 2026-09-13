@@ -1,0 +1,6 @@
+# Flat washer M6 — steel ring, one material.
+scene "Washer M6"
+
+washer_m6 = cylinder(r: 6mm, h: 1.5mm) - cylinder(r: 3.0mm, h: 6mm) material: steel
+ask "mass?"
+simulate: drop

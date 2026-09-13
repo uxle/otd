@@ -1,0 +1,6 @@
+# A polished steel ball.
+scene "Steel Sphere"
+
+ball = sphere(r: 3.3cm) material: steel
+ask "mass?"
+ask "will it float?"

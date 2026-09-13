@@ -1,0 +1,7 @@
+# A template is a shape factory.
+scene "define: Reusable Parts — Lesson 21"
+
+define knob(r) = sphere r
+use knob(r: 2cm)
+use knob(r: 1cm) at (5cm, 0, 0)
+ask "how many objects?"

@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Nobelium (No) — real density 9.9 g/cm³. rod format, like lab stock.
+scene "Nobelium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #00ffa0
+simulate: drop

@@ -1,0 +1,7 @@
+# A oak ball dropped from 92 cm.
+scene "Oak Drop 2"
+
+test1 = sphere(r: 2.2cm) at (0, 92cm, 0) material: oak
+gravity: mars
+simulate: drop
+ask "mass?"

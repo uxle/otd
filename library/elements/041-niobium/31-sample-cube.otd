@@ -1,0 +1,7 @@
+# Sample Cube
+# Niobium (Nb) — real density 8.57 g/cm³. a 1 cm cube — the reference sample.
+scene "Niobium Sample Cube"
+
+sample_cube = cube 10mm color: #73c2c9 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

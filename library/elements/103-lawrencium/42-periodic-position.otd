@@ -1,0 +1,8 @@
+# Periodic Position
+# Lawrencium (Lr) — real density 15.6 g/cm³. period 7, group 3.
+scene "Lawrencium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #00ffd0 at (48mm, 3mm, 144mm)
+label = text "Lr" at (42mm, 4mm, 139mm)
+numtext = text "103" at (55mm, 4mm, 150mm)

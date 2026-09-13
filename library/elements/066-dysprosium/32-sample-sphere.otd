@@ -1,0 +1,6 @@
+# Sample Sphere
+# Dysprosium (Dy) — real density 8.54 g/cm³. 5 mm radius ball.
+scene "Dysprosium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #a6ffff at (0, 5mm, 0)
+simulate: drop

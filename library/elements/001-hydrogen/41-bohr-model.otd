@@ -1,0 +1,7 @@
+# Bohr Model
+# Hydrogen (H) — real density 9e-05 g/cm³. nucleus + first shells, tilted for depth.
+scene "Hydrogen Bohr Model"
+
+define electron = sphere 1.1mm color: #ffffff
+nucleus = sphere 3mm color: #88ff88
+orb1 = ring(n: 1, radius: 6mm) electron rotate (0, a, 0)

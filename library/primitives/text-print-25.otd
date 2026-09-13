@@ -1,0 +1,5 @@
+# The word PRINT rendered as real 3D letters.
+scene "Word PRINT"
+
+labelX = text "PRINT" size: 2.4cm depth: 7mm color: indianred
+ask "mass?"

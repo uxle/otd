@@ -1,0 +1,5 @@
+# Wire Coil
+# Oxygen (O) — real density 0.00143 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Oxygen Wire Coil"
+
+wire = cylinder(r: 1.2mm, h: 70mm) rotate (0, 0, -90deg) color: #ff0d0d

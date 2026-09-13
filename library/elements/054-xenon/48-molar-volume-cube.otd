@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Xenon (Xe) — real density 0.0059 g/cm³. V = M/ρ = 131.29/0.0059 = 22252.5 cm³ per mole.
+scene "Xenon Molar Volume Cube"
+
+mole_cube = cube 28.13cm color: #429eb0 at (0, 14.06cm, 0)
+# one mole of atoms: 6.022e23 atoms of Xenon, 131.29 g, drawn at true scale

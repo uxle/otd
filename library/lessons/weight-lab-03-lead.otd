@@ -1,0 +1,6 @@
+# Weigh a lead ingot — mass times g.
+scene "Weight Lab: Lead"
+
+ingot1 = wedge(w: 8cm, d: 4cm, h: 3cm) material: lead
+ask "mass?"
+ask "weight?"

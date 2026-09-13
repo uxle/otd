@@ -1,0 +1,6 @@
+# Sample Sphere
+# Oganesson (Og) — real density 5 g/cm³. 5 mm radius ball.
+scene "Oganesson Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ffd040 at (0, 5mm, 0)
+simulate: drop

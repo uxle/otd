@@ -1,0 +1,7 @@
+# Hands-on lab: measure a iron sample.
+scene "Material Lab: Iron"
+
+sample1 = cylinder(r: 2cm, h: 5cm) material: iron
+ask "mass?"
+ask "density?"
+ask "will it float?"

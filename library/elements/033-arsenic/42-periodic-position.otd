@@ -1,0 +1,8 @@
+# Periodic Position
+# Arsenic (As) — real density 5.727 g/cm³. period 4, group 15.
+scene "Arsenic Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #bd80e3 at (336mm, 3mm, 72mm)
+label = text "As" at (330mm, 4mm, 67mm)
+numtext = text "33" at (343mm, 4mm, 78mm)

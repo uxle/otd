@@ -1,0 +1,6 @@
+# Ingot
+# Radon (Rn) — real density 0.0097 g/cm³. cast bar format.
+scene "Radon Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #cc0080 at (0, 5.5mm, 0)
+simulate: drop

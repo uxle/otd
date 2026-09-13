@@ -1,0 +1,5 @@
+# Powder Pile
+# Copernicium (Cn) — real density 23.7 g/cm³. a poured heap.
+scene "Copernicium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #ff1050

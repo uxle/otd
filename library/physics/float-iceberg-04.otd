@@ -1,0 +1,8 @@
+# How much of the berg sits below water?
+scene "Iceberg 4"
+
+# iceberg stand-in: white plastic (density < water)
+water1 = plane(w: 40cm, d: 40cm, t: 2mm) color: steelblue
+berg1 = cube(w: 10.3cm, d: 9.7cm, h: 8.9cm) at (0, 15cm, 0) material: plastic color: snow
+simulate: float
+ask "will it float?"

@@ -1,0 +1,6 @@
+# Sample Sphere
+# Moscovium (Mc) — real density 13.5 g/cm³. 5 mm radius ball.
+scene "Moscovium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ff7040 at (0, 5mm, 0)
+simulate: drop

@@ -1,0 +1,6 @@
+# Sample Sphere
+# Plutonium (Pu) — real density 19.85 g/cm³. 5 mm radius ball.
+scene "Plutonium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #00e080 at (0, 5mm, 0)
+simulate: drop

@@ -1,0 +1,6 @@
+# Sample Sphere
+# Iridium (Ir) — real density 22.56 g/cm³. 5 mm radius ball.
+scene "Iridium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #d4d4ff at (0, 5mm, 0)
+simulate: drop

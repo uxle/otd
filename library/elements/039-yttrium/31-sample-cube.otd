@@ -1,0 +1,7 @@
+# Sample Cube
+# Yttrium (Y) — real density 4.472 g/cm³. a 1 cm cube — the reference sample.
+scene "Yttrium Sample Cube"
+
+sample_cube = cube 10mm color: #94ffff at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

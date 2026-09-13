@@ -1,0 +1,8 @@
+# Pipe flange: disc + 6-bolt circle + centre bore — stainless.
+scene "Pipe Flange"
+
+define hole = cylinder(r: 4.5mm, h: 40mm)
+drilled = group(cylinder(r: 45mm, h: 10mm), ring(n: 6, radius: 34mm) hole rotate (0, a, 0))
+pipe_flange = drilled - cylinder(r: 20mm, h: 40mm) material: stainless
+ask "mass?"
+simulate: drop

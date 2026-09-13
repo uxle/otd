@@ -1,0 +1,9 @@
+# Electron Shells
+# Aluminium (Al) — real density 2.7 g/cm³. configuration [Ne] 3s2 3p1.
+scene "Aluminium Electron Shells"
+
+define electron = sphere 1mm color: #ffffff
+nucleus = sphere 2.5mm color: #bfa6a6
+shell1 = ring(n: 2, radius: 5mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell2 = ring(n: 8, radius: 10mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell3 = ring(n: 3, radius: 15mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)

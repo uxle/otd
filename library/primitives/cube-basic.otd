@@ -1,0 +1,5 @@
+# A two-centimeter cube.
+scene "Basic Cube"
+
+cube
+ask "mass?"

@@ -1,0 +1,6 @@
+# A polished silver ball.
+scene "Silver Sphere"
+
+ball = sphere(r: 3.1cm) material: silver
+ask "mass?"
+ask "will it float?"

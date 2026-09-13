@@ -1,0 +1,5 @@
+# A raised platform slab.
+scene "Slab 1"
+
+slab1 = plane(w: 16cm, d: 29cm, t: 14mm) at (0, 10cm, 0)
+ask "volume?"

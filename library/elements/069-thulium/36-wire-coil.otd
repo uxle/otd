@@ -1,0 +1,5 @@
+# Wire Coil
+# Thulium (Tm) — real density 9.32 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Thulium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #8ccbe0

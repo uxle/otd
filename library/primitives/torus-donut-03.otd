@@ -1,0 +1,5 @@
+# A torus with ring radius 4.4 cm and tube 0.7 cm.
+scene "Donut R4.4 t0.7"
+
+donut = torus(R: 4.4cm, tube: 0.7cm) material: glass
+ask "volume?"

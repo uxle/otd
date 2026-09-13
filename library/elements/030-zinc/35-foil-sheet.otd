@@ -1,0 +1,6 @@
+# Foil Sheet
+# Zinc (Zn) — real density 7.14 g/cm³. 0.1 mm foil.
+scene "Zinc Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) material: zinc at (0, 0.1mm, 0)
+ask "mass?"

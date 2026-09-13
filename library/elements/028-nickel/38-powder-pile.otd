@@ -1,0 +1,5 @@
+# Powder Pile
+# Nickel (Ni) — real density 8.908 g/cm³. a poured heap.
+scene "Nickel Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #50d050

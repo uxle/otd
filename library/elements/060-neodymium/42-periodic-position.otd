@@ -1,0 +1,8 @@
+# Periodic Position
+# Neodymium (Nd) — real density 7.01 g/cm³. period 6, group 3.
+scene "Neodymium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #8affde at (48mm, 3mm, 120mm)
+label = text "Nd" at (42mm, 4mm, 115mm)
+numtext = text "60" at (55mm, 4mm, 126mm)

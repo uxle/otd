@@ -1,0 +1,5 @@
+# Granules
+# Lead (Pb) — real density 11.34 g/cm³. small pieces scatter like real granules.
+scene "Lead Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 82) sphere 2.5mm material: lead

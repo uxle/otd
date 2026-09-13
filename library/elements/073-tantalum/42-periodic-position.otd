@@ -1,0 +1,8 @@
+# Periodic Position
+# Tantalum (Ta) — real density 16.69 g/cm³. period 6, group 5.
+scene "Tantalum Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #a0c8c8 at (96mm, 3mm, 120mm)
+label = text "Ta" at (90mm, 4mm, 115mm)
+numtext = text "73" at (103mm, 4mm, 126mm)

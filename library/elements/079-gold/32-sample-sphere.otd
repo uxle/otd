@@ -1,0 +1,7 @@
+# Sample Sphere
+# Gold (Au) — real density 19.32 g/cm³. 5 mm radius ball.
+scene "Gold Sample Sphere"
+
+sample_sphere = sphere 5mm material: gold at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

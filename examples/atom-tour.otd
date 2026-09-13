@@ -1,0 +1,40 @@
+# OTD3.3 — THE SUBATOMIC TOUR: what the things you build are made of.
+#
+# Run the briefings:
+#   otd --check atom-tour.otd
+#
+# Every number below is measured from the actual meshes — the atom
+# counts come from mass ÷ molar mass × Avogadro, the binding energies
+# from Weizsäcker's formula, the activity from A = λN.
+
+scene "The Subatomic Tour — three metals and a ghost"
+
+# ---- three metals, three stories ----
+# Iron: the most tightly bound nucleus in nature — where fusion goes to die.
+ironBlock = cube(5cm, 5cm, 5cm) at (0, 2.5cm, 0) material: iron
+
+# Copper: the electron's favourite highway (59.6 MS/m of conductivity).
+copperSphere = sphere(r: 3cm) at (12cm, 3cm, 0) material: copper
+
+# Uranium: 4.47 billion year half-life — one Earth-age per half.
+uraniumSlug = cylinder(r: 2cm, h: 4cm) at (22cm, 2cm, 0) material: uranium
+
+# Wood: mostly carbon, hydrogen, oxygen — with a whisper of carbon-14.
+woodBase = cube(30cm, 2cm, 10cm) at (10cm, -1cm, 0) material: oak
+
+# ---- the briefings ----
+particle: proton
+particle: neutron
+particle: electron
+particle: up
+particle: gluon
+particle: photon
+particle: neutrino
+
+simulate: atom
+simulate: decay
+simulate: particles
+
+# The scene's own questions:
+ask "mass?"
+ask "density?"

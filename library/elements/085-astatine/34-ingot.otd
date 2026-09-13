@@ -1,0 +1,6 @@
+# Ingot
+# Astatine (At) — real density 7 g/cm³. cast bar format.
+scene "Astatine Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #cc0066 at (0, 5.5mm, 0)
+simulate: drop

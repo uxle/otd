@@ -1,0 +1,9 @@
+# gear_five and gear_six meshing side by side — steel + brass.
+scene "Gear Pair 5-6"
+
+define tooth = cube(w: 4.5mm, h: 7mm, d: 5.5mm)
+define gear5 = group(cylinder(r: 27mm, h: 6mm), ring(n: 5, radius: 29.5mm) tooth rotate (0, a, 0))
+define gear6 = group(cylinder(r: 28mm, h: 6mm), ring(n: 6, radius: 30.5mm) tooth rotate (0, a, 0))
+gear_five = gear5 material: steel
+gear_six = gear6 at (59mm, 0, 0) material: brass
+ask "mass?"

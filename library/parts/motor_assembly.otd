@@ -1,0 +1,13 @@
+# Electric motor: stator + rotor + shaft. Connect it to electricity
+# and watch it rotate — render 8 animation frames:
+#   otd render motor_assembly.otd frames/f.png --spin rotor --frames 8
+scene "Motor Assembly"
+
+frame = cylinder(r: 30mm, h: 70mm) - cylinder(r: 24mm, h: 80mm) material: aluminum
+stator = cylinder(r: 24mm, h: 60mm) - cylinder(r: 21mm, h: 80mm) material: steel
+rotor = cylinder(r: 20mm, h: 58mm) material: steel
+shaft = cylinder(r: 5mm, h: 120mm) rotate (0, 0, -90deg) at (0, 29mm, 0) material: chrome
+endbell1 = cylinder(r: 30mm, h: 5mm) at (0, -5mm, 0) material: aluminum
+endbell2 = cylinder(r: 30mm, h: 5mm) at (0, 70mm, 0) material: aluminum
+ask "mass?"
+simulate: drop

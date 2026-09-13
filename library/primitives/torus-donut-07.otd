@@ -1,0 +1,5 @@
+# A torus with ring radius 2.7 cm and tube 0.9 cm.
+scene "Donut R2.7 t0.9"
+
+donut = torus(R: 2.7cm, tube: 0.9cm) material: fabric
+ask "volume?"

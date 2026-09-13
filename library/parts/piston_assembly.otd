@@ -1,0 +1,9 @@
+# Piston + rings + wrist pin, ready to drop into a cylinder.
+scene "Piston Assembly"
+
+crown = cylinder(r: 20mm, h: 30mm) material: aluminum
+ring1 = torus(R: 20.2mm, tube: 1.1mm) at (0, 22mm, 0) material: steel
+ring2 = torus(R: 20.2mm, tube: 1.1mm) at (0, 18mm, 0) material: steel
+wristpin = cylinder(r: 5mm, h: 36mm) rotate (90deg, 0, 0) at (0, 6mm, 18mm) material: chrome
+ask "mass?"
+simulate: collapse

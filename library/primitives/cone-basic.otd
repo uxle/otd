@@ -1,0 +1,5 @@
+# A plain cone.
+scene "Basic Cone"
+
+cone
+ask "mass?"

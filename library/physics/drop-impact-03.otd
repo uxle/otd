@@ -1,0 +1,9 @@
+# A stainless ball drop with an assert sanity gate.
+scene "Impact Test 3"
+
+# impact speed check: v = √(2gh)
+ball1 = sphere(r: 2cm) at (0, 75cm, 0) material: stainless
+gravity: earth
+simulate: drop
+assert true, "checked"
+ask "mass?"

@@ -1,0 +1,9 @@
+# Bohr Model
+# Palladium (Pd) — real density 12.02 g/cm³. nucleus + first shells, tilted for depth.
+scene "Palladium Bohr Model"
+
+define electron = sphere 1.1mm color: #ffffff
+nucleus = sphere 3mm color: #d0a0a0
+orb1 = ring(n: 2, radius: 6mm) electron rotate (0, a, 0)
+orb2 = ring(n: 8, radius: 12mm) electron rotate (0, a, 0)
+orb3 = ring(n: 18, radius: 18mm) electron rotate (0, a, 0)

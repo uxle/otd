@@ -1,0 +1,5 @@
+# Powder Pile
+# Niobium (Nb) — real density 8.57 g/cm³. a poured heap.
+scene "Niobium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #73c2c9

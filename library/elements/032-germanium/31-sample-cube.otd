@@ -1,0 +1,7 @@
+# Sample Cube
+# Germanium (Ge) — real density 5.323 g/cm³. a 1 cm cube — the reference sample.
+scene "Germanium Sample Cube"
+
+sample_cube = cube 10mm color: #668f8f at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

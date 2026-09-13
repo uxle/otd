@@ -1,0 +1,7 @@
+# Sample Cube
+# Copper (Cu) — real density 8.96 g/cm³. a 1 cm cube — the reference sample.
+scene "Copper Sample Cube"
+
+sample_cube = cube 10mm material: copper at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

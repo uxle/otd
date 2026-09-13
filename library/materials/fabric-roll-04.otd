@@ -1,0 +1,7 @@
+# A rolled bolt of fabric.
+scene "Fabric Roll 4"
+
+material: fabric
+color: gainsboro
+roll = capsule(r: 3.3cm, h: 23.5cm) rotate (0, 0, 90deg)
+ask "mass?"

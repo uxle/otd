@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Selenium (Se) — real density 4.81 g/cm³. V = M/ρ = 78.971/4.81 = 16.4 cm³ per mole.
+scene "Selenium Molar Volume Cube"
+
+mole_cube = cube 2.54cm color: #ffa100 at (0, 1.27cm, 0)
+# one mole of atoms: 6.022e23 atoms of Selenium, 78.971 g, drawn at true scale

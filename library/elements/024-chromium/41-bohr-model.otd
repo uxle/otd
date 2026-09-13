@@ -1,0 +1,9 @@
+# Bohr Model
+# Chromium (Cr) — real density 7.19 g/cm³. nucleus + first shells, tilted for depth.
+scene "Chromium Bohr Model"
+
+define electron = sphere 1.1mm color: #ffffff
+nucleus = sphere 3mm color: #8a99c7
+orb1 = ring(n: 2, radius: 6mm) electron rotate (0, a, 0)
+orb2 = ring(n: 8, radius: 12mm) electron rotate (0, a, 0)
+orb3 = ring(n: 13, radius: 18mm) electron rotate (0, a, 0)

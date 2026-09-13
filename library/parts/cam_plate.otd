@@ -1,0 +1,6 @@
+# Egg-shaped cam plate — the heart of a camshaft — steel.
+scene "Cam Plate"
+
+cam_plate = cylinder(r: 25mm, h: 10mm) scale (1.35, 1, 1) material: steel
+ask "mass?"
+simulate: drop

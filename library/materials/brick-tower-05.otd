@@ -1,0 +1,10 @@
+# A 13-course brick tower that narrows as it rises.
+scene "Brick Tower 5"
+
+material: concrete
+color: firebrick
+for lvl = 0 to 12
+  shrink = lvl * 0.6cm
+  cube(w: 19cm - shrink, d: 19cm - shrink, h: 5.7cm) at (shrink / 2, lvl * 5.7cm, shrink / 2)
+end
+ask "height?"

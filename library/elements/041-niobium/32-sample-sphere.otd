@@ -1,0 +1,6 @@
+# Sample Sphere
+# Niobium (Nb) — real density 8.57 g/cm³. 5 mm radius ball.
+scene "Niobium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #73c2c9 at (0, 5mm, 0)
+simulate: drop

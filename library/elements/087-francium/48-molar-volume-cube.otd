@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Francium (Fr) — real density 1.87 g/cm³. V = M/ρ = 223.0/1.87 = 119.3 cm³ per mole.
+scene "Francium Molar Volume Cube"
+
+mole_cube = cube 4.92cm color: #ff00ff at (0, 2.46cm, 0)
+# one mole of atoms: 6.022e23 atoms of Francium, 223.0 g, drawn at true scale

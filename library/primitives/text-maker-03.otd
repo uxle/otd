@@ -1,0 +1,5 @@
+# The word MAKER rendered as real 3D letters.
+scene "Word MAKER"
+
+labelX = text "MAKER" size: 2.6cm depth: 6mm color: darkslategray
+ask "mass?"

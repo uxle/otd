@@ -1,0 +1,5 @@
+# Crystal Lattice
+# Silicon (Si) — real density 2.329 g/cm³. simple cubic lattice — packing 50% vs close-packed 74%.
+scene "Silicon Crystal Lattice"
+
+lattice = grid(nx: 3, nz: 3, spacing: (8mm, 8mm)) sphere 2.5mm color: #f0c8a0

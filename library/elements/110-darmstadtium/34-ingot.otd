@@ -1,0 +1,6 @@
+# Ingot
+# Darmstadtium (Ds) — real density 34.8 g/cm³. cast bar format.
+scene "Darmstadtium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #ff30d0 at (0, 5.5mm, 0)
+simulate: drop

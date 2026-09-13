@@ -1,0 +1,5 @@
+# A 6-corner profile swept along a vertical path.
+scene "Sweep Solid 6"
+
+rail1 = sweep(profile: [(1.5cm, 0.0cm), (0.8cm, 1.3cm), (-0.7cm, 1.3cm), (-1.5cm, 0.0cm), (-0.8cm, -1.3cm), (0.8cm, -1.3cm)], path: [(0, 0, 0), (0, 33cm, 0)])
+ask "mass?"

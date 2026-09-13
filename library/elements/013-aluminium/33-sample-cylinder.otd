@@ -1,0 +1,7 @@
+# Sample Cylinder
+# Aluminium (Al) — real density 2.7 g/cm³. rod format, like lab stock.
+scene "Aluminium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) material: aluminum
+ask "mass?"
+simulate: drop

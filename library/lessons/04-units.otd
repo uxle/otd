@@ -1,0 +1,6 @@
+# mm, cm, m, in, ft — mix them freely.
+scene "Units Everywhere — Lesson 04"
+
+a = cube(w: 10cm, d: 1in, h: 25.4mm)
+b = cylinder(r: 0.5ft, h: 1m) at (20cm, 0, 0)
+ask "mass?"

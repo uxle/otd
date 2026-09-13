@@ -1,0 +1,6 @@
+# Sample Sphere
+# Yttrium (Y) — real density 4.472 g/cm³. 5 mm radius ball.
+scene "Yttrium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #94ffff at (0, 5mm, 0)
+simulate: drop

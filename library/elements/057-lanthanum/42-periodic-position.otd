@@ -1,0 +1,8 @@
+# Periodic Position
+# Lanthanum (La) — real density 6.162 g/cm³. period 6, group 3.
+scene "Lanthanum Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #4d6fff at (48mm, 3mm, 120mm)
+label = text "La" at (42mm, 4mm, 115mm)
+numtext = text "57" at (55mm, 4mm, 126mm)

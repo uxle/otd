@@ -1,0 +1,5 @@
+# Granules
+# Berkelium (Bk) — real density 14.78 g/cm³. small pieces scatter like real granules.
+scene "Berkelium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 97) sphere 2.5mm color: #80ff40

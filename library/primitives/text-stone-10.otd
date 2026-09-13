@@ -1,0 +1,5 @@
+# The word STONE rendered as real 3D letters.
+scene "Word STONE"
+
+labelX = text "STONE" size: 3cm depth: 8mm color: wheat
+ask "mass?"

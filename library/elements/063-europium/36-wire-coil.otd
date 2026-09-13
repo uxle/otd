@@ -1,0 +1,5 @@
+# Wire Coil
+# Europium (Eu) — real density 5.244 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Europium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #ff00ff

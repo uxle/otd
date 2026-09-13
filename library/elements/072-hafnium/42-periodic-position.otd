@@ -1,0 +1,8 @@
+# Periodic Position
+# Hafnium (Hf) — real density 13.31 g/cm³. period 6, group 4.
+scene "Hafnium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #90b0b0 at (72mm, 3mm, 120mm)
+label = text "Hf" at (66mm, 4mm, 115mm)
+numtext = text "72" at (79mm, 4mm, 126mm)

@@ -1,0 +1,5 @@
+# The ampersand keeps only the overlap.
+scene "Boolean & — Lesson 13"
+
+core = sphere 5cm & cube 4cm
+ask "volume?"

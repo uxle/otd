@@ -1,0 +1,5 @@
+# Granules
+# Cadmium (Cd) — real density 8.65 g/cm³. small pieces scatter like real granules.
+scene "Cadmium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 48) sphere 2.5mm color: #ffd98f

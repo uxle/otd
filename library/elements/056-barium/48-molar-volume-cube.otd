@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Barium (Ba) — real density 3.51 g/cm³. V = M/ρ = 137.33/3.51 = 39.1 cm³ per mole.
+scene "Barium Molar Volume Cube"
+
+mole_cube = cube 3.39cm color: #00c900 at (0, 1.70cm, 0)
+# one mole of atoms: 6.022e23 atoms of Barium, 137.33 g, drawn at true scale

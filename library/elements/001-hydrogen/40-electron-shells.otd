@@ -1,0 +1,7 @@
+# Electron Shells
+# Hydrogen (H) — real density 9e-05 g/cm³. configuration 1s1.
+scene "Hydrogen Electron Shells"
+
+define electron = sphere 1mm color: #ffffff
+nucleus = sphere 2.5mm color: #88ff88
+shell1 = ring(n: 1, radius: 5mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)

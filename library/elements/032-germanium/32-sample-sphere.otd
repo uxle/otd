@@ -1,0 +1,6 @@
+# Sample Sphere
+# Germanium (Ge) — real density 5.323 g/cm³. 5 mm radius ball.
+scene "Germanium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #668f8f at (0, 5mm, 0)
+simulate: drop

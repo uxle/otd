@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Thorium (Th) — real density 11.72 g/cm³. V = M/ρ = 232.04/11.72 = 19.8 cm³ per mole.
+scene "Thorium Molar Volume Cube"
+
+mole_cube = cube 2.71cm color: #00a0ff at (0, 1.35cm, 0)
+# one mole of atoms: 6.022e23 atoms of Thorium, 232.04 g, drawn at true scale

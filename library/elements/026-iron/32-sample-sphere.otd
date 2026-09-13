@@ -1,0 +1,7 @@
+# Sample Sphere
+# Iron (Fe) — real density 7.874 g/cm³. 5 mm radius ball.
+scene "Iron Sample Sphere"
+
+sample_sphere = sphere 5mm material: iron at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

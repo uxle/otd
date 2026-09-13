@@ -1,0 +1,6 @@
+# Foil Sheet
+# Gold (Au) — real density 19.32 g/cm³. 0.1 mm foil.
+scene "Gold Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) material: gold at (0, 0.1mm, 0)
+ask "mass?"

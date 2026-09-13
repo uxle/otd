@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Cobalt (Co) — real density 8.9 g/cm³. V = M/ρ = 58.933/8.9 = 6.6 cm³ per mole.
+scene "Cobalt Molar Volume Cube"
+
+mole_cube = cube 1.88cm color: #f090a0 at (0, 0.94cm, 0)
+# one mole of atoms: 6.022e23 atoms of Cobalt, 58.933 g, drawn at true scale

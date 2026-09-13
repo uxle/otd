@@ -1,0 +1,6 @@
+# Ingot
+# Bromine (Br) — real density 3.12 g/cm³. cast bar format.
+scene "Bromine Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #a62929 at (0, 5.5mm, 0)
+simulate: drop

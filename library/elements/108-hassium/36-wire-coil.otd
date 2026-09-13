@@ -1,0 +1,5 @@
+# Wire Coil
+# Hassium (Hs) — real density 40.7 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Hassium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #c060ff

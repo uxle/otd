@@ -1,0 +1,5 @@
+# Powder Pile
+# Sulfur (S) — real density 2.07 g/cm³. a poured heap.
+scene "Sulfur Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #ffff30

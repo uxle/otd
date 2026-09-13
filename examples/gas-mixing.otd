@@ -1,0 +1,23 @@
+# GASES MIX — P1440. Gases are materials too (real STP densities). In a
+# chamber they expand to fill it, light species rise and heavy ones sink
+# in the surrounding air, and DIFFUSION stirs any two of them into one
+# uniform phase. Reactive pairs do not mix — they REACT.
+scene "Gas chamber"
+
+unit: cm
+
+# the chamber (glass, so you can watch)
+chamber = cube(w: 40cm, d: 40cm, h: 40cm) at (0, 20cm, 0) material: glass
+
+# two inert gases released inside: they mix into something very
+# familiar — nitrogen + oxygen IS air
+n2 = sphere(r: 9cm) at (-10cm, 12cm, 0) material: nitrogen
+o2 = sphere(r: 9cm) at (10cm, 30cm, 0) material: oxygen
+
+# helium from a leak in the floor corner: lighter than air, it rises
+he = sphere(r: 6cm) at (-14cm, 4cm, 10cm) material: helium
+
+# CO2 pours from a valve at the top: heavier than air, it sinks
+co2 = sphere(r: 7cm) at (14cm, 36cm, -10cm) material: carbon_dioxide
+
+simulate: gas

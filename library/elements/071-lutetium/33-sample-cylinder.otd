@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Lutetium (Lu) — real density 9.841 g/cm³. rod format, like lab stock.
+scene "Lutetium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #a6a6ff
+simulate: drop

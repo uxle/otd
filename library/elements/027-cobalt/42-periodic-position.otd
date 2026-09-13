@@ -1,0 +1,8 @@
+# Periodic Position
+# Cobalt (Co) — real density 8.9 g/cm³. period 4, group 9.
+scene "Cobalt Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #f090a0 at (192mm, 3mm, 72mm)
+label = text "Co" at (186mm, 4mm, 67mm)
+numtext = text "27" at (199mm, 4mm, 78mm)

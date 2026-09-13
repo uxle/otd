@@ -1,0 +1,5 @@
+# The word ROBOT rendered as real 3D letters.
+scene "Word ROBOT"
+
+labelX = text "ROBOT" size: 2.1cm depth: 9mm color: sienna
+ask "mass?"

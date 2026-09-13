@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Seaborgium (Sg) — real density 35 g/cm³. V = M/ρ = 269.0/35 = 7.7 cm³ per mole.
+scene "Seaborgium Molar Volume Cube"
+
+mole_cube = cube 1.97cm color: #80a0ff at (0, 0.99cm, 0)
+# one mole of atoms: 6.022e23 atoms of Seaborgium, 269.0 g, drawn at true scale

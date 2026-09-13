@@ -1,0 +1,6 @@
+# Drop Test
+# Boron (B) — real density 2.34 g/cm³. v = √(2gh) — watch the physics console.
+scene "Boron Drop Test"
+
+test_cube = cube 20mm color: #ffb5b5 # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

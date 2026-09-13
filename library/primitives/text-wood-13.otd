@@ -1,0 +1,5 @@
+# The word WOOD rendered as real 3D letters.
+scene "Word WOOD"
+
+labelX = text "WOOD" size: 3.3cm depth: 8mm color: maroon
+ask "mass?"

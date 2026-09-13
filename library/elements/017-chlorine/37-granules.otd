@@ -1,0 +1,5 @@
+# Granules
+# Chlorine (Cl) — real density 0.0032 g/cm³. small pieces scatter like real granules.
+scene "Chlorine Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 17) sphere 2.5mm color: #1ff01f

@@ -1,0 +1,6 @@
+# Ingot
+# Ruthenium (Ru) — real density 12.45 g/cm³. cast bar format.
+scene "Ruthenium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #a0c0c0 at (0, 5.5mm, 0)
+simulate: drop

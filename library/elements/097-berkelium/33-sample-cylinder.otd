@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Berkelium (Bk) — real density 14.78 g/cm³. rod format, like lab stock.
+scene "Berkelium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #80ff40
+simulate: drop

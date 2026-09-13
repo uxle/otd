@@ -1,0 +1,7 @@
+# Splash Test
+# Bromine (Br) — real density 3.12 g/cm³. liquids splash — ripples obey c = √(gH).
+scene "Bromine Splash Test"
+
+pool = cube(w: 90mm, d: 90mm, h: 30mm) color: #a62929
+ball = sphere 12mm material: steel at (0, 70mm, 0)
+simulate: splash

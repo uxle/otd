@@ -1,0 +1,6 @@
+# A polished lead ball.
+scene "Lead Sphere"
+
+ball = sphere(r: 3cm) material: lead
+ask "mass?"
+ask "will it float?"

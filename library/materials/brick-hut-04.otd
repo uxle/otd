@@ -1,0 +1,9 @@
+# A small brick hut with a pitched roof and chimney.
+scene "Brick Hut 4"
+
+color: firebrick
+walls = cube(w: 43cm, d: 34cm, h: 22cm) - hollow(wall: 2cm) material: concrete
+walls = walls - cube(w: 8cm, h: 13cm, d: 6cm) at (-8cm, 0, 15cm)
+roof = pyramid(base: 49cm, h: 11cm) at (0, 22cm, 0) material: wood color: firebrick
+chimney = cylinder(r: 2.3cm, h: 15cm) at (9cm, 22cm, -7cm) material: concrete
+ask "mass?"

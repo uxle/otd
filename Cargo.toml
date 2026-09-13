@@ -1,0 +1,26 @@
+[package]
+name = "otd"
+version = "3.3.0"
+edition = "2021"
+description = "OTD3.3 — Open Three-Dimensional Language. Pure Rust + assembly, zero external libraries: physics/energy/magnetism/sound engine, native PerceptAudio DSP, 8-camera AVC video studio, self-made nn.rs + OTD-Burn deep learning, statistics & astronomy, the program synthesizer, the lit-scene render cache, the website, and the subatomic particle layer."
+license = "MIT"
+
+# THE CONSTRAINT: zero external crates. The engine, renderer, PNG encoder,
+# HTTP server, JSON, Base64 — everything is written from nothing.
+[dependencies]
+
+[lib]
+name = "otd"
+path = "src/lib.rs"
+
+[[bin]]
+name = "otd"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+
+[profile.test]
+opt-level = 1

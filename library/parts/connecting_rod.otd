@@ -1,0 +1,8 @@
+# Connecting rod: big end, small end, I-beam shank — forged steel.
+scene "Connecting Rod"
+
+bigend = cylinder(r: 12mm, h: 14mm) - cylinder(r: 8mm, h: 20mm) material: steel
+smallend = cylinder(r: 7mm, h: 13mm) - cylinder(r: 4mm, h: 18mm) at (0, 62mm, 0) material: steel
+shank = tube(r: 4mm, path: [(0, 0, 0), (0, 62mm, 0)]) material: steel
+ask "mass?"
+simulate: collapse

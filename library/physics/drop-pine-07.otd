@@ -1,0 +1,7 @@
+# A pine ball dropped from 98 cm.
+scene "Pine Drop 7"
+
+test1 = sphere(r: 2.1cm) at (0, 98cm, 0) material: pine
+gravity: mars
+simulate: drop
+ask "mass?"

@@ -1,0 +1,5 @@
+# Powder Pile
+# Copper (Cu) — real density 8.96 g/cm³. a poured heap.
+scene "Copper Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) material: copper

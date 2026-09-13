@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Copernicium (Cn) — real density 23.7 g/cm³. V = M/ρ = 285.0/23.7 = 12.0 cm³ per mole.
+scene "Copernicium Molar Volume Cube"
+
+mole_cube = cube 2.29cm color: #ff1050 at (0, 1.15cm, 0)
+# one mole of atoms: 6.022e23 atoms of Copernicium, 285.0 g, drawn at true scale

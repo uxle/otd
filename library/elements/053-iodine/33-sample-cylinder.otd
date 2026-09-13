@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Iodine (I) — real density 4.93 g/cm³. rod format, like lab stock.
+scene "Iodine Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #940094
+simulate: drop

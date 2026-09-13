@@ -1,0 +1,5 @@
+# Powder Pile
+# Boron (B) — real density 2.34 g/cm³. a poured heap.
+scene "Boron Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #ffb5b5

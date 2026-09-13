@@ -1,0 +1,5 @@
+# Granules
+# Promethium (Pm) — real density 7.26 g/cm³. small pieces scatter like real granules.
+scene "Promethium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 61) sphere 2.5mm color: #6aff6a

@@ -1,0 +1,5 @@
+# Powder Pile
+# Californium (Cf) — real density 15.1 g/cm³. a poured heap.
+scene "Californium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #60ff30

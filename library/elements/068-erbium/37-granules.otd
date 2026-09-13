@@ -1,0 +1,5 @@
+# Granules
+# Erbium (Er) — real density 9.066 g/cm³. small pieces scatter like real granules.
+scene "Erbium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 68) sphere 2.5mm color: #94d9ff

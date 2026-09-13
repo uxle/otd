@@ -1,0 +1,5 @@
+# Foil Sheet
+# Roentgenium (Rg) — real density 28.7 g/cm³. 0.1 mm foil.
+scene "Roentgenium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #ff2060 at (0, 0.1mm, 0)

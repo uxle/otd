@@ -1,0 +1,7 @@
+# Sample Sphere
+# Zinc (Zn) — real density 7.14 g/cm³. 5 mm radius ball.
+scene "Zinc Sample Sphere"
+
+sample_sphere = sphere 5mm material: zinc at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

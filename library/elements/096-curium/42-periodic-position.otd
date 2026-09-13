@@ -1,0 +1,8 @@
+# Periodic Position
+# Curium (Cm) — real density 13.51 g/cm³. period 7, group 10.
+scene "Curium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #80ffa0 at (216mm, 3mm, 144mm)
+label = text "Cm" at (210mm, 4mm, 139mm)
+numtext = text "96" at (223mm, 4mm, 150mm)

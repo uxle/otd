@@ -1,0 +1,5 @@
+# Granules
+# Potassium (K) — real density 0.862 g/cm³. small pieces scatter like real granules.
+scene "Potassium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 19) sphere 2.5mm color: #8f40d4

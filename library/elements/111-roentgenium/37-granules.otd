@@ -1,0 +1,5 @@
+# Granules
+# Roentgenium (Rg) — real density 28.7 g/cm³. small pieces scatter like real granules.
+scene "Roentgenium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 111) sphere 2.5mm color: #ff2060

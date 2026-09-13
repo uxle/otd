@@ -1,0 +1,6 @@
+# Drop Test
+# Arsenic (As) — real density 5.727 g/cm³. v = √(2gh) — watch the physics console.
+scene "Arsenic Drop Test"
+
+test_cube = cube 20mm color: #bd80e3 # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

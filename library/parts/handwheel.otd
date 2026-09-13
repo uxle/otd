@@ -1,0 +1,10 @@
+# Machine handwheel — cast iron with 4 spokes.
+scene "Handwheel"
+
+define spoke = cylinder(r: 5mm, h: 64mm) rotate (0, 0, -90deg) at (0, 5mm, 0)
+rim = group(torus(R: 70mm, tube: 8mm), cylinder(r: 14mm, h: 16mm),
+            ring(n: 4, radius: 0.5mm) spoke rotate (0, a, 0)) material: iron
+handwheel = rim rotate (0, 0, -90deg) at (0, 78mm, 0) material: iron
+hide rim
+ask "mass?"
+simulate: collapse

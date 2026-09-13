@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Francium (Fr) — real density 1.87 g/cm³. rod format, like lab stock.
+scene "Francium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #ff00ff
+simulate: drop

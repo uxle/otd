@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Gallium (Ga) — real density 5.91 g/cm³. V = M/ρ = 69.723/5.91 = 11.8 cm³ per mole.
+scene "Gallium Molar Volume Cube"
+
+mole_cube = cube 2.28cm color: #c28f8f at (0, 1.14cm, 0)
+# one mole of atoms: 6.022e23 atoms of Gallium, 69.723 g, drawn at true scale

@@ -1,0 +1,5 @@
+# Foil Sheet
+# Indium (In) — real density 7.31 g/cm³. 0.1 mm foil.
+scene "Indium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #a67573 at (0, 0.1mm, 0)

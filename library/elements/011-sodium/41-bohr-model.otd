@@ -1,0 +1,9 @@
+# Bohr Model
+# Sodium (Na) — real density 0.971 g/cm³. nucleus + first shells, tilted for depth.
+scene "Sodium Bohr Model"
+
+define electron = sphere 1.1mm color: #ffffff
+nucleus = sphere 3mm color: #ab5cf2
+orb1 = ring(n: 2, radius: 6mm) electron rotate (0, a, 0)
+orb2 = ring(n: 8, radius: 12mm) electron rotate (0, a, 0)
+orb3 = ring(n: 1, radius: 18mm) electron rotate (0, a, 0)

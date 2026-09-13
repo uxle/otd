@@ -1,0 +1,68 @@
+# A horizontal mill steam engine — boiler, firebox, steam cylinder,
+# crank & flywheel. Every part is ONE material with a name, so physics
+# questions work per part and the flywheel really spins:
+#   otd render steam-engine.otd fly.png --spin flywheel=90@x
+scene "Steam Engine"
+
+gravity: earth
+
+# ---------- frame ----------
+base = cube(w: 60cm, d: 16cm, h: 3cm) at (0, 1.5cm, 0) material: oak
+
+# ---------- boiler: steel barrel lying along X ----------
+boiler = cylinder(r: 8cm, h: 24cm) rotate (0, 0, -90deg) at (4cm, 11cm, 0) material: steel
+band1 = torus(R: 8.1cm, tube: 2.5mm) rotate (0, 0, 90deg) at (10cm, 11cm, 0) material: copper
+band2 = torus(R: 8.1cm, tube: 2.5mm) rotate (0, 0, 90deg) at (16cm, 11cm, 0) material: copper
+band3 = torus(R: 8.1cm, tube: 2.5mm) rotate (0, 0, 90deg) at (22cm, 11cm, 0) material: copper
+
+# ---------- chimney + cap (brass) ----------
+chimney = cylinder(r: 2.2cm, h: 13cm) at (9cm, 18cm, 0) material: brass
+cap = cone(r: 3.2cm, h: 3.5cm) at (9cm, 31cm, 0) material: brass
+
+# ---------- steam dome + whistle (brass) ----------
+dome = cylinder(r: 3cm, h: 3.5cm) at (17cm, 18.5cm, 0) material: brass
+dometop = sphere 3cm scale (1, 0.55, 1) at (17cm, 22cm, 0) material: brass
+whistle = cylinder(r: 5mm, h: 3.5cm) at (20cm, 19cm, 2.5cm) material: brass
+whistletop = sphere 1.2cm at (20cm, 22.5cm, 2.5cm) material: brass
+
+# ---------- firebox under the boiler rear ----------
+firebox = cube(w: 9cm, d: 13cm, h: 7cm) at (5cm, 3cm, -6.5cm) material: steel
+firedoor = cube(w: 1cm, d: 6cm, h: 5cm) at (4cm, 4cm, -3cm) material: iron color: darkslategray
+
+# ---------- steam pipe: dome → cylinder chest (bent brass tube) ----------
+steampipe = tube(r: 8mm, path: [(17cm, 24cm, 0), (17cm, 27cm, 0), (35cm, 27cm, 0), (35cm, 16cm, 0)]) material: brass
+
+# ---------- steam cylinder (cast iron, horizontal along X) ----------
+cylinderblock = cylinder(r: 4.5cm, h: 10cm) rotate (0, 0, -90deg) at (30cm, 11cm, 0) material: stainless
+chestcover = cylinder(r: 5cm, h: 1.2cm) rotate (0, 0, -90deg) at (29.2cm, 11cm, 0) material: bronze
+# cylinder saddle legs down to the base
+leg1 = cube(w: 2.5cm, d: 8cm, h: 4.5cm) at (31cm, 3cm, -4cm) material: steel
+leg2 = cube(w: 2.5cm, d: 8cm, h: 4.5cm) at (36.5cm, 3cm, -4cm) material: steel
+
+# ---------- piston rod + crosshead (the sliding link) ----------
+pistonrod = cylinder(r: 8mm, h: 7cm) rotate (0, 0, -90deg) at (40cm, 11cm, 0) material: stainless
+crosshead = cube(w: 4cm, d: 4cm, h: 3.5cm) at (46cm, 9.25cm, -1.75cm) material: bronze
+guide = cube(w: 12cm, d: 2.5cm, h: 1.5cm) at (41cm, 6.5cm, -1.25cm) material: steel
+
+# ---------- crank: disc + pin on the axle, connecting rod ----------
+axle = cylinder(r: 1.2cm, h: 12cm) rotate (0, 0, -90deg) at (43cm, 19cm, 0) material: steel
+crankdisc = cylinder(r: 5cm, h: 1.6cm) rotate (0, 0, 90deg) at (54.8cm, 19cm, 0) material: steel
+crankpin = cylinder(r: 9mm, h: 4.5cm) rotate (0, 0, -90deg) at (54.8cm, 24cm, 8.66cm) material: steel
+conrod = tube(r: 5mm, path: [(49cm, 11cm, 0), (56.5cm, 24cm, 8.66cm)]) material: stainless
+
+# ---------- axle pedestals (bearings) ----------
+pedestal1 = cube(w: 2cm, d: 5cm, h: 16cm) at (42.5cm, 3cm, -2.5cm) material: steel
+bearing1 = cube(w: 3cm, d: 4cm, h: 2.5cm) at (42cm, 19cm, -2cm) material: brass
+pedestal2 = cube(w: 2cm, d: 5cm, h: 16cm) at (49cm, 3cm, -2.5cm) material: steel
+bearing2 = cube(w: 3cm, d: 4cm, h: 2.5cm) at (48.5cm, 19cm, -2cm) material: brass
+
+# ---------- the flywheel: rim + hub + 8 spokes, ONE iron part ----------
+define spoke = cylinder(r: 3.5mm, h: 11.5cm) rotate (0, 0, -90deg) at (0, 2.2cm, 0)
+flywheelrim = group(torus(R: 14cm, tube: 2.2cm),
+                    cylinder(r: 4cm, h: 4.4cm),
+                    ring(n: 8, radius: 0.5mm) spoke rotate (0, a, 0))
+flywheel = flywheelrim rotate (0, 0, -90deg) at (44cm, 19cm, 0) material: iron
+hide flywheelrim
+
+ask "mass?"
+ask "how many objects?"

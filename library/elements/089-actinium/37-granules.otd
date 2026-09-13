@@ -1,0 +1,5 @@
+# Granules
+# Actinium (Ac) — real density 10.07 g/cm³. small pieces scatter like real granules.
+scene "Actinium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 89) sphere 2.5mm color: #007fff

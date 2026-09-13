@@ -1,0 +1,8 @@
+# Periodic Position
+# Indium (In) — real density 7.31 g/cm³. period 5, group 13.
+scene "Indium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #a67573 at (288mm, 3mm, 96mm)
+label = text "In" at (282mm, 4mm, 91mm)
+numtext = text "49" at (295mm, 4mm, 102mm)

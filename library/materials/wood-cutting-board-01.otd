@@ -1,0 +1,6 @@
+# A thick oak cutting-board slab.
+scene "Cutting Board 1"
+
+material: oak
+board = plane(w: 36cm, d: 22cm, t: 2cm)
+ask "volume?"

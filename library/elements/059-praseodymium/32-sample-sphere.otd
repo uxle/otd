@@ -1,0 +1,6 @@
+# Sample Sphere
+# Praseodymium (Pr) — real density 6.773 g/cm³. 5 mm radius ball.
+scene "Praseodymium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #dfffaf at (0, 5mm, 0)
+simulate: drop

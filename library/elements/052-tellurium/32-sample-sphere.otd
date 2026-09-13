@@ -1,0 +1,6 @@
+# Sample Sphere
+# Tellurium (Te) — real density 6.24 g/cm³. 5 mm radius ball.
+scene "Tellurium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #d47a00 at (0, 5mm, 0)
+simulate: drop

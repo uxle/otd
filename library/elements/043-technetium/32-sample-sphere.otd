@@ -1,0 +1,6 @@
+# Sample Sphere
+# Technetium (Tc) — real density 11 g/cm³. 5 mm radius ball.
+scene "Technetium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #3b9e9e at (0, 5mm, 0)
+simulate: drop

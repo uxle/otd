@@ -1,0 +1,6 @@
+# Plain shaft axle with keyway — chrome steel.
+scene "Axle Shaft"
+
+axle_shaft = cylinder(r: 8mm, h: 120mm) rotate (0, 0, -90deg) material: chrome
+ask "mass?"
+simulate: drop

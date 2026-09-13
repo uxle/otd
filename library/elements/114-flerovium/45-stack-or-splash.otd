@@ -1,0 +1,7 @@
+# Stack Test
+# Flerovium (Fl) — real density 14 g/cm³. three cubes stacked — simulate: collapse checks the load path.
+scene "Flerovium Stack Test"
+
+bottom = cube 20mm color: #ff5050 at (0, 10mm, 0)
+middle = cube 20mm color: #ff5050 at (0, 30mm, 0)
+top = cube 20mm color: #ff5050 at (0, 50mm, 0)

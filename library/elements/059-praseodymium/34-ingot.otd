@@ -1,0 +1,6 @@
+# Ingot
+# Praseodymium (Pr) — real density 6.773 g/cm³. cast bar format.
+scene "Praseodymium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #dfffaf at (0, 5.5mm, 0)
+simulate: drop

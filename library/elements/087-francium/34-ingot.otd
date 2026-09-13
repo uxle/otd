@@ -1,0 +1,6 @@
+# Ingot
+# Francium (Fr) — real density 1.87 g/cm³. cast bar format.
+scene "Francium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #ff00ff at (0, 5.5mm, 0)
+simulate: drop

@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Praseodymium (Pr) — real density 6.773 g/cm³. V = M/ρ = 140.91/6.773 = 20.8 cm³ per mole.
+scene "Praseodymium Molar Volume Cube"
+
+mole_cube = cube 2.75cm color: #dfffaf at (0, 1.38cm, 0)
+# one mole of atoms: 6.022e23 atoms of Praseodymium, 140.91 g, drawn at true scale

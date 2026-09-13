@@ -1,0 +1,5 @@
+# A cone with only 7 sides — a pyramid cone.
+scene "7-sided Cone"
+
+cone1 = cone(r: 3.5cm, h: 5.2cm, sides: 7)
+ask "volume?"

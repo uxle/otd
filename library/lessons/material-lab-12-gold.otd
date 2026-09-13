@@ -1,0 +1,7 @@
+# Hands-on lab: measure a gold sample.
+scene "Material Lab: Gold"
+
+sample1 = cube 4cm material: gold
+ask "mass?"
+ask "density?"
+ask "will it float?"

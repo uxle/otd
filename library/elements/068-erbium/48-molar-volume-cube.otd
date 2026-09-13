@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Erbium (Er) — real density 9.066 g/cm³. V = M/ρ = 167.26/9.066 = 18.4 cm³ per mole.
+scene "Erbium Molar Volume Cube"
+
+mole_cube = cube 2.64cm color: #94d9ff at (0, 1.32cm, 0)
+# one mole of atoms: 6.022e23 atoms of Erbium, 167.26 g, drawn at true scale

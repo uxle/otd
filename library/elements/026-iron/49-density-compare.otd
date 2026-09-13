@@ -1,0 +1,7 @@
+# Density Compare
+# Iron (Fe) — real density 7.874 g/cm³. equal masses: Iron vs water — sides ∝ (1/ρ)^(1/3).
+scene "Iron Density Compare"
+
+element_cube = cube 10.0mm material: iron at (-20mm, 5.0mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 62.8 g — the water cube is the reference

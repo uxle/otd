@@ -1,0 +1,6 @@
+# A torus tire standing upright on a steel hub.
+scene "Wheel 5"
+
+tire1 = torus(R: 6cm, tube: 2cm) rotate (90deg, 0, 0) material: rubber color: black
+hub1 = cylinder(r: 4.5cm, h: 3cm) at (0, 2cm, 0) material: steel
+ask "mass?"

@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Rutherfordium (Rf) — real density 23.2 g/cm³. V = M/ρ = 267.0/23.2 = 11.5 cm³ per mole.
+scene "Rutherfordium Molar Volume Cube"
+
+mole_cube = cube 2.26cm color: #50d0ff at (0, 1.13cm, 0)
+# one mole of atoms: 6.022e23 atoms of Rutherfordium, 267.0 g, drawn at true scale

@@ -1,0 +1,5 @@
+# Wire Coil
+# Einsteinium (Es) — real density 8.84 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Einsteinium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #40ff10

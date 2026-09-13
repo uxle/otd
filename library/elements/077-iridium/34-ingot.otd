@@ -1,0 +1,6 @@
+# Ingot
+# Iridium (Ir) — real density 22.56 g/cm³. cast bar format.
+scene "Iridium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #d4d4ff at (0, 5.5mm, 0)
+simulate: drop

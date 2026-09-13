@@ -1,0 +1,5 @@
+# Powder Pile
+# Einsteinium (Es) — real density 8.84 g/cm³. a poured heap.
+scene "Einsteinium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #40ff10

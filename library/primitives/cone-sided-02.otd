@@ -1,0 +1,5 @@
+# A cone with only 12 sides — a pyramid cone.
+scene "12-sided Cone"
+
+cone1 = cone(r: 4.5cm, h: 5cm, sides: 12)
+ask "volume?"

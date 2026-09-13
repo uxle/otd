@@ -1,0 +1,5 @@
+# A stemmed goblet revolved around the Y axis.
+scene "Goblet 4"
+
+goblet1 = revolve [(0, 0), (14mm, 0), (14mm, 3mm), (4mm, 8mm), (4mm, 30mm), (18mm, 35mm), (20mm, 50mm), (16mm, 52mm)]
+ask "mass?"

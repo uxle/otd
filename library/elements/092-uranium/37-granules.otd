@@ -1,0 +1,5 @@
+# Granules
+# Uranium (U) — real density 19.1 g/cm³. small pieces scatter like real granules.
+scene "Uranium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 92) sphere 2.5mm color: #00c8c8

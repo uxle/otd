@@ -1,0 +1,6 @@
+# Hex nut M12 — steel, with a real threaded hole cut through.
+scene "Hex Nut M12"
+
+nut_m12 = prism(sides: 6, r: 11.399999999999999mm, h: 9.600000000000001mm) - cylinder(r: 6.0mm, h: 24mm) at (0, 0, 0) material: steel
+ask "mass?"
+simulate: drop

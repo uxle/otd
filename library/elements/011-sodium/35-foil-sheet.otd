@@ -1,0 +1,5 @@
+# Foil Sheet
+# Sodium (Na) — real density 0.971 g/cm³. 0.1 mm foil.
+scene "Sodium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #ab5cf2 at (0, 0.1mm, 0)

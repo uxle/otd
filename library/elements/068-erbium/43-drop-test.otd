@@ -1,0 +1,6 @@
+# Drop Test
+# Erbium (Er) — real density 9.066 g/cm³. v = √(2gh) — watch the physics console.
+scene "Erbium Drop Test"
+
+test_cube = cube 20mm color: #94d9ff # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

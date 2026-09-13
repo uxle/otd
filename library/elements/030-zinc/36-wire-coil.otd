@@ -1,0 +1,5 @@
+# Wire Coil
+# Zinc (Zn) — real density 7.14 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Zinc Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) material: zinc

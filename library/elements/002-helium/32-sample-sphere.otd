@@ -1,0 +1,6 @@
+# Sample Sphere
+# Helium (He) — real density 0.00018 g/cm³. 5 mm radius ball.
+scene "Helium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #d9ffff at (0, 5mm, 0)
+simulate: drop

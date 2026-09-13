@@ -1,0 +1,6 @@
+# Ingot
+# Mendelevium (Md) — real density 10.3 g/cm³. cast bar format.
+scene "Mendelevium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #00ff80 at (0, 5.5mm, 0)
+simulate: drop

@@ -1,0 +1,5 @@
+# Granules
+# Oganesson (Og) — real density 5 g/cm³. small pieces scatter like real granules.
+scene "Oganesson Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 118) sphere 2.5mm color: #ffd040

@@ -1,0 +1,9 @@
+# A toy building brick with studs.
+scene "Plastic Brick"
+
+material: plastic
+body = cube(w: 3.2cm, d: 1.6cm, h: 1.2cm) color: red
+for i = 0 to 3
+  cylinder(r: 2.4mm, h: 1.8mm) at (i * 8mm, 1.2cm, 0) color: red
+end
+ask "mass?"

@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Roentgenium (Rg) — real density 28.7 g/cm³. rod format, like lab stock.
+scene "Roentgenium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #ff2060
+simulate: drop

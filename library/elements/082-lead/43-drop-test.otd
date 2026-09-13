@@ -1,0 +1,7 @@
+# Drop Test
+# Lead (Pb) — real density 11.34 g/cm³. v = √(2gh) — watch the physics console.
+scene "Lead Drop Test"
+
+test_cube = cube 20mm material: lead at (0, 50mm, 0)
+ask "mass?"
+simulate: drop

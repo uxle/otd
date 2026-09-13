@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Rhodium (Rh) — real density 12.41 g/cm³. rod format, like lab stock.
+scene "Rhodium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #c0c0c0
+simulate: drop

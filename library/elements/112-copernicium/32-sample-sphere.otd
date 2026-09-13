@@ -1,0 +1,6 @@
+# Sample Sphere
+# Copernicium (Cn) — real density 23.7 g/cm³. 5 mm radius ball.
+scene "Copernicium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ff1050 at (0, 5mm, 0)
+simulate: drop

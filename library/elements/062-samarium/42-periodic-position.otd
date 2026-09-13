@@ -1,0 +1,8 @@
+# Periodic Position
+# Samarium (Sm) — real density 7.52 g/cm³. period 6, group 3.
+scene "Samarium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #ff9b9b at (48mm, 3mm, 120mm)
+label = text "Sm" at (42mm, 4mm, 115mm)
+numtext = text "62" at (55mm, 4mm, 126mm)

@@ -1,0 +1,8 @@
+# Periodic Position
+# Iodine (I) — real density 4.93 g/cm³. period 5, group 17.
+scene "Iodine Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #940094 at (384mm, 3mm, 96mm)
+label = text "I" at (378mm, 4mm, 91mm)
+numtext = text "53" at (391mm, 4mm, 102mm)

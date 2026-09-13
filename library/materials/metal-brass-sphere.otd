@@ -1,0 +1,6 @@
+# A polished brass ball.
+scene "Brass Sphere"
+
+ball = sphere(r: 3.7cm) material: brass
+ask "mass?"
+ask "will it float?"

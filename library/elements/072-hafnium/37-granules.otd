@@ -1,0 +1,5 @@
+# Granules
+# Hafnium (Hf) — real density 13.31 g/cm³. small pieces scatter like real granules.
+scene "Hafnium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 72) sphere 2.5mm color: #90b0b0

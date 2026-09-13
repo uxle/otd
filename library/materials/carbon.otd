@@ -1,0 +1,5 @@
+# A thin carbon-fiber panel.
+scene "Carbon Panel"
+
+panel = plane(w: 30cm, d: 20cm, t: 2mm) at (0, 10cm, 0) material: carbon color: dimgray
+ask "mass?"

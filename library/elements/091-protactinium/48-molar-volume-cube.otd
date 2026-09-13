@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Protactinium (Pa) — real density 15.37 g/cm³. V = M/ρ = 231.04/15.37 = 15.0 cm³ per mole.
+scene "Protactinium Molar Volume Cube"
+
+mole_cube = cube 2.47cm color: #00bfff at (0, 1.23cm, 0)
+# one mole of atoms: 6.022e23 atoms of Protactinium, 231.04 g, drawn at true scale

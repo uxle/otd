@@ -1,0 +1,5 @@
+# Crystal Lattice
+# Strontium (Sr) — real density 2.64 g/cm³. simple cubic lattice — packing 50% vs close-packed 74%.
+scene "Strontium Crystal Lattice"
+
+lattice = grid(nx: 3, nz: 3, spacing: (8mm, 8mm)) sphere 2.5mm color: #00ff00

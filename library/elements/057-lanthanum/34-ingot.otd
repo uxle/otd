@@ -1,0 +1,6 @@
+# Ingot
+# Lanthanum (La) — real density 6.162 g/cm³. cast bar format.
+scene "Lanthanum Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #4d6fff at (0, 5.5mm, 0)
+simulate: drop

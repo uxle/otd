@@ -1,0 +1,5 @@
+# Foil Sheet
+# Platinum (Pt) — real density 21.45 g/cm³. 0.1 mm foil.
+scene "Platinum Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #d0d0e0 at (0, 0.1mm, 0)

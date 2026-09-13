@@ -1,0 +1,6 @@
+# Sample Sphere
+# Magnesium (Mg) — real density 1.738 g/cm³. 5 mm radius ball.
+scene "Magnesium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #8aff00 at (0, 5mm, 0)
+simulate: drop

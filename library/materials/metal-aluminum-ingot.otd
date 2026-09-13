@@ -1,0 +1,6 @@
+# A aluminum ingot with chamfered proportions.
+scene "Aluminum Ingot"
+
+ingot = wedge(w: 8cm, d: 4cm, h: 3cm) material: aluminum
+ask "mass?"
+ask "density?"

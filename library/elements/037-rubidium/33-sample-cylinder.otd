@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Rubidium (Rb) — real density 1.532 g/cm³. rod format, like lab stock.
+scene "Rubidium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #702eb0
+simulate: drop

@@ -1,0 +1,7 @@
+# Einsteinium (Es, element 99)
+
+actinide · period 7 · group 13 · density 8.84 g/cm³ · melts 860 °C · boils 996 °C
+
+50 files: 01–30 theory & data (markdown), 31–50 3D samples (OTD programs).
+Run any sample: `otd --check 31-sample-cube.otd` or render it:
+`otd --png 31-sample-cube.otd cube.png`

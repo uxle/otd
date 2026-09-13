@@ -1,0 +1,5 @@
+# Minus cuts one solid out of another.
+scene "Boolean - — Lesson 12"
+
+cheese = cube 6cm - sphere 4cm at (0, 6cm, 6cm)
+ask "mass?"

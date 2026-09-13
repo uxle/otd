@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Samarium (Sm) — real density 7.52 g/cm³. V = M/ρ = 150.36/7.52 = 20.0 cm³ per mole.
+scene "Samarium Molar Volume Cube"
+
+mole_cube = cube 2.71cm color: #ff9b9b at (0, 1.36cm, 0)
+# one mole of atoms: 6.022e23 atoms of Samarium, 150.36 g, drawn at true scale

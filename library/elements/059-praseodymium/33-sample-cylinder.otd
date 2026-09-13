@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Praseodymium (Pr) — real density 6.773 g/cm³. rod format, like lab stock.
+scene "Praseodymium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #dfffaf
+simulate: drop

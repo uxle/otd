@@ -1,0 +1,7 @@
+# Sample Cube
+# Scandium (Sc) — real density 2.985 g/cm³. a 1 cm cube — the reference sample.
+scene "Scandium Sample Cube"
+
+sample_cube = cube 10mm color: #ffe08a at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

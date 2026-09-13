@@ -1,0 +1,8 @@
+# Display Card
+# Lawrencium (Lr) — real density 15.6 g/cm³. periodic-table tile.
+scene "Lawrencium Display Card"
+
+tile = cube(w: 64mm, d: 6mm, h: 64mm) color: #00ffd0 at (0, 3mm, 0)
+sym = text "Lr" at (-14mm, 6mm, -8mm)
+znum = text "103" at (22mm, 6mm, 22mm)
+nmass = text "266" at (-22mm, 6mm, 22mm)

@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Molybdenum (Mo) — real density 10.28 g/cm³. rod format, like lab stock.
+scene "Molybdenum Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #54b5b5
+simulate: drop

@@ -1,0 +1,7 @@
+# Stack Test
+# Iridium (Ir) — real density 22.56 g/cm³. three cubes stacked — simulate: collapse checks the load path.
+scene "Iridium Stack Test"
+
+bottom = cube 20mm color: #d4d4ff at (0, 10mm, 0)
+middle = cube 20mm color: #d4d4ff at (0, 30mm, 0)
+top = cube 20mm color: #d4d4ff at (0, 50mm, 0)

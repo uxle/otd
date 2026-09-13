@@ -1,0 +1,20 @@
+[package]
+name = "reasoning-evaluation"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Reasoning AI — benchmarks and evaluation harnesses"
+
+[dependencies]
+reasoning-common = { path = "../common" }
+reasoning-search = { path = "../search" }
+reasoning-verifier = { path = "../verifier" }
+reasoning-prm = { path = "../prm" }
+reasoning-rl = { path = "../rl" }
+reasoning-selfplay = { path = "../selfplay" }
+reasoning-curriculum = { path = "../curriculum" }
+reasoning-engine = { path = "../engine" }
+reasoning-symbolic = { path = "../symbolic" }
+rand = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }

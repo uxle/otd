@@ -1,0 +1,7 @@
+# A aluminum plate drilled with a grid of holes.
+scene "Metal Plate 8"
+
+material: aluminum
+plate = cube(w: 20cm, d: 20cm, h: 8mm)
+holes = grid(nx: 3, nz: 3, spacing: (6cm, 6cm)) cylinder(r: 8mm, h: 9mm) at (0, 0, 0)
+ask "mass?"

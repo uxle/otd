@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Yttrium (Y) — real density 4.472 g/cm³. V = M/ρ = 88.906/4.472 = 19.9 cm³ per mole.
+scene "Yttrium Molar Volume Cube"
+
+mole_cube = cube 2.71cm color: #94ffff at (0, 1.35cm, 0)
+# one mole of atoms: 6.022e23 atoms of Yttrium, 88.906 g, drawn at true scale

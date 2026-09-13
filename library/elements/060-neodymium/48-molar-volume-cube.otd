@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Neodymium (Nd) — real density 7.01 g/cm³. V = M/ρ = 144.24/7.01 = 20.6 cm³ per mole.
+scene "Neodymium Molar Volume Cube"
+
+mole_cube = cube 2.74cm color: #8affde at (0, 1.37cm, 0)
+# one mole of atoms: 6.022e23 atoms of Neodymium, 144.24 g, drawn at true scale

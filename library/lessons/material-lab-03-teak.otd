@@ -1,0 +1,7 @@
+# Hands-on lab: measure a teak sample.
+scene "Material Lab: Teak"
+
+sample1 = cube 4cm material: teak
+ask "mass?"
+ask "density?"
+ask "will it float?"

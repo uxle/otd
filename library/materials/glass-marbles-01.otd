@@ -1,0 +1,8 @@
+# Three glass marbles of different sizes.
+scene "Glass Marbles 1"
+
+material: glass
+sphere1 = sphere(r: 3cm) at (0, 3cm, 0)
+sphere2 = sphere(r: 2cm) at (4cm, 2cm, 1cm)
+sphere3 = sphere(r: 1.5cm) at (6.5cm, 1.5cm, 2cm)
+ask "how many objects?"

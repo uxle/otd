@@ -1,0 +1,6 @@
+# A display dome with an open bottom.
+scene "Glass Dome 1"
+
+material: glass
+dome = sphere(r: 5.4cm) - hollow(wall: 2mm, open: bottom)
+ask "volume?"

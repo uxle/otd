@@ -1,0 +1,8 @@
+# A row of 3 cylinders of varied height.
+scene "Cylinder Row 5"
+
+material: rubber
+for i = 0 to 2
+  cylinder(r: 1.8cm, h: 5cm) at (i * 4cm, 0, 0)
+end
+ask "how many objects?"

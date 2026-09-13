@@ -1,0 +1,6 @@
+# Weigh a gold ingot — mass times g.
+scene "Weight Lab: Gold"
+
+ingot1 = wedge(w: 8cm, d: 4cm, h: 3cm) material: gold
+ask "mass?"
+ask "weight?"

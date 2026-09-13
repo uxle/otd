@@ -1,0 +1,6 @@
+# A bolt shaft with a hex head.
+scene "Hex Bolt 2"
+
+shaft1 = cylinder(r: 3mm, h: 10.9cm) material: steel
+head2 = prism(sides: 6, r: 1.4cm, h: 4mm) at (0, 11.6cm, 0) material: steel
+ask "mass?"

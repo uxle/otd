@@ -1,0 +1,7 @@
+# A practice exercise: a row of cylinder objects.
+scene "Exercise 7"
+
+for i = 1 to 6
+  cylinder 0.7cm at (i * 4cm, 0, 0)
+end
+ask "how many objects?"

@@ -1,0 +1,8 @@
+# Wood floats, iron sinks — Archimedes on real meshes.
+scene "Basic Float"
+
+water1 = plane(w: 30cm, d: 30cm, t: 2mm) color: deepskyblue
+wood1 = cube 6cm at (-8cm, 10cm, 0) material: wood
+iron1 = sphere(r: 3cm) at (8cm, 10cm, 0) material: iron
+simulate: float
+ask "will it float?"

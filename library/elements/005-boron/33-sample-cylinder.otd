@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Boron (B) — real density 2.34 g/cm³. rod format, like lab stock.
+scene "Boron Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #ffb5b5
+simulate: drop

@@ -1,0 +1,6 @@
+# Sample Sphere
+# Lanthanum (La) — real density 6.162 g/cm³. 5 mm radius ball.
+scene "Lanthanum Sample Sphere"
+
+sample_sphere = sphere 5mm color: #4d6fff at (0, 5mm, 0)
+simulate: drop

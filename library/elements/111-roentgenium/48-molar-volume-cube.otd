@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Roentgenium (Rg) — real density 28.7 g/cm³. V = M/ρ = 282.0/28.7 = 9.8 cm³ per mole.
+scene "Roentgenium Molar Volume Cube"
+
+mole_cube = cube 2.14cm color: #ff2060 at (0, 1.07cm, 0)
+# one mole of atoms: 6.022e23 atoms of Roentgenium, 282.0 g, drawn at true scale

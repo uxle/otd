@@ -1,0 +1,7 @@
+# Drop a rubber ball from one meter — v = √(2gh).
+scene "Basic Drop"
+
+ball1 = sphere(r: 3cm) at (0, 1m, 0) material: rubber
+gravity: earth
+simulate: drop
+ask "mass?"

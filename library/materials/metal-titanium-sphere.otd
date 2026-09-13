@@ -1,0 +1,6 @@
+# A polished titanium ball.
+scene "Titanium Sphere"
+
+ball = sphere(r: 3.2cm) material: titanium
+ask "mass?"
+ask "will it float?"

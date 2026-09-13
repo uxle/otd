@@ -1,0 +1,7 @@
+# Molar Volume Cube
+# Gold (Au) — real density 19.32 g/cm³. V = M/ρ = 196.97/19.32 = 10.2 cm³ per mole.
+scene "Gold Molar Volume Cube"
+
+mole_cube = cube 2.17cm material: gold at (0, 1.08cm, 0)
+ask "mass?"
+# one mole of atoms: 6.022e23 atoms of Gold, 196.97 g, drawn at true scale

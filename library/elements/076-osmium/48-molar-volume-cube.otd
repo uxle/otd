@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Osmium (Os) — real density 22.59 g/cm³. V = M/ρ = 190.23/22.59 = 8.4 cm³ per mole.
+scene "Osmium Molar Volume Cube"
+
+mole_cube = cube 2.03cm color: #a0a0b0 at (0, 1.02cm, 0)
+# one mole of atoms: 6.022e23 atoms of Osmium, 190.23 g, drawn at true scale

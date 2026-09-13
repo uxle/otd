@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Boron (B) — real density 2.34 g/cm³. V = M/ρ = 10.81/2.34 = 4.6 cm³ per mole.
+scene "Boron Molar Volume Cube"
+
+mole_cube = cube 1.67cm color: #ffb5b5 at (0, 0.83cm, 0)
+# one mole of atoms: 6.022e23 atoms of Boron, 10.81 g, drawn at true scale

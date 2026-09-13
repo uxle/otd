@@ -1,0 +1,6 @@
+# Ingot
+# Chlorine (Cl) — real density 0.0032 g/cm³. cast bar format.
+scene "Chlorine Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #1ff01f at (0, 5.5mm, 0)
+simulate: drop

@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Americium (Am) — real density 12 g/cm³. V = M/ρ = 243.0/12 = 20.2 cm³ per mole.
+scene "Americium Molar Volume Cube"
+
+mole_cube = cube 2.73cm color: #00ff80 at (0, 1.36cm, 0)
+# one mole of atoms: 6.022e23 atoms of Americium, 243.0 g, drawn at true scale

@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Yttrium (Y) — real density 4.472 g/cm³. rod format, like lab stock.
+scene "Yttrium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #94ffff
+simulate: drop

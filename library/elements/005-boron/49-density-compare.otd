@@ -1,0 +1,7 @@
+# Density Compare
+# Boron (B) — real density 2.34 g/cm³. equal masses: Boron vs water — sides ∝ (1/ρ)^(1/3).
+scene "Boron Density Compare"
+
+element_cube = cube 15.0mm color: #ffb5b5 at (-20mm, 7.5mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 18.7 g — the water cube is the reference

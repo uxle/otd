@@ -1,0 +1,6 @@
+# Drop Test
+# Nobelium (No) — real density 9.9 g/cm³. v = √(2gh) — watch the physics console.
+scene "Nobelium Drop Test"
+
+test_cube = cube 20mm color: #00ffa0 # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

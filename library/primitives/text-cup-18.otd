@@ -1,0 +1,5 @@
+# The word CUP rendered as real 3D letters.
+scene "Word CUP"
+
+labelX = text "CUP" size: 3.6cm depth: 8mm color: mediumturquoise
+ask "mass?"

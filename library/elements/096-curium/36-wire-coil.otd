@@ -1,0 +1,5 @@
+# Wire Coil
+# Curium (Cm) — real density 13.51 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Curium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #80ffa0

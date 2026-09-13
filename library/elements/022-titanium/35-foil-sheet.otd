@@ -1,0 +1,6 @@
+# Foil Sheet
+# Titanium (Ti) — real density 4.506 g/cm³. 0.1 mm foil.
+scene "Titanium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) material: titanium at (0, 0.1mm, 0)
+ask "mass?"

@@ -1,0 +1,5 @@
+# The word EXPORT rendered as real 3D letters.
+scene "Word EXPORT"
+
+labelX = text "EXPORT" size: 3.9cm depth: 5mm color: orchid
+ask "mass?"

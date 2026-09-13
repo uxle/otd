@@ -1,0 +1,6 @@
+# Sample Sphere
+# Osmium (Os) — real density 22.59 g/cm³. 5 mm radius ball.
+scene "Osmium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #a0a0b0 at (0, 5mm, 0)
+simulate: drop

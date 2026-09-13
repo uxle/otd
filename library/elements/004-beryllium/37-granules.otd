@@ -1,0 +1,5 @@
+# Granules
+# Beryllium (Be) — real density 1.85 g/cm³. small pieces scatter like real granules.
+scene "Beryllium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 4) sphere 2.5mm color: #c2ff00

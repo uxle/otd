@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Curium (Cm) — real density 13.51 g/cm³. V = M/ρ = 247.0/13.51 = 18.3 cm³ per mole.
+scene "Curium Molar Volume Cube"
+
+mole_cube = cube 2.63cm color: #80ffa0 at (0, 1.32cm, 0)
+# one mole of atoms: 6.022e23 atoms of Curium, 247.0 g, drawn at true scale

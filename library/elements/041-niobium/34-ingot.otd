@@ -1,0 +1,6 @@
+# Ingot
+# Niobium (Nb) — real density 8.57 g/cm³. cast bar format.
+scene "Niobium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #73c2c9 at (0, 5.5mm, 0)
+simulate: drop

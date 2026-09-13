@@ -1,0 +1,7 @@
+# Sample Sphere
+# Copper (Cu) — real density 8.96 g/cm³. 5 mm radius ball.
+scene "Copper Sample Sphere"
+
+sample_sphere = sphere 5mm material: copper at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

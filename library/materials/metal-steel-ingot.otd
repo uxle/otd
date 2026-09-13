@@ -1,0 +1,6 @@
+# A steel ingot with chamfered proportions.
+scene "Steel Ingot"
+
+ingot = wedge(w: 8cm, d: 4cm, h: 3cm) material: steel
+ask "mass?"
+ask "density?"

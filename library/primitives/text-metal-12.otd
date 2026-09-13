@@ -1,0 +1,5 @@
+# The word METAL rendered as real 3D letters.
+scene "Word METAL"
+
+labelX = text "METAL" size: 2.1cm depth: 7mm color: snow
+ask "mass?"

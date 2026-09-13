@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Hafnium (Hf) — real density 13.31 g/cm³. rod format, like lab stock.
+scene "Hafnium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #90b0b0
+simulate: drop

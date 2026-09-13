@@ -1,0 +1,6 @@
+# An open-topped glass jar.
+scene "Glass Jar 3"
+
+material: glass
+jar = cylinder(r: 3.8cm, h: 7.9cm) - hollow(wall: 2mm, open: top)
+ask "mass?"

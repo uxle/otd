@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Potassium (K) — real density 0.862 g/cm³. V = M/ρ = 39.098/0.862 = 45.4 cm³ per mole.
+scene "Potassium Molar Volume Cube"
+
+mole_cube = cube 3.57cm color: #8f40d4 at (0, 1.78cm, 0)
+# one mole of atoms: 6.022e23 atoms of Potassium, 39.098 g, drawn at true scale

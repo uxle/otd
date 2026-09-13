@@ -1,0 +1,5 @@
+# Powder Pile
+# Chromium (Cr) — real density 7.19 g/cm³. a poured heap.
+scene "Chromium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) material: chrome

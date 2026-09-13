@@ -1,0 +1,5 @@
+# A steel spring.
+scene "Basic Helix"
+
+spring1 = helix material: steel
+ask "mass?"

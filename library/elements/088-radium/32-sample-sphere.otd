@@ -1,0 +1,6 @@
+# Sample Sphere
+# Radium (Ra) — real density 5.5 g/cm³. 5 mm radius ball.
+scene "Radium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #00ff9d at (0, 5mm, 0)
+simulate: drop

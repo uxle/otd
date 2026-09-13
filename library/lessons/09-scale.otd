@@ -1,0 +1,6 @@
+# scale multiplies every dimension.
+scene "Scaling — Lesson 09"
+
+sphere 2cm scale 2 at (0, 0, 0)
+sphere 2cm scale 0.5 at (8cm, 0, 0)
+ask "how many objects?"

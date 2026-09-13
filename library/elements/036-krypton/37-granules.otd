@@ -1,0 +1,5 @@
+# Granules
+# Krypton (Kr) — real density 0.0037 g/cm³. small pieces scatter like real granules.
+scene "Krypton Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 36) sphere 2.5mm color: #5cb8d1

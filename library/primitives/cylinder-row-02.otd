@@ -1,0 +1,8 @@
+# A row of 5 cylinders of varied height.
+scene "Cylinder Row 2"
+
+material: oak
+for i = 0 to 4
+  cylinder(r: 1.7cm, h: 6cm) at (i * 4cm, 0, 0)
+end
+ask "how many objects?"

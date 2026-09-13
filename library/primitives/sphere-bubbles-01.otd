@@ -1,0 +1,5 @@
+# A scattered cloud of bubble spheres.
+scene "Bubble Cloud 1"
+
+bubbles = scatter(n: 34, radius: 8.7cm, seed: 59) sphere(r: 5.4mm) color: paleturquoise
+ask "how many objects?"

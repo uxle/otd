@@ -1,0 +1,7 @@
+# Sample Cube
+# Dubnium (Db) — real density 29.3 g/cm³. a 1 cm cube — the reference sample.
+scene "Dubnium Sample Cube"
+
+sample_cube = cube 10mm color: #60c0ff at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

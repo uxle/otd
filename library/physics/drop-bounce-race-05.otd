@@ -1,0 +1,10 @@
+# Rubber vs wood vs glass — restitution decides.
+scene "Bounce Race 5"
+
+# three balls, three materials, same height 51 cm
+ballA = sphere(r: 3cm) at (-8cm, 51cm, 0) material: rubber
+ballB = sphere(r: 3cm) at (0, 51cm, 0) material: wood
+ballC = sphere(r: 3cm) at (8cm, 51cm, 0) material: glass
+gravity: earth
+simulate: drop
+ask "how many objects?"

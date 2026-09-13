@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Oxygen (O) — real density 0.00143 g/cm³. V = M/ρ = 15.999/0.00143 = 11188.1 cm³ per mole.
+scene "Oxygen Molar Volume Cube"
+
+mole_cube = cube 22.37cm color: #ff0d0d at (0, 11.18cm, 0)
+# one mole of atoms: 6.022e23 atoms of Oxygen, 15.999 g, drawn at true scale

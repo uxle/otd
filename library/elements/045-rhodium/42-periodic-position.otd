@@ -1,0 +1,8 @@
+# Periodic Position
+# Rhodium (Rh) — real density 12.41 g/cm³. period 5, group 9.
+scene "Rhodium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #c0c0c0 at (192mm, 3mm, 96mm)
+label = text "Rh" at (186mm, 4mm, 91mm)
+numtext = text "45" at (199mm, 4mm, 102mm)

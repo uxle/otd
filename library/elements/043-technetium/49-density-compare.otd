@@ -1,0 +1,7 @@
+# Density Compare
+# Technetium (Tc) — real density 11 g/cm³. equal masses: Technetium vs water — sides ∝ (1/ρ)^(1/3).
+scene "Technetium Density Compare"
+
+element_cube = cube 9.0mm color: #3b9e9e at (-20mm, 4.5mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 87.7 g — the water cube is the reference

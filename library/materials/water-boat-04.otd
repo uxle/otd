@@ -1,0 +1,8 @@
+# A hollow wooden boat hull floating in a tank.
+scene "Boat Hull 4"
+
+water = plane(w: 40cm, d: 25cm, t: 2mm) color: deepskyblue
+hull = cube(w: 16cm, d: 8cm, h: 4cm) - hollow(wall: 5mm, open: top) at (0, 8cm, 0) material: wood
+simulate: float
+ask "will it float?"
+ask "mass?"

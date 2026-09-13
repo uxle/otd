@@ -1,0 +1,6 @@
+# Sample Sphere
+# Palladium (Pd) — real density 12.02 g/cm³. 5 mm radius ball.
+scene "Palladium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #d0a0a0 at (0, 5mm, 0)
+simulate: drop

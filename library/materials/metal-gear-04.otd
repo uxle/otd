@@ -1,0 +1,8 @@
+# A stainless gear wheel with 20 teeth.
+scene "Stainless Gear"
+
+material: stainless
+define tooth = cube(w: 5mm, h: 8mm, d: 6mm)
+define gear(r) = group(cylinder(r: r, height: 6mm), ring(n: 20, radius: r + 3mm) tooth rotate (0, a, 0))
+wheel = gear(r: 24mm) color: silver
+ask "mass?"

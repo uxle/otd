@@ -1,0 +1,5 @@
+# A round chrome bar standing on end.
+scene "Chrome Rod"
+
+rod = cylinder(r: 1.5cm, h: 16cm) material: chrome
+ask "mass?"

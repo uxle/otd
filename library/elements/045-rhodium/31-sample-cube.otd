@@ -1,0 +1,7 @@
+# Sample Cube
+# Rhodium (Rh) — real density 12.41 g/cm³. a 1 cm cube — the reference sample.
+scene "Rhodium Sample Cube"
+
+sample_cube = cube 10mm color: #c0c0c0 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

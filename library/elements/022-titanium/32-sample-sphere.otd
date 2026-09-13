@@ -1,0 +1,7 @@
+# Sample Sphere
+# Titanium (Ti) — real density 4.506 g/cm³. 5 mm radius ball.
+scene "Titanium Sample Sphere"
+
+sample_sphere = sphere 5mm material: titanium at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

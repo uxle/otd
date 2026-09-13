@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Einsteinium (Es) — real density 8.84 g/cm³. V = M/ρ = 252.0/8.84 = 28.5 cm³ per mole.
+scene "Einsteinium Molar Volume Cube"
+
+mole_cube = cube 3.05cm color: #40ff10 at (0, 1.53cm, 0)
+# one mole of atoms: 6.022e23 atoms of Einsteinium, 252.0 g, drawn at true scale

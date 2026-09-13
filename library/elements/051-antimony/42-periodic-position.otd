@@ -1,0 +1,8 @@
+# Periodic Position
+# Antimony (Sb) — real density 6.697 g/cm³. period 5, group 15.
+scene "Antimony Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #9e63b5 at (336mm, 3mm, 96mm)
+label = text "Sb" at (330mm, 4mm, 91mm)
+numtext = text "51" at (343mm, 4mm, 102mm)

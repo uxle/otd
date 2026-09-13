@@ -1,0 +1,7 @@
+# Sample Cube
+# Darmstadtium (Ds) — real density 34.8 g/cm³. a 1 cm cube — the reference sample.
+scene "Darmstadtium Sample Cube"
+
+sample_cube = cube 10mm color: #ff30d0 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

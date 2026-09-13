@@ -1,0 +1,9 @@
+# Spur gear with exactly 12 teeth — steel, named gear_twelve.
+scene "Gear Twelve"
+
+define tooth = cube(w: 4.5mm, h: 7mm, d: 5.5mm)
+gear_twelve = group(cylinder(r: 34mm, h: 6mm),
+                    ring(n: 12, radius: 36.5mm) tooth rotate (0, a, 0)) material: steel
+ask "mass?"
+ask "how many objects?"
+simulate: drop

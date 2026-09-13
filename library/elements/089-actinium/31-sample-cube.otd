@@ -1,0 +1,7 @@
+# Sample Cube
+# Actinium (Ac) — real density 10.07 g/cm³. a 1 cm cube — the reference sample.
+scene "Actinium Sample Cube"
+
+sample_cube = cube 10mm color: #007fff at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

@@ -1,0 +1,7 @@
+# Control lever arm with hub — steel.
+scene "Lever Arm"
+
+hub = cylinder(r: 10mm, h: 14mm) - cylinder(r: 5mm, h: 30mm) material: steel
+arm = cube(w: 70mm, d: 12mm, h: 8mm) at (0, 3mm, -6mm) rotate (0, 0, 0) material: steel
+knob = sphere 9mm at (70mm, 7mm, 0) material: rubber
+ask "mass?"

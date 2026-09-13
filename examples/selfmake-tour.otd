@@ -1,0 +1,27 @@
+# OTD3.1 — THE SELF-MAKE TOUR: every new library in one scene.
+# Written by hand, checked by the synthesizer's own compiler.
+#
+# Try the synthesizer that writes scenes like this one from a sentence:
+#   otd --make "two balls racing to the ground, lead and pine"
+# And the trainer that teaches OTD-Burn its own physics:
+#   otd --train
+scene "The self-make tour — six materials, one dataset"
+
+# six spheres, six materials: a whole statistics lesson in one line each
+leadBall   = sphere(r: 3cm) at (-25cm, 80cm, 0) material: lead
+pineBall   = sphere(r: 3cm) at (-15cm, 80cm, 0) material: pine
+steelBall  = sphere(r: 3cm) at (-5cm, 80cm, 0) material: steel
+goldBall   = sphere(r: 3cm) at (5cm, 80cm, 0) material: gold
+corkBall   = sphere(r: 3cm) at (15cm, 80cm, 0) material: pine color: tan
+mercuryBall = sphere(r: 3cm) at (25cm, 80cm, 0) material: mercury
+
+# the Galileo race: no mass in v = sqrt(2gh)
+simulate: drop
+# the scene reads itself: mean, sigma, correlation, the CLT live
+simulate: stats
+# the highest ball becomes a satellite: Kepler and vis-viva take over
+simulate: orbit
+# and a neural net learns the law they all obey
+simulate: learn
+
+ask "which lands first?"

@@ -1,0 +1,6 @@
+# A six-turn copper coil.
+scene "Copper Coil 5"
+
+coil1 = helix(radius: 2cm, pitch: 1.2cm, turns: 6, tube: 2mm) at (0, 0, 0) material: copper
+ask "mass?"
+ask "triangle count?"

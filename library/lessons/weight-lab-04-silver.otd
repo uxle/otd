@@ -1,0 +1,6 @@
+# Weigh a silver ingot — mass times g.
+scene "Weight Lab: Silver"
+
+ingot1 = wedge(w: 8cm, d: 4cm, h: 3cm) material: silver
+ask "mass?"
+ask "weight?"

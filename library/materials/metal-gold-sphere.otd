@@ -1,0 +1,6 @@
+# A polished gold ball.
+scene "Gold Sphere"
+
+ball = sphere(r: 4cm) material: gold
+ask "mass?"
+ask "will it float?"

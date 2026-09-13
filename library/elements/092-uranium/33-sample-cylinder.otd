@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Uranium (U) — real density 19.1 g/cm³. rod format, like lab stock.
+scene "Uranium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #00c8c8
+simulate: drop

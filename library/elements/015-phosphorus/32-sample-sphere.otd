@@ -1,0 +1,6 @@
+# Sample Sphere
+# Phosphorus (P) — real density 1.823 g/cm³. 5 mm radius ball.
+scene "Phosphorus Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ff8000 at (0, 5mm, 0)
+simulate: drop

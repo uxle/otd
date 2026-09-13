@@ -1,0 +1,7 @@
+# Sample Cube
+# Tungsten (W) — real density 19.25 g/cm³. a 1 cm cube — the reference sample.
+scene "Tungsten Sample Cube"
+
+sample_cube = cube 10mm material: tungsten at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

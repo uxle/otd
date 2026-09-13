@@ -1,0 +1,7 @@
+# Stack Test
+# Lanthanum (La) — real density 6.162 g/cm³. three cubes stacked — simulate: collapse checks the load path.
+scene "Lanthanum Stack Test"
+
+bottom = cube 20mm color: #4d6fff at (0, 10mm, 0)
+middle = cube 20mm color: #4d6fff at (0, 30mm, 0)
+top = cube 20mm color: #4d6fff at (0, 50mm, 0)

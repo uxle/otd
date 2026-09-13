@@ -1,0 +1,5 @@
+# The word SPRING rendered as real 3D letters.
+scene "Word SPRING"
+
+labelX = text "SPRING" size: 2cm depth: 6mm color: navy
+ask "mass?"

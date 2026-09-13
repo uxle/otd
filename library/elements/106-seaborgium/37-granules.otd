@@ -1,0 +1,5 @@
+# Granules
+# Seaborgium (Sg) — real density 35 g/cm³. small pieces scatter like real granules.
+scene "Seaborgium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 106) sphere 2.5mm color: #80a0ff

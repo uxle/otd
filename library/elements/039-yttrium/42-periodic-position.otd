@@ -1,0 +1,8 @@
+# Periodic Position
+# Yttrium (Y) — real density 4.472 g/cm³. period 5, group 3.
+scene "Yttrium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #94ffff at (48mm, 3mm, 96mm)
+label = text "Y" at (42mm, 4mm, 91mm)
+numtext = text "39" at (55mm, 4mm, 102mm)

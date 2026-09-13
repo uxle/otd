@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Iodine (I) — real density 4.93 g/cm³. V = M/ρ = 126.9/4.93 = 25.7 cm³ per mole.
+scene "Iodine Molar Volume Cube"
+
+mole_cube = cube 2.95cm color: #940094 at (0, 1.48cm, 0)
+# one mole of atoms: 6.022e23 atoms of Iodine, 126.9 g, drawn at true scale

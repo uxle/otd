@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Tellurium (Te) — real density 6.24 g/cm³. V = M/ρ = 127.6/6.24 = 20.4 cm³ per mole.
+scene "Tellurium Molar Volume Cube"
+
+mole_cube = cube 2.73cm color: #d47a00 at (0, 1.37cm, 0)
+# one mole of atoms: 6.022e23 atoms of Tellurium, 127.6 g, drawn at true scale

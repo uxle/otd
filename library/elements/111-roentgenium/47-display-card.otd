@@ -1,0 +1,8 @@
+# Display Card
+# Roentgenium (Rg) — real density 28.7 g/cm³. periodic-table tile.
+scene "Roentgenium Display Card"
+
+tile = cube(w: 64mm, d: 6mm, h: 64mm) color: #ff2060 at (0, 3mm, 0)
+sym = text "Rg" at (-14mm, 6mm, -8mm)
+znum = text "111" at (22mm, 6mm, 22mm)
+nmass = text "282" at (-22mm, 6mm, 22mm)

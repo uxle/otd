@@ -1,0 +1,8 @@
+# Periodic Position
+# Thallium (Tl) — real density 11.85 g/cm³. period 6, group 13.
+scene "Thallium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #a6544d at (288mm, 3mm, 120mm)
+label = text "Tl" at (282mm, 4mm, 115mm)
+numtext = text "81" at (295mm, 4mm, 126mm)

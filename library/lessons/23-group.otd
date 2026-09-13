@@ -1,0 +1,5 @@
+# Bundle shapes into one object.
+scene "group() — Lesson 23"
+
+tree = group(cylinder(r: 1cm, h: 8cm), sphere(r: 3cm) at (0, 10cm, 0))
+ask "mass?"

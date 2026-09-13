@@ -1,0 +1,5 @@
+# Wire Coil
+# Zirconium (Zr) — real density 6.52 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Zirconium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #94e0e0

@@ -1,0 +1,5 @@
+# Granules
+# Gold (Au) — real density 19.32 g/cm³. small pieces scatter like real granules.
+scene "Gold Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 79) sphere 2.5mm material: gold

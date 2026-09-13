@@ -1,0 +1,6 @@
+# A thin window pane floating at height.
+scene "Glass Window 1"
+
+material: glass
+window = plane(w: 57cm, d: 41cm, t: 3mm) at (0, 81cm, 0)
+ask "mass?"

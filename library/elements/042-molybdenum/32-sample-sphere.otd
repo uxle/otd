@@ -1,0 +1,6 @@
+# Sample Sphere
+# Molybdenum (Mo) — real density 10.28 g/cm³. 5 mm radius ball.
+scene "Molybdenum Sample Sphere"
+
+sample_sphere = sphere 5mm color: #54b5b5 at (0, 5mm, 0)
+simulate: drop

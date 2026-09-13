@@ -1,0 +1,5 @@
+# Powder Pile
+# Mendelevium (Md) — real density 10.3 g/cm³. a poured heap.
+scene "Mendelevium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #00ff80

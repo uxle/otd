@@ -1,0 +1,6 @@
+# Sample Sphere
+# Nickel (Ni) — real density 8.908 g/cm³. 5 mm radius ball.
+scene "Nickel Sample Sphere"
+
+sample_sphere = sphere 5mm color: #50d050 at (0, 5mm, 0)
+simulate: drop

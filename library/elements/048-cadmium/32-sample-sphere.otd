@@ -1,0 +1,6 @@
+# Sample Sphere
+# Cadmium (Cd) — real density 8.65 g/cm³. 5 mm radius ball.
+scene "Cadmium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ffd98f at (0, 5mm, 0)
+simulate: drop

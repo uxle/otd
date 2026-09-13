@@ -1,0 +1,7 @@
+# Ingot
+# Silver (Ag) — real density 10.49 g/cm³. cast bar format.
+scene "Silver Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) material: silver at (0, 5.5mm, 0)
+ask "mass?"
+simulate: drop

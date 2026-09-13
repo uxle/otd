@@ -1,0 +1,8 @@
+# Two-haft coupling with set pins — steel.
+scene "Shaft Coupling"
+
+half1 = cylinder(r: 16mm, h: 20mm) - cylinder(r: 8mm, h: 60mm) material: steel
+half2 = cylinder(r: 16mm, h: 20mm) - cylinder(r: 8mm, h: 60mm) at (0, 0, 0) material: steel
+pin1 = cylinder(r: 3mm, h: 36mm) rotate (90deg, 0, 0) at (0, 10mm, -18mm) material: chrome
+pin2 = cylinder(r: 3mm, h: 36mm) rotate (90deg, 0, 0) at (0, 30mm, -18mm) material: chrome
+ask "mass?"

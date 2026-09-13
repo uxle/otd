@@ -1,0 +1,6 @@
+# Sample Sphere
+# Thorium (Th) — real density 11.72 g/cm³. 5 mm radius ball.
+scene "Thorium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #00a0ff at (0, 5mm, 0)
+simulate: drop

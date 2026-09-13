@@ -1,0 +1,7 @@
+# Density Compare
+# Lithium (Li) — real density 0.534 g/cm³. equal masses: Lithium vs water — sides ∝ (1/ρ)^(1/3).
+scene "Lithium Density Compare"
+
+element_cube = cube 24.6mm color: #cc80ff at (-20mm, 12.3mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 4.3 g — the water cube is the reference

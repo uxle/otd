@@ -1,0 +1,8 @@
+# A plank on a wedge fulcrum with a weight.
+scene "See-saw 2"
+
+plank1 = plane(w: 24cm, d: 8cm, t: 1.5cm) at (0, 6.9cm, 0)
+fulcrum1 = wedge(w: 6cm, d: 8cm, h: 5.5cm) at (0, 0, 0)
+weightL = sphere(r: 2.5cm) at (-9cm, 11.6cm, 0) material: iron
+simulate: collapse
+ask "mass?"

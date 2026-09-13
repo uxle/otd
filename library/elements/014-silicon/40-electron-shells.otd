@@ -1,0 +1,9 @@
+# Electron Shells
+# Silicon (Si) — real density 2.329 g/cm³. configuration [Ne] 3s2 3p2.
+scene "Silicon Electron Shells"
+
+define electron = sphere 1mm color: #ffffff
+nucleus = sphere 2.5mm color: #f0c8a0
+shell1 = ring(n: 2, radius: 5mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell2 = ring(n: 8, radius: 10mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell3 = ring(n: 4, radius: 15mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)

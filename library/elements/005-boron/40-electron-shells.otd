@@ -1,0 +1,8 @@
+# Electron Shells
+# Boron (B) — real density 2.34 g/cm³. configuration [He] 2s2 2p1.
+scene "Boron Electron Shells"
+
+define electron = sphere 1mm color: #ffffff
+nucleus = sphere 2.5mm color: #ffb5b5
+shell1 = ring(n: 2, radius: 5mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell2 = ring(n: 3, radius: 10mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)

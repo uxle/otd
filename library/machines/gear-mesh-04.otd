@@ -1,0 +1,9 @@
+# Gears with 13 teeth each, rotated to interlock.
+scene "Meshing Gears 4"
+
+material: tungsten
+define tooth = cube(w: 5mm, h: 8mm, d: 6mm)
+define gearA(r) = group(cylinder(r: r, height: 6mm), ring(n: 13, radius: r + 3mm) tooth rotate (0, a, 0))
+wheelA = gearA(r: 23mm)
+wheelB = gearA(r: 17mm) at (46mm, 0, 0) rotate (0, 13.2deg, 0)
+ask "mass?"

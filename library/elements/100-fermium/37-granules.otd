@@ -1,0 +1,5 @@
+# Granules
+# Fermium (Fm) — real density 9.7 g/cm³. small pieces scatter like real granules.
+scene "Fermium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 100) sphere 2.5mm color: #20ff00

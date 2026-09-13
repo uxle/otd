@@ -1,0 +1,6 @@
+# Sample Sphere
+# Boron (B) — real density 2.34 g/cm³. 5 mm radius ball.
+scene "Boron Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ffb5b5 at (0, 5mm, 0)
+simulate: drop

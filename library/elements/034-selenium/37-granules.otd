@@ -1,0 +1,5 @@
+# Granules
+# Selenium (Se) — real density 4.81 g/cm³. small pieces scatter like real granules.
+scene "Selenium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 34) sphere 2.5mm color: #ffa100

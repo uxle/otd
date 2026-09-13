@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Niobium (Nb) — real density 8.57 g/cm³. rod format, like lab stock.
+scene "Niobium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #73c2c9
+simulate: drop

@@ -1,0 +1,7 @@
+# Sample Sphere
+# Tungsten (W) — real density 19.25 g/cm³. 5 mm radius ball.
+scene "Tungsten Sample Sphere"
+
+sample_sphere = sphere 5mm material: tungsten at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

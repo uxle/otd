@@ -1,0 +1,5 @@
+# Wire Coil
+# Mendelevium (Md) — real density 10.3 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Mendelevium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #00ff80

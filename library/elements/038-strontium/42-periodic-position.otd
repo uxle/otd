@@ -1,0 +1,8 @@
+# Periodic Position
+# Strontium (Sr) — real density 2.64 g/cm³. period 5, group 2.
+scene "Strontium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #00ff00 at (24mm, 3mm, 96mm)
+label = text "Sr" at (18mm, 4mm, 91mm)
+numtext = text "38" at (31mm, 4mm, 102mm)

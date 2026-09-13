@@ -1,0 +1,7 @@
+# Stack Test
+# Cadmium (Cd) — real density 8.65 g/cm³. three cubes stacked — simulate: collapse checks the load path.
+scene "Cadmium Stack Test"
+
+bottom = cube 20mm color: #ffd98f at (0, 10mm, 0)
+middle = cube 20mm color: #ffd98f at (0, 30mm, 0)
+top = cube 20mm color: #ffd98f at (0, 50mm, 0)

@@ -1,0 +1,6 @@
+# Sample Sphere
+# Thulium (Tm) — real density 9.32 g/cm³. 5 mm radius ball.
+scene "Thulium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #8ccbe0 at (0, 5mm, 0)
+simulate: drop

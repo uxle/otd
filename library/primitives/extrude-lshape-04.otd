@@ -1,0 +1,5 @@
+# An L-shaped bracket from one extrusion.
+scene "L-Bracket 4"
+
+lshape = extrude [(0, 0), (8cm, 0), (8cm, 3cm), (3cm, 3cm), (3cm, 8cm), (0, 8cm)] depth: 1.5cm
+ask "volume?"

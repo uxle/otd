@@ -1,0 +1,5 @@
+# Powder Pile
+# Tellurium (Te) — real density 6.24 g/cm³. a poured heap.
+scene "Tellurium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #d47a00

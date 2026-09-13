@@ -1,0 +1,6 @@
+# A field of ceramic floor tiles.
+scene "Tile Field 4"
+
+material: ceramic
+tiles = grid(nx: 4, nz: 4, spacing: (5cm, 5cm)) plane(w: 4.6cm, d: 4.6cm, t: 6mm)
+ask "surface area?"

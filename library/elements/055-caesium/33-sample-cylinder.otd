@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Caesium (Cs) — real density 1.879 g/cm³. rod format, like lab stock.
+scene "Caesium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #57178f
+simulate: drop

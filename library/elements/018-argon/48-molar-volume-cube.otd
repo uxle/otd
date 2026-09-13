@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Argon (Ar) — real density 0.0018 g/cm³. V = M/ρ = 39.948/0.0018 = 22193.3 cm³ per mole.
+scene "Argon Molar Volume Cube"
+
+mole_cube = cube 28.10cm color: #80d1e3 at (0, 14.05cm, 0)
+# one mole of atoms: 6.022e23 atoms of Argon, 39.948 g, drawn at true scale

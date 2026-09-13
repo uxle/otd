@@ -1,0 +1,8 @@
+# Periodic Position
+# Carbon (C) — real density 2.267 g/cm³. period 2, group 14.
+scene "Carbon Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm material: carbon at (312mm, 3mm, 24mm)
+label = text "C" at (306mm, 4mm, 19mm)
+numtext = text "6" at (319mm, 4mm, 30mm)

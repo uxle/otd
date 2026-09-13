@@ -1,0 +1,6 @@
+# Sample Sphere
+# Tin (Sn) — real density 7.31 g/cm³. 5 mm radius ball.
+scene "Tin Sample Sphere"
+
+sample_sphere = sphere 5mm color: #668080 at (0, 5mm, 0)
+simulate: drop

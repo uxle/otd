@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Indium (In) — real density 7.31 g/cm³. rod format, like lab stock.
+scene "Indium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #a67573
+simulate: drop

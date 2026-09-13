@@ -1,0 +1,8 @@
+# Periodic Position
+# Neon (Ne) — real density 0.0009 g/cm³. period 2, group 18.
+scene "Neon Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #b3e3f5 at (408mm, 3mm, 24mm)
+label = text "Ne" at (402mm, 4mm, 19mm)
+numtext = text "10" at (415mm, 4mm, 30mm)

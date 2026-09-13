@@ -1,0 +1,5 @@
+# Powder Pile
+# Tin (Sn) — real density 7.31 g/cm³. a poured heap.
+scene "Tin Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #668080

@@ -1,0 +1,6 @@
+# Sample Sphere
+# Hafnium (Hf) — real density 13.31 g/cm³. 5 mm radius ball.
+scene "Hafnium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #90b0b0 at (0, 5mm, 0)
+simulate: drop

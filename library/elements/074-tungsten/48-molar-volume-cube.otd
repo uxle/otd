@@ -1,0 +1,7 @@
+# Molar Volume Cube
+# Tungsten (W) — real density 19.25 g/cm³. V = M/ρ = 183.84/19.25 = 9.6 cm³ per mole.
+scene "Tungsten Molar Volume Cube"
+
+mole_cube = cube 2.12cm material: tungsten at (0, 1.06cm, 0)
+ask "mass?"
+# one mole of atoms: 6.022e23 atoms of Tungsten, 183.84 g, drawn at true scale

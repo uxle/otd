@@ -1,0 +1,5 @@
+# A smooth fillet bridges the gap.
+scene "blend: Soldered Unions — Lesson 40"
+
+fused1 = blend(sphere(r: 2cm), cube 3cm at (4cm, 0, 0), gap: 8mm)
+ask "mass?"

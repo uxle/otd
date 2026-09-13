@@ -1,0 +1,6 @@
+# Ingot
+# Xenon (Xe) — real density 0.0059 g/cm³. cast bar format.
+scene "Xenon Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #429eb0 at (0, 5.5mm, 0)
+simulate: drop

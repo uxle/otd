@@ -1,0 +1,5 @@
+# Wire Coil
+# Silicon (Si) — real density 2.329 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Silicon Wire Coil"
+
+wire = cylinder(r: 1.2mm, h: 70mm) rotate (0, 0, -90deg) color: #f0c8a0

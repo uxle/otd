@@ -1,0 +1,6 @@
+# Sample Sphere
+# Lutetium (Lu) — real density 9.841 g/cm³. 5 mm radius ball.
+scene "Lutetium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #a6a6ff at (0, 5mm, 0)
+simulate: drop

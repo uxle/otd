@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Uranium (U) — real density 19.1 g/cm³. V = M/ρ = 238.03/19.1 = 12.5 cm³ per mole.
+scene "Uranium Molar Volume Cube"
+
+mole_cube = cube 2.32cm color: #00c8c8 at (0, 1.16cm, 0)
+# one mole of atoms: 6.022e23 atoms of Uranium, 238.03 g, drawn at true scale

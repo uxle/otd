@@ -1,0 +1,6 @@
+# Ingot
+# Cadmium (Cd) — real density 8.65 g/cm³. cast bar format.
+scene "Cadmium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #ffd98f at (0, 5.5mm, 0)
+simulate: drop

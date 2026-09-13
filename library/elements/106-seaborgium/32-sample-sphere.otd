@@ -1,0 +1,6 @@
+# Sample Sphere
+# Seaborgium (Sg) — real density 35 g/cm³. 5 mm radius ball.
+scene "Seaborgium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #80a0ff at (0, 5mm, 0)
+simulate: drop

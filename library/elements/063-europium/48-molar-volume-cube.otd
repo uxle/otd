@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Europium (Eu) — real density 5.244 g/cm³. V = M/ρ = 151.96/5.244 = 29.0 cm³ per mole.
+scene "Europium Molar Volume Cube"
+
+mole_cube = cube 3.07cm color: #ff00ff at (0, 1.54cm, 0)
+# one mole of atoms: 6.022e23 atoms of Europium, 151.96 g, drawn at true scale

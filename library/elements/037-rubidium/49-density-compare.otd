@@ -1,0 +1,7 @@
+# Density Compare
+# Rubidium (Rb) — real density 1.532 g/cm³. equal masses: Rubidium vs water — sides ∝ (1/ρ)^(1/3).
+scene "Rubidium Density Compare"
+
+element_cube = cube 17.3mm color: #702eb0 at (-20mm, 8.7mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 12.2 g — the water cube is the reference

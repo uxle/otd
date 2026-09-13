@@ -1,0 +1,8 @@
+# Collection Item
+# Hafnium (Hf) — real density 13.31 g/cm³. display stand + sphere, like an element collection.
+scene "Hafnium Collection Item"
+
+stand = cylinder(r: 26mm, h: 5mm) color: #303038 at (0, 2.5mm, 0)
+pillar = cylinder(r: 5mm, h: 18mm) color: #505058 at (0, 14mm, 0)
+gem = sphere 12mm color: #90b0b0 at (0, 44mm, 0)
+plate = text "Hf · 72" at (-14mm, 5mm, 30mm)

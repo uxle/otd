@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OTD — Open Three-Dimensional Language</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header id="topbar">
+  <div class="logo"><span class="logo-mark">▲</span> OTD <span class="logo-sub">open three-dimensional language</span></div>
+  <div class="toolbar">
+    <select id="examples" title="Load an example"><option value="">examples…</option></select>
+    <button id="btn-lessons" title="20 lessons">lessons</button>
+    <button id="btn-help" title="keywords & cheat sheet">help</button>
+    <span class="sep"></span>
+    <span class="viewgrp" title="camera views">
+      <button class="vw" data-view="iso">iso</button>
+      <button class="vw" data-view="front">front</button>
+      <button class="vw" data-view="top">top</button>
+      <button class="vw" data-view="side">side</button>
+    </span>
+    <span class="sep"></span>
+    <span class="exportgrp" title="export">
+      <button class="ex" data-fmt="stl">STL</button>
+      <button class="ex" data-fmt="obj">OBJ</button>
+      <button class="ex" data-fmt="glb">GLB</button>
+      <button class="ex" data-fmt="scad">SCAD</button>
+      <button class="ex" data-fmt="png">PNG</button>
+    </span>
+  </div>
+</header>
+<main id="layout">
+  <section id="editor-pane">
+    <div id="editor-wrap">
+      <pre id="highlight" aria-hidden="true"></pre>
+      <textarea id="editor" spellcheck="false" placeholder='cube 2cm'></textarea>
+    </div>
+    <div id="console" aria-live="polite"></div>
+  </section>
+  <section id="view-pane">
+    <div id="canvas-holder">
+      <img id="preview" alt="3D preview" draggable="false">
+      <div id="rendering-flag">rendering…</div>
+    </div>
+    <div id="statusbar">
+      <span id="stat-title" class="chip">—</span>
+      <span id="stat-parts" class="chip">0 objects</span>
+      <span id="stat-mass" class="chip">0 g</span>
+      <span id="stat-lines" class="chip">0 lines</span>
+      <span id="stat-status" class="chip ok">ready</span>
+    </div>
+  </section>
+</main>
+
+<dialog id="modal">
+  <div class="modal-head">
+    <h3 id="modal-title">—</h3>
+    <button id="modal-close">✕</button>
+  </div>
+  <div id="modal-body"></div>
+</dialog>
+
+<script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# A hex nut with a bored hole.
+scene "Hex Nut 1"
+
+material: copper
+nut1 = prism(sides: 6, r: 1.3cm, h: 8mm) - cylinder(r: 8mm, h: 2.9cm)
+ask "mass?"

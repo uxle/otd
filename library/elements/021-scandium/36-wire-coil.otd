@@ -1,0 +1,5 @@
+# Wire Coil
+# Scandium (Sc) — real density 2.985 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Scandium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #ffe08a

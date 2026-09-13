@@ -1,0 +1,5 @@
+# Foil Sheet
+# Samarium (Sm) — real density 7.52 g/cm³. 0.1 mm foil.
+scene "Samarium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #ff9b9b at (0, 0.1mm, 0)

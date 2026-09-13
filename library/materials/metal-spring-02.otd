@@ -1,0 +1,7 @@
+# A coiled bronze spring.
+scene "Bronze Spring"
+
+material: bronze
+spring = helix(radius: 3cm, pitch: 1.1cm, turns: 6.8, tube: 2.4mm)
+ask "mass?"
+ask "inertia?"

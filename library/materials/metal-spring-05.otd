@@ -1,0 +1,7 @@
+# A coiled copper spring.
+scene "Copper Spring"
+
+material: copper
+spring = helix(radius: 2.2cm, pitch: 1cm, turns: 3.5, tube: 3.6mm)
+ask "mass?"
+ask "inertia?"

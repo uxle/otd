@@ -1,0 +1,5 @@
+# Foil Sheet
+# Caesium (Cs) — real density 1.879 g/cm³. 0.1 mm foil.
+scene "Caesium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #57178f at (0, 0.1mm, 0)

@@ -1,0 +1,6 @@
+# Drop Test
+# Manganese (Mn) — real density 7.21 g/cm³. v = √(2gh) — watch the physics console.
+scene "Manganese Drop Test"
+
+test_cube = cube 20mm color: #9c7ac7 # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

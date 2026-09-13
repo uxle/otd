@@ -1,0 +1,7 @@
+# Hands-on lab: measure a titanium sample.
+scene "Material Lab: Titanium"
+
+sample1 = sphere 3cm material: titanium
+ask "mass?"
+ask "density?"
+ask "will it float?"

@@ -1,0 +1,7 @@
+# Stack Test
+# Scandium (Sc) — real density 2.985 g/cm³. three cubes stacked — simulate: collapse checks the load path.
+scene "Scandium Stack Test"
+
+bottom = cube 20mm color: #ffe08a at (0, 10mm, 0)
+middle = cube 20mm color: #ffe08a at (0, 30mm, 0)
+top = cube 20mm color: #ffe08a at (0, 50mm, 0)

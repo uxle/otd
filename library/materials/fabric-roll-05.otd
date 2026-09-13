@@ -1,0 +1,7 @@
+# A rolled bolt of fabric.
+scene "Fabric Roll 5"
+
+material: fabric
+color: brown
+roll = capsule(r: 3.5cm, h: 21.7cm) rotate (0, 0, 90deg)
+ask "mass?"

@@ -1,0 +1,7 @@
+# Sample Cylinder
+# Zinc (Zn) — real density 7.14 g/cm³. rod format, like lab stock.
+scene "Zinc Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) material: zinc
+ask "mass?"
+simulate: drop

@@ -1,0 +1,6 @@
+# Sample Sphere
+# Calcium (Ca) — real density 1.55 g/cm³. 5 mm radius ball.
+scene "Calcium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #3dff00 at (0, 5mm, 0)
+simulate: drop

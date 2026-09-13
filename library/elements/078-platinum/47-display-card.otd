@@ -1,0 +1,8 @@
+# Display Card
+# Platinum (Pt) — real density 21.45 g/cm³. periodic-table tile.
+scene "Platinum Display Card"
+
+tile = cube(w: 64mm, d: 6mm, h: 64mm) color: #d0d0e0 at (0, 3mm, 0)
+sym = text "Pt" at (-14mm, 6mm, -8mm)
+znum = text "78" at (22mm, 6mm, 22mm)
+nmass = text "195" at (-22mm, 6mm, 22mm)

@@ -1,0 +1,5 @@
+# A thin slab.
+scene "Basic Plane"
+
+plane
+ask "surface area?"

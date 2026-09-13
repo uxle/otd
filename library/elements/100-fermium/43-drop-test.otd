@@ -1,0 +1,6 @@
+# Drop Test
+# Fermium (Fm) — real density 9.7 g/cm³. v = √(2gh) — watch the physics console.
+scene "Fermium Drop Test"
+
+test_cube = cube 20mm color: #20ff00 # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

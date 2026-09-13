@@ -1,0 +1,5 @@
+# Wire Coil
+# Berkelium (Bk) — real density 14.78 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Berkelium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #80ff40

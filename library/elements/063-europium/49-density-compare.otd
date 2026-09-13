@@ -1,0 +1,7 @@
+# Density Compare
+# Europium (Eu) — real density 5.244 g/cm³. equal masses: Europium vs water — sides ∝ (1/ρ)^(1/3).
+scene "Europium Density Compare"
+
+element_cube = cube 11.5mm color: #ff00ff at (-20mm, 5.8mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 41.8 g — the water cube is the reference

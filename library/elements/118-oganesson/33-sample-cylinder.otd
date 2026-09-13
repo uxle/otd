@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Oganesson (Og) — real density 5 g/cm³. rod format, like lab stock.
+scene "Oganesson Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #ffd040
+simulate: drop

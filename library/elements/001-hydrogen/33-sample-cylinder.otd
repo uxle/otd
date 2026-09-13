@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Hydrogen (H) — real density 9e-05 g/cm³. rod format, like lab stock.
+scene "Hydrogen Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #88ff88
+simulate: drop

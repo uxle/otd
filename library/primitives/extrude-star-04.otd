@@ -1,0 +1,5 @@
+# The ten-point gold star from the spec.
+scene "Gold Star 4"
+
+star1 = extrude [(0cm, 3cm), (1cm, 1cm), (3cm, 1cm), (1.2cm, -1cm), (2cm, -3cm), (0cm, -1.5cm), (-2cm, -3cm), (-1.2cm, -1cm), (-3cm, 1cm), (-1cm, 1cm)] depth: 4mm material: gold
+ask "mass?"

@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Beryllium (Be) — real density 1.85 g/cm³. V = M/ρ = 9.0122/1.85 = 4.9 cm³ per mole.
+scene "Beryllium Molar Volume Cube"
+
+mole_cube = cube 1.70cm color: #c2ff00 at (0, 0.85cm, 0)
+# one mole of atoms: 6.022e23 atoms of Beryllium, 9.0122 g, drawn at true scale

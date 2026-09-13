@@ -1,0 +1,6 @@
+# Sample Sphere
+# Bromine (Br) — real density 3.12 g/cm³. 5 mm radius ball.
+scene "Bromine Sample Sphere"
+
+sample_sphere = sphere 5mm color: #a62929 at (0, 5mm, 0)
+simulate: drop

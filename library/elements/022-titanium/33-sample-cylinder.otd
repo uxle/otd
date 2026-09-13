@@ -1,0 +1,7 @@
+# Sample Cylinder
+# Titanium (Ti) — real density 4.506 g/cm³. rod format, like lab stock.
+scene "Titanium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) material: titanium
+ask "mass?"
+simulate: drop

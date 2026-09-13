@@ -1,0 +1,6 @@
+# A gold torus ring crowned with a hex gem.
+scene "Jewel Ring 4"
+
+ring1 = torus(R: 3cm, tube: 4mm) at (0, 8cm, 0) material: gold
+gem1 = prism(sides: 6, r: 8mm, h: 8mm) at (0, 8.2cm, 0) color: red
+ask "mass?"

@@ -1,0 +1,9 @@
+[package]
+name = "reasoning-puzzles"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Reasoning AI — puzzle domains (calendar, clock, directions, family tree, mirror)"
+
+[dependencies]
+reasoning-common = { path = "../common" }

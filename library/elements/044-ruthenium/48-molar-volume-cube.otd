@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Ruthenium (Ru) — real density 12.45 g/cm³. V = M/ρ = 101.07/12.45 = 8.1 cm³ per mole.
+scene "Ruthenium Molar Volume Cube"
+
+mole_cube = cube 2.01cm color: #a0c0c0 at (0, 1.00cm, 0)
+# one mole of atoms: 6.022e23 atoms of Ruthenium, 101.07 g, drawn at true scale

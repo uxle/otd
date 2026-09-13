@@ -1,0 +1,5 @@
+# Granules
+# Palladium (Pd) — real density 12.02 g/cm³. small pieces scatter like real granules.
+scene "Palladium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 46) sphere 2.5mm color: #d0a0a0

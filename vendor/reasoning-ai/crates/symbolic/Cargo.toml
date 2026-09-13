@@ -1,0 +1,9 @@
+[package]
+name = "reasoning-symbolic"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Reasoning AI — mini computer-algebra engine (sympy replacement)"
+
+[dependencies]
+reasoning-common = { path = "../common" }

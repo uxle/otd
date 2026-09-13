@@ -1,0 +1,7 @@
+# A shelled box with a known wall thickness.
+scene "Hollow Box 5"
+
+material: pine
+shell = cube(w: 10cm, d: 6cm, h: 9cm) - hollow(wall: 6mm)
+ask "mass?"
+ask "watertight?"

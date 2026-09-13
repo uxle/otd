@@ -1,0 +1,8 @@
+# Periodic Position
+# Barium (Ba) — real density 3.51 g/cm³. period 6, group 2.
+scene "Barium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #00c900 at (24mm, 3mm, 120mm)
+label = text "Ba" at (18mm, 4mm, 115mm)
+numtext = text "56" at (31mm, 4mm, 126mm)

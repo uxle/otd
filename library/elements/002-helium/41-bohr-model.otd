@@ -1,0 +1,7 @@
+# Bohr Model
+# Helium (He) — real density 0.00018 g/cm³. nucleus + first shells, tilted for depth.
+scene "Helium Bohr Model"
+
+define electron = sphere 1.1mm color: #ffffff
+nucleus = sphere 3mm color: #d9ffff
+orb1 = ring(n: 2, radius: 6mm) electron rotate (0, a, 0)

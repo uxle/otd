@@ -1,0 +1,7 @@
+# Sample Sphere
+# Mercury (Hg) — real density 13.534 g/cm³. 5 mm radius ball.
+scene "Mercury Sample Sphere"
+
+sample_sphere = sphere 5mm material: mercury at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

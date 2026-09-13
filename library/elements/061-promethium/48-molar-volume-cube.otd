@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Promethium (Pm) — real density 7.26 g/cm³. V = M/ρ = 145.0/7.26 = 20.0 cm³ per mole.
+scene "Promethium Molar Volume Cube"
+
+mole_cube = cube 2.71cm color: #6aff6a at (0, 1.36cm, 0)
+# one mole of atoms: 6.022e23 atoms of Promethium, 145.0 g, drawn at true scale

@@ -1,0 +1,6 @@
+# Sample Sphere
+# Potassium (K) — real density 0.862 g/cm³. 5 mm radius ball.
+scene "Potassium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #8f40d4 at (0, 5mm, 0)
+simulate: drop

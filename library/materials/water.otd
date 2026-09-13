@@ -1,0 +1,7 @@
+# A water surface with a wooden block — simulate: float decides the waterline.
+scene "Water Tank"
+
+water = plane(w: 20cm, d: 20cm, t: 2mm) color: deepskyblue
+block = cube(w: 6cm, d: 6cm, h: 6cm) at (0, 10cm, 0) material: wood
+simulate: float
+ask "will it float?"

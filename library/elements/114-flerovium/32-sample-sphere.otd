@@ -1,0 +1,6 @@
+# Sample Sphere
+# Flerovium (Fl) — real density 14 g/cm³. 5 mm radius ball.
+scene "Flerovium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ff5050 at (0, 5mm, 0)
+simulate: drop

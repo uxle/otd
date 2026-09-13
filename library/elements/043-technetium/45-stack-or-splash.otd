@@ -1,0 +1,7 @@
+# Stack Test
+# Technetium (Tc) — real density 11 g/cm³. three cubes stacked — simulate: collapse checks the load path.
+scene "Technetium Stack Test"
+
+bottom = cube 20mm color: #3b9e9e at (0, 10mm, 0)
+middle = cube 20mm color: #3b9e9e at (0, 30mm, 0)
+top = cube 20mm color: #3b9e9e at (0, 50mm, 0)

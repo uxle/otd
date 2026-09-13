@@ -1,0 +1,7 @@
+# Sample Cube
+# Copernicium (Cn) — real density 23.7 g/cm³. a 1 cm cube — the reference sample.
+scene "Copernicium Sample Cube"
+
+sample_cube = cube 10mm color: #ff1050 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

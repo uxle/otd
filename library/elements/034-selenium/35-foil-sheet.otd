@@ -1,0 +1,5 @@
+# Foil Sheet
+# Selenium (Se) — real density 4.81 g/cm³. 0.1 mm foil.
+scene "Selenium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #ffa100 at (0, 0.1mm, 0)

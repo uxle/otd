@@ -1,0 +1,18 @@
+# OTD3.1 — THE AI LAB: a scene designed for the machines to study.
+# The five balls span densities 130..13500 kg/m³ — a dataset with range.
+scene "The AI lab — five densities, one law"
+
+gravity: earth
+
+balsa  = cube(w: 6cm, d: 6cm, h: 6cm) at (-16cm, 90cm, 0) material: pine
+alum   = cube(w: 6cm, d: 6cm, h: 6cm) at (-8cm, 90cm, 0) material: aluminum
+iron   = cube(w: 6cm, d: 6cm, h: 6cm) at (0, 90cm, 0) material: iron
+lead   = cube(w: 6cm, d: 6cm, h: 6cm) at (8cm, 90cm, 0) material: lead
+gold   = cube(w: 6cm, d: 6cm, h: 6cm) at (16cm, 90cm, 0) material: gold
+
+# the full audit trail: energy ledger, thermal report, statistics
+simulate: energy
+simulate: stats
+simulate: learn
+
+ask "mean mass?"

@@ -1,0 +1,5 @@
+# Foil Sheet
+# Cerium (Ce) — real density 6.77 g/cm³. 0.1 mm foil.
+scene "Cerium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #ffd1d1 at (0, 0.1mm, 0)

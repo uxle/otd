@@ -1,0 +1,7 @@
+# Density Compare
+# Tantalum (Ta) — real density 16.69 g/cm³. equal masses: Tantalum vs water — sides ∝ (1/ρ)^(1/3).
+scene "Tantalum Density Compare"
+
+element_cube = cube 7.8mm color: #a0c8c8 at (-20mm, 3.9mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 133.1 g — the water cube is the reference

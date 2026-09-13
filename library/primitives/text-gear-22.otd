@@ -1,0 +1,5 @@
+# The word GEAR rendered as real 3D letters.
+scene "Word GEAR"
+
+labelX = text "GEAR" size: 2.8cm depth: 11mm color: orange
+ask "mass?"

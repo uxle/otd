@@ -1,0 +1,9 @@
+# Three materials, one waterline test.
+scene "Density Trio 1"
+
+water1 = plane(w: 30cm, d: 30cm, t: 2mm) color: deepskyblue
+c1 = sphere(r: 3cm) at (-9cm, 10cm, 0) material: brass
+c2 = sphere(r: 3cm) at (0cm, 10cm, 0) material: brass
+c3 = sphere(r: 3cm) at (9cm, 14cm, 0) material: titanium
+simulate: float
+ask "density?"

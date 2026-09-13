@@ -1,0 +1,5 @@
+# Foil Sheet
+# Thulium (Tm) — real density 9.32 g/cm³. 0.1 mm foil.
+scene "Thulium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #8ccbe0 at (0, 0.1mm, 0)

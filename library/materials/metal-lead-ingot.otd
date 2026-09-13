@@ -1,0 +1,6 @@
+# A lead ingot with chamfered proportions.
+scene "Lead Ingot"
+
+ingot = wedge(w: 8cm, d: 4cm, h: 3cm) material: lead
+ask "mass?"
+ask "density?"

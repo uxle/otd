@@ -1,0 +1,7 @@
+# Sample Sphere
+# Silver (Ag) — real density 10.49 g/cm³. 5 mm radius ball.
+scene "Silver Sample Sphere"
+
+sample_sphere = sphere 5mm material: silver at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

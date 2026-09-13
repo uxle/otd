@@ -1,0 +1,10 @@
+# Electron Shells
+# Chromium (Cr) — real density 7.19 g/cm³. configuration [Ar] 3d5 4s1.
+scene "Chromium Electron Shells"
+
+define electron = sphere 1mm color: #ffffff
+nucleus = sphere 2.5mm color: #8a99c7
+shell1 = ring(n: 2, radius: 5mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell2 = ring(n: 8, radius: 10mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell3 = ring(n: 13, radius: 15mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell4 = ring(n: 1, radius: 20mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)

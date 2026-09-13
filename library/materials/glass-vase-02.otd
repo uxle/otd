@@ -1,0 +1,6 @@
+# A lofted glass vase with a waisted profile.
+scene "Glass Vase 2"
+
+material: glass
+vase = loft(sections: [[(3.3cm, 0.0cm), (1.7cm, 2.9cm), (-1.6cm, 2.9cm), (-3.3cm, 0.0cm), (-1.7cm, -2.9cm), (1.7cm, -2.9cm)], [(1.5cm, 7.0cm), (0.7cm, 8.3cm), (-0.7cm, 8.3cm), (-1.5cm, 7.0cm), (-0.7cm, 5.7cm), (0.7cm, 5.7cm)], [(2.0cm, 9.0cm), (1.0cm, 10.7cm), (-1.0cm, 10.7cm), (-2.0cm, 9.0cm), (-1.0cm, 7.3cm), (1.0cm, 7.3cm)]])
+ask "mass?"

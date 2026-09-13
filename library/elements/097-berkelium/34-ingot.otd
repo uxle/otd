@@ -1,0 +1,6 @@
+# Ingot
+# Berkelium (Bk) — real density 14.78 g/cm³. cast bar format.
+scene "Berkelium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #80ff40 at (0, 5.5mm, 0)
+simulate: drop

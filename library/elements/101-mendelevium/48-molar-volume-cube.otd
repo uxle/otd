@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Mendelevium (Md) — real density 10.3 g/cm³. V = M/ρ = 258.0/10.3 = 25.0 cm³ per mole.
+scene "Mendelevium Molar Volume Cube"
+
+mole_cube = cube 2.93cm color: #00ff80 at (0, 1.46cm, 0)
+# one mole of atoms: 6.022e23 atoms of Mendelevium, 258.0 g, drawn at true scale

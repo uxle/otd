@@ -1,0 +1,8 @@
+# A row of 5 spheres growing step by step.
+scene "Sphere Ladder 5"
+
+# a rising size ladder of spheres
+for i = 1 to 5
+  sphere(r: i * 6mm) at (i * 2.5cm, 0, 0)
+end
+ask "how many objects?"

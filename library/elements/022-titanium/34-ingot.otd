@@ -1,0 +1,7 @@
+# Ingot
+# Titanium (Ti) — real density 4.506 g/cm³. cast bar format.
+scene "Titanium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) material: titanium at (0, 5.5mm, 0)
+ask "mass?"
+simulate: drop

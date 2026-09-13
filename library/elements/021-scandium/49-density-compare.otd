@@ -1,0 +1,7 @@
+# Density Compare
+# Scandium (Sc) — real density 2.985 g/cm³. equal masses: Scandium vs water — sides ∝ (1/ρ)^(1/3).
+scene "Scandium Density Compare"
+
+element_cube = cube 13.9mm color: #ffe08a at (-20mm, 6.9mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 23.8 g — the water cube is the reference

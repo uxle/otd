@@ -1,0 +1,5 @@
+# Wire Coil
+# Iridium (Ir) — real density 22.56 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Iridium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #d4d4ff

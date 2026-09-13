@@ -1,0 +1,6 @@
+# Sample Sphere
+# Nobelium (No) — real density 9.9 g/cm³. 5 mm radius ball.
+scene "Nobelium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #00ffa0 at (0, 5mm, 0)
+simulate: drop

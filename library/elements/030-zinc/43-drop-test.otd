@@ -1,0 +1,7 @@
+# Drop Test
+# Zinc (Zn) — real density 7.14 g/cm³. v = √(2gh) — watch the physics console.
+scene "Zinc Drop Test"
+
+test_cube = cube 20mm material: zinc at (0, 50mm, 0)
+ask "mass?"
+simulate: drop

@@ -1,0 +1,8 @@
+# Periodic Position
+# Actinium (Ac) — real density 10.07 g/cm³. period 7, group 3.
+scene "Actinium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #007fff at (48mm, 3mm, 144mm)
+label = text "Ac" at (42mm, 4mm, 139mm)
+numtext = text "89" at (55mm, 4mm, 150mm)

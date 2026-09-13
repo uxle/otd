@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Dubnium (Db) — real density 29.3 g/cm³. V = M/ρ = 268.0/29.3 = 9.1 cm³ per mole.
+scene "Dubnium Molar Volume Cube"
+
+mole_cube = cube 2.09cm color: #60c0ff at (0, 1.05cm, 0)
+# one mole of atoms: 6.022e23 atoms of Dubnium, 268.0 g, drawn at true scale

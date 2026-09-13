@@ -1,0 +1,5 @@
+# Granules
+# Tennessine (Ts) — real density 7.2 g/cm³. small pieces scatter like real granules.
+scene "Tennessine Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 117) sphere 2.5mm color: #ffb040

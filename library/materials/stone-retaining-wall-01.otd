@@ -1,0 +1,6 @@
+# A hollow stone retaining wall.
+scene "Retaining Wall 1"
+
+material: concrete
+wall = cube(w: 48cm, d: 12cm, h: 48cm) - hollow(wall: 2cm)
+ask "mass?"

@@ -1,0 +1,7 @@
+# Sample Cube
+# Terbium (Tb) — real density 8.23 g/cm³. a 1 cm cube — the reference sample.
+scene "Terbium Sample Cube"
+
+sample_cube = cube 10mm color: #c9ffa6 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

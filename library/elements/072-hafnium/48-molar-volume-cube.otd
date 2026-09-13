@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Hafnium (Hf) — real density 13.31 g/cm³. V = M/ρ = 178.49/13.31 = 13.4 cm³ per mole.
+scene "Hafnium Molar Volume Cube"
+
+mole_cube = cube 2.38cm color: #90b0b0 at (0, 1.19cm, 0)
+# one mole of atoms: 6.022e23 atoms of Hafnium, 178.49 g, drawn at true scale

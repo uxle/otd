@@ -1,0 +1,6 @@
+# Ingot
+# Silicon (Si) — real density 2.329 g/cm³. cast bar format.
+scene "Silicon Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #f0c8a0 at (0, 5.5mm, 0)
+simulate: drop

@@ -1,0 +1,7 @@
+# A classical column with a square capital.
+scene "Stone Column 1"
+
+material: marble
+column = cylinder(r: 3.9cm, h: 56cm, smooth: 32)
+cap = cube(w: 11cm, d: 10cm, h: 4cm) at (0, 84cm, 0)
+ask "mass?"

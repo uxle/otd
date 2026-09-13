@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Krypton (Kr) — real density 0.0037 g/cm³. V = M/ρ = 83.798/0.0037 = 22648.1 cm³ per mole.
+scene "Krypton Molar Volume Cube"
+
+mole_cube = cube 28.29cm color: #5cb8d1 at (0, 14.15cm, 0)
+# one mole of atoms: 6.022e23 atoms of Krypton, 83.798 g, drawn at true scale

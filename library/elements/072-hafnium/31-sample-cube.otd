@@ -1,0 +1,7 @@
+# Sample Cube
+# Hafnium (Hf) — real density 13.31 g/cm³. a 1 cm cube — the reference sample.
+scene "Hafnium Sample Cube"
+
+sample_cube = cube 10mm color: #90b0b0 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

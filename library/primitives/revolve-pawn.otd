@@ -1,0 +1,5 @@
+# A chess pawn spun from a profile.
+scene "Revolved Pawn"
+
+pawn1 = revolve [(0, 0), (12mm, 0), (12mm, 5mm), (8mm, 10mm), (8mm, 35mm), (13mm, 40mm), (5mm, 45mm)]
+ask "mass?"

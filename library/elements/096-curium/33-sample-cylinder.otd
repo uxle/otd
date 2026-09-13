@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Curium (Cm) — real density 13.51 g/cm³. rod format, like lab stock.
+scene "Curium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #80ffa0
+simulate: drop

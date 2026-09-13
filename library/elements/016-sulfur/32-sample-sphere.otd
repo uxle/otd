@@ -1,0 +1,6 @@
+# Sample Sphere
+# Sulfur (S) — real density 2.07 g/cm³. 5 mm radius ball.
+scene "Sulfur Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ffff30 at (0, 5mm, 0)
+simulate: drop

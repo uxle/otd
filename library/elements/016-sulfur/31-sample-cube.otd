@@ -1,0 +1,7 @@
+# Sample Cube
+# Sulfur (S) — real density 2.07 g/cm³. a 1 cm cube — the reference sample.
+scene "Sulfur Sample Cube"
+
+sample_cube = cube 10mm color: #ffff30 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

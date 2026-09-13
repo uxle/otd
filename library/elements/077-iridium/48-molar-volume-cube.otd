@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Iridium (Ir) — real density 22.56 g/cm³. V = M/ρ = 192.22/22.56 = 8.5 cm³ per mole.
+scene "Iridium Molar Volume Cube"
+
+mole_cube = cube 2.04cm color: #d4d4ff at (0, 1.02cm, 0)
+# one mole of atoms: 6.022e23 atoms of Iridium, 192.22 g, drawn at true scale

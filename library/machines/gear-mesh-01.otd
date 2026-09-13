@@ -1,0 +1,9 @@
+# Gears with 18 teeth each, rotated to interlock.
+scene "Meshing Gears 1"
+
+material: iron
+define tooth = cube(w: 5mm, h: 8mm, d: 6mm)
+define gearA(r) = group(cylinder(r: r, height: 6mm), ring(n: 18, radius: r + 3mm) tooth rotate (0, a, 0))
+wheelA = gearA(r: 27mm)
+wheelB = gearA(r: 33mm) at (66mm, 0, 0) rotate (0, 9.9deg, 0)
+ask "mass?"

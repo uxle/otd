@@ -1,0 +1,24 @@
+# Atomic structure of Hafnium
+
+Hafnium carries 72 protons. A neutral atom therefore holds exactly 72
+electrons, arranged in 6 shells around the
+nucleus. The most common isotope has mass number 178, so its nucleus holds
+106 neutrons alongside the 72 protons.
+
+## Electron shells
+- shell n=1: 2 electrons
+- shell n=2: 8 electrons
+- shell n=3: 18 electrons
+- shell n=4: 32 electrons
+- shell n=5: 10 electrons
+- shell n=6: 2 electrons
+
+## The nucleus
+- protons: 72 (this is what makes it Hafnium and nothing else)
+- neutrons: about 106 (mass number 178)
+- total nucleons: about 178
+
+Electrons fill shells from the inside out: 2 in the first shell, 8 in the second,
+18 in the third (with sub-shell bookkeeping the pattern continues 8, 18, 32 …).
+The outermost electrons — the valence electrons — decide all of Hf's chemistry.
+Hafnium's chemical personality is that of a transition metal: slow oxidation — rust for iron, patina for copper, nothing visible for gold.

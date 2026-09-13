@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Moscovium (Mc) — real density 13.5 g/cm³. rod format, like lab stock.
+scene "Moscovium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #ff7040
+simulate: drop

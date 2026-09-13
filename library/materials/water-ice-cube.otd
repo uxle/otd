@@ -1,0 +1,8 @@
+# An ice-cube float test using a white plastic stand-in.
+scene "Ice Cube"
+
+# ice cube approximated with light plastic (no ice material yet)
+water = plane(w: 20cm, d: 20cm, t: 2mm) color: lightblue
+cube1 = cube(w: 5cm, d: 5cm, h: 5cm) at (0, 10cm, 0) material: plastic color: white
+simulate: float
+ask "will it float?"

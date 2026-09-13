@@ -1,0 +1,6 @@
+# Drop Test
+# Polonium (Po) — real density 9.2 g/cm³. v = √(2gh) — watch the physics console.
+scene "Polonium Drop Test"
+
+test_cube = cube 20mm color: #d8004d # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Astatine (At) — real density 7 g/cm³. rod format, like lab stock.
+scene "Astatine Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #cc0066
+simulate: drop

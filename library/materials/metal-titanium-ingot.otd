@@ -1,0 +1,6 @@
+# A titanium ingot with chamfered proportions.
+scene "Titanium Ingot"
+
+ingot = wedge(w: 8cm, d: 4cm, h: 3cm) material: titanium
+ask "mass?"
+ask "density?"

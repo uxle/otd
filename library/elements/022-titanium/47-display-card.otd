@@ -1,0 +1,8 @@
+# Display Card
+# Titanium (Ti) — real density 4.506 g/cm³. periodic-table tile.
+scene "Titanium Display Card"
+
+tile = cube(w: 64mm, d: 6mm, h: 64mm) color: #bfc2c7 at (0, 3mm, 0)
+sym = text "Ti" at (-14mm, 6mm, -8mm)
+znum = text "22" at (22mm, 6mm, 22mm)
+nmass = text "48" at (-22mm, 6mm, 22mm)

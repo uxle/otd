@@ -1,0 +1,5 @@
+# A cone with only 5 sides — a pyramid cone.
+scene "5-sided Cone"
+
+cone1 = cone(r: 2.7cm, h: 7.2cm, sides: 5)
+ask "volume?"

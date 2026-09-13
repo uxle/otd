@@ -1,0 +1,6 @@
+# A 6 by 2 by 7 centimeter box.
+scene "Box 6×2×7"
+
+box1 = cube(w: 6cm, d: 2cm, h: 7cm)
+ask "mass?"
+ask "surface area?"

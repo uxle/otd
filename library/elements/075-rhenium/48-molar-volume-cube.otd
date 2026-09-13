@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Rhenium (Re) — real density 21.02 g/cm³. V = M/ρ = 186.21/21.02 = 8.9 cm³ per mole.
+scene "Rhenium Molar Volume Cube"
+
+mole_cube = cube 2.07cm color: #d4a0a0 at (0, 1.03cm, 0)
+# one mole of atoms: 6.022e23 atoms of Rhenium, 186.21 g, drawn at true scale

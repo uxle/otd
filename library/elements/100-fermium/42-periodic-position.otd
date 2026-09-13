@@ -1,0 +1,8 @@
+# Periodic Position
+# Fermium (Fm) — real density 9.7 g/cm³. period 7, group 14.
+scene "Fermium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #20ff00 at (312mm, 3mm, 144mm)
+label = text "Fm" at (306mm, 4mm, 139mm)
+numtext = text "100" at (319mm, 4mm, 150mm)

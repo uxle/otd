@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Actinium (Ac) — real density 10.07 g/cm³. rod format, like lab stock.
+scene "Actinium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #007fff
+simulate: drop

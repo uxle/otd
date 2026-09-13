@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Hassium (Hs) — real density 40.7 g/cm³. V = M/ρ = 269.0/40.7 = 6.6 cm³ per mole.
+scene "Hassium Molar Volume Cube"
+
+mole_cube = cube 1.88cm color: #c060ff at (0, 0.94cm, 0)
+# one mole of atoms: 6.022e23 atoms of Hassium, 269.0 g, drawn at true scale

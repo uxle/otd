@@ -1,0 +1,8 @@
+# Electron Shells
+# Beryllium (Be) — real density 1.85 g/cm³. configuration [He] 2s2.
+scene "Beryllium Electron Shells"
+
+define electron = sphere 1mm color: #ffffff
+nucleus = sphere 2.5mm color: #c2ff00
+shell1 = ring(n: 2, radius: 5mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell2 = ring(n: 2, radius: 10mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)

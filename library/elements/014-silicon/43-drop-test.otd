@@ -1,0 +1,6 @@
+# Drop Test
+# Silicon (Si) — real density 2.329 g/cm³. v = √(2gh) — watch the physics console.
+scene "Silicon Drop Test"
+
+test_cube = cube 20mm color: #f0c8a0 # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

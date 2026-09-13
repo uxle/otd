@@ -1,0 +1,5 @@
+# An irregular 6-sided polygon pulled into a solid.
+scene "Extruded 6-gon"
+
+poly1 = extrude [(2.7cm, 0.0cm), (1.7cm, 3.0cm), (-1.6cm, 2.8cm), (-2.7cm, 0.0cm), (-1.4cm, -2.5cm), (2.0cm, -3.5cm)] depth: 0.9cm
+ask "volume?"

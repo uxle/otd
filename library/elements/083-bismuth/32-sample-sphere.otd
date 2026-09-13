@@ -1,0 +1,6 @@
+# Sample Sphere
+# Bismuth (Bi) — real density 9.78 g/cm³. 5 mm radius ball.
+scene "Bismuth Sample Sphere"
+
+sample_sphere = sphere 5mm color: #9c7ac7 at (0, 5mm, 0)
+simulate: drop

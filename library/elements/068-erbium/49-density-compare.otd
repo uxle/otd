@@ -1,0 +1,7 @@
+# Density Compare
+# Erbium (Er) — real density 9.066 g/cm³. equal masses: Erbium vs water — sides ∝ (1/ρ)^(1/3).
+scene "Erbium Density Compare"
+
+element_cube = cube 9.6mm color: #94d9ff at (-20mm, 4.8mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 72.3 g — the water cube is the reference

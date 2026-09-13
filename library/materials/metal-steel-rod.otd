@@ -1,0 +1,5 @@
+# A round steel bar standing on end.
+scene "Steel Rod"
+
+rod = cylinder(r: 1.5cm, h: 15cm) material: steel
+ask "mass?"

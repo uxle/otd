@@ -1,0 +1,5 @@
+# Foil Sheet
+# Vanadium (V) — real density 6.11 g/cm³. 0.1 mm foil.
+scene "Vanadium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #a6a6ab at (0, 0.1mm, 0)

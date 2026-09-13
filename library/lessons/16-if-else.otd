@@ -1,0 +1,10 @@
+# Decide between shapes.
+scene "if / else — Lesson 16"
+
+r = 4cm
+if r > 5cm
+  cube 4cm
+else
+  sphere r
+end
+ask "mass?"

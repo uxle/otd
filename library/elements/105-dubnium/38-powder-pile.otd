@@ -1,0 +1,5 @@
+# Powder Pile
+# Dubnium (Db) — real density 29.3 g/cm³. a poured heap.
+scene "Dubnium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #60c0ff

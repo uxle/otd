@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Indium (In) — real density 7.31 g/cm³. V = M/ρ = 114.82/7.31 = 15.7 cm³ per mole.
+scene "Indium Molar Volume Cube"
+
+mole_cube = cube 2.50cm color: #a67573 at (0, 1.25cm, 0)
+# one mole of atoms: 6.022e23 atoms of Indium, 114.82 g, drawn at true scale

@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Zirconium (Zr) — real density 6.52 g/cm³. V = M/ρ = 91.224/6.52 = 14.0 cm³ per mole.
+scene "Zirconium Molar Volume Cube"
+
+mole_cube = cube 2.41cm color: #94e0e0 at (0, 1.20cm, 0)
+# one mole of atoms: 6.022e23 atoms of Zirconium, 91.224 g, drawn at true scale

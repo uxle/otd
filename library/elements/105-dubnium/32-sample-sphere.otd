@@ -1,0 +1,6 @@
+# Sample Sphere
+# Dubnium (Db) — real density 29.3 g/cm³. 5 mm radius ball.
+scene "Dubnium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #60c0ff at (0, 5mm, 0)
+simulate: drop

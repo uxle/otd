@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Rhenium (Re) — real density 21.02 g/cm³. rod format, like lab stock.
+scene "Rhenium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #d4a0a0
+simulate: drop

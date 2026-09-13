@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Gadolinium (Gd) — real density 7.9 g/cm³. V = M/ρ = 157.25/7.9 = 19.9 cm³ per mole.
+scene "Gadolinium Molar Volume Cube"
+
+mole_cube = cube 2.71cm color: #e6ffa6 at (0, 1.36cm, 0)
+# one mole of atoms: 6.022e23 atoms of Gadolinium, 157.25 g, drawn at true scale

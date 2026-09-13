@@ -1,0 +1,8 @@
+# Three dressed stone blocks in a row.
+scene "Stone Blocks"
+
+material: marble
+block1 = cube(w: 30cm, d: 20cm, h: 15cm)
+block2 = cube(w: 30cm, d: 20cm, h: 15cm) at (35cm, 0, 0)
+block3 = cube(w: 30cm, d: 20cm, h: 15cm) at (70cm, 0, 0)
+ask "mass?"

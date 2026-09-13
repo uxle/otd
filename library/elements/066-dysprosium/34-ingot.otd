@@ -1,0 +1,6 @@
+# Ingot
+# Dysprosium (Dy) — real density 8.54 g/cm³. cast bar format.
+scene "Dysprosium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #a6ffff at (0, 5.5mm, 0)
+simulate: drop

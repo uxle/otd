@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Promethium (Pm) — real density 7.26 g/cm³. rod format, like lab stock.
+scene "Promethium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #6aff6a
+simulate: drop

@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Lutetium (Lu) — real density 9.841 g/cm³. V = M/ρ = 174.97/9.841 = 17.8 cm³ per mole.
+scene "Lutetium Molar Volume Cube"
+
+mole_cube = cube 2.61cm color: #a6a6ff at (0, 1.31cm, 0)
+# one mole of atoms: 6.022e23 atoms of Lutetium, 174.97 g, drawn at true scale

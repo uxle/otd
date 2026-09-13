@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Nobelium (No) — real density 9.9 g/cm³. V = M/ρ = 259.0/9.9 = 26.2 cm³ per mole.
+scene "Nobelium Molar Volume Cube"
+
+mole_cube = cube 2.97cm color: #00ffa0 at (0, 1.48cm, 0)
+# one mole of atoms: 6.022e23 atoms of Nobelium, 259.0 g, drawn at true scale

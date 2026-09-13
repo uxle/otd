@@ -1,0 +1,10 @@
+# A crane with two boom segments and a claw.
+scene "Crane Arm 4"
+
+material: steel
+postC = cylinder(r: 4cm, h: 36.4cm) color: dimgray
+boomA = capsule(r: 2cm, h: 21.7cm) rotate (0, 0, -70deg) at (0, 46.3cm, 0)
+boomB = capsule(r: 1.5cm, h: 20cm) at (20.2cm, 51cm, 0) rotate (0, 0, 20deg)
+clawL = cube(w: 1cm, h: 6cm, d: 2cm) at (27.8cm, 61.9cm, -1.5cm)
+clawR = cube(w: 1cm, h: 6cm, d: 2cm) at (31cm, 57.6cm, 1.5cm)
+ask "how many objects?"

@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Rhodium (Rh) — real density 12.41 g/cm³. V = M/ρ = 102.91/12.41 = 8.3 cm³ per mole.
+scene "Rhodium Molar Volume Cube"
+
+mole_cube = cube 2.02cm color: #c0c0c0 at (0, 1.01cm, 0)
+# one mole of atoms: 6.022e23 atoms of Rhodium, 102.91 g, drawn at true scale

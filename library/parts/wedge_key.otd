@@ -1,0 +1,6 @@
+# Machine key (parallel key) — steel square stock.
+scene "Machine Key"
+
+wedge_key = cube(w: 8mm, d: 30mm, h: 7mm) material: steel
+ask "mass?"
+simulate: drop

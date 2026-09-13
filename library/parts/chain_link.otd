@@ -1,0 +1,9 @@
+# Roller-chain link: two plates + pins — steel.
+scene "Chain Link"
+
+plate1 = cube(w: 24mm, d: 3mm, h: 10mm) at (0, 0, -5mm) material: steel
+plate2 = cube(w: 24mm, d: 3mm, h: 10mm) at (0, 12mm, -5mm) material: steel
+pin1 = cylinder(r: 2.5mm, h: 18mm) at (0, 0, -9mm) material: chrome
+pin2 = cylinder(r: 2.5mm, h: 18mm) at (24mm, 0, -9mm) material: chrome
+ask "mass?"
+simulate: drop

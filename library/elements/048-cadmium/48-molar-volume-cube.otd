@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Cadmium (Cd) — real density 8.65 g/cm³. V = M/ρ = 112.41/8.65 = 13.0 cm³ per mole.
+scene "Cadmium Molar Volume Cube"
+
+mole_cube = cube 2.35cm color: #ffd98f at (0, 1.18cm, 0)
+# one mole of atoms: 6.022e23 atoms of Cadmium, 112.41 g, drawn at true scale

@@ -1,0 +1,5 @@
+# Foil Sheet
+# Ruthenium (Ru) — real density 12.45 g/cm³. 0.1 mm foil.
+scene "Ruthenium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #a0c0c0 at (0, 0.1mm, 0)

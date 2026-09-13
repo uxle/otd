@@ -1,0 +1,7 @@
+# Hands-on lab: measure a ceramic sample.
+scene "Material Lab: Ceramic"
+
+sample1 = sphere 3cm material: ceramic
+ask "mass?"
+ask "density?"
+ask "will it float?"

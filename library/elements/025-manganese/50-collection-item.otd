@@ -1,0 +1,8 @@
+# Collection Item
+# Manganese (Mn) — real density 7.21 g/cm³. display stand + sphere, like an element collection.
+scene "Manganese Collection Item"
+
+stand = cylinder(r: 26mm, h: 5mm) color: #303038 at (0, 2.5mm, 0)
+pillar = cylinder(r: 5mm, h: 18mm) color: #505058 at (0, 14mm, 0)
+gem = sphere 12mm color: #9c7ac7 at (0, 44mm, 0)
+plate = text "Mn · 25" at (-14mm, 5mm, 30mm)

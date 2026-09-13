@@ -1,0 +1,9 @@
+# Cup + torus handle, fused and colored.
+scene "Project: Your First Cup — Lesson 15"
+
+cup = cylinder(top: 40mm, bottom: 30mm, height: 100mm) - hollow(wall: 3mm)
+handle = torus(radius: 20mm, tube: 6mm) rotate (90deg, 0, 0) at (35mm, 25mm, 0)
+add cup, handle
+material cup: ceramic
+color cup: ivory
+ask "mass?"

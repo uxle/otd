@@ -1,0 +1,6 @@
+# Weigh a bronze ingot — mass times g.
+scene "Weight Lab: Bronze"
+
+ingot1 = wedge(w: 8cm, d: 4cm, h: 3cm) material: bronze
+ask "mass?"
+ask "weight?"

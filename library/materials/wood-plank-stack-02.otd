@@ -1,0 +1,8 @@
+# A slightly offset stack of 3 planks.
+scene "Plank Stack 2"
+
+material: teak
+for i = 0 to 2
+  cube(w: 62cm, d: 19cm, h: 2.5cm) at (i * 1cm, i * 2.5cm, i * 0.5cm) rotate (0, i * 2deg, 0)
+end
+ask "mass?"

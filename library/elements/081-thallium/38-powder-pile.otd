@@ -1,0 +1,5 @@
+# Powder Pile
+# Thallium (Tl) — real density 11.85 g/cm³. a poured heap.
+scene "Thallium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #a6544d

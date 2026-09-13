@@ -1,0 +1,6 @@
+# A helical spring with 7.5 turns.
+scene "Spring 5"
+
+springX = helix(radius: 2.4cm, pitch: 0.6cm, turns: 2, tube: 3mm) material: steel
+ask "mass?"
+ask "height?"

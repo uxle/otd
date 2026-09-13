@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Sodium (Na) — real density 0.971 g/cm³. rod format, like lab stock.
+scene "Sodium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #ab5cf2
+simulate: drop

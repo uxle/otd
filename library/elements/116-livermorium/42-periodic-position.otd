@@ -1,0 +1,8 @@
+# Periodic Position
+# Livermorium (Lv) — real density 12.9 g/cm³. period 7, group 16.
+scene "Livermorium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #ff9040 at (360mm, 3mm, 144mm)
+label = text "Lv" at (354mm, 4mm, 139mm)
+numtext = text "116" at (367mm, 4mm, 150mm)

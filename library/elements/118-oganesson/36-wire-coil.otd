@@ -1,0 +1,5 @@
+# Wire Coil
+# Oganesson (Og) — real density 5 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Oganesson Wire Coil"
+
+wire = cylinder(r: 1.2mm, h: 70mm) rotate (0, 0, -90deg) color: #ffd040

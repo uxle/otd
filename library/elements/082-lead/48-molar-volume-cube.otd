@@ -1,0 +1,7 @@
+# Molar Volume Cube
+# Lead (Pb) — real density 11.34 g/cm³. V = M/ρ = 207.2/11.34 = 18.3 cm³ per mole.
+scene "Lead Molar Volume Cube"
+
+mole_cube = cube 2.63cm material: lead at (0, 1.32cm, 0)
+ask "mass?"
+# one mole of atoms: 6.022e23 atoms of Lead, 207.2 g, drawn at true scale

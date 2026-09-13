@@ -1,0 +1,8 @@
+# Bohr Model
+# Boron (B) — real density 2.34 g/cm³. nucleus + first shells, tilted for depth.
+scene "Boron Bohr Model"
+
+define electron = sphere 1.1mm color: #ffffff
+nucleus = sphere 3mm color: #ffb5b5
+orb1 = ring(n: 2, radius: 6mm) electron rotate (0, a, 0)
+orb2 = ring(n: 3, radius: 12mm) electron rotate (0, a, 0)

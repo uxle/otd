@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Lithium (Li) — real density 0.534 g/cm³. V = M/ρ = 6.94/0.534 = 13.0 cm³ per mole.
+scene "Lithium Molar Volume Cube"
+
+mole_cube = cube 2.35cm color: #cc80ff at (0, 1.18cm, 0)
+# one mole of atoms: 6.022e23 atoms of Lithium, 6.94 g, drawn at true scale

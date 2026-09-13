@@ -1,0 +1,7 @@
+# Stack Test
+# Selenium (Se) — real density 4.81 g/cm³. three cubes stacked — simulate: collapse checks the load path.
+scene "Selenium Stack Test"
+
+bottom = cube 20mm color: #ffa100 at (0, 10mm, 0)
+middle = cube 20mm color: #ffa100 at (0, 30mm, 0)
+top = cube 20mm color: #ffa100 at (0, 50mm, 0)

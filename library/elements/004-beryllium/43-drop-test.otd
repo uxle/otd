@@ -1,0 +1,6 @@
+# Drop Test
+# Beryllium (Be) — real density 1.85 g/cm³. v = √(2gh) — watch the physics console.
+scene "Beryllium Drop Test"
+
+test_cube = cube 20mm color: #c2ff00 # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

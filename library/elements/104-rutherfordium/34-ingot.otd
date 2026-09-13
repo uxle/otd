@@ -1,0 +1,6 @@
+# Ingot
+# Rutherfordium (Rf) — real density 23.2 g/cm³. cast bar format.
+scene "Rutherfordium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #50d0ff at (0, 5.5mm, 0)
+simulate: drop

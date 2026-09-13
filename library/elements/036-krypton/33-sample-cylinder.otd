@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Krypton (Kr) — real density 0.0037 g/cm³. rod format, like lab stock.
+scene "Krypton Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #5cb8d1
+simulate: drop

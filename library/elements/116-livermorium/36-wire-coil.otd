@@ -1,0 +1,5 @@
+# Wire Coil
+# Livermorium (Lv) — real density 12.9 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Livermorium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #ff9040

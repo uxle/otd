@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Molybdenum (Mo) — real density 10.28 g/cm³. V = M/ρ = 95.95/10.28 = 9.3 cm³ per mole.
+scene "Molybdenum Molar Volume Cube"
+
+mole_cube = cube 2.11cm color: #54b5b5 at (0, 1.05cm, 0)
+# one mole of atoms: 6.022e23 atoms of Molybdenum, 95.95 g, drawn at true scale

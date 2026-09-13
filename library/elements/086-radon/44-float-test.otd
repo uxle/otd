@@ -1,0 +1,7 @@
+# Float Test
+# Radon (Rn) — real density 0.0097 g/cm³. Archimedes decides: ρ vs 0.997 g/cm³.
+scene "Radon Float Test"
+
+# a gas like Radon does not float as a solid — bubbles rise THROUGH water
+tank = cube(w: 80mm, d: 80mm, h: 50mm) material: water at (0, 25mm, 0)
+bubbles = scatter(n: 10, radius: 20mm, seed: 86) sphere 3mm color: #cc0080

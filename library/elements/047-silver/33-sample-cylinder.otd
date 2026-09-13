@@ -1,0 +1,7 @@
+# Sample Cylinder
+# Silver (Ag) — real density 10.49 g/cm³. rod format, like lab stock.
+scene "Silver Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) material: silver
+ask "mass?"
+simulate: drop

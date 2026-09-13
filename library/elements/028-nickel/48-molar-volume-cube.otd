@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Nickel (Ni) — real density 8.908 g/cm³. V = M/ρ = 58.693/8.908 = 6.6 cm³ per mole.
+scene "Nickel Molar Volume Cube"
+
+mole_cube = cube 1.87cm color: #50d050 at (0, 0.94cm, 0)
+# one mole of atoms: 6.022e23 atoms of Nickel, 58.693 g, drawn at true scale

@@ -1,0 +1,5 @@
+# Granules
+# Cobalt (Co) — real density 8.9 g/cm³. small pieces scatter like real granules.
+scene "Cobalt Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 27) sphere 2.5mm color: #f090a0

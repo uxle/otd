@@ -1,0 +1,21 @@
+# LIQUID CHEMISTRY — P1430. `mix: A + B` asks the chemistry verdict;
+# `simulate: mix` pours every liquid in the scene into one beaker:
+# miscible pairs merge into one phase (volume-weighted density, blended
+# color), immiscible pairs stack into clean density-sorted layers.
+scene "The chemistry beaker"
+
+unit: cm
+
+# a big glass beaker
+beaker = cylinder(r: 14cm, h: 30cm) at (0, 15cm, 0) material: glass
+
+# the liquids, poured anywhere — the beaker collects them
+oil     = cube(w: 8cm, d: 8cm, h: 8cm) at (-30cm, 20cm, 0) material: oil
+water   = cube(w: 8cm, d: 8cm, h: 8cm) at (0, 20cm, 0) material: water
+mercury = cube(w: 6cm, d: 6cm, h: 6cm) at (30cm, 20cm, 0) material: mercury
+
+# ask the chemistry, then pour:
+mix: water + oil
+mix: water + ethanol
+mix: ethanol + oil
+simulate: mix

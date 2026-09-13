@@ -1,0 +1,14 @@
+# 8 blocks — stable or tips?
+scene "Stack 7"
+
+material: ceramic
+block1 = cube(w: 6cm, d: 6cm, h: 3cm) at (0cm, 0cm, 0)
+block2 = cube(w: 6cm, d: 6cm, h: 3cm) at (0cm, 3cm, 0)
+block3 = cube(w: 6cm, d: 6cm, h: 3cm) at (0cm, 6cm, 0)
+block4 = cube(w: 6cm, d: 6cm, h: 3cm) at (0cm, 9cm, 0)
+block5 = cube(w: 6cm, d: 6cm, h: 3cm) at (0cm, 12cm, 0)
+block6 = cube(w: 6cm, d: 6cm, h: 3cm) at (0cm, 15cm, 0)
+block7 = cube(w: 6cm, d: 6cm, h: 3cm) at (0cm, 18cm, 0)
+block8 = cube(w: 6cm, d: 6cm, h: 3cm) at (0cm, 21cm, 0)
+simulate: collapse
+ask "center of mass?"

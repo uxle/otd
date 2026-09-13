@@ -1,0 +1,7 @@
+# Curly braces interpolate values.
+scene "print Debugging — Lesson 25"
+
+r = 3cm
+print "radius = {r}"
+sphere r
+ask "mass?"

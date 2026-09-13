@@ -1,0 +1,9 @@
+# Electron Shells
+# Phosphorus (P) — real density 1.823 g/cm³. configuration [Ne] 3s2 3p3.
+scene "Phosphorus Electron Shells"
+
+define electron = sphere 1mm color: #ffffff
+nucleus = sphere 2.5mm color: #ff8000
+shell1 = ring(n: 2, radius: 5mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell2 = ring(n: 8, radius: 10mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell3 = ring(n: 5, radius: 15mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)

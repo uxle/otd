@@ -1,0 +1,6 @@
+# Sample Sphere
+# Fluorine (F) — real density 0.0017 g/cm³. 5 mm radius ball.
+scene "Fluorine Sample Sphere"
+
+sample_sphere = sphere 5mm color: #90e050 at (0, 5mm, 0)
+simulate: drop

@@ -1,0 +1,6 @@
+# Ingot
+# Molybdenum (Mo) — real density 10.28 g/cm³. cast bar format.
+scene "Molybdenum Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #54b5b5 at (0, 5.5mm, 0)
+simulate: drop

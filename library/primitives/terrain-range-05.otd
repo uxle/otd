@@ -1,0 +1,6 @@
+# Two terrain patches forming a range.
+scene "Mountain Range 5"
+
+mount1 = terrain(size: 30cm, peaks: 7cm, roughness: 0.8, seed: 6) at (-12cm, 0, 0)
+mount2 = terrain(size: 30cm, peaks: 5cm, roughness: 0.6, seed: 25) at (13cm, 0, 0)
+ask "triangle count?"

@@ -1,0 +1,8 @@
+# Periodic Position
+# Bismuth (Bi) — real density 9.78 g/cm³. period 6, group 15.
+scene "Bismuth Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #9c7ac7 at (336mm, 3mm, 120mm)
+label = text "Bi" at (330mm, 4mm, 115mm)
+numtext = text "83" at (343mm, 4mm, 126mm)

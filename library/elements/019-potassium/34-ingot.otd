@@ -1,0 +1,6 @@
+# Ingot
+# Potassium (K) — real density 0.862 g/cm³. cast bar format.
+scene "Potassium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #8f40d4 at (0, 5.5mm, 0)
+simulate: drop

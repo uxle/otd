@@ -1,0 +1,8 @@
+# Mass, volume, float, inertia… the model answers.
+scene "The ask Vocabulary — Lesson 42"
+
+cube 4cm material: oak
+ask "mass?"
+ask "volume?"
+ask "will it float?"
+ask "inertia?"

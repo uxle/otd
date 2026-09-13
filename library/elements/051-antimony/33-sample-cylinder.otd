@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Antimony (Sb) — real density 6.697 g/cm³. rod format, like lab stock.
+scene "Antimony Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #9e63b5
+simulate: drop

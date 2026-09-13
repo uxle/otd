@@ -1,0 +1,7 @@
+# A ceramic ball dropped from 91 cm.
+scene "Ceramic Drop 6"
+
+test1 = sphere(r: 2.6cm) at (0, 91cm, 0) material: ceramic
+gravity: earth
+simulate: drop
+ask "mass?"

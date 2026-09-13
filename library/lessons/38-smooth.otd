@@ -1,0 +1,5 @@
+# Taubin smoothing keeps the shape.
+scene "smooth: Melt Corners — Lesson 38"
+
+rock1 = sphere(r: 3cm) smooth(n: 4, strength: 0.6)
+ask "mass?"

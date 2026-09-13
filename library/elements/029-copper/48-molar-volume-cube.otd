@@ -1,0 +1,7 @@
+# Molar Volume Cube
+# Copper (Cu) — real density 8.96 g/cm³. V = M/ρ = 63.546/8.96 = 7.1 cm³ per mole.
+scene "Copper Molar Volume Cube"
+
+mole_cube = cube 1.92cm material: copper at (0, 0.96cm, 0)
+ask "mass?"
+# one mole of atoms: 6.022e23 atoms of Copper, 63.546 g, drawn at true scale

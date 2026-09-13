@@ -1,0 +1,5 @@
+# Foil Sheet
+# Terbium (Tb) — real density 8.23 g/cm³. 0.1 mm foil.
+scene "Terbium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #c9ffa6 at (0, 0.1mm, 0)

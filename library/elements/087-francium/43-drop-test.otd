@@ -1,0 +1,6 @@
+# Drop Test
+# Francium (Fr) — real density 1.87 g/cm³. v = √(2gh) — watch the physics console.
+scene "Francium Drop Test"
+
+test_cube = cube 20mm color: #ff00ff # stand-in: no exact engine metal at (0, 50mm, 0)
+simulate: drop

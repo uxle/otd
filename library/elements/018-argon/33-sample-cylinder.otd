@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Argon (Ar) — real density 0.0018 g/cm³. rod format, like lab stock.
+scene "Argon Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #80d1e3
+simulate: drop

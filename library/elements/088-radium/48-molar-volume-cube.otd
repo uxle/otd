@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Radium (Ra) — real density 5.5 g/cm³. V = M/ρ = 226.0/5.5 = 41.1 cm³ per mole.
+scene "Radium Molar Volume Cube"
+
+mole_cube = cube 3.45cm color: #00ff9d at (0, 1.73cm, 0)
+# one mole of atoms: 6.022e23 atoms of Radium, 226.0 g, drawn at true scale

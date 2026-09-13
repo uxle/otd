@@ -1,0 +1,5 @@
+# The word MARS rendered as real 3D letters.
+scene "Word MARS"
+
+labelX = text "MARS" size: 2.9cm depth: 10mm color: limegreen
+ask "mass?"

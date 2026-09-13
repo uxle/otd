@@ -1,0 +1,7 @@
+# A classical column turned from three cylinders.
+scene "Turned Column 5"
+
+column1 = cylinder(r: 2.5cm, h: 30cm)
+cap1 = cylinder(r: 3.5cm, h: 2cm) at (0, 30cm, 0)
+base1 = cylinder(r: 3.5cm, h: 2cm)
+ask "height?"

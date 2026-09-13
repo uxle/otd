@@ -1,0 +1,7 @@
+# at (x, y, z) says where the object stands.
+scene "Placing with at — Lesson 07"
+
+for i = 0 to 4
+  sphere 1cm at (i * 3cm, 0, 0)
+end
+ask "how many objects?"

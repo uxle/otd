@@ -1,0 +1,5 @@
+# Powder Pile
+# Silicon (Si) — real density 2.329 g/cm³. a poured heap.
+scene "Silicon Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #f0c8a0

@@ -1,0 +1,7 @@
+# Density Compare
+# Californium (Cf) — real density 15.1 g/cm³. equal masses: Californium vs water — sides ∝ (1/ρ)^(1/3).
+scene "Californium Density Compare"
+
+element_cube = cube 8.1mm color: #60ff30 at (-20mm, 4.0mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 120.4 g — the water cube is the reference

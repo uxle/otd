@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Arsenic (As) — real density 5.727 g/cm³. rod format, like lab stock.
+scene "Arsenic Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #bd80e3
+simulate: drop

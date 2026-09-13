@@ -1,0 +1,5 @@
+# Granules
+# Magnesium (Mg) — real density 1.738 g/cm³. small pieces scatter like real granules.
+scene "Magnesium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 12) sphere 2.5mm color: #8aff00

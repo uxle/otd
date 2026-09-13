@@ -1,0 +1,6 @@
+# Sample Sphere
+# Francium (Fr) — real density 1.87 g/cm³. 5 mm radius ball.
+scene "Francium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ff00ff at (0, 5mm, 0)
+simulate: drop

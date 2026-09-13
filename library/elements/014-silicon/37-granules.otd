@@ -1,0 +1,5 @@
+# Granules
+# Silicon (Si) — real density 2.329 g/cm³. small pieces scatter like real granules.
+scene "Silicon Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 14) sphere 2.5mm color: #f0c8a0

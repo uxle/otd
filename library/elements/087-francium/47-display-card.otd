@@ -1,0 +1,8 @@
+# Display Card
+# Francium (Fr) — real density 1.87 g/cm³. periodic-table tile.
+scene "Francium Display Card"
+
+tile = cube(w: 64mm, d: 6mm, h: 64mm) color: #ff00ff at (0, 3mm, 0)
+sym = text "Fr" at (-14mm, 6mm, -8mm)
+znum = text "87" at (22mm, 6mm, 22mm)
+nmass = text "223" at (-22mm, 6mm, 22mm)

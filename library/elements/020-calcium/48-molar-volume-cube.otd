@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Calcium (Ca) — real density 1.55 g/cm³. V = M/ρ = 40.078/1.55 = 25.9 cm³ per mole.
+scene "Calcium Molar Volume Cube"
+
+mole_cube = cube 2.96cm color: #3dff00 at (0, 1.48cm, 0)
+# one mole of atoms: 6.022e23 atoms of Calcium, 40.078 g, drawn at true scale

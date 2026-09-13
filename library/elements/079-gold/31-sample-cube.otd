@@ -1,0 +1,7 @@
+# Sample Cube
+# Gold (Au) — real density 19.32 g/cm³. a 1 cm cube — the reference sample.
+scene "Gold Sample Cube"
+
+sample_cube = cube 10mm material: gold at (0, 5mm, 0)
+ask "mass?"
+simulate: drop

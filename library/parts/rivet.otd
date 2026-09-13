@@ -1,0 +1,7 @@
+# Round-head rivet — aluminum dome head on a shank.
+scene "Rivet"
+
+shank = cylinder(r: 3mm, h: 12mm) material: aluminum
+head = sphere 4.5mm scale (1, 0.7, 1) at (0, 11mm, 0) material: aluminum
+ask "mass?"
+simulate: drop

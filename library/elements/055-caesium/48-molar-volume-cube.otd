@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Caesium (Cs) — real density 1.879 g/cm³. V = M/ρ = 132.91/1.879 = 70.7 cm³ per mole.
+scene "Caesium Molar Volume Cube"
+
+mole_cube = cube 4.14cm color: #57178f at (0, 2.07cm, 0)
+# one mole of atoms: 6.022e23 atoms of Caesium, 132.91 g, drawn at true scale

@@ -1,0 +1,5 @@
+# Foil Sheet
+# Livermorium (Lv) — real density 12.9 g/cm³. 0.1 mm foil.
+scene "Livermorium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #ff9040 at (0, 0.1mm, 0)

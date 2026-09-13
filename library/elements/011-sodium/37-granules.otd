@@ -1,0 +1,5 @@
+# Granules
+# Sodium (Na) — real density 0.971 g/cm³. small pieces scatter like real granules.
+scene "Sodium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 11) sphere 2.5mm color: #ab5cf2

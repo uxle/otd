@@ -1,0 +1,6 @@
+# Sample Sphere
+# Chlorine (Cl) — real density 0.0032 g/cm³. 5 mm radius ball.
+scene "Chlorine Sample Sphere"
+
+sample_sphere = sphere 5mm color: #1ff01f at (0, 5mm, 0)
+simulate: drop

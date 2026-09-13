@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Lawrencium (Lr) — real density 15.6 g/cm³. rod format, like lab stock.
+scene "Lawrencium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #00ffd0
+simulate: drop

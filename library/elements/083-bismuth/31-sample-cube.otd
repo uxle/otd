@@ -1,0 +1,7 @@
+# Sample Cube
+# Bismuth (Bi) — real density 9.78 g/cm³. a 1 cm cube — the reference sample.
+scene "Bismuth Sample Cube"
+
+sample_cube = cube 10mm color: #9c7ac7 at (0, 5mm, 0)
+# no exact engine material: mass shown is geometric only
+simulate: drop

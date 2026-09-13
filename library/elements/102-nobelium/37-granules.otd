@@ -1,0 +1,5 @@
+# Granules
+# Nobelium (No) — real density 9.9 g/cm³. small pieces scatter like real granules.
+scene "Nobelium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 102) sphere 2.5mm color: #00ffa0

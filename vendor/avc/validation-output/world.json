@@ -1,0 +1,4833 @@
+{
+  "version": "4.0.0",
+  "frame": 59,
+  "t": 1.9666666666666666,
+  "camera": {
+    "pose": [
+      0.7740225161920987,
+      -0.1931831844956693,
+      -0.6029671646580524,
+      1.018136250659725,
+      0.04194067573708406,
+      0.9658688711521469,
+      -0.2556135823034414,
+      1.9442545133366846,
+      0.6317674604998077,
+      0.17256181781435292,
+      0.7557064872595901,
+      1.9583763357669182,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "sigma_rot": 0.31978685381980504,
+    "sigma_trans": 1.3355288881817375
+  },
+  "objects": [
+    {
+      "track_id": 1,
+      "class": "box",
+      "center": [
+        -0.2749412215507714,
+        1.2125012324396391,
+        3.021218433280742
+      ],
+      "velocity": [
+        -0.3884020763838018,
+        -0.5205038610626395,
+        -0.4013969697859231
+      ],
+      "sigma": [
+        0.09371584328082741,
+        0.1023654294914299,
+        0.09351376946026085
+      ],
+      "cov": [
+        0.008782659281836604,
+        0.0,
+        0.0,
+        0.0,
+        0.010478681154964907,
+        0.0,
+        0.0,
+        0.0,
+        0.008744825078666816
+      ],
+      "extents": [
+        0.8190221077891963,
+        1.216202367340713,
+        0.33473009621377503
+      ],
+      "yaw": -0.18978653249634903,
+      "confidence": 0.9523809523809523,
+      "first_frame": 0,
+      "last_frame": 59,
+      "speed": 0.763478860004444
+    },
+    {
+      "track_id": 2,
+      "class": "person",
+      "center": [
+        -0.8246061610426838,
+        1.1104619041636168,
+        4.16746966372394
+      ],
+      "velocity": [
+        -0.09809164587405643,
+        0.7333894432649364,
+        0.2960582671463309
+      ],
+      "sigma": [
+        1.3795108999424333,
+        1.645749535945835,
+        1.3795108999424333
+      ],
+      "cov": [
+        1.903050323059982,
+        0.0,
+        0.0,
+        0.0,
+        2.708491535065931,
+        0.0,
+        0.0,
+        0.0,
+        1.903050323059982
+      ],
+      "extents": [
+        0.3915063630877176,
+        1.6923230917897085,
+        0.8353695772009666
+      ],
+      "yaw": -1.0445946355191562,
+      "confidence": 0.8333333333333334,
+      "first_frame": 0,
+      "last_frame": 14,
+      "speed": 0.7969520337061841
+    },
+    {
+      "track_id": 3,
+      "class": "small_box",
+      "center": [
+        -0.7283829109116062,
+        0.8202140265031858,
+        3.0529418038005
+      ],
+      "velocity": [
+        0.35024740933642606,
+        0.06528834325480026,
+        -0.11990846313936467
+      ],
+      "sigma": [
+        0.37608096679145886,
+        0.37608096679145886,
+        0.37608096679145886
+      ],
+      "cov": [
+        0.1414368935827984,
+        0.0,
+        0.0,
+        0.0,
+        0.1414368935827984,
+        0.0,
+        0.0,
+        0.0,
+        0.1414368935827984
+      ],
+      "extents": [
+        0.14176393651745833,
+        0.37158093263518976,
+        0.13733710027581814
+      ],
+      "yaw": -0.20862173110099788,
+      "confidence": 0.9333333333333333,
+      "first_frame": 0,
+      "last_frame": 45,
+      "speed": 0.37591735134771176
+    },
+    {
+      "track_id": 5,
+      "class": "small_box",
+      "center": [
+        0.5014891553133817,
+        1.1919251053867712,
+        3.613727293437971
+      ],
+      "velocity": [
+        -0.4027197868929705,
+        0.975729605886168,
+        0.49983563370412226
+      ],
+      "sigma": [
+        0.14329944510282175,
+        0.14329944510282175,
+        0.14330028125199906
+      ],
+      "cov": [
+        0.02053473096677662,
+        0.0,
+        0.0,
+        0.0,
+        0.02053473096677662,
+        0.0,
+        0.0,
+        0.0,
+        0.020534970606902035
+      ],
+      "extents": [
+        0.6249991912498488,
+        0.2535179569695082,
+        0.24882949357726636
+      ],
+      "yaw": -1.1595123343098641,
+      "confidence": 0.8421052631578947,
+      "first_frame": 0,
+      "last_frame": 59,
+      "speed": 1.1679328539253864
+    },
+    {
+      "track_id": 6,
+      "class": "small_box",
+      "center": [
+        -0.10929876053066345,
+        0.24369507745812127,
+        4.986726854614136
+      ],
+      "velocity": [
+        -2.9217158466333983,
+        0.3314815894054561,
+        0.23236553643234392
+      ],
+      "sigma": [
+        0.23043483267492096,
+        0.2297774776938465,
+        0.2605028223245912
+      ],
+      "cov": [
+        0.05310021210991882,
+        0.0,
+        0.0,
+        0.0,
+        0.05279768925534612,
+        0.0,
+        0.0,
+        0.0,
+        0.06786172043907754
+      ],
+      "extents": [
+        0.8734761221763838,
+        0.12312506943228874,
+        0.6982561347588432
+      ],
+      "yaw": -1.127153147065639,
+      "confidence": 0.8125,
+      "first_frame": 0,
+      "last_frame": 55,
+      "speed": 2.9496266331698617
+    },
+    {
+      "track_id": 8,
+      "class": "small_box",
+      "center": [
+        -0.05094569644350724,
+        0.145493703845737,
+        6.563834572719413
+      ],
+      "velocity": [
+        -1.8809863961547681,
+        0.24372196255396467,
+        2.266681503353529
+      ],
+      "sigma": [
+        0.5450155501163589,
+        0.5444153505137637,
+        0.5444153505137637
+      ],
+      "cov": [
+        0.2970419498686373,
+        0.0,
+        0.0,
+        0.0,
+        0.29638807387502414,
+        0.0,
+        0.0,
+        0.0,
+        0.29638807387502414
+      ],
+      "extents": [
+        0.6004181509316802,
+        0.10530368286842573,
+        0.4323772638017128
+      ],
+      "yaw": 0.7033914764467281,
+      "confidence": 0.7,
+      "first_frame": 0,
+      "last_frame": 41,
+      "speed": 2.955563441240176
+    },
+    {
+      "track_id": 17,
+      "class": "box",
+      "center": [
+        0.5676903732395141,
+        1.2922649668358057,
+        3.7377234518713274
+      ],
+      "velocity": [
+        -0.4195238884762437,
+        0.8998949627307204,
+        0.49204100374629345
+      ],
+      "sigma": [
+        0.2051024214340859,
+        0.3023049647765759,
+        0.20511022353424174
+      ],
+      "cov": [
+        0.04206700327812538,
+        0.0,
+        0.0,
+        0.0,
+        0.0913882917285668,
+        0.0,
+        0.0,
+        0.0,
+        0.04207020379826662
+      ],
+      "extents": [
+        0.6947100136022327,
+        0.4337511955123783,
+        0.23181242516546227
+      ],
+      "yaw": -0.6200492640983173,
+      "confidence": 0.7272727272727273,
+      "first_frame": 1,
+      "last_frame": 58,
+      "speed": 1.1081135259160102
+    },
+    {
+      "track_id": 18,
+      "class": "small_box",
+      "center": [
+        0.20899246558760148,
+        0.22721798937249924,
+        5.527493687125433
+      ],
+      "velocity": [
+        -2.6438573278480737,
+        0.14761141132249547,
+        -1.4100458507550122
+      ],
+      "sigma": [
+        0.3810085160719218,
+        0.3810085160719218,
+        0.3810085160719218
+      ],
+      "cov": [
+        0.1451674893193279,
+        0.0,
+        0.0,
+        0.0,
+        0.1451674893193279,
+        0.0,
+        0.0,
+        0.0,
+        0.1451674893193279
+      ],
+      "extents": [
+        0.3786110629706334,
+        0.1233310919498205,
+        0.4470049337812363
+      ],
+      "yaw": -1.3400975100925512,
+      "confidence": 0.75,
+      "first_frame": 8,
+      "last_frame": 52,
+      "speed": 3.0000000000000004
+    },
+    {
+      "track_id": 19,
+      "class": "box",
+      "center": [
+        -1.6272390023018994,
+        0.15729957084294394,
+        3.662307532830813
+      ],
+      "velocity": [
+        -0.4287742811332286,
+        0.18625983624853082,
+        -0.9145727118634771
+      ],
+      "sigma": [
+        0.19509496233775775,
+        0.14004137256538424,
+        0.149579890436275
+      ],
+      "cov": [
+        0.03806204432957112,
+        0.0,
+        0.0,
+        0.0,
+        0.019611586029996755,
+        0.0,
+        0.0,
+        0.0,
+        0.022374143622928038
+      ],
+      "extents": [
+        0.7839154991844924,
+        0.15773866030739558,
+        1.3003552900152837
+      ],
+      "yaw": -0.5469849490964894,
+      "confidence": 0.8888888888888888,
+      "first_frame": 9,
+      "last_frame": 58,
+      "speed": 1.0271238270266936
+    },
+    {
+      "track_id": 20,
+      "class": "small_box",
+      "center": [
+        0.5392265969292579,
+        1.4388133509374001,
+        3.739861077020208
+      ],
+      "velocity": [
+        0.457353596075131,
+        -0.9151947823849331,
+        1.4128851162656995
+      ],
+      "sigma": [
+        0.1555722286503733,
+        0.1701958363268161,
+        0.1555722286503733
+      ],
+      "cov": [
+        0.02420271832724403,
+        0.0,
+        0.0,
+        0.0,
+        0.028966622702984376,
+        0.0,
+        0.0,
+        0.0,
+        0.02420271832724403
+      ],
+      "extents": [
+        0.2484696824882177,
+        0.2896158403773821,
+        0.10155998943385133
+      ],
+      "yaw": -0.9278744241677362,
+      "confidence": 0.7272727272727273,
+      "first_frame": 11,
+      "last_frame": 59,
+      "speed": 1.7444191449627575
+    },
+    {
+      "track_id": 21,
+      "class": "small_box",
+      "center": [
+        -1.5476764366193922,
+        0.17611307809187324,
+        3.626572252554562
+      ],
+      "velocity": [
+        -0.9131338684229993,
+        0.09669432742071897,
+        -0.9775280337880528
+      ],
+      "sigma": [
+        0.2306057815174312,
+        0.2220364226692929,
+        0.2220364226692929
+      ],
+      "cov": [
+        0.05317902646926521,
+        0.0,
+        0.0,
+        0.0,
+        0.049300172991776886,
+        0.0,
+        0.0,
+        0.0,
+        0.049300172991776886
+      ],
+      "extents": [
+        0.6000940569134257,
+        0.15222183848727222,
+        0.8501906628393572
+      ],
+      "yaw": -0.49706122234824046,
+      "confidence": 0.8,
+      "first_frame": 12,
+      "last_frame": 54,
+      "speed": 1.3411652811857429
+    },
+    {
+      "track_id": 22,
+      "class": "small_box",
+      "center": [
+        0.9248663086160857,
+        0.10457911494914311,
+        7.02946058960448
+      ],
+      "velocity": [
+        0.3464219616756131,
+        0.08488871070289711,
+        1.9643408144311039
+      ],
+      "sigma": [
+        1.5924651350543333,
+        1.5785871038433656,
+        1.5785871038433656
+      ],
+      "cov": [
+        2.5359452063636163,
+        0.0,
+        0.0,
+        0.0,
+        2.4919372444205847,
+        0.0,
+        0.0,
+        0.0,
+        2.4919372444205847
+      ],
+      "extents": [
+        0.73898362457877,
+        0.09582167844871514,
+        0.4606450251523254
+      ],
+      "yaw": 0.4053421682198515,
+      "confidence": 0.5,
+      "first_frame": 16,
+      "last_frame": 23,
+      "speed": 1.9964591415743604
+    },
+    {
+      "track_id": 26,
+      "class": "cylinder",
+      "center": [
+        0.5409110277502363,
+        1.4416772645156444,
+        3.7349729192290297
+      ],
+      "velocity": [
+        0.5586898008979617,
+        0.4853997417064096,
+        -0.7832858388974716
+      ],
+      "sigma": [
+        0.13086538470160222,
+        0.20182627319616545,
+        0.13086538470160222
+      ],
+      "cov": [
+        0.017125748913098343,
+        0.0,
+        0.0,
+        0.0,
+        0.040733844552253214,
+        0.0,
+        0.0,
+        0.0,
+        0.017125748913098343
+      ],
+      "extents": [
+        0.33520915824738345,
+        1.3373722284616312,
+        0.24177111875487275
+      ],
+      "yaw": -0.6313163299472387,
+      "confidence": 0.8421052631578947,
+      "first_frame": 41,
+      "last_frame": 57,
+      "speed": 1.0776288360531974
+    },
+    {
+      "track_id": 27,
+      "class": "small_box",
+      "center": [
+        -1.0576921687192309,
+        1.9070281655033345,
+        3.6334021224503203
+      ],
+      "velocity": [
+        -2.9501720930137703,
+        0.269654982722676,
+        0.47304419655628765
+      ],
+      "sigma": [
+        0.23418283174020088,
+        0.23418283174020088,
+        0.23418283174020088
+      ],
+      "cov": [
+        0.05484159868185924,
+        0.0,
+        0.0,
+        0.0,
+        0.05484159868185924,
+        0.0,
+        0.0,
+        0.0,
+        0.05484159868185924
+      ],
+      "extents": [
+        0.10095033664491078,
+        0.06450453912901621,
+        0.12975006885983703
+      ],
+      "yaw": -0.45304006334278746,
+      "confidence": 0.6666666666666666,
+      "first_frame": 43,
+      "last_frame": 58,
+      "speed": 3.0000000000000004
+    }
+  ],
+  "relations": [
+    {
+      "subject": 1,
+      "object": 2,
+      "kind": "in_front_of",
+      "confidence": 0.6173855106635553,
+      "margin_m": 1.2237420391890614
+    },
+    {
+      "subject": 2,
+      "object": 1,
+      "kind": "behind",
+      "confidence": 0.6173855106635553,
+      "margin_m": 1.2237420391890614
+    },
+    {
+      "subject": 1,
+      "object": 2,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.1683776996590294
+    },
+    {
+      "subject": 2,
+      "object": 1,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.1683776996590294
+    },
+    {
+      "subject": 1,
+      "object": 2,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.2753177853045945
+    },
+    {
+      "subject": 3,
+      "object": 1,
+      "kind": "left_of",
+      "confidence": 0.6299207729263316,
+      "margin_m": 0.34738507461369483
+    },
+    {
+      "subject": 1,
+      "object": 3,
+      "kind": "right_of",
+      "confidence": 0.6299207729263316,
+      "margin_m": 0.34738507461369483
+    },
+    {
+      "subject": 1,
+      "object": 3,
+      "kind": "in_front_of",
+      "confidence": 0.6949637839843729,
+      "margin_m": 0.3976579446724049
+    },
+    {
+      "subject": 3,
+      "object": 1,
+      "kind": "behind",
+      "confidence": 0.6949637839843729,
+      "margin_m": 0.3976579446724049
+    },
+    {
+      "subject": 1,
+      "object": 3,
+      "kind": "above",
+      "confidence": 0.6858128456606969,
+      "margin_m": 0.3922872059364534
+    },
+    {
+      "subject": 3,
+      "object": 1,
+      "kind": "below",
+      "confidence": 0.6858128456606969,
+      "margin_m": 0.3922872059364534
+    },
+    {
+      "subject": 1,
+      "object": 3,
+      "kind": "closer_than",
+      "confidence": 0.9999999972228442,
+      "margin_m": 0.5209515825615814
+    },
+    {
+      "subject": 3,
+      "object": 1,
+      "kind": "farther_than",
+      "confidence": 0.9999999972228442,
+      "margin_m": 0.5209515825615814
+    },
+    {
+      "subject": 1,
+      "object": 3,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 0.6004206773829255
+    },
+    {
+      "subject": 1,
+      "object": 5,
+      "kind": "left_of",
+      "confidence": 0.9999999874238186,
+      "margin_m": 0.9744394351808898
+    },
+    {
+      "subject": 5,
+      "object": 1,
+      "kind": "right_of",
+      "confidence": 0.9999999874238186,
+      "margin_m": 0.9744394351808898
+    },
+    {
+      "subject": 1,
+      "object": 5,
+      "kind": "closer_than",
+      "confidence": 0.5676156974704144,
+      "margin_m": 0.06348174783588356
+    },
+    {
+      "subject": 5,
+      "object": 1,
+      "kind": "farther_than",
+      "confidence": 0.5676156974704144,
+      "margin_m": 0.06348174783588356
+    },
+    {
+      "subject": 1,
+      "object": 5,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 0.9769003308867928
+    },
+    {
+      "subject": 1,
+      "object": 6,
+      "kind": "left_of",
+      "confidence": 0.9999996715324664,
+      "margin_m": 1.3293228736056486
+    },
+    {
+      "subject": 6,
+      "object": 1,
+      "kind": "right_of",
+      "confidence": 0.9999996715324664,
+      "margin_m": 1.3293228736056486
+    },
+    {
+      "subject": 1,
+      "object": 6,
+      "kind": "in_front_of",
+      "confidence": 0.9999999992499499,
+      "margin_m": 1.6331105115291735
+    },
+    {
+      "subject": 6,
+      "object": 1,
+      "kind": "behind",
+      "confidence": 0.9999999992499499,
+      "margin_m": 1.6331105115291735
+    },
+    {
+      "subject": 1,
+      "object": 6,
+      "kind": "above",
+      "confidence": 0.9998825015891626,
+      "margin_m": 0.9688061549815179
+    },
+    {
+      "subject": 6,
+      "object": 1,
+      "kind": "below",
+      "confidence": 0.9998825015891626,
+      "margin_m": 0.9688061549815179
+    },
+    {
+      "subject": 1,
+      "object": 6,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.8247783315328499
+    },
+    {
+      "subject": 6,
+      "object": 1,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.8247783315328499
+    },
+    {
+      "subject": 1,
+      "object": 8,
+      "kind": "left_of",
+      "confidence": 0.9999814335384053,
+      "margin_m": 2.366736165132312
+    },
+    {
+      "subject": 8,
+      "object": 1,
+      "kind": "right_of",
+      "confidence": 0.9999814335384053,
+      "margin_m": 2.366736165132312
+    },
+    {
+      "subject": 1,
+      "object": 8,
+      "kind": "in_front_of",
+      "confidence": 0.9999996464858838,
+      "margin_m": 2.8148576685029383
+    },
+    {
+      "subject": 8,
+      "object": 1,
+      "kind": "behind",
+      "confidence": 0.9999996464858838,
+      "margin_m": 2.8148576685029383
+    },
+    {
+      "subject": 1,
+      "object": 8,
+      "kind": "above",
+      "confidence": 0.9459158494821391,
+      "margin_m": 1.0670075285939022
+    },
+    {
+      "subject": 8,
+      "object": 1,
+      "kind": "below",
+      "confidence": 0.9459158494821391,
+      "margin_m": 1.0670075285939022
+    },
+    {
+      "subject": 1,
+      "object": 8,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 3.2317440760368057
+    },
+    {
+      "subject": 8,
+      "object": 1,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 3.2317440760368057
+    },
+    {
+      "subject": 1,
+      "object": 17,
+      "kind": "left_of",
+      "confidence": 0.9999990920493503,
+      "margin_m": 1.1082257281727679
+    },
+    {
+      "subject": 17,
+      "object": 1,
+      "kind": "right_of",
+      "confidence": 0.9999990920493503,
+      "margin_m": 1.1082257281727679
+    },
+    {
+      "subject": 1,
+      "object": 17,
+      "kind": "closer_than",
+      "confidence": 0.8616476794224328,
+      "margin_m": 0.12105117799764509
+    },
+    {
+      "subject": 17,
+      "object": 1,
+      "kind": "farther_than",
+      "confidence": 0.8616476794224328,
+      "margin_m": 0.12105117799764509
+    },
+    {
+      "subject": 1,
+      "object": 17,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.108949818309709
+    },
+    {
+      "subject": 1,
+      "object": 18,
+      "kind": "left_of",
+      "confidence": 0.9999989643675607,
+      "margin_m": 1.916635277617273
+    },
+    {
+      "subject": 18,
+      "object": 1,
+      "kind": "right_of",
+      "confidence": 0.9999989643675607,
+      "margin_m": 1.916635277617273
+    },
+    {
+      "subject": 1,
+      "object": 18,
+      "kind": "in_front_of",
+      "confidence": 0.9999976846208632,
+      "margin_m": 1.8540641243162108
+    },
+    {
+      "subject": 18,
+      "object": 1,
+      "kind": "behind",
+      "confidence": 0.9999976846208632,
+      "margin_m": 1.8540641243162108
+    },
+    {
+      "subject": 1,
+      "object": 18,
+      "kind": "above",
+      "confidence": 0.987489961739421,
+      "margin_m": 0.9852832430671399
+    },
+    {
+      "subject": 18,
+      "object": 1,
+      "kind": "below",
+      "confidence": 0.987489961739421,
+      "margin_m": 0.9852832430671399
+    },
+    {
+      "subject": 1,
+      "object": 18,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 2.2156798554391135
+    },
+    {
+      "subject": 18,
+      "object": 1,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 2.2156798554391135
+    },
+    {
+      "subject": 19,
+      "object": 1,
+      "kind": "left_of",
+      "confidence": 0.9993427665897634,
+      "margin_m": 0.6859455692473819
+    },
+    {
+      "subject": 1,
+      "object": 19,
+      "kind": "right_of",
+      "confidence": 0.9993427665897634,
+      "margin_m": 0.6859455692473819
+    },
+    {
+      "subject": 1,
+      "object": 19,
+      "kind": "in_front_of",
+      "confidence": 0.9999999999999998,
+      "margin_m": 1.5695902268475566
+    },
+    {
+      "subject": 19,
+      "object": 1,
+      "kind": "behind",
+      "confidence": 0.9999999999999998,
+      "margin_m": 1.5695902268475566
+    },
+    {
+      "subject": 1,
+      "object": 19,
+      "kind": "above",
+      "confidence": 0.9999999988164647,
+      "margin_m": 1.0552016615966953
+    },
+    {
+      "subject": 19,
+      "object": 1,
+      "kind": "below",
+      "confidence": 0.9999999988164647,
+      "margin_m": 1.0552016615966953
+    },
+    {
+      "subject": 1,
+      "object": 19,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.7918605418368267
+    },
+    {
+      "subject": 19,
+      "object": 1,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.7918605418368267
+    },
+    {
+      "subject": 1,
+      "object": 20,
+      "kind": "left_of",
+      "confidence": 0.9999999982736116,
+      "margin_m": 1.0936909446819816
+    },
+    {
+      "subject": 20,
+      "object": 1,
+      "kind": "right_of",
+      "confidence": 0.9999999982736116,
+      "margin_m": 1.0936909446819816
+    },
+    {
+      "subject": 20,
+      "object": 1,
+      "kind": "above",
+      "confidence": 0.7455006594712694,
+      "margin_m": 0.226312118497761
+    },
+    {
+      "subject": 1,
+      "object": 20,
+      "kind": "below",
+      "confidence": 0.7455006594712694,
+      "margin_m": 0.226312118497761
+    },
+    {
+      "subject": 1,
+      "object": 20,
+      "kind": "closer_than",
+      "confidence": 0.7102368856900936,
+      "margin_m": 0.08593842702407395
+    },
+    {
+      "subject": 20,
+      "object": 1,
+      "kind": "farther_than",
+      "confidence": 0.7102368856900936,
+      "margin_m": 0.08593842702407395
+    },
+    {
+      "subject": 1,
+      "object": 20,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.10929421752226
+    },
+    {
+      "subject": 21,
+      "object": 1,
+      "kind": "left_of",
+      "confidence": 0.9914429270899241,
+      "margin_m": 0.6461496880264797
+    },
+    {
+      "subject": 1,
+      "object": 21,
+      "kind": "right_of",
+      "confidence": 0.9914429270899241,
+      "margin_m": 0.6461496880264797
+    },
+    {
+      "subject": 1,
+      "object": 21,
+      "kind": "in_front_of",
+      "confidence": 0.9999999989574955,
+      "margin_m": 1.4898022410926623
+    },
+    {
+      "subject": 21,
+      "object": 1,
+      "kind": "behind",
+      "confidence": 0.9999999989574955,
+      "margin_m": 1.4898022410926623
+    },
+    {
+      "subject": 1,
+      "object": 21,
+      "kind": "above",
+      "confidence": 0.9999775189898041,
+      "margin_m": 1.036388154347766
+    },
+    {
+      "subject": 21,
+      "object": 1,
+      "kind": "below",
+      "confidence": 0.9999775189898041,
+      "margin_m": 1.036388154347766
+    },
+    {
+      "subject": 1,
+      "object": 21,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.7077011624381742
+    },
+    {
+      "subject": 21,
+      "object": 1,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.7077011624381742
+    },
+    {
+      "subject": 1,
+      "object": 22,
+      "kind": "left_of",
+      "confidence": 0.9682794352120095,
+      "margin_m": 3.414488009343287
+    },
+    {
+      "subject": 22,
+      "object": 1,
+      "kind": "right_of",
+      "confidence": 0.9682794352120095,
+      "margin_m": 3.414488009343287
+    },
+    {
+      "subject": 1,
+      "object": 22,
+      "kind": "in_front_of",
+      "confidence": 0.8972848190481673,
+      "margin_m": 2.588809996806086
+    },
+    {
+      "subject": 22,
+      "object": 1,
+      "kind": "behind",
+      "confidence": 0.8972848190481673,
+      "margin_m": 2.588809996806086
+    },
+    {
+      "subject": 1,
+      "object": 22,
+      "kind": "above",
+      "confidence": 0.5163058344605718,
+      "margin_m": 1.107922117490496
+    },
+    {
+      "subject": 22,
+      "object": 1,
+      "kind": "below",
+      "confidence": 0.5163058344605718,
+      "margin_m": 1.107922117490496
+    },
+    {
+      "subject": 1,
+      "object": 22,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 3.5684901697305498
+    },
+    {
+      "subject": 22,
+      "object": 1,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 3.5684901697305498
+    },
+    {
+      "subject": 1,
+      "object": 26,
+      "kind": "left_of",
+      "confidence": 0.999999999987961,
+      "margin_m": 1.092026667500856
+    },
+    {
+      "subject": 26,
+      "object": 1,
+      "kind": "right_of",
+      "confidence": 0.999999999987961,
+      "margin_m": 1.092026667500856
+    },
+    {
+      "subject": 26,
+      "object": 1,
+      "kind": "above",
+      "confidence": 0.6887968138841498,
+      "margin_m": 0.22917603207600523
+    },
+    {
+      "subject": 1,
+      "object": 26,
+      "kind": "below",
+      "confidence": 0.6887968138841498,
+      "margin_m": 0.22917603207600523
+    },
+    {
+      "subject": 1,
+      "object": 26,
+      "kind": "closer_than",
+      "confidence": 0.677360434659494,
+      "margin_m": 0.08020766680793723
+    },
+    {
+      "subject": 26,
+      "object": 1,
+      "kind": "farther_than",
+      "confidence": 0.677360434659494,
+      "margin_m": 0.08020766680793723
+    },
+    {
+      "subject": 1,
+      "object": 26,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.1079630014485682
+    },
+    {
+      "subject": 27,
+      "object": 1,
+      "kind": "left_of",
+      "confidence": 0.5486995841577269,
+      "margin_m": 0.1899801941227155
+    },
+    {
+      "subject": 1,
+      "object": 27,
+      "kind": "right_of",
+      "confidence": 0.5486995841577269,
+      "margin_m": 0.1899801941227155
+    },
+    {
+      "subject": 1,
+      "object": 27,
+      "kind": "in_front_of",
+      "confidence": 0.9972940190506882,
+      "margin_m": 0.7570737871808961
+    },
+    {
+      "subject": 27,
+      "object": 1,
+      "kind": "behind",
+      "confidence": 0.9972940190506882,
+      "margin_m": 0.7570737871808961
+    },
+    {
+      "subject": 27,
+      "object": 1,
+      "kind": "above",
+      "confidence": 0.9934216240453175,
+      "margin_m": 0.6945269330636954
+    },
+    {
+      "subject": 1,
+      "object": 27,
+      "kind": "below",
+      "confidence": 0.9934216240453175,
+      "margin_m": 0.6945269330636954
+    },
+    {
+      "subject": 1,
+      "object": 27,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 0.8408277427533339
+    },
+    {
+      "subject": 27,
+      "object": 1,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 0.8408277427533339
+    },
+    {
+      "subject": 1,
+      "object": 27,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.2123677558106114
+    },
+    {
+      "subject": 3,
+      "object": 2,
+      "kind": "closer_than",
+      "confidence": 0.9999999994696331,
+      "margin_m": 0.647426117097448
+    },
+    {
+      "subject": 2,
+      "object": 3,
+      "kind": "farther_than",
+      "confidence": 0.9999999994696331,
+      "margin_m": 0.647426117097448
+    },
+    {
+      "subject": 2,
+      "object": 3,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.155714106039074
+    },
+    {
+      "subject": 5,
+      "object": 2,
+      "kind": "in_front_of",
+      "confidence": 0.6218329502714519,
+      "margin_m": 1.2388817351557053
+    },
+    {
+      "subject": 2,
+      "object": 5,
+      "kind": "behind",
+      "confidence": 0.6218329502714519,
+      "margin_m": 1.2388817351557053
+    },
+    {
+      "subject": 5,
+      "object": 2,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.1048959518231458
+    },
+    {
+      "subject": 2,
+      "object": 5,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.1048959518231458
+    },
+    {
+      "subject": 2,
+      "object": 5,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.4393733545765466
+    },
+    {
+      "subject": 2,
+      "object": 6,
+      "kind": "left_of",
+      "confidence": 0.5398239300711254,
+      "margin_m": 1.0348912825615315
+    },
+    {
+      "subject": 6,
+      "object": 2,
+      "kind": "right_of",
+      "confidence": 0.5398239300711254,
+      "margin_m": 1.0348912825615315
+    },
+    {
+      "subject": 2,
+      "object": 6,
+      "kind": "closer_than",
+      "confidence": 0.9999999130502625,
+      "margin_m": 0.6564006318738205
+    },
+    {
+      "subject": 6,
+      "object": 2,
+      "kind": "farther_than",
+      "confidence": 0.9999999130502625,
+      "margin_m": 0.6564006318738205
+    },
+    {
+      "subject": 2,
+      "object": 6,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.3907306547026541
+    },
+    {
+      "subject": 2,
+      "object": 8,
+      "kind": "left_of",
+      "confidence": 0.8375116338628903,
+      "margin_m": 2.072304574088195
+    },
+    {
+      "subject": 8,
+      "object": 2,
+      "kind": "right_of",
+      "confidence": 0.8375116338628903,
+      "margin_m": 2.072304574088195
+    },
+    {
+      "subject": 2,
+      "object": 8,
+      "kind": "in_front_of",
+      "confidence": 0.7109469845283531,
+      "margin_m": 1.5911156293138768
+    },
+    {
+      "subject": 8,
+      "object": 2,
+      "kind": "behind",
+      "confidence": 0.7109469845283531,
+      "margin_m": 1.5911156293138768
+    },
+    {
+      "subject": 2,
+      "object": 8,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 2.0633663763777763
+    },
+    {
+      "subject": 8,
+      "object": 2,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 2.0633663763777763
+    },
+    {
+      "subject": 17,
+      "object": 2,
+      "kind": "in_front_of",
+      "confidence": 0.60795645208918,
+      "margin_m": 1.210742425934999
+    },
+    {
+      "subject": 2,
+      "object": 17,
+      "kind": "behind",
+      "confidence": 0.60795645208918,
+      "margin_m": 1.210742425934999
+    },
+    {
+      "subject": 17,
+      "object": 2,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.0473265216613843
+    },
+    {
+      "subject": 2,
+      "object": 17,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.0473265216613843
+    },
+    {
+      "subject": 2,
+      "object": 17,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.4684085942178622
+    },
+    {
+      "subject": 2,
+      "object": 18,
+      "kind": "left_of",
+      "confidence": 0.7428264525152928,
+      "margin_m": 1.622203686573156
+    },
+    {
+      "subject": 18,
+      "object": 2,
+      "kind": "right_of",
+      "confidence": 0.7428264525152928,
+      "margin_m": 1.622203686573156
+    },
+    {
+      "subject": 2,
+      "object": 18,
+      "kind": "closer_than",
+      "confidence": 0.9999999999999996,
+      "margin_m": 1.0473021557800841
+    },
+    {
+      "subject": 18,
+      "object": 2,
+      "kind": "farther_than",
+      "confidence": 0.9999999999999996,
+      "margin_m": 1.0473021557800841
+    },
+    {
+      "subject": 19,
+      "object": 2,
+      "kind": "left_of",
+      "confidence": 0.5189121491641515,
+      "margin_m": 0.980377160291499
+    },
+    {
+      "subject": 2,
+      "object": 19,
+      "kind": "right_of",
+      "confidence": 0.5189121491641515,
+      "margin_m": 0.980377160291499
+    },
+    {
+      "subject": 2,
+      "object": 19,
+      "kind": "closer_than",
+      "confidence": 0.9999996682935779,
+      "margin_m": 0.6234828421777974
+    },
+    {
+      "subject": 19,
+      "object": 2,
+      "kind": "farther_than",
+      "confidence": 0.9999996682935779,
+      "margin_m": 0.6234828421777974
+    },
+    {
+      "subject": 2,
+      "object": 19,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.3445916443357946
+    },
+    {
+      "subject": 20,
+      "object": 2,
+      "kind": "in_front_of",
+      "confidence": 0.6177029568771437,
+      "margin_m": 1.229424043686394
+    },
+    {
+      "subject": 2,
+      "object": 20,
+      "kind": "behind",
+      "confidence": 0.6177029568771437,
+      "margin_m": 1.229424043686394
+    },
+    {
+      "subject": 20,
+      "object": 2,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.0824392726349554
+    },
+    {
+      "subject": 2,
+      "object": 20,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.0824392726349554
+    },
+    {
+      "subject": 2,
+      "object": 20,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.4665277248448298
+    },
+    {
+      "subject": 2,
+      "object": 21,
+      "kind": "closer_than",
+      "confidence": 0.9999918758108876,
+      "margin_m": 0.5393234627791448
+    },
+    {
+      "subject": 21,
+      "object": 2,
+      "kind": "farther_than",
+      "confidence": 0.9999918758108876,
+      "margin_m": 0.5393234627791448
+    },
+    {
+      "subject": 2,
+      "object": 21,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.299387687187299
+    },
+    {
+      "subject": 2,
+      "object": 22,
+      "kind": "left_of",
+      "confidence": 0.8620834517512033,
+      "margin_m": 3.12005641829917
+    },
+    {
+      "subject": 22,
+      "object": 2,
+      "kind": "right_of",
+      "confidence": 0.8620834517512033,
+      "margin_m": 3.12005641829917
+    },
+    {
+      "subject": 2,
+      "object": 22,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 2.4001124700715204
+    },
+    {
+      "subject": 22,
+      "object": 2,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 2.4001124700715204
+    },
+    {
+      "subject": 26,
+      "object": 2,
+      "kind": "in_front_of",
+      "confidence": 0.6205103293015106,
+      "margin_m": 1.2348657679252661
+    },
+    {
+      "subject": 2,
+      "object": 26,
+      "kind": "behind",
+      "confidence": 0.6205103293015106,
+      "margin_m": 1.2348657679252661
+    },
+    {
+      "subject": 26,
+      "object": 2,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.0881700328510922
+    },
+    {
+      "subject": 2,
+      "object": 26,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.0881700328510922
+    },
+    {
+      "subject": 2,
+      "object": 26,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.4701680998514213
+    },
+    {
+      "subject": 27,
+      "object": 2,
+      "kind": "closer_than",
+      "confidence": 0.9974705493174514,
+      "margin_m": 0.32754995690569544
+    },
+    {
+      "subject": 2,
+      "object": 27,
+      "kind": "farther_than",
+      "confidence": 0.9974705493174514,
+      "margin_m": 0.32754995690569544
+    },
+    {
+      "subject": 2,
+      "object": 27,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 0.9869523971911597
+    },
+    {
+      "subject": 3,
+      "object": 5,
+      "kind": "left_of",
+      "confidence": 0.9989778331239237,
+      "margin_m": 1.3218245097945847
+    },
+    {
+      "subject": 5,
+      "object": 3,
+      "kind": "right_of",
+      "confidence": 0.9989778331239237,
+      "margin_m": 1.3218245097945847
+    },
+    {
+      "subject": 5,
+      "object": 3,
+      "kind": "in_front_of",
+      "confidence": 0.6949638264810791,
+      "margin_m": 0.4127976406390488
+    },
+    {
+      "subject": 3,
+      "object": 5,
+      "kind": "behind",
+      "confidence": 0.6949638264810791,
+      "margin_m": 0.4127976406390488
+    },
+    {
+      "subject": 5,
+      "object": 3,
+      "kind": "above",
+      "confidence": 0.6443077661322301,
+      "margin_m": 0.37171107888358546
+    },
+    {
+      "subject": 3,
+      "object": 5,
+      "kind": "below",
+      "confidence": 0.6443077661322301,
+      "margin_m": 0.37171107888358546
+    },
+    {
+      "subject": 5,
+      "object": 3,
+      "kind": "closer_than",
+      "confidence": 0.9999997676500687,
+      "margin_m": 0.4574698347256978
+    },
+    {
+      "subject": 3,
+      "object": 5,
+      "kind": "farther_than",
+      "confidence": 0.9999997676500687,
+      "margin_m": 0.4574698347256978
+    },
+    {
+      "subject": 3,
+      "object": 5,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.4018683215028644
+    },
+    {
+      "subject": 3,
+      "object": 6,
+      "kind": "left_of",
+      "confidence": 0.9998197123116569,
+      "margin_m": 1.6767079482193434
+    },
+    {
+      "subject": 6,
+      "object": 3,
+      "kind": "right_of",
+      "confidence": 0.9998197123116569,
+      "margin_m": 1.6767079482193434
+    },
+    {
+      "subject": 3,
+      "object": 6,
+      "kind": "in_front_of",
+      "confidence": 0.993901087425611,
+      "margin_m": 1.2354525668567686
+    },
+    {
+      "subject": 6,
+      "object": 3,
+      "kind": "behind",
+      "confidence": 0.993901087425611,
+      "margin_m": 1.2354525668567686
+    },
+    {
+      "subject": 3,
+      "object": 6,
+      "kind": "above",
+      "confidence": 0.8091700349486148,
+      "margin_m": 0.5765189490450645
+    },
+    {
+      "subject": 6,
+      "object": 3,
+      "kind": "below",
+      "confidence": 0.8091700349486148,
+      "margin_m": 0.5765189490450645
+    },
+    {
+      "subject": 3,
+      "object": 6,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.3038267489712685
+    },
+    {
+      "subject": 6,
+      "object": 3,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.3038267489712685
+    },
+    {
+      "subject": 3,
+      "object": 8,
+      "kind": "left_of",
+      "confidence": 0.9999586641161851,
+      "margin_m": 2.714121239746007
+    },
+    {
+      "subject": 8,
+      "object": 3,
+      "kind": "right_of",
+      "confidence": 0.9999586641161851,
+      "margin_m": 2.714121239746007
+    },
+    {
+      "subject": 3,
+      "object": 8,
+      "kind": "in_front_of",
+      "confidence": 0.999739843149315,
+      "margin_m": 2.4171997238305334
+    },
+    {
+      "subject": 8,
+      "object": 3,
+      "kind": "behind",
+      "confidence": 0.999739843149315,
+      "margin_m": 2.4171997238305334
+    },
+    {
+      "subject": 3,
+      "object": 8,
+      "kind": "above",
+      "confidence": 0.6921304399380144,
+      "margin_m": 0.6747203226574487
+    },
+    {
+      "subject": 8,
+      "object": 3,
+      "kind": "below",
+      "confidence": 0.6921304399380144,
+      "margin_m": 0.6747203226574487
+    },
+    {
+      "subject": 3,
+      "object": 8,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 2.7107924934752243
+    },
+    {
+      "subject": 8,
+      "object": 3,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 2.7107924934752243
+    },
+    {
+      "subject": 3,
+      "object": 17,
+      "kind": "left_of",
+      "confidence": 0.9993190531562277,
+      "margin_m": 1.4556108027864627
+    },
+    {
+      "subject": 17,
+      "object": 3,
+      "kind": "right_of",
+      "confidence": 0.9993190531562277,
+      "margin_m": 1.4556108027864627
+    },
+    {
+      "subject": 17,
+      "object": 3,
+      "kind": "in_front_of",
+      "confidence": 0.6266222911643662,
+      "margin_m": 0.3846583314183425
+    },
+    {
+      "subject": 3,
+      "object": 17,
+      "kind": "behind",
+      "confidence": 0.6266222911643662,
+      "margin_m": 0.3846583314183425
+    },
+    {
+      "subject": 17,
+      "object": 3,
+      "kind": "above",
+      "confidence": 0.6720760709672836,
+      "margin_m": 0.47205094033261996
+    },
+    {
+      "subject": 3,
+      "object": 17,
+      "kind": "below",
+      "confidence": 0.6720760709672836,
+      "margin_m": 0.47205094033261996
+    },
+    {
+      "subject": 17,
+      "object": 3,
+      "kind": "closer_than",
+      "confidence": 0.9999926184151979,
+      "margin_m": 0.3999004045639363
+    },
+    {
+      "subject": 3,
+      "object": 17,
+      "kind": "farther_than",
+      "confidence": 0.9999926184151979,
+      "margin_m": 0.3999004045639363
+    },
+    {
+      "subject": 3,
+      "object": 18,
+      "kind": "left_of",
+      "confidence": 0.999976512730559,
+      "margin_m": 2.264020352230968
+    },
+    {
+      "subject": 18,
+      "object": 3,
+      "kind": "right_of",
+      "confidence": 0.999976512730559,
+      "margin_m": 2.264020352230968
+    },
+    {
+      "subject": 3,
+      "object": 18,
+      "kind": "in_front_of",
+      "confidence": 0.9934806262783059,
+      "margin_m": 1.456406179643806
+    },
+    {
+      "subject": 18,
+      "object": 3,
+      "kind": "behind",
+      "confidence": 0.9934806262783059,
+      "margin_m": 1.456406179643806
+    },
+    {
+      "subject": 3,
+      "object": 18,
+      "kind": "above",
+      "confidence": 0.7319955292259135,
+      "margin_m": 0.5929960371306865
+    },
+    {
+      "subject": 18,
+      "object": 3,
+      "kind": "below",
+      "confidence": 0.7319955292259135,
+      "margin_m": 0.5929960371306865
+    },
+    {
+      "subject": 3,
+      "object": 18,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.6947282728775321
+    },
+    {
+      "subject": 18,
+      "object": 3,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.6947282728775321
+    },
+    {
+      "subject": 19,
+      "object": 3,
+      "kind": "left_of",
+      "confidence": 0.5840671098779788,
+      "margin_m": 0.3385604946336871
+    },
+    {
+      "subject": 3,
+      "object": 19,
+      "kind": "right_of",
+      "confidence": 0.5840671098779788,
+      "margin_m": 0.3385604946336871
+    },
+    {
+      "subject": 3,
+      "object": 19,
+      "kind": "in_front_of",
+      "confidence": 0.9955994928600103,
+      "margin_m": 1.1719322821751517
+    },
+    {
+      "subject": 19,
+      "object": 3,
+      "kind": "behind",
+      "confidence": 0.9955994928600103,
+      "margin_m": 1.1719322821751517
+    },
+    {
+      "subject": 3,
+      "object": 19,
+      "kind": "above",
+      "confidence": 0.9014415431833731,
+      "margin_m": 0.6629144556602418
+    },
+    {
+      "subject": 19,
+      "object": 3,
+      "kind": "below",
+      "confidence": 0.9014415431833731,
+      "margin_m": 0.6629144556602418
+    },
+    {
+      "subject": 3,
+      "object": 19,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.2709089592752454
+    },
+    {
+      "subject": 19,
+      "object": 3,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.2709089592752454
+    },
+    {
+      "subject": 3,
+      "object": 19,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.2722910202738187
+    },
+    {
+      "subject": 3,
+      "object": 20,
+      "kind": "left_of",
+      "confidence": 0.9996009078660598,
+      "margin_m": 1.4410760192956764
+    },
+    {
+      "subject": 20,
+      "object": 3,
+      "kind": "right_of",
+      "confidence": 0.9996009078660598,
+      "margin_m": 1.4410760192956764
+    },
+    {
+      "subject": 20,
+      "object": 3,
+      "kind": "in_front_of",
+      "confidence": 0.6778774212278074,
+      "margin_m": 0.40333994916973737
+    },
+    {
+      "subject": 3,
+      "object": 20,
+      "kind": "behind",
+      "confidence": 0.6778774212278074,
+      "margin_m": 0.40333994916973737
+    },
+    {
+      "subject": 20,
+      "object": 3,
+      "kind": "above",
+      "confidence": 0.8660085666428881,
+      "margin_m": 0.6185993244342144
+    },
+    {
+      "subject": 3,
+      "object": 20,
+      "kind": "below",
+      "confidence": 0.8660085666428881,
+      "margin_m": 0.6185993244342144
+    },
+    {
+      "subject": 20,
+      "object": 3,
+      "kind": "closer_than",
+      "confidence": 0.9999990478949838,
+      "margin_m": 0.4350131555375074
+    },
+    {
+      "subject": 3,
+      "object": 20,
+      "kind": "farther_than",
+      "confidence": 0.9999990478949838,
+      "margin_m": 0.4350131555375074
+    },
+    {
+      "subject": 21,
+      "object": 3,
+      "kind": "left_of",
+      "confidence": 0.5034689529366312,
+      "margin_m": 0.2987646134127848
+    },
+    {
+      "subject": 3,
+      "object": 21,
+      "kind": "right_of",
+      "confidence": 0.5034689529366312,
+      "margin_m": 0.2987646134127848
+    },
+    {
+      "subject": 3,
+      "object": 21,
+      "kind": "in_front_of",
+      "confidence": 0.987279885736288,
+      "margin_m": 1.0921442964202575
+    },
+    {
+      "subject": 21,
+      "object": 3,
+      "kind": "behind",
+      "confidence": 0.987279885736288,
+      "margin_m": 1.0921442964202575
+    },
+    {
+      "subject": 3,
+      "object": 21,
+      "kind": "above",
+      "confidence": 0.8597365825873338,
+      "margin_m": 0.6441009484113125
+    },
+    {
+      "subject": 21,
+      "object": 3,
+      "kind": "below",
+      "confidence": 0.8597365825873338,
+      "margin_m": 0.6441009484113125
+    },
+    {
+      "subject": 3,
+      "object": 21,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.1867495798765928
+    },
+    {
+      "subject": 21,
+      "object": 3,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.1867495798765928
+    },
+    {
+      "subject": 3,
+      "object": 21,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.1896048943867175
+    },
+    {
+      "subject": 3,
+      "object": 22,
+      "kind": "left_of",
+      "confidence": 0.9789265628390406,
+      "margin_m": 3.761873083956982
+    },
+    {
+      "subject": 22,
+      "object": 3,
+      "kind": "right_of",
+      "confidence": 0.9789265628390406,
+      "margin_m": 3.761873083956982
+    },
+    {
+      "subject": 3,
+      "object": 22,
+      "kind": "in_front_of",
+      "confidence": 0.8217531406668955,
+      "margin_m": 2.191152052133681
+    },
+    {
+      "subject": 22,
+      "object": 3,
+      "kind": "behind",
+      "confidence": 0.8217531406668955,
+      "margin_m": 2.191152052133681
+    },
+    {
+      "subject": 3,
+      "object": 22,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 3.0475385871689684
+    },
+    {
+      "subject": 22,
+      "object": 3,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 3.0475385871689684
+    },
+    {
+      "subject": 3,
+      "object": 26,
+      "kind": "left_of",
+      "confidence": 0.9996988018155244,
+      "margin_m": 1.439411742114551
+    },
+    {
+      "subject": 26,
+      "object": 3,
+      "kind": "right_of",
+      "confidence": 0.9996988018155244,
+      "margin_m": 1.439411742114551
+    },
+    {
+      "subject": 26,
+      "object": 3,
+      "kind": "in_front_of",
+      "confidence": 0.6930384768786682,
+      "margin_m": 0.4087816734086096
+    },
+    {
+      "subject": 3,
+      "object": 26,
+      "kind": "behind",
+      "confidence": 0.6930384768786682,
+      "margin_m": 0.4087816734086096
+    },
+    {
+      "subject": 26,
+      "object": 3,
+      "kind": "above",
+      "confidence": 0.8546209756844896,
+      "margin_m": 0.6214632380124586
+    },
+    {
+      "subject": 3,
+      "object": 26,
+      "kind": "below",
+      "confidence": 0.8546209756844896,
+      "margin_m": 0.6214632380124586
+    },
+    {
+      "subject": 26,
+      "object": 3,
+      "kind": "closer_than",
+      "confidence": 0.99999933065964,
+      "margin_m": 0.44074391575364413
+    },
+    {
+      "subject": 3,
+      "object": 26,
+      "kind": "farther_than",
+      "confidence": 0.99999933065964,
+      "margin_m": 0.44074391575364413
+    },
+    {
+      "subject": 3,
+      "object": 27,
+      "kind": "in_front_of",
+      "confidence": 0.5827845932483743,
+      "margin_m": 0.35941584250849123
+    },
+    {
+      "subject": 27,
+      "object": 3,
+      "kind": "behind",
+      "confidence": 0.5827845932483743,
+      "margin_m": 0.35941584250849123
+    },
+    {
+      "subject": 27,
+      "object": 3,
+      "kind": "above",
+      "confidence": 0.9858377106437324,
+      "margin_m": 1.0868141390001487
+    },
+    {
+      "subject": 3,
+      "object": 27,
+      "kind": "below",
+      "confidence": 0.9858377106437324,
+      "margin_m": 1.0868141390001487
+    },
+    {
+      "subject": 3,
+      "object": 27,
+      "kind": "closer_than",
+      "confidence": 0.9987216316878619,
+      "margin_m": 0.3198761601917526
+    },
+    {
+      "subject": 27,
+      "object": 3,
+      "kind": "farther_than",
+      "confidence": 0.9987216316878619,
+      "margin_m": 0.3198761601917526
+    },
+    {
+      "subject": 3,
+      "object": 27,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.2753602399069424
+    },
+    {
+      "subject": 5,
+      "object": 6,
+      "kind": "left_of",
+      "confidence": 0.7917650039403952,
+      "margin_m": 0.3548834384247588
+    },
+    {
+      "subject": 6,
+      "object": 5,
+      "kind": "right_of",
+      "confidence": 0.7917650039403952,
+      "margin_m": 0.3548834384247588
+    },
+    {
+      "subject": 5,
+      "object": 6,
+      "kind": "in_front_of",
+      "confidence": 0.9999999912759345,
+      "margin_m": 1.6482502074958174
+    },
+    {
+      "subject": 6,
+      "object": 5,
+      "kind": "behind",
+      "confidence": 0.9999999912759345,
+      "margin_m": 1.6482502074958174
+    },
+    {
+      "subject": 5,
+      "object": 6,
+      "kind": "above",
+      "confidence": 0.9995374265066852,
+      "margin_m": 0.94823002792865
+    },
+    {
+      "subject": 6,
+      "object": 5,
+      "kind": "below",
+      "confidence": 0.9995374265066852,
+      "margin_m": 0.94823002792865
+    },
+    {
+      "subject": 5,
+      "object": 6,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.7612965836969663
+    },
+    {
+      "subject": 6,
+      "object": 5,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.7612965836969663
+    },
+    {
+      "subject": 5,
+      "object": 8,
+      "kind": "left_of",
+      "confidence": 0.9865508220515545,
+      "margin_m": 1.3922967299514224
+    },
+    {
+      "subject": 8,
+      "object": 5,
+      "kind": "right_of",
+      "confidence": 0.9865508220515545,
+      "margin_m": 1.3922967299514224
+    },
+    {
+      "subject": 5,
+      "object": 8,
+      "kind": "in_front_of",
+      "confidence": 0.999999496064546,
+      "margin_m": 2.829997364469582
+    },
+    {
+      "subject": 8,
+      "object": 5,
+      "kind": "behind",
+      "confidence": 0.999999496064546,
+      "margin_m": 2.829997364469582
+    },
+    {
+      "subject": 5,
+      "object": 8,
+      "kind": "above",
+      "confidence": 0.9369454525548999,
+      "margin_m": 1.0464314015410343
+    },
+    {
+      "subject": 8,
+      "object": 5,
+      "kind": "below",
+      "confidence": 0.9369454525548999,
+      "margin_m": 1.0464314015410343
+    },
+    {
+      "subject": 5,
+      "object": 8,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 3.168262328200922
+    },
+    {
+      "subject": 8,
+      "object": 5,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 3.168262328200922
+    },
+    {
+      "subject": 5,
+      "object": 17,
+      "kind": "closer_than",
+      "confidence": 0.5143492267912093,
+      "margin_m": 0.057569430161761526
+    },
+    {
+      "subject": 17,
+      "object": 5,
+      "kind": "farther_than",
+      "confidence": 0.5143492267912093,
+      "margin_m": 0.057569430161761526
+    },
+    {
+      "subject": 5,
+      "object": 17,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 0.1727012922845243
+    },
+    {
+      "subject": 5,
+      "object": 18,
+      "kind": "left_of",
+      "confidence": 0.9793654940200665,
+      "margin_m": 0.9421958424363832
+    },
+    {
+      "subject": 18,
+      "object": 5,
+      "kind": "right_of",
+      "confidence": 0.9793654940200665,
+      "margin_m": 0.9421958424363832
+    },
+    {
+      "subject": 5,
+      "object": 18,
+      "kind": "in_front_of",
+      "confidence": 0.9999956031796134,
+      "margin_m": 1.8692038202828547
+    },
+    {
+      "subject": 18,
+      "object": 5,
+      "kind": "behind",
+      "confidence": 0.9999956031796134,
+      "margin_m": 1.8692038202828547
+    },
+    {
+      "subject": 5,
+      "object": 18,
+      "kind": "above",
+      "confidence": 0.9822074704429271,
+      "margin_m": 0.964707116014272
+    },
+    {
+      "subject": 18,
+      "object": 5,
+      "kind": "below",
+      "confidence": 0.9822074704429271,
+      "margin_m": 0.964707116014272
+    },
+    {
+      "subject": 5,
+      "object": 18,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 2.1521981076032297
+    },
+    {
+      "subject": 18,
+      "object": 5,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 2.1521981076032297
+    },
+    {
+      "subject": 19,
+      "object": 5,
+      "kind": "left_of",
+      "confidence": 0.9999999999996105,
+      "margin_m": 1.6603850044282717
+    },
+    {
+      "subject": 5,
+      "object": 19,
+      "kind": "right_of",
+      "confidence": 0.9999999999996105,
+      "margin_m": 1.6603850044282717
+    },
+    {
+      "subject": 5,
+      "object": 19,
+      "kind": "in_front_of",
+      "confidence": 0.9999999999993977,
+      "margin_m": 1.5847299228142004
+    },
+    {
+      "subject": 19,
+      "object": 5,
+      "kind": "behind",
+      "confidence": 0.9999999999993977,
+      "margin_m": 1.5847299228142004
+    },
+    {
+      "subject": 5,
+      "object": 19,
+      "kind": "above",
+      "confidence": 0.999999757427116,
+      "margin_m": 1.0346255345438273
+    },
+    {
+      "subject": 19,
+      "object": 5,
+      "kind": "below",
+      "confidence": 0.999999757427116,
+      "margin_m": 1.0346255345438273
+    },
+    {
+      "subject": 5,
+      "object": 19,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.7283787940009432
+    },
+    {
+      "subject": 19,
+      "object": 5,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.7283787940009432
+    },
+    {
+      "subject": 20,
+      "object": 5,
+      "kind": "above",
+      "confidence": 0.7328564822010206,
+      "margin_m": 0.24688824555062894
+    },
+    {
+      "subject": 5,
+      "object": 20,
+      "kind": "below",
+      "confidence": 0.7328564822010206,
+      "margin_m": 0.24688824555062894
+    },
+    {
+      "subject": 5,
+      "object": 20,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 0.2797993060240676
+    },
+    {
+      "subject": 21,
+      "object": 5,
+      "kind": "left_of",
+      "confidence": 0.9999999983839403,
+      "margin_m": 1.6205891232073695
+    },
+    {
+      "subject": 5,
+      "object": 21,
+      "kind": "right_of",
+      "confidence": 0.9999999983839403,
+      "margin_m": 1.6205891232073695
+    },
+    {
+      "subject": 5,
+      "object": 21,
+      "kind": "in_front_of",
+      "confidence": 0.999999982770638,
+      "margin_m": 1.5049419370593062
+    },
+    {
+      "subject": 21,
+      "object": 5,
+      "kind": "behind",
+      "confidence": 0.999999982770638,
+      "margin_m": 1.5049419370593062
+    },
+    {
+      "subject": 5,
+      "object": 21,
+      "kind": "above",
+      "confidence": 0.9998788834821799,
+      "margin_m": 1.015812027294898
+    },
+    {
+      "subject": 21,
+      "object": 5,
+      "kind": "below",
+      "confidence": 0.9998788834821799,
+      "margin_m": 1.015812027294898
+    },
+    {
+      "subject": 5,
+      "object": 21,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.6442194146022906
+    },
+    {
+      "subject": 21,
+      "object": 5,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.6442194146022906
+    },
+    {
+      "subject": 5,
+      "object": 22,
+      "kind": "left_of",
+      "confidence": 0.8743227391931898,
+      "margin_m": 2.440048574162397
+    },
+    {
+      "subject": 22,
+      "object": 5,
+      "kind": "right_of",
+      "confidence": 0.8743227391931898,
+      "margin_m": 2.440048574162397
+    },
+    {
+      "subject": 5,
+      "object": 22,
+      "kind": "in_front_of",
+      "confidence": 0.8984914603960779,
+      "margin_m": 2.60394969277273
+    },
+    {
+      "subject": 22,
+      "object": 5,
+      "kind": "behind",
+      "confidence": 0.8984914603960779,
+      "margin_m": 2.60394969277273
+    },
+    {
+      "subject": 5,
+      "object": 22,
+      "kind": "above",
+      "confidence": 0.5072800832628213,
+      "margin_m": 1.0873459904376281
+    },
+    {
+      "subject": 22,
+      "object": 5,
+      "kind": "below",
+      "confidence": 0.5072800832628213,
+      "margin_m": 1.0873459904376281
+    },
+    {
+      "subject": 5,
+      "object": 22,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 3.505008421894666
+    },
+    {
+      "subject": 22,
+      "object": 5,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 3.505008421894666
+    },
+    {
+      "subject": 26,
+      "object": 5,
+      "kind": "above",
+      "confidence": 0.6870244405758004,
+      "margin_m": 0.24975215912887316
+    },
+    {
+      "subject": 5,
+      "object": 26,
+      "kind": "below",
+      "confidence": 0.6870244405758004,
+      "margin_m": 0.24975215912887316
+    },
+    {
+      "subject": 5,
+      "object": 26,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 0.28041170943708293
+    },
+    {
+      "subject": 27,
+      "object": 5,
+      "kind": "left_of",
+      "confidence": 0.9999777553916842,
+      "margin_m": 1.1644196293036053
+    },
+    {
+      "subject": 5,
+      "object": 27,
+      "kind": "right_of",
+      "confidence": 0.9999777553916842,
+      "margin_m": 1.1644196293036053
+    },
+    {
+      "subject": 5,
+      "object": 27,
+      "kind": "in_front_of",
+      "confidence": 0.995086742975811,
+      "margin_m": 0.77221348314754
+    },
+    {
+      "subject": 27,
+      "object": 5,
+      "kind": "behind",
+      "confidence": 0.995086742975811,
+      "margin_m": 0.77221348314754
+    },
+    {
+      "subject": 27,
+      "object": 5,
+      "kind": "above",
+      "confidence": 0.9908033999825018,
+      "margin_m": 0.7151030601165633
+    },
+    {
+      "subject": 5,
+      "object": 27,
+      "kind": "below",
+      "confidence": 0.9908033999825018,
+      "margin_m": 0.7151030601165633
+    },
+    {
+      "subject": 5,
+      "object": 27,
+      "kind": "closer_than",
+      "confidence": 0.9999999999999999,
+      "margin_m": 0.7773459949174504
+    },
+    {
+      "subject": 27,
+      "object": 5,
+      "kind": "farther_than",
+      "confidence": 0.9999999999999999,
+      "margin_m": 0.7773459949174504
+    },
+    {
+      "subject": 6,
+      "object": 8,
+      "kind": "left_of",
+      "confidence": 0.9180123538741471,
+      "margin_m": 1.0374132915266636
+    },
+    {
+      "subject": 8,
+      "object": 6,
+      "kind": "right_of",
+      "confidence": 0.9180123538741471,
+      "margin_m": 1.0374132915266636
+    },
+    {
+      "subject": 6,
+      "object": 8,
+      "kind": "in_front_of",
+      "confidence": 0.9516975164626239,
+      "margin_m": 1.1817471569737648
+    },
+    {
+      "subject": 8,
+      "object": 6,
+      "kind": "behind",
+      "confidence": 0.9516975164626239,
+      "margin_m": 1.1817471569737648
+    },
+    {
+      "subject": 6,
+      "object": 8,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.4069657445039558
+    },
+    {
+      "subject": 8,
+      "object": 6,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.4069657445039558
+    },
+    {
+      "subject": 17,
+      "object": 6,
+      "kind": "left_of",
+      "confidence": 0.51306814310132,
+      "margin_m": 0.22109714543288073
+    },
+    {
+      "subject": 6,
+      "object": 17,
+      "kind": "right_of",
+      "confidence": 0.51306814310132,
+      "margin_m": 0.22109714543288073
+    },
+    {
+      "subject": 17,
+      "object": 6,
+      "kind": "in_front_of",
+      "confidence": 0.9999992845314472,
+      "margin_m": 1.6201108982751111
+    },
+    {
+      "subject": 6,
+      "object": 17,
+      "kind": "behind",
+      "confidence": 0.9999992845314472,
+      "margin_m": 1.6201108982751111
+    },
+    {
+      "subject": 17,
+      "object": 6,
+      "kind": "above",
+      "confidence": 0.9942452059639615,
+      "margin_m": 1.0485698893776845
+    },
+    {
+      "subject": 6,
+      "object": 17,
+      "kind": "below",
+      "confidence": 0.9942452059639615,
+      "margin_m": 1.0485698893776845
+    },
+    {
+      "subject": 17,
+      "object": 6,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.7037271535352048
+    },
+    {
+      "subject": 6,
+      "object": 17,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.7037271535352048
+    },
+    {
+      "subject": 6,
+      "object": 18,
+      "kind": "left_of",
+      "confidence": 0.8063390068392492,
+      "margin_m": 0.5873124040116244
+    },
+    {
+      "subject": 18,
+      "object": 6,
+      "kind": "right_of",
+      "confidence": 0.8063390068392492,
+      "margin_m": 0.5873124040116244
+    },
+    {
+      "subject": 6,
+      "object": 18,
+      "kind": "closer_than",
+      "confidence": 0.9956144357096953,
+      "margin_m": 0.39090152390626365
+    },
+    {
+      "subject": 18,
+      "object": 6,
+      "kind": "farther_than",
+      "confidence": 0.9956144357096953,
+      "margin_m": 0.39090152390626365
+    },
+    {
+      "subject": 6,
+      "object": 18,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 0.6277018131246322
+    },
+    {
+      "subject": 19,
+      "object": 6,
+      "kind": "left_of",
+      "confidence": 0.9999999999774674,
+      "margin_m": 2.0152684428530305
+    },
+    {
+      "subject": 6,
+      "object": 19,
+      "kind": "right_of",
+      "confidence": 0.9999999999774674,
+      "margin_m": 2.0152684428530305
+    },
+    {
+      "subject": 20,
+      "object": 6,
+      "kind": "left_of",
+      "confidence": 0.5860112533844735,
+      "margin_m": 0.23563192892366702
+    },
+    {
+      "subject": 6,
+      "object": 20,
+      "kind": "right_of",
+      "confidence": 0.5860112533844735,
+      "margin_m": 0.23563192892366702
+    },
+    {
+      "subject": 20,
+      "object": 6,
+      "kind": "in_front_of",
+      "confidence": 0.9999999768944647,
+      "margin_m": 1.638792516026506
+    },
+    {
+      "subject": 6,
+      "object": 20,
+      "kind": "behind",
+      "confidence": 0.9999999768944647,
+      "margin_m": 1.638792516026506
+    },
+    {
+      "subject": 20,
+      "object": 6,
+      "kind": "above",
+      "confidence": 0.9999707729338976,
+      "margin_m": 1.195118273479279
+    },
+    {
+      "subject": 6,
+      "object": 20,
+      "kind": "below",
+      "confidence": 0.9999707729338976,
+      "margin_m": 1.195118273479279
+    },
+    {
+      "subject": 20,
+      "object": 6,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.738839904508776
+    },
+    {
+      "subject": 6,
+      "object": 20,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.738839904508776
+    },
+    {
+      "subject": 21,
+      "object": 6,
+      "kind": "left_of",
+      "confidence": 0.9999999971344002,
+      "margin_m": 1.9754725616321283
+    },
+    {
+      "subject": 6,
+      "object": 21,
+      "kind": "right_of",
+      "confidence": 0.9999999971344002,
+      "margin_m": 1.9754725616321283
+    },
+    {
+      "subject": 21,
+      "object": 6,
+      "kind": "closer_than",
+      "confidence": 0.6324870985519702,
+      "margin_m": 0.11707716909467569
+    },
+    {
+      "subject": 6,
+      "object": 21,
+      "kind": "farther_than",
+      "confidence": 0.6324870985519702,
+      "margin_m": 0.11707716909467569
+    },
+    {
+      "subject": 6,
+      "object": 22,
+      "kind": "left_of",
+      "confidence": 0.8060038844747808,
+      "margin_m": 2.0851651357376384
+    },
+    {
+      "subject": 22,
+      "object": 6,
+      "kind": "right_of",
+      "confidence": 0.8060038844747808,
+      "margin_m": 2.0851651357376384
+    },
+    {
+      "subject": 6,
+      "object": 22,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.7437118381977
+    },
+    {
+      "subject": 22,
+      "object": 6,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.7437118381977
+    },
+    {
+      "subject": 26,
+      "object": 6,
+      "kind": "left_of",
+      "confidence": 0.6101373965957546,
+      "margin_m": 0.23729620610479252
+    },
+    {
+      "subject": 6,
+      "object": 26,
+      "kind": "right_of",
+      "confidence": 0.6101373965957546,
+      "margin_m": 0.23729620610479252
+    },
+    {
+      "subject": 26,
+      "object": 6,
+      "kind": "in_front_of",
+      "confidence": 0.9999999936106638,
+      "margin_m": 1.6442342402653782
+    },
+    {
+      "subject": 6,
+      "object": 26,
+      "kind": "behind",
+      "confidence": 0.9999999936106638,
+      "margin_m": 1.6442342402653782
+    },
+    {
+      "subject": 26,
+      "object": 6,
+      "kind": "above",
+      "confidence": 0.999910365055061,
+      "margin_m": 1.1979821870575231
+    },
+    {
+      "subject": 6,
+      "object": 26,
+      "kind": "below",
+      "confidence": 0.999910365055061,
+      "margin_m": 1.1979821870575231
+    },
+    {
+      "subject": 26,
+      "object": 6,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.7445706647249126
+    },
+    {
+      "subject": 6,
+      "object": 26,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.7445706647249126
+    },
+    {
+      "subject": 27,
+      "object": 6,
+      "kind": "left_of",
+      "confidence": 0.999993296431875,
+      "margin_m": 1.519303067728364
+    },
+    {
+      "subject": 6,
+      "object": 27,
+      "kind": "right_of",
+      "confidence": 0.999993296431875,
+      "margin_m": 1.519303067728364
+    },
+    {
+      "subject": 27,
+      "object": 6,
+      "kind": "in_front_of",
+      "confidence": 0.9897781950922044,
+      "margin_m": 0.8760367243482774
+    },
+    {
+      "subject": 6,
+      "object": 27,
+      "kind": "behind",
+      "confidence": 0.9897781950922044,
+      "margin_m": 0.8760367243482774
+    },
+    {
+      "subject": 27,
+      "object": 6,
+      "kind": "above",
+      "confidence": 0.9999996011655466,
+      "margin_m": 1.6633330880452133
+    },
+    {
+      "subject": 6,
+      "object": 27,
+      "kind": "below",
+      "confidence": 0.9999996011655466,
+      "margin_m": 1.6633330880452133
+    },
+    {
+      "subject": 27,
+      "object": 6,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 0.9839505887795159
+    },
+    {
+      "subject": 6,
+      "object": 27,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 0.9839505887795159
+    },
+    {
+      "subject": 17,
+      "object": 8,
+      "kind": "left_of",
+      "confidence": 0.969360061047218,
+      "margin_m": 1.2585104369595443
+    },
+    {
+      "subject": 8,
+      "object": 17,
+      "kind": "right_of",
+      "confidence": 0.969360061047218,
+      "margin_m": 1.2585104369595443
+    },
+    {
+      "subject": 17,
+      "object": 8,
+      "kind": "in_front_of",
+      "confidence": 0.9999983437811664,
+      "margin_m": 2.801858055248876
+    },
+    {
+      "subject": 8,
+      "object": 17,
+      "kind": "behind",
+      "confidence": 0.9999983437811664,
+      "margin_m": 2.801858055248876
+    },
+    {
+      "subject": 17,
+      "object": 8,
+      "kind": "above",
+      "confidence": 0.934460743394166,
+      "margin_m": 1.1467712629900686
+    },
+    {
+      "subject": 8,
+      "object": 17,
+      "kind": "below",
+      "confidence": 0.934460743394166,
+      "margin_m": 1.1467712629900686
+    },
+    {
+      "subject": 17,
+      "object": 8,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 3.1106928980391606
+    },
+    {
+      "subject": 8,
+      "object": 17,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 3.1106928980391606
+    },
+    {
+      "subject": 18,
+      "object": 8,
+      "kind": "left_of",
+      "confidence": 0.501629741030952,
+      "margin_m": 0.4501008875150392
+    },
+    {
+      "subject": 8,
+      "object": 18,
+      "kind": "right_of",
+      "confidence": 0.501629741030952,
+      "margin_m": 0.4501008875150392
+    },
+    {
+      "subject": 18,
+      "object": 8,
+      "kind": "in_front_of",
+      "confidence": 0.8516846803651803,
+      "margin_m": 0.9607935441867275
+    },
+    {
+      "subject": 8,
+      "object": 18,
+      "kind": "behind",
+      "confidence": 0.8516846803651803,
+      "margin_m": 0.9607935441867275
+    },
+    {
+      "subject": 18,
+      "object": 8,
+      "kind": "closer_than",
+      "confidence": 0.9999999998839588,
+      "margin_m": 1.0160642205976922
+    },
+    {
+      "subject": 8,
+      "object": 18,
+      "kind": "farther_than",
+      "confidence": 0.9999999998839588,
+      "margin_m": 1.0160642205976922
+    },
+    {
+      "subject": 8,
+      "object": 18,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.0715638749410537
+    },
+    {
+      "subject": 19,
+      "object": 8,
+      "kind": "left_of",
+      "confidence": 0.9999998992578822,
+      "margin_m": 3.052681734379694
+    },
+    {
+      "subject": 8,
+      "object": 19,
+      "kind": "right_of",
+      "confidence": 0.9999998992578822,
+      "margin_m": 3.052681734379694
+    },
+    {
+      "subject": 19,
+      "object": 8,
+      "kind": "in_front_of",
+      "confidence": 0.9711806938324394,
+      "margin_m": 1.2452674416553817
+    },
+    {
+      "subject": 8,
+      "object": 19,
+      "kind": "behind",
+      "confidence": 0.9711806938324394,
+      "margin_m": 1.2452674416553817
+    },
+    {
+      "subject": 19,
+      "object": 8,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.439883534199979
+    },
+    {
+      "subject": 8,
+      "object": 19,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.439883534199979
+    },
+    {
+      "subject": 20,
+      "object": 8,
+      "kind": "left_of",
+      "confidence": 0.9753581955964019,
+      "margin_m": 1.2730452204503306
+    },
+    {
+      "subject": 8,
+      "object": 20,
+      "kind": "right_of",
+      "confidence": 0.9753581955964019,
+      "margin_m": 1.2730452204503306
+    },
+    {
+      "subject": 20,
+      "object": 8,
+      "kind": "in_front_of",
+      "confidence": 0.9999993538978957,
+      "margin_m": 2.8205396730002708
+    },
+    {
+      "subject": 8,
+      "object": 20,
+      "kind": "behind",
+      "confidence": 0.9999993538978957,
+      "margin_m": 2.8205396730002708
+    },
+    {
+      "subject": 20,
+      "object": 8,
+      "kind": "above",
+      "confidence": 0.9766340118272432,
+      "margin_m": 1.2933196470916632
+    },
+    {
+      "subject": 8,
+      "object": 20,
+      "kind": "below",
+      "confidence": 0.9766340118272432,
+      "margin_m": 1.2933196470916632
+    },
+    {
+      "subject": 20,
+      "object": 8,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 3.1458056490127317
+    },
+    {
+      "subject": 8,
+      "object": 20,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 3.1458056490127317
+    },
+    {
+      "subject": 21,
+      "object": 8,
+      "kind": "left_of",
+      "confidence": 0.9999996675021121,
+      "margin_m": 3.012885853158792
+    },
+    {
+      "subject": 8,
+      "object": 21,
+      "kind": "right_of",
+      "confidence": 0.9999996675021121,
+      "margin_m": 3.012885853158792
+    },
+    {
+      "subject": 21,
+      "object": 8,
+      "kind": "in_front_of",
+      "confidence": 0.9754445800717326,
+      "margin_m": 1.325055427410276
+    },
+    {
+      "subject": 8,
+      "object": 21,
+      "kind": "behind",
+      "confidence": 0.9754445800717326,
+      "margin_m": 1.325055427410276
+    },
+    {
+      "subject": 21,
+      "object": 8,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.5240429135986315
+    },
+    {
+      "subject": 8,
+      "object": 21,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.5240429135986315
+    },
+    {
+      "subject": 8,
+      "object": 22,
+      "kind": "closer_than",
+      "confidence": 0.9440329225196855,
+      "margin_m": 0.3367460936937441
+    },
+    {
+      "subject": 22,
+      "object": 8,
+      "kind": "farther_than",
+      "confidence": 0.9440329225196855,
+      "margin_m": 0.3367460936937441
+    },
+    {
+      "subject": 8,
+      "object": 22,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 1.0819845934223151
+    },
+    {
+      "subject": 26,
+      "object": 8,
+      "kind": "left_of",
+      "confidence": 0.9770946363127408,
+      "margin_m": 1.2747094976314561
+    },
+    {
+      "subject": 8,
+      "object": 26,
+      "kind": "right_of",
+      "confidence": 0.9770946363127408,
+      "margin_m": 1.2747094976314561
+    },
+    {
+      "subject": 26,
+      "object": 8,
+      "kind": "in_front_of",
+      "confidence": 0.999999515893967,
+      "margin_m": 2.825981397239143
+    },
+    {
+      "subject": 8,
+      "object": 26,
+      "kind": "behind",
+      "confidence": 0.999999515893967,
+      "margin_m": 2.825981397239143
+    },
+    {
+      "subject": 26,
+      "object": 8,
+      "kind": "above",
+      "confidence": 0.9744118860553828,
+      "margin_m": 1.2961835606699075
+    },
+    {
+      "subject": 8,
+      "object": 26,
+      "kind": "below",
+      "confidence": 0.9744118860553828,
+      "margin_m": 1.2961835606699075
+    },
+    {
+      "subject": 26,
+      "object": 8,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 3.1515364092288687
+    },
+    {
+      "subject": 8,
+      "object": 26,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 3.1515364092288687
+    },
+    {
+      "subject": 27,
+      "object": 8,
+      "kind": "left_of",
+      "confidence": 0.9999837851494826,
+      "margin_m": 2.5567163592550277
+    },
+    {
+      "subject": 8,
+      "object": 27,
+      "kind": "right_of",
+      "confidence": 0.9999837851494826,
+      "margin_m": 2.5567163592550277
+    },
+    {
+      "subject": 27,
+      "object": 8,
+      "kind": "in_front_of",
+      "confidence": 0.9994814236204026,
+      "margin_m": 2.057783881322042
+    },
+    {
+      "subject": 8,
+      "object": 27,
+      "kind": "behind",
+      "confidence": 0.9994814236204026,
+      "margin_m": 2.057783881322042
+    },
+    {
+      "subject": 27,
+      "object": 8,
+      "kind": "above",
+      "confidence": 0.9970442761697463,
+      "margin_m": 1.7615344616575976
+    },
+    {
+      "subject": 8,
+      "object": 27,
+      "kind": "below",
+      "confidence": 0.9970442761697463,
+      "margin_m": 1.7615344616575976
+    },
+    {
+      "subject": 27,
+      "object": 8,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 2.3909163332834718
+    },
+    {
+      "subject": 8,
+      "object": 27,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 2.3909163332834718
+    },
+    {
+      "subject": 17,
+      "object": 18,
+      "kind": "left_of",
+      "confidence": 0.93821380583125,
+      "margin_m": 0.8084095494445052
+    },
+    {
+      "subject": 18,
+      "object": 17,
+      "kind": "right_of",
+      "confidence": 0.93821380583125,
+      "margin_m": 0.8084095494445052
+    },
+    {
+      "subject": 17,
+      "object": 18,
+      "kind": "in_front_of",
+      "confidence": 0.9999754018638517,
+      "margin_m": 1.8410645110621484
+    },
+    {
+      "subject": 18,
+      "object": 17,
+      "kind": "behind",
+      "confidence": 0.9999754018638517,
+      "margin_m": 1.8410645110621484
+    },
+    {
+      "subject": 17,
+      "object": 18,
+      "kind": "above",
+      "confidence": 0.9714604511795937,
+      "margin_m": 1.0650469774633065
+    },
+    {
+      "subject": 18,
+      "object": 17,
+      "kind": "below",
+      "confidence": 0.9714604511795937,
+      "margin_m": 1.0650469774633065
+    },
+    {
+      "subject": 17,
+      "object": 18,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 2.0946286774414684
+    },
+    {
+      "subject": 18,
+      "object": 17,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 2.0946286774414684
+    },
+    {
+      "subject": 19,
+      "object": 17,
+      "kind": "left_of",
+      "confidence": 0.9999999999583713,
+      "margin_m": 1.7941712974201498
+    },
+    {
+      "subject": 17,
+      "object": 19,
+      "kind": "right_of",
+      "confidence": 0.9999999999583713,
+      "margin_m": 1.7941712974201498
+    },
+    {
+      "subject": 17,
+      "object": 19,
+      "kind": "in_front_of",
+      "confidence": 0.999999991246256,
+      "margin_m": 1.5565906135934942
+    },
+    {
+      "subject": 19,
+      "object": 17,
+      "kind": "behind",
+      "confidence": 0.999999991246256,
+      "margin_m": 1.5565906135934942
+    },
+    {
+      "subject": 17,
+      "object": 19,
+      "kind": "above",
+      "confidence": 0.9993421276211039,
+      "margin_m": 1.1349653959928618
+    },
+    {
+      "subject": 19,
+      "object": 17,
+      "kind": "below",
+      "confidence": 0.9993421276211039,
+      "margin_m": 1.1349653959928618
+    },
+    {
+      "subject": 17,
+      "object": 19,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.6708093638391817
+    },
+    {
+      "subject": 19,
+      "object": 17,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.6708093638391817
+    },
+    {
+      "subject": 17,
+      "object": 20,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 0.14930232712823294
+    },
+    {
+      "subject": 21,
+      "object": 17,
+      "kind": "left_of",
+      "confidence": 0.9999999898604766,
+      "margin_m": 1.7543754161992475
+    },
+    {
+      "subject": 17,
+      "object": 21,
+      "kind": "right_of",
+      "confidence": 0.9999999898604766,
+      "margin_m": 1.7543754161992475
+    },
+    {
+      "subject": 17,
+      "object": 21,
+      "kind": "in_front_of",
+      "confidence": 0.9999981214051286,
+      "margin_m": 1.4768026278386
+    },
+    {
+      "subject": 21,
+      "object": 17,
+      "kind": "behind",
+      "confidence": 0.9999981214051286,
+      "margin_m": 1.4768026278386
+    },
+    {
+      "subject": 17,
+      "object": 21,
+      "kind": "above",
+      "confidence": 0.9970769757583102,
+      "margin_m": 1.1161518887439326
+    },
+    {
+      "subject": 21,
+      "object": 17,
+      "kind": "below",
+      "confidence": 0.9970769757583102,
+      "margin_m": 1.1161518887439326
+    },
+    {
+      "subject": 17,
+      "object": 21,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.586649984440529
+    },
+    {
+      "subject": 21,
+      "object": 17,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.586649984440529
+    },
+    {
+      "subject": 17,
+      "object": 22,
+      "kind": "left_of",
+      "confidence": 0.850495732772518,
+      "margin_m": 2.306262281170519
+    },
+    {
+      "subject": 22,
+      "object": 17,
+      "kind": "right_of",
+      "confidence": 0.850495732772518,
+      "margin_m": 2.306262281170519
+    },
+    {
+      "subject": 17,
+      "object": 22,
+      "kind": "in_front_of",
+      "confidence": 0.8930413011504481,
+      "margin_m": 2.5758103835520236
+    },
+    {
+      "subject": 22,
+      "object": 17,
+      "kind": "behind",
+      "confidence": 0.8930413011504481,
+      "margin_m": 2.5758103835520236
+    },
+    {
+      "subject": 17,
+      "object": 22,
+      "kind": "above",
+      "confidence": 0.5400596383321892,
+      "margin_m": 1.1876858518866626
+    },
+    {
+      "subject": 22,
+      "object": 17,
+      "kind": "below",
+      "confidence": 0.5400596383321892,
+      "margin_m": 1.1876858518866626
+    },
+    {
+      "subject": 17,
+      "object": 22,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 3.4474389917329047
+    },
+    {
+      "subject": 22,
+      "object": 17,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 3.4474389917329047
+    },
+    {
+      "subject": 17,
+      "object": 26,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 0.15181809336379895
+    },
+    {
+      "subject": 27,
+      "object": 17,
+      "kind": "left_of",
+      "confidence": 0.9999693017636107,
+      "margin_m": 1.2982059222954834
+    },
+    {
+      "subject": 17,
+      "object": 27,
+      "kind": "right_of",
+      "confidence": 0.9999693017636107,
+      "margin_m": 1.2982059222954834
+    },
+    {
+      "subject": 17,
+      "object": 27,
+      "kind": "in_front_of",
+      "confidence": 0.9812974195544666,
+      "margin_m": 0.7440741739268337
+    },
+    {
+      "subject": 27,
+      "object": 17,
+      "kind": "behind",
+      "confidence": 0.9812974195544666,
+      "margin_m": 0.7440741739268337
+    },
+    {
+      "subject": 27,
+      "object": 17,
+      "kind": "above",
+      "confidence": 0.8920867548231097,
+      "margin_m": 0.6147631986675288
+    },
+    {
+      "subject": 17,
+      "object": 27,
+      "kind": "below",
+      "confidence": 0.8920867548231097,
+      "margin_m": 0.6147631986675288
+    },
+    {
+      "subject": 17,
+      "object": 27,
+      "kind": "closer_than",
+      "confidence": 0.9999999999999795,
+      "margin_m": 0.7197765647556889
+    },
+    {
+      "subject": 27,
+      "object": 17,
+      "kind": "farther_than",
+      "confidence": 0.9999999999999795,
+      "margin_m": 0.7197765647556889
+    },
+    {
+      "subject": 19,
+      "object": 18,
+      "kind": "left_of",
+      "confidence": 0.9999999993852304,
+      "margin_m": 2.602580846864655
+    },
+    {
+      "subject": 18,
+      "object": 19,
+      "kind": "right_of",
+      "confidence": 0.9999999993852304,
+      "margin_m": 2.602580846864655
+    },
+    {
+      "subject": 19,
+      "object": 18,
+      "kind": "in_front_of",
+      "confidence": 0.5059076063673589,
+      "margin_m": 0.28447389746865426
+    },
+    {
+      "subject": 18,
+      "object": 19,
+      "kind": "behind",
+      "confidence": 0.5059076063673589,
+      "margin_m": 0.28447389746865426
+    },
+    {
+      "subject": 19,
+      "object": 18,
+      "kind": "closer_than",
+      "confidence": 0.998058094214926,
+      "margin_m": 0.42381931360228675
+    },
+    {
+      "subject": 18,
+      "object": 19,
+      "kind": "farther_than",
+      "confidence": 0.998058094214926,
+      "margin_m": 0.42381931360228675
+    },
+    {
+      "subject": 20,
+      "object": 18,
+      "kind": "left_of",
+      "confidence": 0.954455707572448,
+      "margin_m": 0.8229443329352915
+    },
+    {
+      "subject": 18,
+      "object": 20,
+      "kind": "right_of",
+      "confidence": 0.954455707572448,
+      "margin_m": 0.8229443329352915
+    },
+    {
+      "subject": 20,
+      "object": 18,
+      "kind": "in_front_of",
+      "confidence": 0.9999936557595273,
+      "margin_m": 1.8597461288135433
+    },
+    {
+      "subject": 18,
+      "object": 20,
+      "kind": "behind",
+      "confidence": 0.9999936557595273,
+      "margin_m": 1.8597461288135433
+    },
+    {
+      "subject": 20,
+      "object": 18,
+      "kind": "above",
+      "confidence": 0.9963092111033764,
+      "margin_m": 1.2115953615649009
+    },
+    {
+      "subject": 18,
+      "object": 20,
+      "kind": "below",
+      "confidence": 0.9963092111033764,
+      "margin_m": 1.2115953615649009
+    },
+    {
+      "subject": 20,
+      "object": 18,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 2.1297414284150396
+    },
+    {
+      "subject": 18,
+      "object": 20,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 2.1297414284150396
+    },
+    {
+      "subject": 21,
+      "object": 18,
+      "kind": "left_of",
+      "confidence": 0.9999999923763108,
+      "margin_m": 2.5627849656437527
+    },
+    {
+      "subject": 18,
+      "object": 21,
+      "kind": "right_of",
+      "confidence": 0.9999999923763108,
+      "margin_m": 2.5627849656437527
+    },
+    {
+      "subject": 21,
+      "object": 18,
+      "kind": "in_front_of",
+      "confidence": 0.5895149395004637,
+      "margin_m": 0.36426188322354847
+    },
+    {
+      "subject": 18,
+      "object": 21,
+      "kind": "behind",
+      "confidence": 0.5895149395004637,
+      "margin_m": 0.36426188322354847
+    },
+    {
+      "subject": 21,
+      "object": 18,
+      "kind": "closer_than",
+      "confidence": 0.999819806700571,
+      "margin_m": 0.5079786930009393
+    },
+    {
+      "subject": 18,
+      "object": 21,
+      "kind": "farther_than",
+      "confidence": 0.999819806700571,
+      "margin_m": 0.5079786930009393
+    },
+    {
+      "subject": 18,
+      "object": 22,
+      "kind": "left_of",
+      "confidence": 0.6412732829745322,
+      "margin_m": 1.497852731726014
+    },
+    {
+      "subject": 22,
+      "object": 18,
+      "kind": "right_of",
+      "confidence": 0.6412732829745322,
+      "margin_m": 1.497852731726014
+    },
+    {
+      "subject": 18,
+      "object": 22,
+      "kind": "closer_than",
+      "confidence": 0.9999999999999999,
+      "margin_m": 1.3528103142914363
+    },
+    {
+      "subject": 22,
+      "object": 18,
+      "kind": "farther_than",
+      "confidence": 0.9999999999999999,
+      "margin_m": 1.3528103142914363
+    },
+    {
+      "subject": 26,
+      "object": 18,
+      "kind": "left_of",
+      "confidence": 0.9593069854955925,
+      "margin_m": 0.824608610116417
+    },
+    {
+      "subject": 18,
+      "object": 26,
+      "kind": "right_of",
+      "confidence": 0.9593069854955925,
+      "margin_m": 0.824608610116417
+    },
+    {
+      "subject": 26,
+      "object": 18,
+      "kind": "in_front_of",
+      "confidence": 0.9999959313395466,
+      "margin_m": 1.8651878530524155
+    },
+    {
+      "subject": 18,
+      "object": 26,
+      "kind": "behind",
+      "confidence": 0.9999959313395466,
+      "margin_m": 1.8651878530524155
+    },
+    {
+      "subject": 26,
+      "object": 18,
+      "kind": "above",
+      "confidence": 0.9951480027196088,
+      "margin_m": 1.2144592751431451
+    },
+    {
+      "subject": 18,
+      "object": 26,
+      "kind": "below",
+      "confidence": 0.9951480027196088,
+      "margin_m": 1.2144592751431451
+    },
+    {
+      "subject": 26,
+      "object": 18,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 2.1354721886311765
+    },
+    {
+      "subject": 18,
+      "object": 26,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 2.1354721886311765
+    },
+    {
+      "subject": 27,
+      "object": 18,
+      "kind": "left_of",
+      "confidence": 0.9999975251341742,
+      "margin_m": 2.1066154717399885
+    },
+    {
+      "subject": 18,
+      "object": 27,
+      "kind": "right_of",
+      "confidence": 0.9999975251341742,
+      "margin_m": 2.1066154717399885
+    },
+    {
+      "subject": 27,
+      "object": 18,
+      "kind": "in_front_of",
+      "confidence": 0.9858285935258186,
+      "margin_m": 1.0969903371353147
+    },
+    {
+      "subject": 18,
+      "object": 27,
+      "kind": "behind",
+      "confidence": 0.9858285935258186,
+      "margin_m": 1.0969903371353147
+    },
+    {
+      "subject": 27,
+      "object": 18,
+      "kind": "above",
+      "confidence": 0.9998273536072809,
+      "margin_m": 1.6798101761308353
+    },
+    {
+      "subject": 18,
+      "object": 27,
+      "kind": "below",
+      "confidence": 0.9998273536072809,
+      "margin_m": 1.6798101761308353
+    },
+    {
+      "subject": 27,
+      "object": 18,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.3748521126857796
+    },
+    {
+      "subject": 18,
+      "object": 27,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.3748521126857796
+    },
+    {
+      "subject": 19,
+      "object": 20,
+      "kind": "left_of",
+      "confidence": 0.9999999999999455,
+      "margin_m": 1.7796365139293635
+    },
+    {
+      "subject": 20,
+      "object": 19,
+      "kind": "right_of",
+      "confidence": 0.9999999999999455,
+      "margin_m": 1.7796365139293635
+    },
+    {
+      "subject": 20,
+      "object": 19,
+      "kind": "in_front_of",
+      "confidence": 0.9999999999940148,
+      "margin_m": 1.575272231344889
+    },
+    {
+      "subject": 19,
+      "object": 20,
+      "kind": "behind",
+      "confidence": 0.9999999999940148,
+      "margin_m": 1.575272231344889
+    },
+    {
+      "subject": 20,
+      "object": 19,
+      "kind": "above",
+      "confidence": 0.9999999938945522,
+      "margin_m": 1.2815137800944563
+    },
+    {
+      "subject": 19,
+      "object": 20,
+      "kind": "below",
+      "confidence": 0.9999999938945522,
+      "margin_m": 1.2815137800944563
+    },
+    {
+      "subject": 20,
+      "object": 19,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.7059221148127528
+    },
+    {
+      "subject": 19,
+      "object": 20,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.7059221148127528
+    },
+    {
+      "subject": 19,
+      "object": 21,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 0.08922533367497706
+    },
+    {
+      "subject": 19,
+      "object": 22,
+      "kind": "left_of",
+      "confidence": 0.989764007698394,
+      "margin_m": 4.100433578590669
+    },
+    {
+      "subject": 22,
+      "object": 19,
+      "kind": "right_of",
+      "confidence": 0.989764007698394,
+      "margin_m": 4.100433578590669
+    },
+    {
+      "subject": 19,
+      "object": 22,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.776629627893723
+    },
+    {
+      "subject": 22,
+      "object": 19,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.776629627893723
+    },
+    {
+      "subject": 19,
+      "object": 26,
+      "kind": "left_of",
+      "confidence": 0.9999999999999991,
+      "margin_m": 1.777972236748238
+    },
+    {
+      "subject": 26,
+      "object": 19,
+      "kind": "right_of",
+      "confidence": 0.9999999999999991,
+      "margin_m": 1.777972236748238
+    },
+    {
+      "subject": 26,
+      "object": 19,
+      "kind": "in_front_of",
+      "confidence": 0.9999999999997597,
+      "margin_m": 1.5807139555837613
+    },
+    {
+      "subject": 19,
+      "object": 26,
+      "kind": "behind",
+      "confidence": 0.9999999999997597,
+      "margin_m": 1.5807139555837613
+    },
+    {
+      "subject": 26,
+      "object": 19,
+      "kind": "above",
+      "confidence": 0.9999998287015732,
+      "margin_m": 1.2843776936727005
+    },
+    {
+      "subject": 19,
+      "object": 26,
+      "kind": "below",
+      "confidence": 0.9999998287015732,
+      "margin_m": 1.2843776936727005
+    },
+    {
+      "subject": 26,
+      "object": 19,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.7116528750288895
+    },
+    {
+      "subject": 19,
+      "object": 26,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.7116528750288895
+    },
+    {
+      "subject": 19,
+      "object": 27,
+      "kind": "left_of",
+      "confidence": 0.908062560822657,
+      "margin_m": 0.49596537512466643
+    },
+    {
+      "subject": 27,
+      "object": 19,
+      "kind": "right_of",
+      "confidence": 0.908062560822657,
+      "margin_m": 0.49596537512466643
+    },
+    {
+      "subject": 27,
+      "object": 19,
+      "kind": "in_front_of",
+      "confidence": 0.9952678653214699,
+      "margin_m": 0.8125164396666604
+    },
+    {
+      "subject": 19,
+      "object": 27,
+      "kind": "behind",
+      "confidence": 0.9952678653214699,
+      "margin_m": 0.8125164396666604
+    },
+    {
+      "subject": 27,
+      "object": 19,
+      "kind": "above",
+      "confidence": 0.9999999998562015,
+      "margin_m": 1.7497285946603907
+    },
+    {
+      "subject": 19,
+      "object": 27,
+      "kind": "below",
+      "confidence": 0.9999999998562015,
+      "margin_m": 1.7497285946603907
+    },
+    {
+      "subject": 27,
+      "object": 19,
+      "kind": "closer_than",
+      "confidence": 0.9999999999999991,
+      "margin_m": 0.9510327990834928
+    },
+    {
+      "subject": 19,
+      "object": 27,
+      "kind": "farther_than",
+      "confidence": 0.9999999999999991,
+      "margin_m": 0.9510327990834928
+    },
+    {
+      "subject": 21,
+      "object": 20,
+      "kind": "left_of",
+      "confidence": 0.9999999997337261,
+      "margin_m": 1.7398406327084612
+    },
+    {
+      "subject": 20,
+      "object": 21,
+      "kind": "right_of",
+      "confidence": 0.9999999997337261,
+      "margin_m": 1.7398406327084612
+    },
+    {
+      "subject": 20,
+      "object": 21,
+      "kind": "in_front_of",
+      "confidence": 0.9999999502396028,
+      "margin_m": 1.4954842455899948
+    },
+    {
+      "subject": 21,
+      "object": 20,
+      "kind": "behind",
+      "confidence": 0.9999999502396028,
+      "margin_m": 1.4954842455899948
+    },
+    {
+      "subject": 20,
+      "object": 21,
+      "kind": "above",
+      "confidence": 0.9999936167749219,
+      "margin_m": 1.262700272845527
+    },
+    {
+      "subject": 21,
+      "object": 20,
+      "kind": "below",
+      "confidence": 0.9999936167749219,
+      "margin_m": 1.262700272845527
+    },
+    {
+      "subject": 20,
+      "object": 21,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.6217627354141002
+    },
+    {
+      "subject": 21,
+      "object": 20,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.6217627354141002
+    },
+    {
+      "subject": 20,
+      "object": 22,
+      "kind": "left_of",
+      "confidence": 0.8544627966878303,
+      "margin_m": 2.3207970646613054
+    },
+    {
+      "subject": 22,
+      "object": 20,
+      "kind": "right_of",
+      "confidence": 0.8544627966878303,
+      "margin_m": 2.3207970646613054
+    },
+    {
+      "subject": 20,
+      "object": 22,
+      "kind": "in_front_of",
+      "confidence": 0.8969732249315625,
+      "margin_m": 2.5944920013034185
+    },
+    {
+      "subject": 22,
+      "object": 20,
+      "kind": "behind",
+      "confidence": 0.8969732249315625,
+      "margin_m": 2.5944920013034185
+    },
+    {
+      "subject": 20,
+      "object": 22,
+      "kind": "above",
+      "confidence": 0.5992811278384182,
+      "margin_m": 1.334234235988257
+    },
+    {
+      "subject": 22,
+      "object": 20,
+      "kind": "below",
+      "confidence": 0.5992811278384182,
+      "margin_m": 1.334234235988257
+    },
+    {
+      "subject": 20,
+      "object": 22,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 3.482551742706476
+    },
+    {
+      "subject": 22,
+      "object": 20,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 3.482551742706476
+    },
+    {
+      "subject": 20,
+      "object": 26,
+      "kind": "near",
+      "confidence": 0.9,
+      "margin_m": 0.005910447932751704
+    },
+    {
+      "subject": 27,
+      "object": 20,
+      "kind": "left_of",
+      "confidence": 0.9999950137575082,
+      "margin_m": 1.283671138804697
+    },
+    {
+      "subject": 20,
+      "object": 27,
+      "kind": "right_of",
+      "confidence": 0.9999950137575082,
+      "margin_m": 1.283671138804697
+    },
+    {
+      "subject": 20,
+      "object": 27,
+      "kind": "in_front_of",
+      "confidence": 0.9932242955541588,
+      "margin_m": 0.7627557916782286
+    },
+    {
+      "subject": 27,
+      "object": 20,
+      "kind": "behind",
+      "confidence": 0.9932242955541588,
+      "margin_m": 0.7627557916782286
+    },
+    {
+      "subject": 27,
+      "object": 20,
+      "kind": "above",
+      "confidence": 0.8941955126419516,
+      "margin_m": 0.4682148145659344
+    },
+    {
+      "subject": 20,
+      "object": 27,
+      "kind": "below",
+      "confidence": 0.8941955126419516,
+      "margin_m": 0.4682148145659344
+    },
+    {
+      "subject": 20,
+      "object": 27,
+      "kind": "closer_than",
+      "confidence": 0.9999999999999992,
+      "margin_m": 0.75488931572926
+    },
+    {
+      "subject": 27,
+      "object": 20,
+      "kind": "farther_than",
+      "confidence": 0.9999999999999992,
+      "margin_m": 0.75488931572926
+    },
+    {
+      "subject": 21,
+      "object": 22,
+      "kind": "left_of",
+      "confidence": 0.9886906105640105,
+      "margin_m": 4.060637697369767
+    },
+    {
+      "subject": 22,
+      "object": 21,
+      "kind": "right_of",
+      "confidence": 0.9886906105640105,
+      "margin_m": 4.060637697369767
+    },
+    {
+      "subject": 21,
+      "object": 22,
+      "kind": "in_front_of",
+      "confidence": 0.5079560687135647,
+      "margin_m": 1.0990077557134237
+    },
+    {
+      "subject": 22,
+      "object": 21,
+      "kind": "behind",
+      "confidence": 0.5079560687135647,
+      "margin_m": 1.0990077557134237
+    },
+    {
+      "subject": 21,
+      "object": 22,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.8607890072923756
+    },
+    {
+      "subject": 22,
+      "object": 21,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.8607890072923756
+    },
+    {
+      "subject": 21,
+      "object": 26,
+      "kind": "left_of",
+      "confidence": 0.9999999999655963,
+      "margin_m": 1.7381763555273357
+    },
+    {
+      "subject": 26,
+      "object": 21,
+      "kind": "right_of",
+      "confidence": 0.9999999999655963,
+      "margin_m": 1.7381763555273357
+    },
+    {
+      "subject": 26,
+      "object": 21,
+      "kind": "in_front_of",
+      "confidence": 0.9999999878652566,
+      "margin_m": 1.500925969828867
+    },
+    {
+      "subject": 21,
+      "object": 26,
+      "kind": "behind",
+      "confidence": 0.9999999878652566,
+      "margin_m": 1.500925969828867
+    },
+    {
+      "subject": 26,
+      "object": 21,
+      "kind": "above",
+      "confidence": 0.9999753089922421,
+      "margin_m": 1.2655641864237712
+    },
+    {
+      "subject": 21,
+      "object": 26,
+      "kind": "below",
+      "confidence": 0.9999753089922421,
+      "margin_m": 1.2655641864237712
+    },
+    {
+      "subject": 26,
+      "object": 21,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 1.627493495630237
+    },
+    {
+      "subject": 21,
+      "object": 26,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 1.627493495630237
+    },
+    {
+      "subject": 21,
+      "object": 27,
+      "kind": "left_of",
+      "confidence": 0.8379006874749109,
+      "margin_m": 0.45616949390376416
+    },
+    {
+      "subject": 27,
+      "object": 21,
+      "kind": "right_of",
+      "confidence": 0.8379006874749109,
+      "margin_m": 0.45616949390376416
+    },
+    {
+      "subject": 27,
+      "object": 21,
+      "kind": "in_front_of",
+      "confidence": 0.9758873606677287,
+      "margin_m": 0.7327284539117662
+    },
+    {
+      "subject": 21,
+      "object": 27,
+      "kind": "behind",
+      "confidence": 0.9758873606677287,
+      "margin_m": 0.7327284539117662
+    },
+    {
+      "subject": 27,
+      "object": 21,
+      "kind": "above",
+      "confidence": 0.9999999182794517,
+      "margin_m": 1.7309150874114614
+    },
+    {
+      "subject": 21,
+      "object": 27,
+      "kind": "below",
+      "confidence": 0.9999999182794517,
+      "margin_m": 1.7309150874114614
+    },
+    {
+      "subject": 27,
+      "object": 21,
+      "kind": "closer_than",
+      "confidence": 0.9999999999998921,
+      "margin_m": 0.8668734196848402
+    },
+    {
+      "subject": 21,
+      "object": 27,
+      "kind": "farther_than",
+      "confidence": 0.9999999999998921,
+      "margin_m": 0.8668734196848402
+    },
+    {
+      "subject": 26,
+      "object": 22,
+      "kind": "left_of",
+      "confidence": 0.8553089897691759,
+      "margin_m": 2.322461341842431
+    },
+    {
+      "subject": 22,
+      "object": 26,
+      "kind": "right_of",
+      "confidence": 0.8553089897691759,
+      "margin_m": 2.322461341842431
+    },
+    {
+      "subject": 26,
+      "object": 22,
+      "kind": "in_front_of",
+      "confidence": 0.8980896746862723,
+      "margin_m": 2.5999337255422907
+    },
+    {
+      "subject": 22,
+      "object": 26,
+      "kind": "behind",
+      "confidence": 0.8980896746862723,
+      "margin_m": 2.5999337255422907
+    },
+    {
+      "subject": 26,
+      "object": 22,
+      "kind": "above",
+      "confidence": 0.5991943120913156,
+      "margin_m": 1.3370981495665013
+    },
+    {
+      "subject": 22,
+      "object": 26,
+      "kind": "below",
+      "confidence": 0.5991943120913156,
+      "margin_m": 1.3370981495665013
+    },
+    {
+      "subject": 26,
+      "object": 22,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 3.4882825029226128
+    },
+    {
+      "subject": 22,
+      "object": 26,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 3.4882825029226128
+    },
+    {
+      "subject": 27,
+      "object": 22,
+      "kind": "left_of",
+      "confidence": 0.9753620484911769,
+      "margin_m": 3.6044682034660025
+    },
+    {
+      "subject": 22,
+      "object": 27,
+      "kind": "right_of",
+      "confidence": 0.9753620484911769,
+      "margin_m": 3.6044682034660025
+    },
+    {
+      "subject": 27,
+      "object": 22,
+      "kind": "in_front_of",
+      "confidence": 0.7474651138405539,
+      "margin_m": 1.83173620962519
+    },
+    {
+      "subject": 22,
+      "object": 27,
+      "kind": "behind",
+      "confidence": 0.7474651138405539,
+      "margin_m": 1.83173620962519
+    },
+    {
+      "subject": 27,
+      "object": 22,
+      "kind": "above",
+      "confidence": 0.7412922521633398,
+      "margin_m": 1.8024490505541915
+    },
+    {
+      "subject": 22,
+      "object": 27,
+      "kind": "below",
+      "confidence": 0.7412922521633398,
+      "margin_m": 1.8024490505541915
+    },
+    {
+      "subject": 27,
+      "object": 22,
+      "kind": "closer_than",
+      "confidence": 1.0,
+      "margin_m": 2.727662426977216
+    },
+    {
+      "subject": 22,
+      "object": 27,
+      "kind": "farther_than",
+      "confidence": 1.0,
+      "margin_m": 2.727662426977216
+    },
+    {
+      "subject": 27,
+      "object": 26,
+      "kind": "left_of",
+      "confidence": 0.9999982225550315,
+      "margin_m": 1.2820068616235716
+    },
+    {
+      "subject": 26,
+      "object": 27,
+      "kind": "right_of",
+      "confidence": 0.9999982225550315,
+      "margin_m": 1.2820068616235716
+    },
+    {
+      "subject": 26,
+      "object": 27,
+      "kind": "in_front_of",
+      "confidence": 0.9953935698791114,
+      "margin_m": 0.7681975159171008
+    },
+    {
+      "subject": 27,
+      "object": 26,
+      "kind": "behind",
+      "confidence": 0.9953935698791114,
+      "margin_m": 0.7681975159171008
+    },
+    {
+      "subject": 27,
+      "object": 26,
+      "kind": "above",
+      "confidence": 0.8677390268962492,
+      "margin_m": 0.46535090098769016
+    },
+    {
+      "subject": 26,
+      "object": 27,
+      "kind": "below",
+      "confidence": 0.8677390268962492,
+      "margin_m": 0.46535090098769016
+    },
+    {
+      "subject": 26,
+      "object": 27,
+      "kind": "closer_than",
+      "confidence": 0.9999999999999996,
+      "margin_m": 0.7606200759453967
+    },
+    {
+      "subject": 27,
+      "object": 26,
+      "kind": "farther_than",
+      "confidence": 0.9999999999999996,
+      "margin_m": 0.7606200759453967
+    }
+  ],
+  "measurements": [
+    {
+      "a": 20,
+      "b": 26,
+      "center_distance": 0.005910447932751704,
+      "surface_distance": 0.0,
+      "sigma": 0.21906601830032896,
+      "interval_3sigma": [
+        0.0,
+        0.6631085028337386
+      ]
+    },
+    {
+      "a": 19,
+      "b": 21,
+      "center_distance": 0.08922533367497706,
+      "surface_distance": 0.0,
+      "sigma": 0.29514355470947157,
+      "interval_3sigma": [
+        0.0,
+        0.9746559978033917
+      ]
+    },
+    {
+      "a": 17,
+      "b": 20,
+      "center_distance": 0.14930232712823294,
+      "surface_distance": 0.0,
+      "sigma": 0.3440611417661665,
+      "interval_3sigma": [
+        0.0,
+        1.1814857524267324
+      ]
+    },
+    {
+      "a": 17,
+      "b": 26,
+      "center_distance": 0.15181809336379895,
+      "surface_distance": 0.0,
+      "sigma": 0.3603180401601394,
+      "interval_3sigma": [
+        0.0,
+        1.2327722138442172
+      ]
+    },
+    {
+      "a": 5,
+      "b": 17,
+      "center_distance": 0.1727012922845243,
+      "surface_distance": 0.0,
+      "sigma": 0.28151836059788793,
+      "interval_3sigma": [
+        0.0,
+        1.0172563740781881
+      ]
+    },
+    {
+      "a": 5,
+      "b": 20,
+      "center_distance": 0.2797993060240676,
+      "surface_distance": 0.10460456451850876,
+      "sigma": 0.22010591890462067,
+      "interval_3sigma": [
+        0.0,
+        0.9401170627379296
+      ]
+    },
+    {
+      "a": 5,
+      "b": 26,
+      "center_distance": 0.28041170943708293,
+      "surface_distance": 0.03511140327101338,
+      "sigma": 0.2374622963614278,
+      "interval_3sigma": [
+        0.0,
+        0.9927985985213663
+      ]
+    },
+    {
+      "a": 1,
+      "b": 5,
+      "center_distance": 0.9769003308867928,
+      "surface_distance": 0.6851205359912722,
+      "sigma": 0.1711850253912879,
+      "interval_3sigma": [
+        0.4633452547129291,
+        1.4904554070606566
+      ]
+    },
+    {
+      "a": 1,
+      "b": 26,
+      "center_distance": 1.1079630014485682,
+      "surface_distance": 0.8197123939642442,
+      "sigma": 0.1642416956054254,
+      "interval_3sigma": [
+        0.6152379146322919,
+        1.6006880882648444
+      ]
+    },
+    {
+      "a": 1,
+      "b": 17,
+      "center_distance": 1.108949818309709,
+      "surface_distance": 0.8256785576200903,
+      "sigma": 0.2260511979490049,
+      "interval_3sigma": [
+        0.4307962244626944,
+        1.7871034121567237
+      ]
+    }
+  ]
+}

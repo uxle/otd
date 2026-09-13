@@ -1,0 +1,5 @@
+# Foil Sheet
+# Meitnerium (Mt) — real density 37.4 g/cm³. 0.1 mm foil.
+scene "Meitnerium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #d040ff at (0, 0.1mm, 0)

@@ -1,0 +1,7 @@
+# Float Test
+# Neon (Ne) — real density 0.0009 g/cm³. Archimedes decides: ρ vs 0.997 g/cm³.
+scene "Neon Float Test"
+
+# a gas like Neon does not float as a solid — bubbles rise THROUGH water
+tank = cube(w: 80mm, d: 80mm, h: 50mm) material: water at (0, 25mm, 0)
+bubbles = scatter(n: 10, radius: 20mm, seed: 10) sphere 3mm color: #b3e3f5

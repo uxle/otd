@@ -1,0 +1,5 @@
+# A 5-point pipe run with capped ends.
+scene "Pipe 3"
+
+pipe2 = tube(r: 7.1mm, path: [(0cm, 0cm, 0cm), (1cm, 15cm, -3cm), (4cm, 30cm, -4cm), (12cm, 43cm, -3cm), (16cm, 51cm, 4cm)]) material: copper
+ask "mass?"

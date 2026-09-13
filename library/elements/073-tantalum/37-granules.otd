@@ -1,0 +1,5 @@
+# Granules
+# Tantalum (Ta) — real density 16.69 g/cm³. small pieces scatter like real granules.
+scene "Tantalum Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 73) sphere 2.5mm color: #a0c8c8

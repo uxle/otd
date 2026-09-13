@@ -1,0 +1,5 @@
+# A right-triangle ramp.
+scene "Basic Wedge"
+
+wedge
+ask "volume?"

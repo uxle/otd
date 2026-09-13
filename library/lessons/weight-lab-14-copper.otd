@@ -1,0 +1,6 @@
+# Weigh a copper ingot — mass times g.
+scene "Weight Lab: Copper"
+
+ingot1 = wedge(w: 8cm, d: 4cm, h: 3cm) material: copper
+ask "mass?"
+ask "weight?"

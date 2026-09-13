@@ -1,0 +1,5 @@
+# Powder Pile
+# Lawrencium (Lr) — real density 15.6 g/cm³. a poured heap.
+scene "Lawrencium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #00ffd0

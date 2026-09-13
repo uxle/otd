@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Neon (Ne) — real density 0.0009 g/cm³. rod format, like lab stock.
+scene "Neon Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #b3e3f5
+simulate: drop

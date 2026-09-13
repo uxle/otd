@@ -1,0 +1,5 @@
+# Foil Sheet
+# Technetium (Tc) — real density 11 g/cm³. 0.1 mm foil.
+scene "Technetium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) color: #3b9e9e at (0, 0.1mm, 0)

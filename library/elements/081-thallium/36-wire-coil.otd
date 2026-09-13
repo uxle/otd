@@ -1,0 +1,5 @@
+# Wire Coil
+# Thallium (Tl) — real density 11.85 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Thallium Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) color: #a6544d

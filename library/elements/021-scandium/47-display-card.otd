@@ -1,0 +1,8 @@
+# Display Card
+# Scandium (Sc) — real density 2.985 g/cm³. periodic-table tile.
+scene "Scandium Display Card"
+
+tile = cube(w: 64mm, d: 6mm, h: 64mm) color: #ffe08a at (0, 3mm, 0)
+sym = text "Sc" at (-14mm, 6mm, -8mm)
+znum = text "21" at (22mm, 6mm, 22mm)
+nmass = text "45" at (-22mm, 6mm, 22mm)

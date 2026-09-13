@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Palladium (Pd) — real density 12.02 g/cm³. rod format, like lab stock.
+scene "Palladium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #d0a0a0
+simulate: drop

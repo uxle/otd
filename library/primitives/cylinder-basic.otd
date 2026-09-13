@@ -1,0 +1,5 @@
+# A plain upright cylinder.
+scene "Basic Cylinder"
+
+cylinder
+ask "volume?"

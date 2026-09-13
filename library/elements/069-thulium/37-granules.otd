@@ -1,0 +1,5 @@
+# Granules
+# Thulium (Tm) — real density 9.32 g/cm³. small pieces scatter like real granules.
+scene "Thulium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 69) sphere 2.5mm color: #8ccbe0

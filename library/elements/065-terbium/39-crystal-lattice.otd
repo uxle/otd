@@ -1,0 +1,5 @@
+# Crystal Lattice
+# Terbium (Tb) — real density 8.23 g/cm³. simple cubic lattice — packing 50% vs close-packed 74%.
+scene "Terbium Crystal Lattice"
+
+lattice = grid(nx: 3, nz: 3, spacing: (8mm, 8mm)) sphere 2.5mm color: #c9ffa6

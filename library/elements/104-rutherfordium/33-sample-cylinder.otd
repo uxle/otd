@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Rutherfordium (Rf) — real density 23.2 g/cm³. rod format, like lab stock.
+scene "Rutherfordium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #50d0ff
+simulate: drop

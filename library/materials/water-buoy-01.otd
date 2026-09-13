@@ -1,0 +1,7 @@
+# A plastic buoy bobbing on the water plane.
+scene "Buoy 1"
+
+water = plane(w: 25cm, d: 25cm, t: 2mm) color: deepskyblue
+buoy = capsule(r: 2cm, h: 4cm) at (0, 12cm, 0) material: plastic color: orangered
+simulate: float
+ask "will it float?"

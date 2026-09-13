@@ -1,0 +1,6 @@
+# Ingot
+# Lawrencium (Lr) — real density 15.6 g/cm³. cast bar format.
+scene "Lawrencium Ingot"
+
+ingot = cube(w: 34mm, d: 14mm, h: 11mm) color: #00ffd0 at (0, 5.5mm, 0)
+simulate: drop

@@ -1,0 +1,6 @@
+# Sample Sphere
+# Lawrencium (Lr) — real density 15.6 g/cm³. 5 mm radius ball.
+scene "Lawrencium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #00ffd0 at (0, 5mm, 0)
+simulate: drop

@@ -1,0 +1,6 @@
+# Sample Sphere
+# Gadolinium (Gd) — real density 7.9 g/cm³. 5 mm radius ball.
+scene "Gadolinium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #e6ffa6 at (0, 5mm, 0)
+simulate: drop

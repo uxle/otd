@@ -1,0 +1,8 @@
+# Display Card
+# Fermium (Fm) — real density 9.7 g/cm³. periodic-table tile.
+scene "Fermium Display Card"
+
+tile = cube(w: 64mm, d: 6mm, h: 64mm) color: #20ff00 at (0, 3mm, 0)
+sym = text "Fm" at (-14mm, 6mm, -8mm)
+znum = text "100" at (22mm, 6mm, 22mm)
+nmass = text "257" at (-22mm, 6mm, 22mm)

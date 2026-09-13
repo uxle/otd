@@ -1,0 +1,8 @@
+# Periodic Position
+# Californium (Cf) — real density 15.1 g/cm³. period 7, group 12.
+scene "Californium Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #60ff30 at (264mm, 3mm, 144mm)
+label = text "Cf" at (258mm, 4mm, 139mm)
+numtext = text "98" at (271mm, 4mm, 150mm)

@@ -1,0 +1,6 @@
+# Sample Sphere
+# Rhenium (Re) — real density 21.02 g/cm³. 5 mm radius ball.
+scene "Rhenium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #d4a0a0 at (0, 5mm, 0)
+simulate: drop

@@ -1,0 +1,6 @@
+# Sample Sphere
+# Astatine (At) — real density 7 g/cm³. 5 mm radius ball.
+scene "Astatine Sample Sphere"
+
+sample_sphere = sphere 5mm color: #cc0066 at (0, 5mm, 0)
+simulate: drop

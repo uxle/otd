@@ -1,0 +1,5 @@
+# hollow shells a solid with a wall thickness.
+scene "Hollowing — Lesson 14"
+
+pot = cylinder(top: 5cm, bottom: 4cm, h: 8cm) - hollow(wall: 3mm)
+ask "mass?"

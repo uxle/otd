@@ -1,0 +1,12 @@
+# 3 levels of blocks tested for stability.
+scene "Block Pyramid 6"
+
+# pyramid of blocks — wide base wins
+cube(w: 5cm, d: 5cm, h: 3cm) at (-5.4cm, 0cm, 0)
+cube(w: 5cm, d: 5cm, h: 3cm) at (0.0cm, 0cm, 0)
+cube(w: 5cm, d: 5cm, h: 3cm) at (5.4cm, 0cm, 0)
+cube(w: 5cm, d: 5cm, h: 3cm) at (-2.7cm, 3cm, 0)
+cube(w: 5cm, d: 5cm, h: 3cm) at (2.7cm, 3cm, 0)
+cube(w: 5cm, d: 5cm, h: 3cm) at (0.0cm, 6cm, 0)
+simulate: collapse
+ask "how many objects?"

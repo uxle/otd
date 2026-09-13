@@ -1,0 +1,6 @@
+# 147 color names plus #rrggbb hex.
+scene "Color Names — Lesson 05"
+
+sphere 2cm color: tomato
+sphere 2cm color: #1e90ff at (5cm, 0, 0)
+ask "how many objects?"

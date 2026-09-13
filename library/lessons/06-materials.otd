@@ -1,0 +1,6 @@
+# Steel is heavy, wood floats — density is real.
+scene "Materials Have Physics — Lesson 06"
+
+a = sphere 3cm material: steel
+b = sphere 3cm material: wood at (8cm, 0, 0)
+ask "density?"

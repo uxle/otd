@@ -1,0 +1,98 @@
+# library/lessons
+
+46 numbered lessons from hello-sphere to export, plus labs & exercises.
+
+**92 files.**
+
+- `01-hello-sphere.otd` — Your first object: one sphere on the ground.
+- `02-first-cube.otd` — A cube with default size 2 cm.
+- `03-sizing.otd` — Bare numbers mean centimeters; suffix a unit to change that.
+- `04-units.otd` — mm, cm, m, in, ft — mix them freely.
+- `05-colors.otd` — 147 color names plus #rrggbb hex.
+- `06-materials.otd` — Steel is heavy, wood floats — density is real.
+- `07-move-around.otd` — at (x, y, z) says where the object stands.
+- `08-rotate.otd` — rotate (x, y, z) spins in place.
+- `09-scale.otd` — scale multiplies every dimension.
+- `10-mirror.otd` — mirror x flips across the plane.
+- `11-union.otd` — The plus fuses two solids into one mesh.
+- `12-subtract.otd` — Minus cuts one solid out of another.
+- `13-intersect.otd` — The ampersand keeps only the overlap.
+- `14-hollow.otd` — hollow shells a solid with a wall thickness.
+- `15-first-cup.otd` — Cup + torus handle, fused and colored.
+- `16-if-else.otd` — Decide between shapes.
+- `17-for-loops.otd` — for i = from to to — inclusive both ends.
+- `18-for-lists.otd` — for x in [...] visits every element.
+- `19-while.otd` — Repeat until the condition turns false.
+- `20-break-continue.otd` — Skip some, stop early.
+- `21-define-parts.otd` — A template is a shape factory.
+- `22-use-place.otd` — Copies are independent and placeable.
+- `23-group.otd` — Bundle shapes into one object.
+- `24-assert.otd` — Loud failure beats silent mistakes.
+- `25-print.otd` — Curly braces interpolate values.
+- `26-pattern-repeat.otd` — Copy along a step vector.
+- `27-pattern-grid.otd` — Rows and columns in one word.
+- `28-pattern-ring.otd` — Circle layouts — and the angle a.
+- `29-pattern-scatter.otd` — Deterministic randomness with seed.
+- `30-magic-variables.otd` — Patterns inject counters into copies.
+- `31-extrude.otd` — Draw a polygon, pull it up.
+- `32-revolve.otd` — (radius, height) pairs become a solid.
+- `33-sweep.otd` — A 2D profile dragged through 3D space.
+- `34-loft.otd` — Equal-corner sections sewn into one solid.
+- `35-text.otd` — Real letters, real mass.
+- `36-terrain.otd` — Seed-controlled hills.
+- `37-metaball.otd` — Balls that melt together.
+- `38-smooth.otd` — Taubin smoothing keeps the shape.
+- `39-subdiv.otd` — Loop subdivision: 4x triangles per level.
+- `40-blend.otd` — A smooth fillet bridges the gap.
+- `41-rope.otd` — The sag is measured, not guessed.
+- `42-ask-questions.otd` — Mass, volume, float, inertia… the model answers.
+- `43-simulate-drop.otd` — Falls, bounces, settles.
+- `44-simulate-float.otd` — The waterline solved on the real mesh.
+- `45-simulate-collapse.otd` — Static stability: center of mass vs base.
+- `46-export.otd` — STL, OBJ, GLTF, USDZ, PNG, SCAD.
+- `exercise-01-sphere-row.otd` — A practice exercise: a row of sphere objects.
+- `exercise-02-cylinder-row.otd` — A practice exercise: a row of cylinder objects.
+- `exercise-03-cube-row.otd` — A practice exercise: a row of cube objects.
+- `exercise-04-cylinder-row.otd` — A practice exercise: a row of cylinder objects.
+- `exercise-05-cylinder-row.otd` — A practice exercise: a row of cylinder objects.
+- `exercise-06-cylinder-row.otd` — A practice exercise: a row of cylinder objects.
+- `exercise-07-cylinder-row.otd` — A practice exercise: a row of cylinder objects.
+- `exercise-08-sphere-row.otd` — A practice exercise: a row of sphere objects.
+- `exercise-09-cube-row.otd` — A practice exercise: a row of cube objects.
+- `exercise-10-cube-row.otd` — A practice exercise: a row of cube objects.
+- `exercise-11-cylinder-row.otd` — A practice exercise: a row of cylinder objects.
+- `exercise-12-cylinder-row.otd` — A practice exercise: a row of cylinder objects.
+- `exercise-13-cylinder-row.otd` — A practice exercise: a row of cylinder objects.
+- `exercise-14-sphere-row.otd` — A practice exercise: a row of sphere objects.
+- `material-lab-01-titanium.otd` — Hands-on lab: measure a titanium sample.
+- `material-lab-02-chrome.otd` — Hands-on lab: measure a chrome sample.
+- `material-lab-03-teak.otd` — Hands-on lab: measure a teak sample.
+- `material-lab-04-stainless.otd` — Hands-on lab: measure a stainless sample.
+- `material-lab-05-plastic.otd` — Hands-on lab: measure a plastic sample.
+- `material-lab-06-ceramic.otd` — Hands-on lab: measure a ceramic sample.
+- `material-lab-07-tungsten.otd` — Hands-on lab: measure a tungsten sample.
+- `material-lab-08-iron.otd` — Hands-on lab: measure a iron sample.
+- `material-lab-09-iron.otd` — Hands-on lab: measure a iron sample.
+- `material-lab-10-concrete.otd` — Hands-on lab: measure a concrete sample.
+- `material-lab-11-stainless.otd` — Hands-on lab: measure a stainless sample.
+- `material-lab-12-gold.otd` — Hands-on lab: measure a gold sample.
+- `material-lab-13-wood.otd` — Hands-on lab: measure a wood sample.
+- `material-lab-14-glass.otd` — Hands-on lab: measure a glass sample.
+- `material-lab-15-glass.otd` — Hands-on lab: measure a glass sample.
+- `material-lab-16-plastic.otd` — Hands-on lab: measure a plastic sample.
+- `weight-lab-01-titanium.otd` — Weigh a titanium ingot — mass times g.
+- `weight-lab-02-lead.otd` — Weigh a lead ingot — mass times g.
+- `weight-lab-03-lead.otd` — Weigh a lead ingot — mass times g.
+- `weight-lab-04-silver.otd` — Weigh a silver ingot — mass times g.
+- `weight-lab-05-gold.otd` — Weigh a gold ingot — mass times g.
+- `weight-lab-06-stainless.otd` — Weigh a stainless ingot — mass times g.
+- `weight-lab-07-titanium.otd` — Weigh a titanium ingot — mass times g.
+- `weight-lab-08-chrome.otd` — Weigh a chrome ingot — mass times g.
+- `weight-lab-09-titanium.otd` — Weigh a titanium ingot — mass times g.
+- `weight-lab-10-brass.otd` — Weigh a brass ingot — mass times g.
+- `weight-lab-11-stainless.otd` — Weigh a stainless ingot — mass times g.
+- `weight-lab-12-zinc.otd` — Weigh a zinc ingot — mass times g.
+- `weight-lab-13-bronze.otd` — Weigh a bronze ingot — mass times g.
+- `weight-lab-14-copper.otd` — Weigh a copper ingot — mass times g.
+- `weight-lab-15-copper.otd` — Weigh a copper ingot — mass times g.
+- `weight-lab-16-tungsten.otd` — Weigh a tungsten ingot — mass times g.

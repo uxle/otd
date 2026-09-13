@@ -1,0 +1,7 @@
+# A helical worm beside its wheel.
+scene "Worm Drive 4"
+
+material: steel
+worm1 = helix(radius: 2.2cm, pitch: 0.7cm, turns: 3.3, tube: 3mm) rotate (90deg, 0, 0) at (0, 3cm, 0)
+wheel1 = cylinder(r: 4.3cm, h: 8mm) at (4.5cm, 2.9cm, 0) color: gold
+ask "mass?"

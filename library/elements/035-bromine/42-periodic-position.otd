@@ -1,0 +1,8 @@
+# Periodic Position
+# Bromine (Br) — real density 3.12 g/cm³. period 4, group 17.
+scene "Bromine Periodic Position"
+
+board = plane(w: 460mm, d: 200mm) color: #e8e8f0
+marker = cube 18mm color: #a62929 at (384mm, 3mm, 72mm)
+label = text "Br" at (378mm, 4mm, 67mm)
+numtext = text "35" at (391mm, 4mm, 78mm)

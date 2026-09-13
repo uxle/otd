@@ -1,0 +1,15 @@
+# Physical properties of Fluorine
+
+| property | value |
+|---|---|
+| density (near room temp) | 0.0017 g/cm³ |
+| phase at 20 °C | gas |
+| melting point | -219.7 °C |
+| boiling point | -188.1 °C |
+| appearance | see 09-optical-properties.md — colour #90e050 in this library's palette |
+
+Density is mass divided by volume: a cube of Fluorine measuring 1 cm on a side
+weighs 0.0017 g — the 48-molar-volume and 49-density-compare samples
+in this folder draw exactly this mathematics in 3D.
+
+As a gas, Fluorine fills whatever volume it is given; the density above is for the gas at 0 °C and 1 atm.

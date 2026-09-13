@@ -1,0 +1,5 @@
+# Crystal Lattice
+# Caesium (Cs) — real density 1.879 g/cm³. simple cubic lattice — packing 50% vs close-packed 74%.
+scene "Caesium Crystal Lattice"
+
+lattice = grid(nx: 3, nz: 3, spacing: (8mm, 8mm)) sphere 2.5mm color: #57178f

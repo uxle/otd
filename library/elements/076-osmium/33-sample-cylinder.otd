@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Osmium (Os) — real density 22.59 g/cm³. rod format, like lab stock.
+scene "Osmium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #a0a0b0
+simulate: drop

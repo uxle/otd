@@ -1,0 +1,6 @@
+# A tapered cup shelled with a 3 mm wall.
+scene "Shelled Cup 4"
+
+cup2 = cylinder(top: 4cm, bottom: 3cm, height: 8cm) - hollow(wall: 3mm)
+ask "mass?"
+ask "will it float?"

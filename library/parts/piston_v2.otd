@@ -1,0 +1,7 @@
+# An engine piston: crown + ring grooves + pin bore. Aluminum alloy.
+scene "Piston V2"
+
+grooved = cylinder(r: 20mm, h: 30mm) - torus(R: 20.5mm, tube: 1.2mm) at (0, 22mm, 0) - torus(R: 20.5mm, tube: 1.2mm) at (0, 18mm, 0)
+piston_v2 = grooved material: aluminum
+ask "mass?"
+simulate: drop

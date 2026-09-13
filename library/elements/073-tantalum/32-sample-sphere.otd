@@ -1,0 +1,6 @@
+# Sample Sphere
+# Tantalum (Ta) — real density 16.69 g/cm³. 5 mm radius ball.
+scene "Tantalum Sample Sphere"
+
+sample_sphere = sphere 5mm color: #a0c8c8 at (0, 5mm, 0)
+simulate: drop

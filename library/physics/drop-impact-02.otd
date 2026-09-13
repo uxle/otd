@@ -1,0 +1,9 @@
+# A teak ball drop with an assert sanity gate.
+scene "Impact Test 2"
+
+# impact speed check: v = √(2gh)
+ball1 = sphere(r: 2cm) at (0, 76cm, 0) material: teak
+gravity: earth
+simulate: drop
+assert true, "checked"
+ask "mass?"

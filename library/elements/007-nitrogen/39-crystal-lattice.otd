@@ -1,0 +1,5 @@
+# Crystal Lattice
+# Nitrogen (N) — real density 0.00125 g/cm³. simple cubic lattice — packing 50% vs close-packed 74%.
+scene "Nitrogen Crystal Lattice"
+
+lattice = grid(nx: 3, nz: 3, spacing: (8mm, 8mm)) sphere 2.5mm color: #3050f8

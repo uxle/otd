@@ -1,0 +1,6 @@
+# Sample Sphere
+# Indium (In) — real density 7.31 g/cm³. 5 mm radius ball.
+scene "Indium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #a67573 at (0, 5mm, 0)
+simulate: drop

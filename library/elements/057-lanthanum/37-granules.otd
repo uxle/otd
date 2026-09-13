@@ -1,0 +1,5 @@
+# Granules
+# Lanthanum (La) — real density 6.162 g/cm³. small pieces scatter like real granules.
+scene "Lanthanum Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 57) sphere 2.5mm color: #4d6fff

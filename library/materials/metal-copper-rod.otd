@@ -1,0 +1,5 @@
+# A round copper bar standing on end.
+scene "Copper Rod"
+
+rod = cylinder(r: 1.5cm, h: 22cm) material: copper
+ask "mass?"

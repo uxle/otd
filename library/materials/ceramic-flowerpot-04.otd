@@ -1,0 +1,7 @@
+# A tapered ceramic flower pot.
+scene "Flower Pot 4"
+
+material: ceramic
+pot = cylinder(bottom: 3.8cm, top: 5.4cm, height: 12.4cm)
+ask "mass?"
+ask "volume?"

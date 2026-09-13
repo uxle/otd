@@ -1,0 +1,8 @@
+# Display Card
+# Ruthenium (Ru) — real density 12.45 g/cm³. periodic-table tile.
+scene "Ruthenium Display Card"
+
+tile = cube(w: 64mm, d: 6mm, h: 64mm) color: #a0c0c0 at (0, 3mm, 0)
+sym = text "Ru" at (-14mm, 6mm, -8mm)
+znum = text "44" at (22mm, 6mm, 22mm)
+nmass = text "101" at (-22mm, 6mm, 22mm)

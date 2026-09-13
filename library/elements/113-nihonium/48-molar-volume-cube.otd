@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Nihonium (Nh) — real density 16 g/cm³. V = M/ρ = 286.0/16 = 17.9 cm³ per mole.
+scene "Nihonium Molar Volume Cube"
+
+mole_cube = cube 2.61cm color: #ff3060 at (0, 1.31cm, 0)
+# one mole of atoms: 6.022e23 atoms of Nihonium, 286.0 g, drawn at true scale

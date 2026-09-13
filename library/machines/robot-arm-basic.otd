@@ -1,0 +1,12 @@
+# A six-joint robot arm with sphere joints and capsule links.
+scene "Robot Arm"
+
+material: steel
+baseR = cylinder(r: 9cm, h: 3cm) color: dimgray
+columnR = cylinder(r: 3.5cm, h: 30cm) at (0, 3cm, 0)
+shoulderR = sphere(r: 4.5cm) at (0, 33cm, 0) color: gold
+lowerR = capsule(r: 3cm, h: 28cm) rotate (0, 0, -60deg) at (0, 36cm, 0)
+elbowR = sphere(r: 4cm) at (14cm, 48cm, 0) color: gold
+upperR = capsule(r: 2.5cm, h: 24cm) rotate (0, 0, -25deg) at (12cm, 52cm, 0)
+wristR = sphere(r: 3cm) at (24cm, 62cm, 0) color: gold
+ask "how many objects?"

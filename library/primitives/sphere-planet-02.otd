@@ -1,0 +1,6 @@
+# A planet with one moon in orbit position.
+scene "Planet & Moon 2"
+
+planet = sphere(r: 3.6cm) color: silver
+moon1 = sphere(r: 6.5mm) at (6cm, 0, 0) color: silver
+ask "how many objects?"

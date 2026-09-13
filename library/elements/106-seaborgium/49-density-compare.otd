@@ -1,0 +1,7 @@
+# Density Compare
+# Seaborgium (Sg) — real density 35 g/cm³. equal masses: Seaborgium vs water — sides ∝ (1/ρ)^(1/3).
+scene "Seaborgium Density Compare"
+
+element_cube = cube 6.1mm color: #80a0ff at (-20mm, 3.1mm, 0)
+water_cube = cube 20mm material: water at (18mm, 10mm, 0)
+# both cubes weigh the same: about 279.2 g — the water cube is the reference

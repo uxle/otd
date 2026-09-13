@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Cerium (Ce) — real density 6.77 g/cm³. V = M/ρ = 140.12/6.77 = 20.7 cm³ per mole.
+scene "Cerium Molar Volume Cube"
+
+mole_cube = cube 2.75cm color: #ffd1d1 at (0, 1.37cm, 0)
+# one mole of atoms: 6.022e23 atoms of Cerium, 140.12 g, drawn at true scale

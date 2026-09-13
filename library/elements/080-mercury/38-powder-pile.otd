@@ -1,0 +1,5 @@
+# Powder Pile
+# Mercury (Hg) — real density 13.534 g/cm³. a poured heap.
+scene "Mercury Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) material: mercury

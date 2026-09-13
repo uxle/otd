@@ -1,0 +1,6 @@
+# Molar Volume Cube
+# Vanadium (V) — real density 6.11 g/cm³. V = M/ρ = 50.942/6.11 = 8.3 cm³ per mole.
+scene "Vanadium Molar Volume Cube"
+
+mole_cube = cube 2.03cm color: #a6a6ab at (0, 1.01cm, 0)
+# one mole of atoms: 6.022e23 atoms of Vanadium, 50.942 g, drawn at true scale

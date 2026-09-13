@@ -1,0 +1,7 @@
+# Sample Cylinder
+# Tungsten (W) — real density 19.25 g/cm³. rod format, like lab stock.
+scene "Tungsten Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) material: tungsten
+ask "mass?"
+simulate: drop

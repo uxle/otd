@@ -1,0 +1,8 @@
+# Electron Shells
+# Nitrogen (N) — real density 0.00125 g/cm³. configuration [He] 2s2 2p3.
+scene "Nitrogen Electron Shells"
+
+define electron = sphere 1mm color: #ffffff
+nucleus = sphere 2.5mm color: #3050f8
+shell1 = ring(n: 2, radius: 5mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)
+shell2 = ring(n: 5, radius: 10mm) electron rotate (0, a, 0) at (0, 0.5mm, 0)

@@ -1,0 +1,7 @@
+# A coiled titanium spring.
+scene "Titanium Spring"
+
+material: titanium
+spring = helix(radius: 2cm, pitch: 0.7cm, turns: 6.9, tube: 2.3mm)
+ask "mass?"
+ask "inertia?"

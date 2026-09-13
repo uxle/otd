@@ -1,0 +1,6 @@
+# Sample Sphere
+# Rhodium (Rh) — real density 12.41 g/cm³. 5 mm radius ball.
+scene "Rhodium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #c0c0c0 at (0, 5mm, 0)
+simulate: drop

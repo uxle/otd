@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Thulium (Tm) — real density 9.32 g/cm³. rod format, like lab stock.
+scene "Thulium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #8ccbe0
+simulate: drop

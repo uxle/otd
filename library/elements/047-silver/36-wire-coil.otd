@@ -1,0 +1,5 @@
+# Wire Coil
+# Silver (Ag) — real density 10.49 g/cm³. conductors wind into coils; insulators stay straight.
+scene "Silver Wire Coil"
+
+wire_coil = helix(radius: 9mm, pitch: 4mm, turns: 5, tube: 1.2mm) material: silver

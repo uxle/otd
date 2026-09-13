@@ -1,0 +1,5 @@
+# Powder Pile
+# Scandium (Sc) — real density 2.985 g/cm³. a poured heap.
+scene "Scandium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #ffe08a

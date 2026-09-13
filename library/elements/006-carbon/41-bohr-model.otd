@@ -1,0 +1,8 @@
+# Bohr Model
+# Carbon (C) — real density 2.267 g/cm³. nucleus + first shells, tilted for depth.
+scene "Carbon Bohr Model"
+
+define electron = sphere 1.1mm color: #ffffff
+nucleus = sphere 3mm color: #909090
+orb1 = ring(n: 2, radius: 6mm) electron rotate (0, a, 0)
+orb2 = ring(n: 4, radius: 12mm) electron rotate (0, a, 0)

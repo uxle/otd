@@ -1,0 +1,5 @@
+# Granules
+# Rhenium (Re) — real density 21.02 g/cm³. small pieces scatter like real granules.
+scene "Rhenium Granules"
+
+granules = scatter(n: 16, radius: 20mm, seed: 75) sphere 2.5mm color: #d4a0a0

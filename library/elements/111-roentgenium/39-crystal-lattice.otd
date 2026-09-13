@@ -1,0 +1,5 @@
+# Crystal Lattice
+# Roentgenium (Rg) — real density 28.7 g/cm³. simple cubic lattice — packing 50% vs close-packed 74%.
+scene "Roentgenium Crystal Lattice"
+
+lattice = grid(nx: 3, nz: 3, spacing: (8mm, 8mm)) sphere 2.5mm color: #ff2060

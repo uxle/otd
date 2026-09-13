@@ -1,0 +1,7 @@
+# Drop Test
+# Argon (Ar) — real density 0.0018 g/cm³. v = √(2gh) — watch the physics console.
+scene "Argon Drop Test"
+
+# gases cannot be dropped as a solid — a puff of Argon drifts instead
+puff = sphere 14mm scale (1, 0.6, 1) color: #80d1e3 at (0, 60mm, 0)
+simulate: drop

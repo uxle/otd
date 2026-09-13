@@ -1,0 +1,7 @@
+# A plastic cube dropped into water — floats or sinks?
+scene "Float Test 2"
+
+tank = plane(w: 25cm, d: 25cm, t: 2mm) color: deepskyblue
+test = cube(w: 5cm, d: 5cm, h: 5cm) at (0, 12cm, 0) material: plastic
+simulate: float
+ask "will it float?"

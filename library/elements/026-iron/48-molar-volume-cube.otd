@@ -1,0 +1,7 @@
+# Molar Volume Cube
+# Iron (Fe) — real density 7.874 g/cm³. V = M/ρ = 55.845/7.874 = 7.1 cm³ per mole.
+scene "Iron Molar Volume Cube"
+
+mole_cube = cube 1.92cm material: iron at (0, 0.96cm, 0)
+ask "mass?"
+# one mole of atoms: 6.022e23 atoms of Iron, 55.845 g, drawn at true scale

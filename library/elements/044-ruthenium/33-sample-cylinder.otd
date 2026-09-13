@@ -1,0 +1,6 @@
+# Sample Cylinder
+# Ruthenium (Ru) — real density 12.45 g/cm³. rod format, like lab stock.
+scene "Ruthenium Sample Cylinder"
+
+sample_cylinder = cylinder(r: 5mm, h: 16mm) color: #a0c0c0
+simulate: drop

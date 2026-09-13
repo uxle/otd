@@ -1,0 +1,5 @@
+# Crystal Lattice
+# Zinc (Zn) — real density 7.14 g/cm³. simple cubic lattice — packing 50% vs close-packed 74%.
+scene "Zinc Crystal Lattice"
+
+lattice = grid(nx: 3, nz: 3, spacing: (8mm, 8mm)) sphere 2.5mm material: zinc

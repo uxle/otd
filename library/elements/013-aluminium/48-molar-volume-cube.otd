@@ -1,0 +1,7 @@
+# Molar Volume Cube
+# Aluminium (Al) — real density 2.7 g/cm³. V = M/ρ = 26.982/2.7 = 10.0 cm³ per mole.
+scene "Aluminium Molar Volume Cube"
+
+mole_cube = cube 2.15cm material: aluminum at (0, 1.08cm, 0)
+ask "mass?"
+# one mole of atoms: 6.022e23 atoms of Aluminium, 26.982 g, drawn at true scale

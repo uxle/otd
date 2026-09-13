@@ -1,0 +1,6 @@
+# Sample Sphere
+# Roentgenium (Rg) — real density 28.7 g/cm³. 5 mm radius ball.
+scene "Roentgenium Sample Sphere"
+
+sample_sphere = sphere 5mm color: #ff2060 at (0, 5mm, 0)
+simulate: drop

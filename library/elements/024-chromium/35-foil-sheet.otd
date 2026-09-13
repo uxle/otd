@@ -1,0 +1,6 @@
+# Foil Sheet
+# Chromium (Cr) — real density 7.19 g/cm³. 0.1 mm foil.
+scene "Chromium Foil Sheet"
+
+foil = cube(w: 50mm, d: 50mm, h: 0.2mm) material: chrome at (0, 0.1mm, 0)
+ask "mass?"

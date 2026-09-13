@@ -1,0 +1,5 @@
+# Powder Pile
+# Nihonium (Nh) — real density 16 g/cm³. a poured heap.
+scene "Nihonium Powder Pile"
+
+powder_pile = sphere 24mm scale (1, 0.32, 1) color: #ff3060
