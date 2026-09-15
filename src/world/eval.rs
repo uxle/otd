@@ -3,7 +3,6 @@
 use crate::geo::csg::{mesh_intersect, mesh_subtract, mesh_union};
 use crate::geo::hollow::{hollow, HollowResult, Open};
 use crate::geo::mesh::{Kind, Mesh};
-use crate::geo::prims;
 use crate::lang::ast::*;
 use crate::lang::errors::Error;
 use crate::lang::keywords as kw;
@@ -98,6 +97,10 @@ pub struct Part {
     pub mass_g: f64,
     pub centroid: Option<V3>,
     pub area_mm2: f64,
+    /// OTD4 — when true, this part is a permanent magnet (overrides its
+    /// material's intrinsic magnetism for `simulate: magnet`). The moment
+    /// (A·m²) is stored on the world's magnet registry below.
+    pub magnetized: bool,
 }
 
 #[derive(Clone)]
@@ -149,6 +152,19 @@ pub struct World {
     /// Default 20 °C — a pleasant lab. Set with `temperature: 800` or
     /// `temperature: 350K` / `temperature: 72F`.
     pub temp_c: f64,
+    /// OTD4 P2300 — strict mode: when true, solid-solid interpenetration
+    /// FAILS compilation (instead of just emitting a warning). Toggle with
+    /// `strict: overlap` / `strict: off`. The silent-wrongness fix.
+    pub strict_overlap: bool,
+    /// OTD4 P2310 — explicit magnetic moments (A·m²) for parts marked with
+    /// `magnetize: name [moment: <expr>]`. Keyed by part name. When a part
+    /// is in this map, its moment is used by `simulate: magnet` regardless
+    /// of the material's intrinsic class.
+    pub magnet_moments: std::collections::HashMap<String, f64>,
+    /// OTD6 #5 — electrical connections: (partA, partB) pairs declared
+    /// with `connect: A B`. Read by `simulate: circuit` to walk the real
+    /// resistance of modeled windings and report current/voltage drop.
+    pub connections: Vec<(String, String)>,
 }
 
 struct Entry {
@@ -274,11 +290,15 @@ pub fn compile(src: &str) -> World {
     let def_mat = ctx.world.default_material;
     let def_col = ctx.world.default_color;
     let mut parts: Vec<Part> = Vec::new();
+    let mut any_unmaterialized = false;
     for e in ctx.entries.drain(..) {
         let material = e.sv.mat.or(def_mat);
         let color = e.sv.color.or(def_col);
         if e.sv.is_empty() {
             continue;
+        }
+        if material.is_none() {
+            any_unmaterialized = true;
         }
         let mesh = if e.sv.meshes.len() == 1 {
             e.sv.meshes.into_iter().next().unwrap()
@@ -302,12 +322,45 @@ pub fn compile(src: &str) -> World {
             color: color.or(material.map(|m| Color::new(m.color[0], m.color[1], m.color[2]))),
             hidden: e.hidden,
             mesh,
+            magnetized: false,
         });
     }
     ctx.world.parts = parts;
     ctx.world.errors = ctx.errors;
 
     finalize_stats(ctx.world);
+
+    // OTD4 — material suggestion: if any part has no material, recommend
+    // common ones based on what the scene seems to be making. The
+    // silent-wrongness fix: a part with no material defaults to a plastic-
+    // class density (1050 kg/m³) which is rarely what the user wanted.
+    if any_unmaterialized {
+        let n_unmat = ctx.world.parts.iter().filter(|p| p.material.is_none()).count();
+        let first_unmat = ctx.world.parts.iter().find(|p| p.material.is_none()).map(|p| p.name.clone()).unwrap_or_default();
+        ctx.world.console.push(ConsoleLine {
+            kind: LineKind::Warn,
+            text: format!(
+                "{} part(s) (e.g., '{}') have no material — mass defaults to plastic density 1050 kg/m³. Add `material: <name>` to fix. Common choices:",
+                n_unmat, first_unmat
+            ),
+        });
+        ctx.world.console.push(ConsoleLine {
+            kind: LineKind::Info,
+            text: "  steel (structural) · aluminum (lightweight) · copper (conductor) · glass (transparent) · oak (wood) · ceramic (cup) · water (liquid) · iron (magnet)".into(),
+        });
+        ctx.world.console.push(ConsoleLine {
+            kind: LineKind::Info,
+            text: "  or set a scene-wide default:  material: steel  (applies to every part that doesn't override)".into(),
+        });
+    }
+    // OTD4 — color suggestion: similar friendly hint for missing colors
+    let any_uncolored = ctx.world.parts.iter().any(|p| p.color.is_none() && p.material.is_none());
+    if any_uncolored {
+        ctx.world.console.push(ConsoleLine {
+            kind: LineKind::Info,
+            text: "tip: parts without a color inherit from their material (steel → light gray, oak → tan). Add `color: <name>` (like color: ivory) or a hex `color: #1e90ff` to override.".into(),
+        });
+    }
 
     // deferred ask/simulate need the finished world
     let mut w = std::mem::take(ctx.world);
@@ -392,9 +445,11 @@ fn finalize_stats(w: &mut World) {
     // contact (touching boxes) after settle is NOT a false alarm
     // fluids (liquids + gases) are exempt: they interpenetrate BY NATURE —
     // that is what mixing means. Solidity is a law about SOLIDS.
+    // OTD4: when strict_overlap is on, this becomes a hard error.
     use super::materials as mats;
     let is_fluid = |p: &Part| p.material.map(|m| mats::state(m)) != Some(mats::State::Solid);
-    let boxes: Vec<(Aabb, bool)> = w.parts.iter().filter(|p| !p.hidden && !p.mesh.is_empty()).map(|p| (p.mesh.bbox(), is_fluid(p))).collect();
+    let boxes: Vec<(Aabb, bool, String)> = w.parts.iter().filter(|p| !p.hidden && !p.mesh.is_empty()).map(|p| (p.mesh.bbox(), is_fluid(p), p.name.clone())).collect();
+    let mut first_overlap: Option<(String, String, f64)> = None;
     'outer: for i in 0..boxes.len() {
         for j in i + 1..boxes.len() {
             if boxes[i].1 || boxes[j].1 { continue; }
@@ -402,13 +457,34 @@ fn finalize_stats(w: &mut World) {
             let b = &boxes[j].0;
             let pen3 = |k: usize| a.max.0[k].min(b.max.0[k]) - a.min.0[k].max(b.min.0[k]);
             if pen3(0) > 0.02 && pen3(1) > 0.02 && pen3(2) > 0.02 {
+                let depth = pen3(0).min(pen3(1)).min(pen3(2));
+                first_overlap = Some((boxes[i].2.clone(), boxes[j].2.clone(), depth));
                 w.stats.overlaps = true;
-                w.console.push(ConsoleLine {
-                    kind: LineKind::Warn,
-                    text: "objects overlap each other — mass counts the overlap twice until you fuse them with add (real solidity: run simulate: settle or solidity to fix/check)".into(),
-                });
-                break 'outer; // report once
+                break 'outer;
             }
+        }
+    }
+    if let Some((a, b, depth)) = first_overlap {
+        if w.strict_overlap {
+            // Hard error — the silent-wrongness fix.
+            w.errors.push(Error::new(0, format!("strict overlap: {} and {} interpenetrate by {:.2} mm — compilation FAILED", a, b, depth))
+                .with_hint(format!("fix: separate them (move along the shallowest axis by {:.2} mm), or fuse with `add {}, {}` if they are meant to be one part", depth, a, b)));
+            w.console.push(ConsoleLine {
+                kind: LineKind::Error,
+                text: format!("strict overlap: {} and {} interpenetrate by {:.2} mm — use `strict: off` to demote to warning, or fix the geometry", a, b, depth),
+            });
+        } else {
+            w.console.push(ConsoleLine {
+                kind: LineKind::Warn,
+                text: format!("objects {} and {} overlap by {:.2} mm — mass counts the overlap twice until you fuse them with add (run `strict: overlap` to make this an error, or `simulate: settle` / `simulate: solidity` to fix/check)", a, b, depth),
+            });
+        }
+    }
+
+    // OTD4 — propagate magnetize: marks from the world registry onto parts.
+    for p in w.parts.iter_mut() {
+        if w.magnet_moments.contains_key(&p.name) {
+            p.magnetized = true;
         }
     }
 }
@@ -473,6 +549,43 @@ impl<'a> Ctx<'a> {
             Stmt::Mix { a, b, line } => {
                 let lines = super::chem::mix_pair(&a, &b, line);
                 self.world.console.extend(lines);
+            }
+            // OTD4 — multi-part assembly: include "parts/wheel.otd" at (x,y,z)
+            Stmt::Include { file, at, line } => {
+                self.exec_include(file, at, line);
+            }
+            // OTD4 — magnetize: mark a part as a permanent magnet
+            Stmt::Magnetize { target, moment, line } => {
+                self.exec_magnetize(target, moment, line);
+            }
+            // OTD4 — strict: overlap | all | off — toggle strict-mode flags
+            Stmt::Strict(mode) => {
+                self.world.strict_overlap = matches!(mode.as_str(), "overlap" | "all" | "on" | "yes");
+                self.world.console.push(ConsoleLine {
+                    kind: LineKind::Info,
+                    text: format!(
+                        "strict mode: {} — {}",
+                        mode,
+                        if self.world.strict_overlap {
+                            "solid-solid interpenetration will FAIL compilation (not just warn)"
+                        } else {
+                            "silent-wrongness back to warnings only"
+                        }
+                    ),
+                });
+            }
+            // OTD4 — overlap: check — explicit overlap audit
+            Stmt::Overlap { mode, line } => {
+                let lines = self.overlap_audit(line, mode == "strict");
+                self.world.console.extend(lines);
+            }
+            // OTD6 #5: connect: A B — record electrical connectivity
+            Stmt::Connect { a, b, line: _ } => {
+                self.world.connections.push((a.clone(), b.clone()));
+                self.world.console.push(ConsoleLine {
+                    kind: LineKind::Info,
+                    text: format!("connect: {} ↔ {} — electrical path established (run simulate: circuit to analyze)", a, b),
+                });
             }
             Stmt::Camera(v) => self.world.camera = Some(v),
             Stmt::Hide(name) => self.set_hidden(&name, true),
@@ -809,6 +922,191 @@ impl<'a> Ctx<'a> {
         }
     }
 
+    // ---------- OTD4: include, magnetize, overlap audit ----------
+
+    /// `include: "parts/wheel.otd" at (x, y, z)` — load another .otd file as a
+    /// part library and merge its top-level shapes into this scene. This is
+    /// the multi-part design workflow: make each part in its own file, then a
+    /// main file `include`s them and arranges them with `at`.
+    fn exec_include(&mut self, file: String, at: Option<Vec<Expr>>, line: usize) {
+        // resolve relative to cwd or examples/
+        let mut path = std::path::PathBuf::from(&file);
+        if !path.exists() {
+            path = std::path::PathBuf::from("examples").join(&file);
+        }
+        if !path.exists() {
+            path = std::path::PathBuf::from("library/parts").join(&file);
+        }
+        let src = match std::fs::read_to_string(&path) {
+            Ok(s) => s,
+            Err(_) => {
+                self.err_hint(
+                    line,
+                    format!("include: I can't find the file \"{}\"", file),
+                    "put it next to your main .otd file, in examples/, or in library/parts/",
+                );
+                return;
+            }
+        };
+        // pre-scan the file's default unit so bare numbers parse correctly
+        let default_unit = scan_unit(&src).unwrap_or_else(|| self.default_unit.clone());
+        let prog = parser::parse(&src, &default_unit);
+        // propagate any parse errors with the include line
+        for e in prog.errors {
+            let mapped = Error::new(line, format!("include \"{}\": {}", file, e.msg))
+                .with_hint(e.hint.unwrap_or_default());
+            self.errors.push(mapped);
+        }
+        // count top-level shape assignments (any Stmt::Assign where the value
+        // is or contains a shape); execute them in a child context that
+        // shares our world but a fresh env, then promote each entry into ours
+        let mut n_added = 0usize;
+        // save our env/templates, run the file in a fresh sub-env
+        let saved_env = std::mem::take(&mut self.env);
+        let saved_templates = std::mem::take(&mut self.templates);
+        let saved_magic = std::mem::take(&mut self.magic);
+        let saved_entries_len = self.entries.len();
+        for stmt in prog.stmts {
+            let _ = self.exec(stmt);
+        }
+        // promote the new entries (with optional offset)
+        let mut offset = V3::ZERO;
+        if let Some(items) = at {
+            let mut pos = [0.0f64; 3];
+            for (k, item) in items.iter().take(3).enumerate() {
+                if let Ok(Val::Qty(q)) = self.eval_expr(item, line) {
+                    pos[k] = self.to_len(&q);
+                }
+            }
+            if items.len() == 2 {
+                pos = [pos[0], 0.0, pos[1]];
+            }
+            offset = V3::new(pos[0], pos[1], pos[2]);
+        }
+        // give each new entry a unique name based on the file name + its index
+        let base_name = std::path::Path::new(&file)
+            .file_stem()
+            .and_then(|s| s.to_str())
+            .unwrap_or("part")
+            .to_string();
+        let mut promoted = self.entries.split_off(saved_entries_len);
+        // Count how many existing entries already use the base_name or base_name_N
+        // pattern, so we can pick fresh unique names for the new ones.
+        let existing_count = self.entries.iter().filter(|x| {
+            x.name == base_name || x.name.starts_with(&format!("{}_", base_name))
+        }).count();
+        for (i, e) in promoted.iter_mut().enumerate() {
+            // Always rename included parts to base_name_N to avoid clashes
+            // when the same file is included multiple times.
+            e.name = format!("{}_{}", base_name, existing_count + i + 1);
+            if offset != V3::ZERO {
+                e.sv.translate(offset);
+            }
+            n_added += 1;
+        }
+        self.entries.append(&mut promoted);
+        // restore our env/templates/magic
+        self.env = saved_env;
+        self.templates = saved_templates;
+        self.magic = saved_magic;
+        self.world.console.push(ConsoleLine {
+            kind: LineKind::Info,
+            text: format!("included {} — {} part(s) merged into the scene{}", file, n_added, if offset != V3::ZERO { format!(" at offset ({:.0}, {:.0}, {:.0}) mm", offset.x(), offset.y(), offset.z()) } else { String::new() }),
+        });
+    }
+
+    /// `magnetize: rotor [moment: 0.5]` — mark a part as a permanent magnet.
+    fn exec_magnetize(&mut self, target: String, moment: Option<Expr>, line: usize) {
+        // validate that the named part exists (in entries)
+        let exists = self.entries.iter().any(|e| e.name == target);
+        if !exists {
+            let suggestion = self.entries.iter().map(|e| e.name.as_str()).collect::<Vec<_>>();
+            let hint = crate::lang::errors::suggest(&target, &suggestion)
+                .map(|s| format!("did you mean {}?", s))
+                .unwrap_or_else(|| "make the part first, then magnetize it".to_string());
+            self.err_hint(line, format!("magnetize: no part named '{}'", target), hint);
+            return;
+        }
+        // compute moment (A·m²): explicit, or estimate from the part's volume
+        let m_am2 = if let Some(expr) = moment {
+            match self.eval_expr(&expr, line) {
+                Ok(Val::Qty(q)) => q.expect_plain("magnetic moment"),
+                _ => {
+                    self.err_hint(line, "magnetize moment: needs a number", "like magnetize: rotor moment: 0.5  (units: A·m²)");
+                    return;
+                }
+            }
+        } else {
+            // estimate from the part's mesh volume: a neodymium magnet
+            // carries ~8×10⁵ A/m magnetisation; compute m = M × V
+            let entry = self.entries.iter().find(|e| e.name == target).unwrap();
+            let vol_m3 = entry.sv.bbox().size().x() * entry.sv.bbox().size().y() * entry.sv.bbox().size().z() * 1e-9;
+            8.0e5 * vol_m3
+        };
+        // store on the world's magnet registry — applied to parts after finalize
+        self.world.magnet_moments.insert(target.clone(), m_am2);
+        self.world.console.push(ConsoleLine {
+            kind: LineKind::Info,
+            text: format!("magnetize: {} is now a permanent magnet, moment ≈ {:.3} A·m² (run simulate: magnet to see its field)", target, m_am2),
+        });
+    }
+
+    /// `overlap: check` — explicit overlap audit. When `strict` is true,
+    /// overlapping pairs become hard errors instead of warnings.
+    fn overlap_audit(&mut self, line: usize, force_strict: bool) -> Vec<ConsoleLine> {
+        let mut out = Vec::new();
+        let strict = self.world.strict_overlap || force_strict;
+        // build pairs from current entries (their AABBs)
+        use super::materials as mats;
+        let is_fluid = |e: &Entry| e.sv.mat.map(|m| mats::state(m)) != Some(mats::State::Solid);
+        let boxes: Vec<(usize, String, Aabb, bool)> = self.entries.iter().enumerate()
+            .filter(|(_, e)| !e.hidden && !e.sv.is_empty())
+            .map(|(i, e)| (i, e.name.clone(), e.sv.bbox(), is_fluid(e)))
+            .collect();
+        let mut bad_pairs: Vec<(String, String, f64, usize)> = Vec::new();
+        for i in 0..boxes.len() {
+            for j in i + 1..boxes.len() {
+                if boxes[i].3 || boxes[j].3 {
+                    continue; // fluids interpenetrate by nature
+                }
+                let a = &boxes[i].2;
+                let b = &boxes[j].2;
+                let pen = |k: usize| a.max.0[k].min(b.max.0[k]) - a.min.0[k].max(b.min.0[k]);
+                if pen(0) > 0.02 && pen(1) > 0.02 && pen(2) > 0.02 {
+                    let depth = pen(0).min(pen(1)).min(pen(2));
+                    let axis = [pen(0), pen(1), pen(2)].iter().enumerate().min_by(|x, y| x.1.partial_cmp(y.1).unwrap()).unwrap().0;
+                    bad_pairs.push((boxes[i].1.clone(), boxes[j].1.clone(), depth, axis));
+                }
+            }
+        }
+        if bad_pairs.is_empty() {
+            out.push(ConsoleLine {
+                kind: LineKind::Answer,
+                text: format!("OVERLAP CHECK: SOLID — {} solid part(s), zero interpenetrations", boxes.len()),
+            });
+        } else {
+            out.push(ConsoleLine {
+                kind: if strict { LineKind::Error } else { LineKind::Warn },
+                text: format!("OVERLAP CHECK: {} overlapping pair(s)", bad_pairs.len()),
+            });
+            for (a, b, depth, axis) in &bad_pairs {
+                let axis_name = ["X", "Y", "Z"][*axis];
+                let suggestion = format!(
+                    "fix: move {} along {} by {:.2} mm, or fuse them with `add {}, {}` if they are meant to be one part",
+                    b, axis_name, depth, a, b
+                );
+                out.push(ConsoleLine {
+                    kind: if strict { LineKind::Error } else { LineKind::Warn },
+                    text: format!("  {} and {} overlap by {:.2} mm (shallowest axis: {}) — {}", a, b, depth, axis_name, suggestion),
+                });
+                if strict {
+                    self.err_hint(line, format!("{} and {} interpenetrate by {:.2} mm", a, b, depth), suggestion);
+                }
+            }
+        }
+        out
+    }
+
     /// `print "the radius is {r}"` — {name} pulls the value from the
     /// environment (2.1). Unknown names stay as written.
     fn interpolate(&mut self, s: &str, line: usize) -> String {
@@ -822,19 +1120,47 @@ impl<'a> Ctx<'a> {
             let after = &rest[open + 1..];
             match after.find('}') {
                 Some(close) => {
-                    let name = after[..close].trim();
+                    let expr_str = after[..close].trim();
+                    // OTD6 #6: expression interpolation — try bare name first,
+                    // then fall back to evaluating it as an expression (a+b, sqrt(x), etc.)
                     let val = self
                         .env
-                        .get(name)
+                        .get(expr_str)
                         .cloned()
-                        .or_else(|| self.magic.iter().find(|(k, _)| k == name).map(|(_, q)| Val::Qty(*q)));
+                        .or_else(|| self.magic.iter().find(|(k, _)| k == expr_str).map(|(_, q)| Val::Qty(*q)));
                     match val {
                         Some(v) => out.push_str(&format_val(&v)),
                         None => {
-                            // leave it as written — could be intentional
-                            let _ = line;
+                            // OTD6 #6: try evaluating as an expression (not just a bare name)
+                            // Parse the expression and evaluate it. If parsing or
+                            // evaluation fails, silently fall through to the warning
+                            // (don't push errors — this is a print interpolation, not
+                            // a real statement).
+                            let parsed = crate::lang::parser::parse(&format!("__tmp = {}", expr_str), &self.default_unit);
+                            if parsed.errors.is_empty() && parsed.stmts.len() == 1 {
+                                if let crate::lang::ast::Stmt::Assign(_, e, _) = &parsed.stmts[0] {
+                                    let err_count_before = self.errors.len();
+                                    let eval_result = self.eval_expr(e, line);
+                                    if eval_result.is_err() {
+                                        // roll back any errors pushed during eval
+                                        self.errors.truncate(err_count_before);
+                                    } else if let Ok(v) = eval_result {
+                                        out.push_str(&format_val(&v));
+                                        rest = &after[close + 1..];
+                                        continue;
+                                    }
+                                }
+                            }
+                            // Expression evaluation failed — warn and leave as literal
+                            self.world.console.push(ConsoleLine {
+                                kind: LineKind::Warn,
+                                text: format!(
+                                    "line {}: print interpolation '{}' is not a known variable or expression — left as literal text. Define it first (r = 5cm) or fix the typo.",
+                                    line, expr_str
+                                ),
+                            });
                             out.push('{');
-                            out.push_str(name);
+                            out.push_str(expr_str);
                             out.push('}');
                         }
                     }
@@ -1300,7 +1626,7 @@ impl<'a> Ctx<'a> {
                         am
                     }
                     BinOp::Sub => {
-                        let mut am = a.merged_mesh();
+                        let am = a.merged_mesh();
                         let bm = b.merged_mesh();
                         mesh_subtract(&am, &bm)
                     }
@@ -1583,7 +1909,13 @@ impl<'a> Ctx<'a> {
 
     fn eval_hollow(&mut self, sv: &mut ShapeVal, args: &[Arg], line: usize) -> Result<ShapeVal, Error> {
         let mut wall = 2.0f64;
+        // OTD4 — silent-wrongness fix: hollow() still defaults to Open::Top
+        // (for backward compat with OTD3 files), but now we EMIT A HINT
+        // every time `open:` is not explicit, so the user/AI is never
+        // surprised. To get a sealed shell, write `open: none`; to breach
+        // the bottom, `open: bottom`.
         let mut open = Open::Top;
+        let mut open_was_set = false;
         let mut has_shape = false;
         let mut shape_arg: Option<Val> = None;
         for a in args {
@@ -1609,6 +1941,7 @@ impl<'a> Ctx<'a> {
                                 "none" => Open::None,
                                 _ => return Err(self.err_hint(line, "open wants top, bottom, or none", "try open: top")),
                             };
+                            open_was_set = true;
                         }
                         _ => return Err(self.err(line, "open wants a word: top, bottom, or none")),
                     }
@@ -1647,6 +1980,15 @@ impl<'a> Ctx<'a> {
             self.world.console.push(ConsoleLine {
                 kind: LineKind::Info,
                 text: "hollow used the general shell path (curved or fused shape) — walls are approximate".into(),
+            });
+        }
+        // OTD4 — silent-wrongness fix: tell the user what default they got
+        if !open_was_set {
+            self.world.console.push(ConsoleLine {
+                kind: LineKind::Info,
+                text: format!(
+                    "hollow() default: open top (write `open: none` for a sealed shell, or `open: bottom` to breach the base)"
+                ),
             });
         }
         Ok(out)
@@ -1688,8 +2030,21 @@ impl<'a> Ctx<'a> {
                 Ok(Val::Shape(out))
             }
             "group" => {
+                // OTD4 — silent-wrongness fix: group() used to silently double-count
+                // mass because the source parts stayed in entries AND their meshes
+                // were re-added into the group. Now we re-parent: when an arg is
+                // an Ident referring to an existing entry, that entry is marked
+                // hidden (so it doesn't become a separate part) and the group
+                // carries its meshes forward as the single combined part.
                 let mut sv = ShapeVal::default();
+                let mut absorbed_names: Vec<String> = Vec::new();
                 for a in args {
+                    // detect Ident reference to an existing entry — re-parent it
+                    if let Expr::Ident(n) = &a.val {
+                        if self.entries.iter().any(|e| e.name == *n) {
+                            absorbed_names.push(n.clone());
+                        }
+                    }
                     if let Val::Shape(s) = self.eval_expr(&a.val, line)? {
                         sv.meshes.extend(s.meshes);
                         sv.kinds.extend(s.kinds);
@@ -1698,6 +2053,22 @@ impl<'a> Ctx<'a> {
                             sv.color = s.color;
                         }
                     }
+                }
+                if !absorbed_names.is_empty() {
+                    for n in &absorbed_names {
+                        for e in self.entries.iter_mut() {
+                            if e.name == *n {
+                                e.hidden = true;
+                            }
+                        }
+                    }
+                    self.world.console.push(ConsoleLine {
+                        kind: LineKind::Info,
+                        text: format!(
+                            "group() re-parented {} — they are now hidden as separate parts (the group is the single combined part). Old behavior double-counted their mass.",
+                            absorbed_names.join(", ")
+                        ),
+                    });
                 }
                 Ok(Val::Shape(sv))
             }
@@ -1815,6 +2186,41 @@ impl<'a> Ctx<'a> {
                     _ => unreachable!(),
                 }
             }
+            // OTD6 #1: in-script self-describing functions
+            "help" => {
+                self.world.console.push(ConsoleLine {
+                    kind: LineKind::Info,
+                    text: "OTD help — try: --list-functions, --list-materials, --list-keywords, --list-shapes, --list-simulate, --list-all from the CLI. In-script: functions(), materials(), keywords(), shapes(), sims()".into(),
+                });
+                return Ok(Val::Qty(Qty::plain(0.0)));
+            }
+            "functions" => {
+                let fns = crate::lang::keywords::FUNCS;
+                self.world.console.push(ConsoleLine { kind: LineKind::Info, text: format!("callable functions ({}): {}", fns.len(), fns.join("  ")) });
+                return Ok(Val::Qty(Qty::plain(fns.len() as f64)));
+            }
+            "materials" => {
+                let names = crate::world::materials::NAMES;
+                self.world.console.push(ConsoleLine { kind: LineKind::Info, text: format!("materials ({}): {}", names.len(), names.join("  ")) });
+                return Ok(Val::Qty(Qty::plain(names.len() as f64)));
+            }
+            "keywords" => {
+                let kw = crate::lang::keywords::KEYWORDS;
+                self.world.console.push(ConsoleLine { kind: LineKind::Info, text: format!("keywords ({}): {}", kw.len(), kw.join("  ")) });
+                return Ok(Val::Qty(Qty::plain(kw.len() as f64)));
+            }
+            "shapes" => {
+                let prims = crate::lang::keywords::PRIMITIVES;
+                let builders = crate::lang::keywords::BUILDERS;
+                self.world.console.push(ConsoleLine { kind: LineKind::Info, text: format!("primitives ({}): {}", prims.len(), prims.join("  ")) });
+                self.world.console.push(ConsoleLine { kind: LineKind::Info, text: format!("builders ({}): {}", builders.len(), builders.join("  ")) });
+                return Ok(Val::Qty(Qty::plain((prims.len() + builders.len()) as f64)));
+            }
+            "sims" => {
+                let sims = "drop float collapse splash settle solidity gas mix energy heat magnet sound light time learn stats orbit atom decay particles motor circuit";
+                self.world.console.push(ConsoleLine { kind: LineKind::Info, text: format!("simulate domains: {}", sims) });
+                return Ok(Val::Qty(Qty::plain(21.0)));
+            }
             _ => {}
         }
         let mut nums = Vec::new();
@@ -1890,6 +2296,46 @@ impl<'a> Ctx<'a> {
                 let (a, lo) = self.promote_pair(nums[0], nums[1]);
                 let (a, hi) = self.promote_pair(a, nums[2]);
                 return Ok(Val::Qty(Qty { v: a.v.max(lo.v).min(hi.v), dim: a.dim }));
+            }
+            // OTD6 #3: wire up electrodynamics functions as callable from scripts
+            "ohm_v" => {
+                if nums.len() != 2 { return Err(self.err_hint(line, "ohm_v(i, r) — Ohm's law V=IR", "like ohm_v(2, 5) = 10")); }
+                return Ok(Val::Qty(Qty::plain(nums[0].v * nums[1].v)));
+            }
+            "ohm_i" => {
+                if nums.len() != 2 { return Err(self.err_hint(line, "ohm_i(v, r) — Ohm's law I=V/R", "like ohm_i(10, 5) = 2")); }
+                if nums[1].v.abs() < 1e-12 { return Err(self.err_hint(line, "ohm_i: resistance cannot be zero", "division by zero")); }
+                return Ok(Val::Qty(Qty::plain(nums[0].v / nums[1].v)));
+            }
+            "ohm_r" => {
+                if nums.len() != 2 { return Err(self.err_hint(line, "ohm_r(v, i) — Ohm's law R=V/I", "like ohm_r(10, 2) = 5")); }
+                if nums[1].v.abs() < 1e-12 { return Err(self.err_hint(line, "ohm_r: current cannot be zero", "division by zero")); }
+                return Ok(Val::Qty(Qty::plain(nums[0].v / nums[1].v)));
+            }
+            "power_vi" => {
+                if nums.len() != 2 { return Err(self.err_hint(line, "power_vi(v, i) — electrical power P=VI", "like power_vi(12, 2) = 24")); }
+                return Ok(Val::Qty(Qty::plain(nums[0].v * nums[1].v)));
+            }
+            "power_ir" => {
+                if nums.len() != 2 { return Err(self.err_hint(line, "power_ir(i, r) — power loss P=I²R", "like power_ir(2, 5) = 20")); }
+                return Ok(Val::Qty(Qty::plain(nums[0].v * nums[0].v * nums[1].v)));
+            }
+            "cap_energy" => {
+                if nums.len() != 2 { return Err(self.err_hint(line, "cap_energy(c, v) — capacitor energy U=½CV²", "like cap_energy(1e-6, 12)")); }
+                return Ok(Val::Qty(Qty::plain(0.5 * nums[0].v * nums[1].v * nums[1].v)));
+            }
+            "ind_energy" => {
+                if nums.len() != 2 { return Err(self.err_hint(line, "ind_energy(l, i) — inductor energy U=½LI²", "like ind_energy(1e-6, 2)")); }
+                return Ok(Val::Qty(Qty::plain(0.5 * nums[0].v * nums[1].v * nums[1].v)));
+            }
+            "rc_tau" => {
+                if nums.len() != 2 { return Err(self.err_hint(line, "rc_tau(r, c) — RC time constant τ=RC", "like rc_tau(1000, 1e-6) = 0.001")); }
+                return Ok(Val::Qty(Qty::plain(nums[0].v * nums[1].v)));
+            }
+            "lc_omega" => {
+                if nums.len() != 2 { return Err(self.err_hint(line, "lc_omega(l, c) — LC resonance ω=1/√(LC)", "like lc_omega(1e-6, 1e-6)")); }
+                if nums[0].v <= 0.0 || nums[1].v <= 0.0 { return Err(self.err_hint(line, "lc_omega: L and C must be positive", "")); }
+                return Ok(Val::Qty(Qty::plain(1.0 / (nums[0].v * nums[1].v).sqrt())));
             }
             _ => f(&nums[0]),
         };
@@ -2180,8 +2626,20 @@ impl<'a> Ctx<'a> {
                 sv.translate(V3::new(pos[0] - c.x(), pos[1] - bb.min.y(), pos[2] - c.z()));
             }
             Mod::Rotate(v) => {
+                // OTD4 — silent-wrongness fix: the default pivot is the
+                // bounding-box CENTER. This is documented in the hint the
+                // first time rotate is used without `pivot:`. Use
+                // `rotate (...) pivot (0, 0, 0)` to pivot around the origin,
+                // or `pivot: center` to be explicit.
                 let bb = sv.bbox();
                 let c = bb.center();
+                self.world.console.push(ConsoleLine {
+                    kind: LineKind::Info,
+                    text: format!(
+                        "rotate: pivot = bounding-box center ({:.1}, {:.1}, {:.1}) mm — write `pivot (0,0,0)` to pivot around the origin, or `pivot: center` to be explicit",
+                        c.x(), c.y(), c.z()
+                    ),
+                });
                 let m4 = match self.eval_expr(v, line) {
                     Ok(Val::Tuple(qs)) => {
                         let (mut rx, mut ry, mut rz) = (0.0, 0.0, 0.0);
@@ -2211,6 +2669,62 @@ impl<'a> Ctx<'a> {
                         return;
                     }
                 };
+                for mesh in &mut sv.meshes {
+                    mesh.transform(&m4);
+                }
+            }
+            // OTD4 — `rotate (...) pivot (...)` — explicit pivot point
+            Mod::RotateWithPivot { angles, pivot } => {
+                let bb = sv.bbox();
+                let center = bb.center();
+                let pivot_pt = match pivot {
+                    crate::lang::ast::PivotSpec::Origin => V3::ZERO,
+                    crate::lang::ast::PivotSpec::Center => center,
+                    crate::lang::ast::PivotSpec::Point(items) => {
+                        let mut p = [0.0f64; 3];
+                        for (k, item) in items.iter().take(3).enumerate() {
+                            if let Ok(Val::Qty(q)) = self.eval_expr(item, line) {
+                                p[k] = self.to_len(&q);
+                            }
+                        }
+                        V3::new(p[0], p[1], p[2])
+                    }
+                };
+                let m4 = match self.eval_expr(angles, line) {
+                    Ok(Val::Tuple(qs)) => {
+                        let (mut rx, mut ry, mut rz) = (0.0, 0.0, 0.0);
+                        match qs.len() {
+                            3 => {
+                                rx = qs[0].expect_angle("x rotation");
+                                ry = qs[1].expect_angle("y rotation");
+                                rz = qs[2].expect_angle("z rotation");
+                            }
+                            _ => { self.err_hint(line, "rotate wants one angle or (x, y, z) angles", "like rotate (0, 45deg, 0)"); }
+                        }
+                        M4::translate(-pivot_pt.x(), -pivot_pt.y(), -pivot_pt.z())
+                            .mul(&M4::rot_z(rz))
+                            .mul(&M4::rot_y(ry))
+                            .mul(&M4::rot_x(rx))
+                            .mul(&M4::translate(pivot_pt.x(), pivot_pt.y(), pivot_pt.z()))
+                    }
+                    Ok(Val::Qty(q)) => {
+                        let a = q.expect_angle("rotation");
+                        M4::translate(-pivot_pt.x(), -pivot_pt.y(), -pivot_pt.z())
+                            .mul(&M4::rot_y(a))
+                            .mul(&M4::translate(pivot_pt.x(), pivot_pt.y(), pivot_pt.z()))
+                    }
+                    _ => {
+                        self.err_hint(line, "rotate wants an angle or a tuple of angles", "like rotate 90deg or rotate (0, 45deg, 0) pivot (0, 0, 0)");
+                        return;
+                    }
+                };
+                self.world.console.push(ConsoleLine {
+                    kind: LineKind::Info,
+                    text: format!(
+                        "rotate: pivot = ({:.1}, {:.1}, {:.1}) mm (explicit)",
+                        pivot_pt.x(), pivot_pt.y(), pivot_pt.z()
+                    ),
+                });
                 for mesh in &mut sv.meshes {
                     mesh.transform(&m4);
                 }

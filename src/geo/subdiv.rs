@@ -54,7 +54,7 @@ fn subdivide_once(mesh: &Mesh) -> Mesh {
     }
     // odd points: one new vertex per undirected edge, memoized by key
     let mut edge_point: HashMap<(u32, u32), u32> = HashMap::new();
-    let mut odd = |e: u32,
+    let odd = |e: u32,
                    edge_point: &mut HashMap<(u32, u32), u32>,
                    out: &mut Mesh|
      -> u32 {

@@ -397,8 +397,8 @@ pub fn terrain(size: f64, height: f64, seed: u64, res: u32) -> Mesh {
         }
     }
     // base (flat at y=0) + walls
-    let (x0, x1) = (-size / 2.0, size / 2.0);
-    let (z0, z1) = (-size / 2.0, size / 2.0);
+    let (_x0, _x1) = (-size / 2.0, size / 2.0);
+    let (_z0, _z1) = (-size / 2.0, size / 2.0);
     let yb = 0.0;
     // build boundary walk explicitly (top surface boundary, CCW seen from above)
     let mut boundary: Vec<u32> = Vec::new();

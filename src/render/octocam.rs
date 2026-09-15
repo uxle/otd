@@ -132,7 +132,7 @@ pub fn render_panel(world: &World, vw: u32, vh: u32) -> Result<Vec<u8>, String> 
             out
         }
     };
-    for (i, cam) in ring.iter().enumerate() {
+    for (i, _cam) in ring.iter().enumerate() {
         let rgb = &rgbs[i];
         let col = i as u32 % 4;
         let row = i as u32 / 4;

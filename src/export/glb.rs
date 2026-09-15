@@ -68,7 +68,7 @@ pub fn to_glb(title: &str, parts: &[GlbPart], materials: &[GlbMaterial]) -> Vec<
             nor.push(n.z());
         }
         // indices
-        let mut idx: Vec<u8> = Vec::with_capacity(p.mesh.tris.len() * 6);
+        let _idx: Vec<u8> = Vec::with_capacity(p.mesh.tris.len() * 6);
         // always u32 indices
         let mut idx32: Vec<u8> = Vec::with_capacity(p.mesh.tris.len() * 12);
         for t in &p.mesh.tris {

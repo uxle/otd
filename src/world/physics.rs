@@ -68,9 +68,23 @@ pub fn simulate(kind: &str, world: &World, line: usize, g: f64) -> Vec<ConsoleLi
         "decay" | "radioactive" | "radioactivity" | "halflife" => super::atom::decay_sim(world),
         // P2250 — the Standard Model briefing: quarks, gluons, photons, neutrinos
         "particles" | "particle" | "standardmodel" | "quark" | "quarks" => super::particles::particles_sim(world),
+        // ---- OTD4 dynamics expansion (P2300 series) ----
+        // P2300 — aerodynamics: drag, lift, terminal velocity, Reynolds, Mach
+        "aero" | "aerodynamics" | "drag" | "lift" | "flight" => super::aerodynamics::aero_sim(world),
+        // P2310 — fluid dynamics: continuity, Bernoulli, Poiseuille, Stokes
+        "fluid" | "fluiddynamics" | "fluid_dynamics" | "bernoulli" | "poiseuille" => super::fluiddynamics::fluid_sim(world),
+        // P2320 — electrodynamics: Ohm, Kirchhoff, RC/RL/LC, Maxwell
+        "electro" | "electrodynamics" | "ohm" | "current" => super::electrodynamics::electro_sim(world),
+        // P2330 — stellar dynamics: N-body, virial, Jeans
+        "stellar" | "stellardynamics" | "stellar_dynamics" | "nbody" | "virial" => super::stellardynamics::stellar_sim(world),
+        // P2340 — rigid body dynamics: inertia, angular momentum, gyroscopes
+        "rigid" | "rigidbody" | "rigid_body" | "inertia" | "gyroscope" | "spin" => super::rigidbody::rigid_sim(world),
+        // ---- OTD6: motor + circuit ----
+        "motor" | "electric_motor" | "electricmotor" => super::motor::motor_sim(world),
+        "circuit" => super::motor::circuit_sim(world),
         other => vec![ConsoleLine {
             kind: LineKind::Error,
-            text: format!("line {}: '{}' is not a simulation I know — try drop, float, collapse, splash, settle, solidity, gas, mix, energy, heat, magnet, sound, light, time, learn, stats, orbit, atom, decay, or particles", line, other),
+            text: format!("line {}: '{}' is not a simulation I know — try drop, float, collapse, splash, settle, solidity, gas, mix, energy, heat, magnet, sound, light, time, learn, stats, orbit, atom, decay, particles, aero, fluid, electro, stellar, rigid, motor, or circuit", line, other),
         }],
     }
 }

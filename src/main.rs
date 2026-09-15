@@ -120,7 +120,15 @@ fn main() {
             // OTD3.1 P2210 — train the self-made OTD-Burn network on
             // OTD's own physics laws (freefall) + the XOR sanity check
             "--train" => { mode = "train".into(); }
-            "--version" | "-v" => { println!("OTD 3.3.0 \"QUARK\" — pure Rust + assembly, zero dependencies + self-made nn.rs & Burn + reasoning + native audio + AVC video + the synthesizer + the Standard Model"); return; }
+            "--version" | "-v" => { println!("OTD {} — Open Three-Dimensional Language (pure Rust + assembly, zero dependencies)", env!("CARGO_PKG_VERSION")); return; }
+            // OTD6 #1: self-describing — list from source, not hand-maintained docs
+            "--list-functions" | "--functions" => { list_functions(); return; }
+            "--list-materials" | "--materials" => { list_materials(); return; }
+            "--list-keywords" | "--keywords" => { list_keywords(); return; }
+            "--list-shapes" | "--shapes" => { list_shapes(); return; }
+            "--list-simulate" | "--sims" => { list_simulate(); return; }
+            "--list-colors" | "--colors" => { list_colors(); return; }
+            "--list-all" => { list_all(); return; }
             "--serve" | "serve" => { mode = "serve".into(); }
             other => {
                 if other.starts_with("--") {
@@ -153,13 +161,13 @@ fn main() {
 }
 
 fn banner() -> String {
-    let art = r#"
+    let art = format!(r#"
   ██████╗ ████████╗████████╗██████╗
  ██╔════╝ ╚══██╔══╝╚══██╔══╝██╔══██╗
  ██║  ███╗   ██║      ██║   ██████╔╝
  ██║   ██║   ██║      ██║   ██╔══██╗
  ╚██████╔╝   ██║      ██║   ██████╔╝
-  ╚═════╝    ╚═╝      ╚═╝   ╚═════╝  3.1"#;
+  ╚═════╝    ╚═╝      ╚═╝   ╚═════╝  {}"#, env!("CARGO_PKG_VERSION"));
     format!("{}\n  Open Three-Dimensional Language\n  {}\n", art, otd::phase::banner())
 }
 
@@ -210,7 +218,7 @@ fn cmd_vm_dump(file: &str) {
     let mut programs: Vec<(usize, vm::compile::Program)> = Vec::new();
     for stmt in &prog.stmts {
         let exprs: Vec<&otd::lang::ast::Expr> = match stmt {
-            otd::lang::ast::Stmt::Assign(_, e, line) => vec![e],
+            otd::lang::ast::Stmt::Assign(_, e, _line) => vec![e],
             _ => Vec::new(),
         };
         let line = match stmt {
@@ -698,4 +706,118 @@ fn cmd_perceive(file: &str, out_dir: &str, baseline_mm: f64) {
         }
         Err(_) => eprintln!("(no world.json written)"),
     }
+}
+
+// ============================================================
+// OTD6 #1: Self-describing — list functions/materials/keywords
+// directly from source, never hand-maintained.
+// ============================================================
+
+fn list_functions() {
+    println!("OTD {} — callable functions (from src/lang/keywords.rs FUNCS):", env!("CARGO_PKG_VERSION"));
+    println!();
+    let funcs = otd::lang::keywords::FUNCS;
+    println!("  Total: {} functions", funcs.len());
+    println!();
+    for chunk in funcs.chunks(8) {
+        println!("    {}", chunk.join("  "));
+    }
+    println!();
+    println!("  Usage: my_val = sqrt(16)   or   x = abs(-5)   or   v = ohm_i(12, 5)");
+}
+
+fn list_materials() {
+    println!("OTD {} — materials (from src/world/materials.rs MATERIALS):", env!("CARGO_PKG_VERSION"));
+    println!();
+    let names = otd::world::materials::NAMES;
+    let metals: Vec<&&str> = names.iter().filter(|n| {
+        otd::world::materials::find(n).map(|m| m.metal).unwrap_or(false)
+    }).collect();
+    let non_metals: Vec<&&str> = names.iter().filter(|n| {
+        otd::world::materials::find(n).map(|m| !m.metal).unwrap_or(false)
+    }).collect();
+    println!("  Metals ({}):", metals.len());
+    for chunk in metals.chunks(8) {
+        println!("    {}", chunk.iter().map(|s| **s).collect::<Vec<_>>().join("  "));
+    }
+    println!();
+    println!("  Non-metals ({}):", non_metals.len());
+    for chunk in non_metals.chunks(8) {
+        println!("    {}", chunk.iter().map(|s| **s).collect::<Vec<_>>().join("  "));
+    }
+    println!();
+    println!("  Usage: material cup: ceramic   or   cube 5cm material: steel");
+}
+
+fn list_keywords() {
+    println!("OTD {} — keywords (from src/lang/keywords.rs KEYWORDS):", env!("CARGO_PKG_VERSION"));
+    println!();
+    let kw = otd::lang::keywords::KEYWORDS;
+    println!("  Total: {} (budget < 100)", kw.len());
+    println!();
+    for chunk in kw.chunks(10) {
+        println!("    {}", chunk.join("  "));
+    }
+    println!();
+    println!("  Every keyword is reserved — it can never be an object name.");
+}
+
+fn list_shapes() {
+    println!("OTD {} — shapes (from src/lang/keywords.rs PRIMITIVES + BUILDERS):", env!("CARGO_PKG_VERSION"));
+    println!();
+    let prims = otd::lang::keywords::PRIMITIVES;
+    let builders = otd::lang::keywords::BUILDERS;
+    println!("  Primitives ({}):", prims.len());
+    println!("    {}", prims.join("  "));
+    println!();
+    println!("  Builders ({}):", builders.len());
+    println!("    {}", builders.join("  "));
+    println!();
+    println!("  Usage: sphere(r: 2cm)   or   cube(w: 4cm, d: 4cm, h: 4cm)");
+}
+
+fn list_simulate() {
+    println!("OTD {} — simulate domains:", env!("CARGO_PKG_VERSION"));
+    println!();
+    let domains = [
+        ("Basic", &["drop", "float", "collapse", "splash", "settle", "solidity", "gas", "mix"][..]),
+        ("Science", &["energy", "heat", "magnet", "sound", "light", "time"][..]),
+        ("AI", &["learn", "stats", "orbit"][..]),
+        ("Subatomic", &["atom", "decay", "particles"][..]),
+        ("OTD6", &["motor", "circuit"][..]),
+    ];
+    for (cat, items) in &domains {
+        println!("  {} ({}):", cat, items.len());
+        println!("    {}", items.join("  "));
+        println!();
+    }
+    println!("  Usage: simulate: drop   or   simulate: motor   or   simulate: circuit");
+}
+
+fn list_colors() {
+    println!("OTD {} — named colors (from src/world/colors.rs NAMED):", env!("CARGO_PKG_VERSION"));
+    println!();
+    let colors = otd::world::colors::NAMED;
+    println!("  Total: {} named colors + #rrggbb hex", colors.len());
+    println!();
+    for chunk in colors.chunks(6) {
+        let names: Vec<String> = chunk.iter().map(|(n, r, g, b)| format!("{}(#{:02x}{:02x}{:02x})", n, r, g, b)).collect();
+        println!("    {}", names.join("  "));
+    }
+    println!();
+    println!("  Usage: color cup: ivory   or   color cup: #1e90ff");
+}
+
+fn list_all() {
+    list_functions();
+    println!("\n{}", "=".repeat(60));
+    list_materials();
+    println!("\n{}", "=".repeat(60));
+    list_keywords();
+    println!("\n{}", "=".repeat(60));
+    list_shapes();
+    println!("\n{}", "=".repeat(60));
+    list_simulate();
+    println!("\n{}", "=".repeat(60));
+    list_colors();
 }

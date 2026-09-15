@@ -94,6 +94,11 @@ pub struct Arg {
 pub enum Mod {
     At(Vec<Expr>),        // rest-point placement (tuple)
     Rotate(Expr),         // angle or (x,y,z) tuple
+    /// OTD4 — `rotate (...) pivot (px, py, pz)` — override the default
+    /// bounding-box center pivot. `pivot: origin` means the world origin
+    /// (0, 0, 0); `pivot: center` is the bbox center (the default, kept
+    /// for explicitness); a tuple is a literal pivot point.
+    RotateWithPivot { angles: Expr, pivot: PivotSpec },
     Scale(Expr),          // factor or (x,y,z) tuple
     Mirror(char),         // x / y / z world plane
     Material(String),
@@ -102,6 +107,17 @@ pub enum Mod {
     Smooth { iterations: Expr, strength: Expr },
     /// 2.0 deep tier: Loop subdivision — `subdiv(n: 2)`
     Subdiv(Expr),
+}
+
+/// OTD4 — pivot specification for `rotate`.
+#[derive(Clone, Debug)]
+pub enum PivotSpec {
+    /// the world origin (0, 0, 0)
+    Origin,
+    /// the bounding-box center (the default — kept for explicitness)
+    Center,
+    /// a literal (x, y, z) pivot point
+    Point(Vec<Expr>),
 }
 
 #[derive(Clone, Debug)]
@@ -125,6 +141,29 @@ pub enum Stmt {
     /// P1420b — `environment: air | vacuum | water | oil | density <n>`
     /// sets the medium the whole scene lives in (buoyancy + drag)
     Environment(String),
+    /// OTD4 P2300 — `include "parts/wheel.otd"`: load an .otd file as a part
+    /// library and merge its top-level parts into the current scene. Powers
+    /// the multi-part design workflow: make each part in its own file, then
+    /// a main file `include`s them all and arranges them with `at`.
+    Include { file: String, at: Option<Vec<Expr>>, line: usize },
+    /// OTD4 P2310 — `magnetize: name`: mark a part as a permanent magnet
+    /// (overrides its material's intrinsic magnetism). The moment is computed
+    /// from the part's volume × a neodymium-grade magnetisation unless a
+    /// `moment:` parameter is supplied.
+    Magnetize { target: String, moment: Option<Expr>, line: usize },
+    /// OTD4 P2320 — `strict: overlap` (or `strict: all`): turn silent-wrongness
+    /// into loud errors. With `overlap`, any pair of solid parts that
+    /// interpenetrate by more than 0.02 mm fails compilation with a corrective
+    /// error rather than a warning.
+    Strict(String),
+    /// OTD4 P2330 — `overlap: check` (or just `overlap`): the explicit overlap
+    /// audit. Reports every interpenetrating pair with the penetration depth
+    /// and the shallowest escape axis; under `strict: overlap` it is an error.
+    Overlap { mode: String, line: usize },
+    /// OTD6 #5 — `connect: A B`: declare electrical connectivity between
+    /// two named parts. Powers `simulate: circuit` which walks the real
+    /// resistance of modeled windings and reports current/voltage drop.
+    Connect { a: String, b: String, line: usize },
     Define { name: String, params: Vec<String>, body: Expr, line: usize },
     /// define name(params) <newline> statements… end — a multi-statement
     /// template; the value is the last expression (2.1)

@@ -1,0 +1,66 @@
+
+  ██████╗ ████████╗████████╗██████╗
+ ██╔════╝ ╚══██╔══╝╚══██╔══╝██╔══██╗
+ ██║  ███╗   ██║      ██║   ██████╔╝
+ ██║   ██║   ██║      ██║   ██╔══██╗
+ ╚██████╔╝   ██║      ██║   ██████╔╝
+  ╚═════╝    ╚═╝      ╚═╝   ╚═════╝  2.1
+  Open Three-Dimensional Language
+  OTD engine — 63 / 10000 phases ready (P0000–P1340, stages S0+S1 complete + the 2.1 syntax expansion)
+
+stereo pair → /tmp/perc-final/left.png, right.png (baseline 65 mm, fx 625 px)
+stereo: 307200 px | strong 51788 weak 25465 filled 224827 invalid 5120
+cloud: 690 voxels
+objects (2 detections, 2 tracked):
+  small_box #1 center=(-0.09,0.19,0.77) m  extents=(0.12,0.29,0.11) m  sigma=(0.13,0.13,0.13) m
+  small_box #2 center=(0.22,0.00,0.88) m  extents=(0.23,0.19,0.18) m  sigma=(0.13,0.13,0.13) m
+measurements:
+  #1 <-> #2: 0.375 +/- 0.180 m (3-sigma [0.000, 0.915] m)
+
+outputs in /tmp/perc-final: disparity_color.png, depth_kitti.png, cloud.ply, world.json, measurements.csv
+---- what AVC sees (its world model, /tmp/perc-final world.json) ----
+  "objects": [
+  "track_id": 1
+  "class": "small_box"
+  "sigma": [
+  "extents": [
+  "yaw": 0.309329856237254
+  "confidence": 0.6666666666666666
+  "track_id": 2
+  "class": "small_box"
+  "sigma": [
+  "extents": [
+  "yaw": 0.49325232595751994
+  "confidence": 0.6666666666666666
+  "relations": [
+  "kind": "left_of"
+  "confidence": 0.9107445848254137
+  "kind": "right_of"
+  "confidence": 0.9107445848254137
+  "kind": "above"
+  "confidence": 0.6991631242687659
+  "kind": "below"
+  "confidence": 0.6991631242687659
+  "kind": "closer_than"
+  "confidence": 0.9632912120257401
+  "kind": "farther_than"
+  "confidence": 0.9632912120257401
+  "kind": "near"
+  "confidence": 0.9
+  "measurements": [
+  "a": 1
+  "b": 2
+  "sigma": 0.18009913042042813
+  (full model: /tmp/perc-final/world.json — distances in metres, honest sigmas)
+
+  ██████╗ ████████╗████████╗██████╗
+ ██╔════╝ ╚══██╔══╝╚══██╔══╝██╔══██╗
+ ██║  ███╗   ██║      ██║   ██████╔╝
+ ██║   ██║   ██║      ██║   ██╔══██╗
+ ╚██████╔╝   ██║      ██║   ██████╔╝
+  ╚═════╝    ╚═╝      ╚═╝   ╚═════╝  2.1
+  Open Three-Dimensional Language
+  OTD engine — 63 / 10000 phases ready (P0000–P1340, stages S0+S1 complete + the 2.1 syntax expansion)
+
+  VERIFIED: 2 H2 + O2 -> 2 H2O   [confidence 100%]
+

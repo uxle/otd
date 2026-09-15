@@ -1,0 +1,56 @@
+
+  ██████╗ ████████╗████████╗██████╗
+ ██╔════╝ ╚══██╔══╝╚══██╔══╝██╔══██╗
+ ██║  ███╗   ██║      ██║   ██████╔╝
+ ██║   ██║   ██║      ██║   ██╔══██╗
+ ╚██████╔╝   ██║      ██║   ██████╔╝
+  ╚═════╝    ╚═╝      ╚═╝   ╚═════╝  2.1
+  Open Three-Dimensional Language
+  OTD engine — 63 / 10000 phases ready (P0000–P1340, stages S0+S1 complete + the 2.1 syntax expansion)
+
+scene: The chemistry beaker
+objects: 4
+mass: 49957.1 g  volume: 19659.9 cm³
+  beaker — 46049.6 g (glass)
+  oil — 471.0 g (oil)
+  water — 510.5 g (water)
+  mercury — 2925.9 g (mercury)
+  [answer] water + oil do NOT mix — oil is non-polar, water is polar — water would have to give up its hydrogen-bond network, so oil floats on top. oil (920 kg/m³) floats on water (997 kg/m³)
+  [answer] water + ethanol MIX into ONE phase — both polar — ethanol's –OH hydrogen-bonds into water, one phase at any ratio → a solution of ρ ≈ 893 kg/m³
+  [answer] ethanol + oil do NOT mix — no known mixing at room temperature — kept as separate phases. ethanol (789 kg/m³) floats on oil (920 kg/m³)
+  [sim] water floats on mercury — mercury is a liquid metal — metallic bonds will not mix with polar water (this is why it beads)
+  [sim] oil floats on water — oil is non-polar, water is polar — water would have to give up its hydrogen-bond network, so oil floats on top
+  [sim] layer stack, bottom → top:
+  [sim]   0–60 mm: mercury (13546 kg/m³)
+  [sim]   60–140 mm: water (997 kg/m³)
+  [sim]   140–220 mm: oil (920 kg/m³)
+  [sim] immiscible layers sort by density — that's chemistry, not luck: each liquid stays where its weight balances
+✔ no errors
+
+  ██████╗ ████████╗████████╗██████╗
+ ██╔════╝ ╚══██╔══╝╚══██╔══╝██╔══██╗
+ ██║  ███╗   ██║      ██║   ██████╔╝
+ ██║   ██║   ██║      ██║   ██╔══██╗
+ ╚██████╔╝   ██║      ██║   ██████╔╝
+  ╚═════╝    ╚═╝      ╚═╝   ╚═════╝  2.1
+  Open Three-Dimensional Language
+  OTD engine — 63 / 10000 phases ready (P0000–P1340, stages S0+S1 complete + the 2.1 syntax expansion)
+
+scene: Solidity — a settled stack
+objects: 6
+mass: 3277.4 g  volume: 1008.2 cm³
+  base — 1695.6 g (steel)
+  mid — 163.1 g (oak)
+  top — 540.0 g (glass)
+  nut — 10.2 g (brass)
+  ball — 74.7 g (rubber)
+  plate — 793.8 g (aluminum)
+  [sim]   base fell 610 mm and landed on ground at v = √(2gh) ≈ 1.88 m/s — now resting (ρ = 7850 kg/m³)
+  [sim]   mid fell 1068 mm and landed on top at v = √(2gh) ≈ 0.79 m/s — now resting (ρ = 755 kg/m³)
+  [sim]   top fell 1107 mm and landed on mid at v = √(2gh) ≈ 0.79 m/s — now resting (ρ = 2500 kg/m³)
+  [sim]   nut fell 543 mm and landed on ground at v = √(2gh) ≈ 0.90 m/s — now resting (ρ = 8500 kg/m³)
+  [sim]   ball fell 497 mm and landed on ground at v = √(2gh) ≈ 0.78 m/s — now resting (ρ = 1150 kg/m³)
+  [sim]   plate fell 1212 mm and landed on top at v = √(2gh) ≈ 0.88 m/s — now resting (ρ = 2700 kg/m³)
+  [sim] settled: 6 bodies at rest under current g — real solidity verified: max residual penetration 0.009 mm (< 0.05 mm tolerance), nothing can insert into anything
+  [answer] SOLID — 6 parts, zero interpenetrations: no item is inside another item (axis-aligned bounding-box test, 0.02 mm tolerance)
+✔ no errors

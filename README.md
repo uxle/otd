@@ -1,4 +1,93 @@
-# OTD3.3 "QUARK" — Open Three-Dimensional Language
+# OTD4.0 "DYNAMICS" — Open Three-Dimensional Language
+
+> **The Dynamics Edition.** OTD3 had the static sciences — thermodynamics,
+> magnetism, waves, energy. OTD4 adds the five that *move*:
+> **aerodynamics** (wings, drag, terminal velocity, Reynolds, Mach),
+> **fluid dynamics** (Bernoulli, Poiseuille, Stokes, hydrostatics),
+> **electrodynamics** (Ohm, Kirchhoff, RC/RL/LC, Maxwell's identity
+> c = 1/√(μ₀ε₀)), **stellar dynamics** (N-body, virial theorem, Jeans
+> scale), and **rigid body dynamics** (inertia tensor, angular
+> momentum, gyroscopic precession). Six new `simulate:` domains ship:
+> `aero`, `fluid`, `electro`, `stellar`, `rigid` — plus `magnet` which
+> now honors the new `magnetize:` keyword.
+>
+> The user reported silent-wrongness bugs that bit hard when an AI uses
+> the language without a human in the loop. OTD4 fixes every one:
+> **`strict: overlap`** turns solid-solid interpenetration into a
+> compilation ERROR with the axis, depth, and a concrete fix
+> suggestion (the "shapes overlapping" bug — impossible to ship by
+> accident now); **`hollow()`** logs its default `open:` every time
+> so the open-top is never a surprise; **`group()`** re-parents its
+> source parts so mass is no longer double-counted (7.0g → 14.0g
+> fixed); **`rotate`** logs its pivot point every time (the bbox
+> center, unless `pivot (x,y,z)` is given) — the "stator-tooth
+> petals instead of radial teeth" bug is now impossible to ship
+> without seeing the pivot; **`print "{name}"`** with an unknown
+> variable now WARNS instead of silently leaving the literal text.
+>
+> **Multi-part design workflow:** each part in its own file, then a
+> main file `include`s them and arranges them with `at (...)`. See
+> `examples/car-assembly.otd` and `examples/parts/`. Four new
+> keywords: `include`, `magnetize`, `strict`, `overlap` (82 total,
+> still under the 100 budget).
+
+| Area | The upgrade |
+|---|---|
+| **Aerodynamics** | `simulate: aero` — drag (D = ½ρv²AC_D), lift (L = ½ρv²AC_L), terminal velocity (v_t = √(2mg/ρAC_D)), Reynolds (Re = ρvL/μ), Mach (M = v/c). ISA atmosphere: Everest air is 40% of sea level. Wings get L/W ratio and stall speed. |
+| **Fluid dynamics** | `simulate: fluid` — Bernoulli (P + ½ρv² + ρgh = const), Poiseuille (Q = πr⁴ΔP/8μL — the r⁴ law), Stokes drag (F = 6πμrv), hydrostatic pressure (P = ρgh), capillary rise (water climbs 14 mm in a 1 mm tube). 14 viscosities from water (1 mPa·s) to glycerin (1.4 Pa·s). |
+| **Electrodynamics** | `simulate: electro` — Ohm (V = IR), power (P = VI), capacitor energy (U = ½CV²), inductor energy (U = ½LI²), RC/RL time constants, LC resonance (ω = 1/√(LC)), and the Maxwell identity c = 1/√(μ₀ε₀) = 299,792,458 m/s. Conductors get Ohm's law at 12 V; insulators get parallel-plate capacitance and charge in electrons. Johnson noise reported at scene temperature. |
+| **Stellar dynamics** | `simulate: stellar` — N-body pairwise force, the virial theorem (2K + U = 0), Jeans length (the size a cloud must exceed to collapse into stars), dynamical time (the natural clock), escape velocity. Reads each part as a "star" with its real mass. |
+| **Rigid body** | `simulate: rigid` — moment of inertia (I = Σmr²) for spheres/cylinders/rods/slabs, parallel axis theorem, angular momentum (L = Iω), rotational energy (E = ½Iω²), gyroscopic precession (Ω_p = τ/Iω) verified against Earth's 26,000-year axial precession. The tennis racket theorem taught. |
+| **`include`** | `include: "parts/wheel.otd" at (x, y, z)` — multi-part design. Each part in its own file, then a main file `include`s them and arranges them with `at (...)`. Auto-naming on clashes (wheel_1, wheel_2, ...). |
+| **`magnetize`** | `magnetize: <name> [moment: <expr>]` — mark a part as a permanent magnet. Overrides the material's intrinsic magnetism. `simulate: magnet` tags it with `[MAGNETIZED]`. |
+| **`strict`** | `strict: overlap` (or `all`/`off`) — solid-solid interpenetration now FAILS compilation with axis, depth, and a concrete fix suggestion. The silent-wrongness fix. |
+| **`overlap`** | `overlap` or `overlap: check` — explicit overlap audit. Reports every interpenetrating pair with penetration depth and shallowest escape axis, plus a fix. |
+| **Silent-wrongness fixes** | `hollow()` logs its default `open:`; `group()` re-parents (no more double-counted mass); `rotate` logs its pivot point; `print "{name}"` warns on unknown variables; missing material suggests common choices by use case. |
+| **Error templates** | 18 corrective error templates in `errors.rs` — every common mistake (negative radius, unknown material, wrong axis, bad boolean, missing file, etc.) now has both a message AND a concrete fix suggestion. |
+
+## Quickstart (OTD4)
+
+```bash
+cargo run --release            # serve the viewer at http://127.0.0.1:6830
+cargo test                     # 200+ math/physics/byte-level tests
+cargo run --release -- --check examples/dynamics-tour.otd    # all six new sims
+cargo run --release -- --check examples/car-assembly.otd     # multi-part workflow
+```
+
+### The multi-part workflow in 30 seconds
+
+```otd
+# parts/wheel.otd
+scene "Wheel Part"
+tire = torus(r: 8cm, tube: 2cm) at (0, 8cm, 0) material: rubber
+rim  = cylinder(r: 6cm, h: 4cm) at (0, 8cm, 0) material: aluminum
+hub  = cylinder(r: 1.5cm, h: 5cm) at (0, 8cm, 0) material: steel
+wheel = group(tire, rim, hub)
+
+# main.otd
+scene "Car Assembly"
+include: "parts/chassis.otd" at (0, 0, 0)
+include: "parts/wheel.otd"   at (-12cm, 0, 4cm)
+include: "parts/wheel.otd"   at ( 12cm, 0, 4cm)
+strict: overlap    # fail if any two solids interpenetrate
+overlap: check     # explicit audit
+```
+
+### Strict overlap (the silent-wrongness fix)
+
+```otd
+scene "Overlap demo"
+a = cube 4cm at (0, 2cm, 0) material: steel
+b = cube 4cm at (1cm, 2cm, 0) material: steel   # overlaps a by 3 cm on X
+strict: overlap
+overlap: check
+# ⇒ ERROR: a and b interpenetrate by 30.00 mm — fix: move b along X by 30.00 mm,
+#           or fuse with `add a, b` if they are meant to be one part
+```
+
+---
+
+# OTD3.3 "QUARK" — the base OTD4 builds on
 
 > **The Subatomic Edition.** Everything you build is made of exactly
 > three particles — proton, neutron, electron — and those are made of

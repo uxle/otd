@@ -178,6 +178,108 @@ pub fn suggest(name: &str) -> Option<String> {
     crate::lang::errors::suggest(name, NAMES)
 }
 
+/// OTD4 — suggest a material by intended use case. When the user hasn't
+/// specified a material, we can recommend one based on what they're trying
+/// to make. Returns (name, reason) so the user understands the suggestion.
+pub fn suggest_by_use(use_case: &str) -> Option<(&'static str, &'static str)> {
+    match use_case.to_lowercase().as_str() {
+        // structural
+        "structure" | "frame" | "beam" | "column" | "load_bearing" | "load-bearing" => {
+            Some(("steel", "strong, cheap, welds easily; the default structural metal"))
+        }
+        "lightweight" | "light" | "drone" | "airplane" | "aerospace" => {
+            Some(("aluminum", "2700 kg/m³ — 1/3 the weight of steel, fully recyclable"))
+        }
+        "strong_light" | "strong-light" | "bicycle" | "sport" => {
+            Some(("titanium", "4500 kg/m³, ~steel strength at half the weight, biocompatible"))
+        }
+        // magnets
+        "magnet" | "magnetic" | "permanent_magnet" | "permanent-magnet" => {
+            Some(("iron", "ferromagnetic at room temperature — the easiest permanent magnet"))
+        }
+        "electromagnet" | "coil" | "inductor" | "transformer" => {
+            Some(("iron", "high permeability — concentrates field lines in solenoids and transformers"))
+        }
+        // conductors
+        "wire" | "conductor" | "cable" | "electrical" => {
+            Some(("copper", "59.6 MS/m — the second-best conductor, and far cheaper than silver"))
+        }
+        // thermal
+        "heat_sink" | "heat-sink" | "radiator" | "cooling" => {
+            Some(("aluminum", "237 W/mK — the heatsink champion; cheap and easy to extrude"))
+        }
+        "pan" | "cookware" | "pot" => {
+            Some(("copper", "401 W/mK — spreads heat evenly; the chef's choice (often lined with tin)"))
+        }
+        // liquids
+        "fluid" | "liquid" | "water" | "coolant" => {
+            Some(("water", "997 kg/m³, 4.18 J/gK — the universal solvent and coolant"))
+        }
+        "lubricant" | "lubrication" => {
+            Some(("oil", "920 kg/m³ — slips between moving parts; floats on water"))
+        }
+        // optical
+        "lens" | "window" | "transparent" | "optical" => {
+            Some(("glass", "transmits 66% of light; the oldest optical material"))
+        }
+        // decorative
+        "jewelry" | "ornament" | "luxury" => {
+            Some(("gold", "19320 kg/m³ — never tarnishes, the eternal metal"))
+        }
+        // wood-class
+        "furniture" | "wood" | "floor" | "cabinet" => {
+            Some(("oak", "755 kg/m³ — hard, durable, the furniture wood"))
+        }
+        // thermal insulator
+        "insulator" | "insulation" => {
+            Some(("foam", "60 kg/m³, 0.03 W/mK — traps air, blocks heat"))
+        }
+        // heavy
+        "heavy" | "ballast" | "weight" => {
+            Some(("lead", "11340 kg/m³ — dense, soft, easy to shape; the weight champion"))
+        }
+        // nuclear
+        "nuclear" | "reactor" | "radioactive" => {
+            Some(("uranium", "19050 kg/m³ — the heaviest natural metal; powers reactors"))
+        }
+        // hard
+        "cutting" | "tool" | "drill" | "hard" => {
+            Some(("tungsten", "4.5 GPa hardness — the cutting-tool metal; highest melting point of any metal"))
+        }
+        // soft / protective
+        "tire" | "seal" | "gasket" | "shock" | "bounce" => {
+            Some(("rubber", "1150 kg/m³, 0.85 restitution — the bounce and seal material"))
+        }
+        // food / drink
+        "cup" | "mug" | "dish" | "plate" => {
+            Some(("ceramic", "2400 kg/m³ — fired clay, holds heat, dishwasher-safe"))
+        }
+        _ => None,
+    }
+}
+
+/// OTD4 — list all material names that match a given property predicate
+/// (e.g., "all ferromagnetic materials", "all materials denser than water").
+pub fn list_by_property(prop: &str) -> Vec<&'static str> {
+    MATERIALS
+        .iter()
+        .filter(|m| match prop.to_lowercase().as_str() {
+            "magnetic" | "ferromagnetic" => m.magnetic,
+            "metal" => m.metal,
+            "transparent" => m.opacity < 0.999,
+            "liquid" => LIQUIDS.contains(&m.name),
+            "gas" => GASES.contains(&m.name),
+            "solid" => !LIQUIDS.contains(&m.name) && !GASES.contains(&m.name),
+            "conductor" | "conductive" => m.conductive.is_some(),
+            "insulator" | "nonconductive" => m.conductive.is_none(),
+            "sinks" | "denser_than_water" => m.density > 1000.0,
+            "floats" | "lighter_than_water" => m.density < 1000.0,
+            _ => false,
+        })
+        .map(|m| m.name)
+        .collect()
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

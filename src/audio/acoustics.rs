@@ -20,7 +20,7 @@
 //!                     sub-bass wave is 5 metres long — half the wavelength
 //!                     rule of subwoofers and organ pipes.
 
-use crate::audio::fft::{Fft, FRAME_SIZE, TARGET_RATE};
+use crate::audio::fft::{Fft, FRAME_SIZE};
 
 /// Named regions of the full audio spectrum (Hz bounds, name, physics note).
 pub const SPECTRUM_LADDER: &[(f64, f64, &str, &str)] = &[
@@ -247,6 +247,7 @@ pub fn distance_from_band(band: &str, hf_ratio: f32) -> DistanceEstimate {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::audio::fft::TARGET_RATE;
 
     #[test]
     fn spectrum_ladder_is_ordered() {

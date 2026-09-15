@@ -1,0 +1,12 @@
+scene "Wheel Part"
+unit: cm
+
+# A standalone wheel — this file is meant to be `include`d by main.otd.
+# It defines one top-level shape: a wheel (tire + rim + hub).
+# When include: "parts/wheel.otd" runs, the wheel's meshes are merged into
+# the parent scene as a single new part.
+
+tire = torus(r: 8cm, tube: 2cm) at (0, 8cm, 0) material: rubber
+rim  = cylinder(r: 6cm, h: 4cm) at (0, 8cm, 0) material: aluminum
+hub  = cylinder(r: 1.5cm, h: 5cm) at (0, 8cm, 0) material: steel
+wheel = group(tire, rim, hub)

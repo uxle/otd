@@ -354,6 +354,7 @@ pub fn simulate_gas(world: &mut World) -> Vec<ConsoleLine> {
             mass_g: product_mass,
             centroid: Some(c),
             area_mm2: 0.0,
+            magnetized: false,
         };
         world.parts.push(prod_part);
     }

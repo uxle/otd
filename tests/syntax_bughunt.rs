@@ -277,9 +277,11 @@ fn robust_edges() {
     let w = compile("\n\n\n");
     assert!(w.errors.is_empty());
     // keyword budget still holds after all changes (2.1 raised it 60 → 100:
-    // the syntax expansion added 17 words; OTD3 added temperature + thread)
+    // the syntax expansion added 17 words; OTD3 added temperature + thread + particle;
+    // OTD4 added include + magnetize + strict + overlap;
+    // OTD6 added connect)
     assert!(otd::lang::keywords::KEYWORDS.len() < 100);
-    assert_eq!(otd::lang::keywords::KEYWORDS.len(), 78);
+    assert_eq!(otd::lang::keywords::KEYWORDS.len(), 83);
 }
 
 // ------------------------------------------------------------------

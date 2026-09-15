@@ -1,0 +1,47 @@
+scene "Car Assembly (multi-part)"
+unit: cm
+
+# ====== The multi-part design workflow ======
+#
+# Each part was made in its own file under parts/:
+#   parts/wheel.otd   — a tire + rim + hub grouped into one wheel
+#   parts/axle.otd    — a steel cylinder
+#   parts/chassis.otd — an aluminum plate
+#
+# This main file `include`s them and arranges them with `at (...)`.
+# Workflow:
+#   1. Design each part in isolation (run `otd --check parts/wheel.otd`)
+#   2. Create main.otd that includes them and arranges them
+#   3. Run the strict overlap check to catch collisions
+#   4. Render and verify visually
+#
+# Geometry: chassis is a 30×10×1 cm plate centered at y=8cm (so y in [7.5, 8.5]).
+# Wheels are at the corners, OUTSIDE the chassis footprint on Z (±8cm — chassis
+# is 10cm deep so its Z extent is ±5cm; wheels at ±8cm don't touch it on Z).
+# Axles go through the wheels along Z, well above the chassis.
+
+# include each part — the file path is relative to this main file
+include: "parts/chassis.otd" at (0, 0, 0)
+
+# four wheels at the corners of the chassis — placed BEYOND the chassis on Z
+# so they don't interpenetrate it. Wheel torus has r=8cm + tube=2cm = 10cm
+# half-extent on Z, so wheels at ±12cm leave a 4cm gap between them.
+include: "parts/wheel.otd" at (-12cm, 0, 12cm)
+include: "parts/wheel.otd" at ( 12cm, 0, 12cm)
+include: "parts/wheel.otd" at (-12cm, 0, -12cm)
+include: "parts/wheel.otd" at ( 12cm, 0, -12cm)
+
+# the two axles span between each pair of wheels along Z.
+# Axle is 24cm long (z=±12cm); wheel torus bbox is z=±[2,22]cm around its
+# center at z=±12cm — they touch on the inner edge but don't interpenetrate.
+include: "parts/axle.otd" at (-12cm, 0, 0)
+include: "parts/axle.otd" at ( 12cm, 0, 0)
+
+# strict mode — fail if any two solids interpenetrate
+strict: overlap
+overlap: check
+
+# physics checks
+ask "mass?"
+simulate: rigid
+simulate: aero

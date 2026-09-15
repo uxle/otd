@@ -4,7 +4,6 @@ use super::eval::{Ctx, ShapeVal, Val};
 use crate::geo::mesh::Kind;
 use crate::geo::prims;
 use crate::lang::ast::{Arg, Expr};
-use crate::units::Qty;
 use crate::world::eval::LineKind;
 use crate::world::eval::ConsoleLine;
 
@@ -51,7 +50,7 @@ impl ShapeArgs {
     }
     /// length in mm (named alias, else next positional, else default).
     /// Bare numbers get the scene default unit; explicit units pass through.
-    pub fn take_len(&mut self, aliases: &[&str], default: f64, what: &str) -> f64 {
+    pub fn take_len(&mut self, aliases: &[&str], default: f64, _what: &str) -> f64 {
         let unit = self.unit_mm;
         let to_mm = |v: &Val| -> Option<f64> {
             if let Val::Qty(q) = v {

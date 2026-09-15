@@ -1,0 +1,43 @@
+scene "Electric Motor + Circuit"
+unit: cm
+
+# ====== Make a motor, connect it with electricity, check will it move ======
+
+# --- the stator: two iron magnets ---
+stator_n = cube(w: 2cm, d: 4cm, h: 4cm) at (-3cm, 2cm, 0) material: iron
+stator_s = cube(w: 2cm, d: 4cm, h: 4cm) at (3cm, 2cm, 0)  material: iron
+magnetize: stator_n
+magnetize: stator_s
+
+# --- the rotor: copper coil ---
+rotor = cylinder(r: 1.5cm, h: 4cm) at (0, 2cm, 0) material: copper
+
+# --- the shaft ---
+shaft = cylinder(r: 3mm, h: 8cm) rotate (0, 0, 90deg) at (0, 2cm, 0) material: steel
+
+# --- the battery ---
+battery = cylinder(r: 1.5cm, h: 5cm) at (0, 2cm, 8cm) material: lithium
+
+# --- connect the electricity ---
+connect: battery rotor
+
+# --- check the circuit ---
+simulate: circuit
+
+# --- check will it move ---
+simulate: motor
+
+# --- also use the new callable electrodynamics functions ---
+v = 6
+r = ohm_r(v, 2)
+i = ohm_i(v, r)
+p = power_vi(v, i)
+print "V = {v}V, R = {r}ohm, I = {i}A, P = {p}W"
+print "Also: v+r = {v+r} (expression interpolation)"
+
+# --- self-describing ---
+functions()
+materials()
+
+# --- mass ---
+ask "mass?"

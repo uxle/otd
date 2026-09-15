@@ -17,7 +17,7 @@ pub fn try_run(
     unit_mm: f64,
     lookup: &dyn Fn(&str) -> Option<Qty>,
 ) -> Option<Result<Qty, String>> {
-    use crate::lang::ast::Expr;
+    
     // quick gate: only forms that can be numeric
     if !compile::is_numeric_shape(e) {
         return None;

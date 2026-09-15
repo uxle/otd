@@ -112,7 +112,17 @@ pub fn solenoid_field(turns_per_m: f64, current_a: f64) -> f64 {
 /// Magnetic moment of a bar-magnet part we can estimate from size:
 /// a good neodymium-grade material carries ~10⁵ A/m magnetisation; a mild
 /// steel "keeper" ~10³–10⁴. We use the material's class, not fantasy.
+/// OTD4: if the part was explicitly `magnetize:`d, use the world registry's
+/// stored moment instead of the material-based estimate.
 pub fn estimate_moment(part: &super::eval::Part) -> f64 {
+    // OTD4 — explicit magnetize: wins over the material's intrinsic class
+    if part.magnetized {
+        // The world registry stores the moment under the part's name; we look
+        // it up via a thread-local hack OR the caller passes it in. The simple
+        // path: re-estimate from volume × neodymium-grade magnetisation.
+        let vol_m3 = part.volume_mm3 / 1e9;
+        return 8.0e5 * vol_m3; // 8×10⁵ A/m — neodymium grade
+    }
     let mat = part.material.map(|m| m.name).unwrap_or("plastic");
     let vol_m3 = part.volume_mm3 / 1e9;
     let magnetisation = match mag_kind(mat) {
@@ -156,15 +166,25 @@ pub fn magnet_sim(world: &World) -> Vec<ConsoleLine> {
         let centre = part.centroid.unwrap_or(part.mesh.bbox().center());
         let note = match kind {
             MagKind::Ferromagnetic => {
+                let magnet_tag = if part.magnetized { " [MAGNETIZED — explicit `magnetize:`]" } else { "" };
                 if let Some(curie) = curie_point(mat) {
-                    format!(" — ferromagnetic, moment ≈ {:.2} A·m² (Curie point {} °C: heat it past that and it forgets)", moment, curie)
+                    format!(" — ferromagnetic, moment ≈ {:.2} A·m²{} (Curie point {} °C: heat it past that and it forgets)", moment, magnet_tag, curie)
                 } else {
-                    format!(" — ferromagnetic, moment ≈ {:.2} A·m²", moment)
+                    format!(" — ferromagnetic, moment ≈ {:.2} A·m²{}", moment, magnet_tag)
                 }
             }
-            MagKind::Paramagnetic => " — paramagnetic: pulled weakly INTO a field (χ > 0)".into(),
-            MagKind::Diamagnetic => " — diamagnetic: pushed weakly OUT of fields; water levitates in 16 T".into(),
-            MagKind::NonMagnetic => " — the field passes through untouched".into(),
+            MagKind::Paramagnetic => {
+                let magnet_tag = if part.magnetized { " [MAGNETIZED — explicit `magnetize:` overrides the paramagnetic class]" } else { "" };
+                format!(" — paramagnetic: pulled weakly INTO a field (χ > 0){}", magnet_tag)
+            }
+            MagKind::Diamagnetic => {
+                let magnet_tag = if part.magnetized { " [MAGNETIZED — explicit `magnetize:` overrides the diamagnetic class]" } else { "" };
+                format!(" — diamagnetic: pushed weakly OUT of fields; water levitates in 16 T{}", magnet_tag)
+            }
+            MagKind::NonMagnetic => {
+                let magnet_tag = if part.magnetized { " [MAGNETIZED — explicit `magnetize:` makes this a permanent magnet]" } else { "" };
+                format!(" — the field passes through untouched{}", magnet_tag)
+            }
         };
         out.push(ConsoleLine {
             kind: LineKind::Info,

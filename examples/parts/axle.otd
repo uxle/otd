@@ -1,0 +1,6 @@
+scene "Axle Part"
+unit: cm
+
+# A standalone axle — meant to be `include`d by main.otd.
+
+axle = cylinder(r: 1.5cm, h: 24cm) rotate (0, 0, 90deg) at (0, 8cm, 0) material: steel

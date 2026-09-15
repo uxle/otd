@@ -1,0 +1,6 @@
+scene "Chassis Part"
+unit: cm
+
+# A standalone chassis plate — meant to be `include`d by main.otd.
+
+chassis = cube(w: 30cm, d: 10cm, h: 1cm) at (0, 4cm, 0) material: aluminum

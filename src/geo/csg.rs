@@ -8,7 +8,7 @@
 //! - AABB fast paths skip BSP entirely for disjoint solids.
 
 use crate::geo::mesh::Mesh;
-use crate::math3::{Aabb, V3};
+use crate::math3::V3;
 
 /// Plane epsilon in mm: above f64 rounding noise (≈1e-10 for values ~1000),
 /// far below any real feature (walls are ≥ 0.1 mm).

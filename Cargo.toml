@@ -1,8 +1,8 @@
 [package]
 name = "otd"
-version = "3.3.0"
+version = "6.0.0"
 edition = "2021"
-description = "OTD3.3 — Open Three-Dimensional Language. Pure Rust + assembly, zero external libraries: physics/energy/magnetism/sound engine, native PerceptAudio DSP, 8-camera AVC video studio, self-made nn.rs + OTD-Burn deep learning, statistics & astronomy, the program synthesizer, the lit-scene render cache, the website, and the subatomic particle layer."
+description = "OTD6.0 — Open Three-Dimensional Language. Pure Rust + assembly, zero external libraries: aerodynamics, fluid dynamics, electrodynamics, stellar dynamics, rigid body dynamics, multi-part assembly (include), magnetize, strict-overlap mode, plus the full OTD3 base (thermo, magnetism, waves, energy, Standard Model, PerceptAudio, AVC video, OTD-Burn)."
 license = "MIT"
 
 # THE CONSTRAINT: zero external crates. The engine, renderer, PNG encoder,

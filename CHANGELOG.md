@@ -1,5 +1,219 @@
 # Changelog
 
+## 4.0.0 "DYNAMICS" — the dynamics + assembly edition: aerodynamics, fluid dynamics, electrodynamics, stellar dynamics, rigid body dynamics, multi-part assembly, magnetize, strict-overlap
+
+> The user said: "you made good but not all science here." OTD3 had
+> thermodynamics, magnetism, waves, energy — the static sciences. OTD4
+> adds the five that move: **aerodynamics** (wings, drag, terminal
+> velocity, Reynolds, Mach), **fluid dynamics** (Bernoulli, Poiseuille,
+> Stokes, hydrostatic pressure), **electrodynamics** (Ohm, Kirchhoff,
+> RC/RL/LC, Maxwell's identity c = 1/√(μ₀ε₀)), **stellar dynamics**
+> (N-body, virial theorem, Jeans length, dynamical time), and **rigid
+> body dynamics** (inertia tensor, angular momentum, gyroscopic
+> precession, the tennis racket theorem).
+>
+> The user also reported silent-wrongness bugs that bit hard when an AI
+> uses the language without a human checking each step. OTD4 fixes every
+> one of them — and adds **strict overlap mode** that turns
+> "it compiled" into "it compiled AND it's geometrically sane":
+>
+> - `strict: overlap` + `overlap: check` — solid-solid interpenetration
+>   now FAILS compilation with a corrective error (axis, depth, fix
+>   suggestion) instead of just warning. The "shapes overlapping" bug
+>   the user reported is now impossible to ship by accident.
+> - `hollow()` now logs an INFO line every time `open:` is not
+>   explicit, so the default (open top) is never a surprise.
+> - `group()` re-parents its source parts (hides them as separate
+>   entries) so mass is no longer double-counted. The old 7.0g → 14.0g
+>   bug is gone.
+> - `rotate` now logs its pivot point every time (the bbox center,
+>   unless `pivot (x,y,z)` or `pivot: origin` is given). The
+>   "stator-tooth petals instead of radial teeth" bug is now
+>   impossible to ship without seeing the pivot in the console.
+> - `print "{name}"` with an unknown variable now WARNS instead of
+>   silently leaving the literal text. The AI sees the typo.
+
+> Multi-part design workflow: each part in its own file, then a main
+> file `include`s them and arranges them with `at (...)`. Four new
+> keywords: `include`, `magnetize`, `strict`, `overlap` — bringing the
+> total to 82 (still under the 100 budget).
+
+### New physics modules (P2300 series)
+
+- **`src/world/aerodynamics.rs` (P2300)** — the science of air moving
+  past things: continuity (A·v = const), Bernoulli (P + ½ρv² + ρgh =
+  const), lift (L = ½ρv²AC_L), drag (D = ½ρv²AC_D), Reynolds (Re =
+  ρvL/μ), Mach (M = v/c), terminal velocity (v_t = √(2mg/ρAC_D)).
+  `simulate: aero` walks every part, infers its shape class (sphere /
+  box / rod / streamlined), and reports drag, terminal velocity, and
+  (for wings) lift, L/W ratio, and stall speed. The ISA standard
+  atmosphere gives air density at any altitude; Everest's air is 40%
+  of sea level.
+- **`src/world/fluiddynamics.rs` (P2310)** — how liquids actually
+  move: Poiseuille (Q = πr⁴ΔP/8μL — the r⁴ law), Stokes drag
+  (F = 6πμrv), hydrostatic pressure (P = ρgh), capillary rise
+  (h = 2γcosθ/ρgr), Reynolds (the laminar/turbulent switch). 14
+  viscosity values from water (1 mPa·s) to glycerin (1.4 Pa·s — 1400×
+  water). `simulate: fluid` walks every liquid/gas part and reports
+  its column pressure, flow regime, and Poiseuille throughput.
+- **`src/world/electrodynamics.rs` (P2320)** — currents, fields, and
+  circuits in time: Ohm (V = IR), power (P = VI = I²R), capacitor
+  energy (U = ½CV²), inductor energy (U = ½LI²), RC/RL time constants,
+  LC resonance (ω = 1/√(LC)), and the Maxwell identity
+  c = 1/√(μ₀ε₀) = 299,792,458 m/s (light IS electromagnetism). 14
+  resistivity values from silver (1.59e-8 Ω·m) to carbon (3.5e-5).
+  `simulate: electro` walks every part — conductors get Ohm's law at
+  12 V, insulators get the parallel-plate capacitance and charge in
+  electrons. Johnson noise (the floor every amplifier hears) is
+  reported at the scene temperature.
+- **`src/world/stellardynamics.rs` (P2330)** — many-body gravity: the
+  N-body pairwise force, the virial theorem (2K + U = 0), the Jeans
+  length (the size a cloud must exceed to collapse into stars), the
+  Jeans mass, the dynamical time (the natural clock of the system),
+  escape velocity. Sound speed in an ideal gas (c_s = √(γkT/μm_H)).
+  `simulate: stellar` reads each part as a "star" with mass = its real
+  mass, computes pairwise forces, reports the virial energy (bound vs
+  unbound), the Jeans length for the scene's density, and the
+  dynamical time. Earth's orbital speed (29.8 km/s) and a globular
+  cluster's virial mass are tested.
+- **`src/world/rigidbody.rs` (P2340)** — rotation, inertia,
+  gyroscopes: moment of inertia (I = Σmr²) for solid/hollow spheres,
+  cylinders, rods, slabs; parallel axis theorem (I = I_cm + Md²);
+  angular momentum (L = Iω); rotational energy (E = ½Iω²); torque
+  (τ = r×F); gyroscopic precession (Ω_p = τ/Iω) — verified against
+  Earth's 26,000-year axial precession. The tennis racket theorem
+  (rotation about the middle-inertia axis is unstable) is taught.
+  `simulate: rigid` walks every part, computes its principal moment,
+  angular momentum, and the gravity-arm precession rate at a notional
+  1 rad/s spin.
+
+### New keywords (4 → 82 total)
+
+- **`include "parts/wheel.otd" at (x, y, z)`** — the multi-part
+  design workflow. Each part is designed in its own file (run
+  `otd --check parts/wheel.otd` to verify); the main file `include`s
+  them and arranges them with `at (...)`. New entries are auto-named
+  after the file (e.g., `wheel_1`, `wheel_2`) when there's a clash.
+  See `examples/car-assembly.otd` and `examples/parts/`.
+- **`magnetize: <name> [moment: <expr>]`** — mark a part as a
+  permanent magnet. The moment defaults to neodymium-grade
+  (8×10⁵ A/m × volume); pass `moment: 0.5` for a custom value.
+  Overrides the material's intrinsic magnetism class. `simulate:
+  magnet` then tags the part with `[MAGNETIZED]` in the survey.
+- **`strict: overlap` | `strict: all` | `strict: off`** — toggle
+  strict mode. When ON, solid-solid interpenetration FAILS
+  compilation (not just a warning). The silent-wrongness fix the user
+  asked for: an AI can no longer ship overlapping geometry without
+  seeing an error.
+- **`overlap` or `overlap: check`** — the explicit overlap audit.
+  Reports every interpenetrating pair with the penetration depth and
+  the shallowest escape axis (X, Y, or Z), plus a concrete fix
+  suggestion ("move B along Y by 2.5 mm, or fuse with `add A, B`").
+
+### Silent-wrongness fixes
+
+- **`hollow()` default pivot hint** — `eval_hollow` now emits an INFO
+  line every time `open:` is not explicit, telling the user the
+  default is "open top" and how to override (`open: none` for a sealed
+  shell, `open: bottom` to breach the base).
+- **`group()` re-parents** — when an arg is an Ident referring to an
+  existing entry, that entry is now marked hidden so it doesn't
+  double-count mass. The old 7.0g → 14.0g bug is gone. An INFO line
+  tells the user which parts were re-parented.
+- **`rotate` pivot logged** — every `rotate` (without `pivot:`) now
+  emits an INFO line naming the pivot point (the bbox center) and
+  showing how to override (`pivot (0, 0, 0)` for the origin,
+  `pivot: center` to be explicit). The new `Mod::RotateWithPivot`
+  variant accepts `rotate (angles) pivot (x, y, z)`.
+- **`print "{name}"` warns on unknown** — instead of silently leaving
+  the literal text, an unrecognized `{expr}` now emits a WARN line
+  telling the user/AI the variable is unknown and to define it first
+  or fix the typo.
+- **material suggestion** — when any part has no material assigned,
+  the engine now emits a WARN with the first unmaterialized part's
+  name and a list of common choices (steel, aluminum, copper, glass,
+  oak, ceramic, water, iron). A second INFO line explains how to set
+  a scene-wide default (`material: steel`).
+- **color suggestion** — when any part has neither color nor
+  material, an INFO line explains that parts without a color inherit
+  from their material and shows how to override.
+
+### Error template library (errors.rs)
+
+`src/lang/errors.rs` grew a library of corrective error templates,
+each with both a message AND a concrete fix suggestion:
+
+- `err_negative_radius(line, got, unit)` — "did you mean 5mm?"
+- `err_negative_length(line, what, got, unit)`
+- `err_unknown_material(line, name)` — Levenshtein-suggests from the
+  50-material table
+- `err_unknown_color(line, name)` — Levenshtein-suggests from the
+  147-color CSS/SVG set
+- `err_unknown_shape(line, name)` — Levenshtein-suggests from the 14
+  primitives
+- `err_unknown_unit(line, name)` — Levenshtein-suggests from the 10
+  units
+- `err_arg_count(line, shape, expected, got, example)`
+- `err_missing_arg(line, shape, arg, example)`
+- `err_bad_axis(line, got)` — "must be x, y, or z"
+- `err_bad_boolean(line, got)` — "use + - & between shapes"
+- `err_object_not_found(line, name, candidates)` — Levenshtein
+  suggestion
+- `err_type_mismatch(line, what, expected, got)`
+- `err_out_of_range(line, what, got, min, max, hint)`
+- `err_syntax(line, what, example)`
+- `err_overlap(line, a, b, depth_mm, axis)` — the strict-mode error
+  with the fix suggestion
+- `err_file_not_found(line, file, kind)` — for include/import
+- `err_deprecated(line, old, new)`
+- `err_empty_scene(line, sim)`
+- `err_no_material(line, part)`
+
+### Material suggest-by-use
+
+`materials::suggest_by_use(use_case)` returns a (name, reason) pair
+for 20+ use cases: "structure" → steel, "lightweight" → aluminum,
+"magnet" → iron, "wire" → copper, "heat_sink" → aluminum, "jewelry"
+→ gold, "cup" → ceramic, "lubricant" → oil, "nuclear" → uranium,
+"hard" → tungsten, "tire" → rubber, etc. Powers the "no material"
+suggestion when a part is created without one.
+
+`materials::list_by_property(prop)` lists materials by predicate:
+"magnetic", "metal", "transparent", "liquid", "gas", "conductor",
+"insulator", "sinks", "floats". For programmatic discovery.
+
+### Tests
+
+New tests in every new module — Earth's orbital speed (29.8 km/s),
+Earth's escape velocity (11.2 km/s), the Maxwell identity (c =
+299,792,458 m/s), Poiseuille's r⁴ law (halve radius → ×16 flow),
+Stokes drag (glycerin 1400× water), capillary rise (water climbs 14
+mm in a 1 mm tube), the virial mass of a globular cluster, Earth's
+26,000-year axial precession. Every test verifies a real physical
+constant or law to the textbook value.
+
+### Examples
+
+- `examples/dynamics-tour.otd` — one scene, all six dynamics domains
+  on the same parts (wing, wire, disk, three balls, water pool)
+- `examples/car-assembly.otd` — the multi-part workflow: chassis +
+  4 wheels + 2 axles, each in its own file under `examples/parts/`,
+  assembled with `include:` and audited with `strict: overlap`
+- `examples/parts/wheel.otd`, `axle.otd`, `chassis.otd` — the
+  individual part files for the car-assembly demo
+
+### Backward compatibility
+
+Every existing OTD3 file still compiles unchanged. The `hollow()`
+default remains `Open::Top` (the old behavior); the new info hint is
+non-fatal. The `group()` re-parenting is a behavior change but
+produces the mass the user originally expected (the bug fix is the
+correct behavior). The `rotate` info hint is non-fatal. The
+`print "{name}"` warn is non-fatal. `strict: overlap` is opt-in
+(default off) so no existing file is broken.
+
+---
+
 ## 3.3.0 "QUARK" — the subatomic edition: protons, neutrons, electrons, quarks, gluons, photons, neutrinos
 
 > The user asked for the particles underneath everything. The grams were

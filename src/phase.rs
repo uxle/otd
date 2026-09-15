@@ -79,7 +79,7 @@ pub const IMPLEMENTED: &[PhaseEntry] = &[
 pub fn banner() -> String {
     let done = IMPLEMENTED.len();
     format!(
-        "OTD engine — {} / {} phases ready (P0000–P1340, stages S0+S1 complete + the 2.1 syntax expansion)",
-        done, TOTAL_PHASES
+        "OTD v{} — {} / {} phases ready",
+        env!("CARGO_PKG_VERSION"), done, TOTAL_PHASES
     )
 }

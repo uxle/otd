@@ -391,7 +391,7 @@ fn api_export(req: &Request, cache: &Mutex<Cache>) -> Response {
             Response::binary("text/plain", text.into_bytes(), &format!("{}.obj", title))
         }
         "glb" | "gltf" => {
-            let parts: Vec<crate::export::glb::GlbPart> = visible
+            let _parts: Vec<crate::export::glb::GlbPart> = visible
                 .iter()
                 .map(|p| crate::export::glb::GlbPart { name: p.name.as_str(), mesh: &p.mesh, material: 0 })
                 .collect();

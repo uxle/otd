@@ -1,6 +1,9 @@
 #!/bin/sh
 # OTD — build everything (engine + the two vendored intelligence toolchains)
 # and start the 3D viewer. The vendor builds are one-time (~2 min each).
+#
+# OTD6 #4: Minimum Rust version is 1.85+ (edition2024 via vendor/avc transitive
+# dep pxfm). If you have an older toolchain, run `rustup update` first.
 cd "$(dirname "$0")"
 if [ ! -x target/release/otd ]; then
     echo "building the OTD engine (needs the Rust toolchain)…"

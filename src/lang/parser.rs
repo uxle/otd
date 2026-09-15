@@ -220,6 +220,106 @@ impl Parser {
                 };
                 Some(Stmt::Mix { a, b, line })
             }
+            // OTD4 P2300 — `include "parts/wheel.otd" at (x, y, z)`
+            "include" => {
+                self.bump();
+                self.eat_p(":");
+                let file = match self.bump() {
+                    Tok::Str(s) => s,
+                    _ => {
+                        self.err_hint(
+                            "include needs a file path in quotes",
+                            "like include: \"parts/wheel.otd\" at (10cm, 0, 0)",
+                        );
+                        return None;
+                    }
+                };
+                // optional `at (x, y, z)` placement
+                let mut at: Option<Vec<Expr>> = None;
+                if let Tok::Ident(w) = self.peek().clone() {
+                    if w == "at" {
+                        self.bump();
+                        if let Tok::P("(") = self.peek().clone() {
+                            self.bump();
+                            let mut items = Vec::new();
+                            loop {
+                                items.push(self.parse_expr());
+                                if matches!(self.peek(), Tok::P(")")) { self.bump(); break; }
+                                if !self.eat_p(",") { break; }
+                            }
+                            at = Some(items);
+                        }
+                    }
+                }
+                Some(Stmt::Include { file, at, line })
+            }
+            // OTD4 P2310 — `magnetize: name` or `magnetize: name moment: 0.5`
+            "magnetize" => {
+                self.bump();
+                self.eat_p(":");
+                let target = match self.bump() {
+                    Tok::Ident(n) => n,
+                    _ => {
+                        self.err_hint(
+                            "magnetize needs an object name",
+                            "like magnetize: rotor  (then run simulate: magnet)",
+                        );
+                        return None;
+                    }
+                };
+                // optional `moment: <number>` named argument
+                let mut moment: Option<Expr> = None;
+                if let Tok::Ident(w) = self.peek().clone() {
+                    if w == "moment" {
+                        self.bump();
+                        self.eat_p(":");
+                        moment = Some(self.parse_expr());
+                    }
+                }
+                Some(Stmt::Magnetize { target, moment, line })
+            }
+            // OTD4 P2320 — `strict: overlap` | `strict: all` | `strict: off`
+            "strict" => {
+                self.bump();
+                self.eat_p(":");
+                match self.bump() {
+                    Tok::Ident(mode) => Some(Stmt::Strict(mode)),
+                    _ => {
+                        self.err_hint(
+                            "strict needs a mode",
+                            "try strict: overlap  (or strict: all, strict: off)",
+                        );
+                        None
+                    }
+                }
+            }
+            // OTD4 P2330 — `overlap` or `overlap: check`
+            "overlap" => {
+                self.bump();
+                let mode = if self.eat_p(":") {
+                    match self.bump() {
+                        Tok::Ident(m) => m,
+                        _ => "check".to_string(),
+                    }
+                } else {
+                    "check".to_string()
+                };
+                Some(Stmt::Overlap { mode, line })
+            }
+            // OTD6 #5: connect: A B — electrical connectivity between parts
+            "connect" => {
+                self.bump();
+                self.eat_p(":");
+                let a = match self.bump() {
+                    Tok::Ident(n) => n,
+                    _ => { self.err_hint("connect needs two part names", "try connect: battery rotor"); None.unwrap_or_default() }
+                };
+                let b = match self.bump() {
+                    Tok::Ident(n) => n,
+                    _ => { self.err_hint("connect needs a second part name", "try connect: battery rotor"); None.unwrap_or_default() }
+                };
+                Some(Stmt::Connect { a, b, line })
+            }
             "hide" | "show" => {
                 let which = word == "show";
                 self.bump();
@@ -243,15 +343,22 @@ impl Parser {
                              // OTD3.3 — the subatomic layer
                              "atom", "atoms", "nucleus", "nuclear",
                              "decay", "radioactive", "radioactivity", "halflife",
-                             "particles", "particle", "standardmodel", "quark", "quarks"].contains(&sim.as_str()) {
+                             "particles", "particle", "standardmodel", "quark", "quarks",
+                             // OTD4 — the dynamics expansion
+                             "aero", "aerodynamics", "drag", "lift", "flight",
+                             "fluid", "fluiddynamics", "fluid_dynamics", "bernoulli", "poiseuille",
+                             "electro", "electrodynamics", "ohm", "current",
+                             "stellar", "stellardynamics", "stellar_dynamics", "nbody", "virial",
+                             "rigid", "rigidbody", "rigid_body", "inertia", "gyroscope", "spin",
+                             "motor", "electric_motor", "electricmotor", "circuit"].contains(&sim.as_str()) {
                             self.err_hint(
                                 format!("'{}' is not a simulation I know", sim),
-                                "try drop, float, collapse, splash, settle, solidity, gas, mix, energy, heat, magnet, sound, light, time, learn, stats, orbit, atom, decay, or particles",
+                                "try drop, float, collapse, splash, settle, solidity, gas, mix, energy, heat, magnet, sound, light, time, learn, stats, orbit, atom, decay, particles, aero, fluid, electro, stellar, rigid, motor, or circuit",
                             );
                         }
                         Some(Stmt::Simulate(sim, line))
                     }
-                    _ => { self.err("simulate needs drop, float, collapse, splash, settle, solidity, gas, mix, energy, heat, magnet, sound, light, time, learn, stats, orbit, atom, decay, or particles"); None }
+                    _ => { self.err("simulate needs drop, float, collapse, splash, settle, solidity, gas, mix, energy, heat, magnet, sound, light, time, learn, stats, orbit, atom, decay, particles, aero, fluid, electro, stellar, rigid, motor, or circuit"); None }
                 }
             }
             // OTD3.3 P2250 — `particle: gluon` | `particle: proton` — one
@@ -861,7 +968,40 @@ impl Parser {
             } else if self.is_word("rotate") {
                 self.bump();
                 let v = self.parse_angle_or_tuple();
-                mods.push(Mod::Rotate(v));
+                // OTD4 — optional `pivot (x, y, z)` | `pivot: origin` | `pivot: center`
+                if self.is_word("pivot") {
+                    self.bump();
+                    let pivot = if self.is_p("(") {
+                        PivotSpec::Point(self.parse_tuple())
+                    } else if self.is_word("origin") {
+                        self.bump();
+                        PivotSpec::Origin
+                    } else if self.is_word("center") {
+                        self.bump();
+                        PivotSpec::Center
+                    } else if self.eat_p(":") {
+                        if self.is_word("origin") {
+                            self.bump();
+                            PivotSpec::Origin
+                        } else if self.is_word("center") {
+                            self.bump();
+                            PivotSpec::Center
+                        } else if self.is_p("(") {
+                            PivotSpec::Point(self.parse_tuple())
+                        } else {
+                            self.err_hint(
+                                "pivot wants origin, center, or (x, y, z)",
+                                "like rotate (0, 45deg, 0) pivot (0, 0, 0)",
+                            );
+                            PivotSpec::Center
+                        }
+                    } else {
+                        PivotSpec::Center
+                    };
+                    mods.push(Mod::RotateWithPivot { angles: v, pivot });
+                } else {
+                    mods.push(Mod::Rotate(v));
+                }
             } else if self.is_word("scale") {
                 self.bump();
                 let v = self.parse_factor_or_tuple();

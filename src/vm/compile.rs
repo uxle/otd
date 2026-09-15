@@ -6,7 +6,7 @@
 //! VM never changes semantics, only the execution engine.
 
 use crate::lang::ast::{Arg, BinOp, Expr};
-use crate::units::{Dim, Qty};
+use crate::units::Dim;
 use crate::vm::isa::*;
 
 pub const MAX_REGS: u32 = 200;
@@ -136,7 +136,7 @@ fn compile_expr(c: &mut Ctx, e: &Expr) -> Result<u32, CompileErr> {
                         return Err(CompileErr::NotNumeric);
                     }
                     let code = if name == "min" { OP_MIN_F64 } else { OP_MAX_F64 };
-                    let mut acc = compile_expr(c, &vals[0].val)?;
+                    let acc = compile_expr(c, &vals[0].val)?;
                     for v in &vals[1..] {
                         let r = compile_expr(c, &v.val)?;
                         c.insns.push(Insn::new(code, acc, acc, r, 0.0));

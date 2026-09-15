@@ -1,7 +1,6 @@
 //! P0640a — binary STL exporter (millimeters). 84-byte header + N×50 bytes.
 
 use crate::geo::mesh::Mesh;
-use crate::math3::V3;
 
 pub fn to_binary_stl(m: &Mesh, name: &str) -> Vec<u8> {
     let mut out = Vec::with_capacity(84 + m.tris.len() * 50);

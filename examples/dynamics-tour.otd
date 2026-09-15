@@ -1,0 +1,39 @@
+scene "OTD4 Dynamics Tour"
+unit: cm
+
+# ====== The OTD4 dynamics tour ======
+# Six new physics domains, all on the same scene so you can see how they
+# read the same parts through different lenses.
+#
+# 1. aerodynamics   — drag, lift, terminal velocity, Reynolds, Mach
+# 2. fluid dynamics — Bernoulli, Poiseuille, Stokes, hydrostatic pressure
+# 3. electrodynamics — Ohm, Kirchhoff, RC/RL/LC, Maxwell's light
+# 4. stellar dynamics — N-body, virial theorem, Jeans scale
+# 5. rigid body dynamics — inertia tensor, angular momentum, gyroscopes
+# 6. magnetism (already in OTD3, now with magnetize: keyword)
+#
+# The parts are spread out enough that strict-overlap passes.
+
+# --- the parts: a wing, a wire, a spinning disk, three lead balls, a water pool ---
+wing    = cube(w: 20cm, d: 3cm, h: 1cm) at (0, 5cm, 0) material: aluminum
+wire    = cylinder(r: 1mm, h: 20cm) rotate (90deg, 0, 0) at (15cm, 10cm, 0) material: copper
+disk    = cylinder(r: 8cm, h: 2cm) at (-25cm, 5cm, 0) material: steel
+star_a  = sphere 2cm at (-45cm, 5cm, 0)   material: lead
+star_b  = sphere 2cm at (-45cm, 5cm, 8cm) material: lead
+star_c  = sphere 2cm at (-37cm, 5cm, 12cm) material: lead
+pool    = cube(w: 8cm, d: 8cm, h: 4cm) at (25cm, 2cm, 15cm) material: water
+
+# --- magnetize the disk so it becomes a permanent magnet ---
+magnetize: disk
+
+# --- run every new simulation ---
+simulate: aero
+simulate: fluid
+simulate: electro
+simulate: stellar
+simulate: rigid
+simulate: magnet
+
+# --- and the new strict-overlap audit ---
+strict: overlap
+overlap: check

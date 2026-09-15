@@ -408,7 +408,7 @@ pub fn lex(src: &str) -> LexOut {
 
 /// Convert a raw (value, unit) pair into a Qty in canonical units (mm / deg).
 /// `default_unit` applies to bare numbers (scene `unit:` statement, default cm).
-pub fn qty_of(v: f64, unit: &Option<String>, line: usize, default_unit: &str) -> Result<crate::units::Qty, crate::lang::errors::Error> {
+pub fn qty_of(v: f64, unit: &Option<String>, line: usize, _default_unit: &str) -> Result<crate::units::Qty, crate::lang::errors::Error> {
     use crate::units::Qty;
     match unit {
         None => {

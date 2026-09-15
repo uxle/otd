@@ -37,7 +37,7 @@ pub fn hollow(mesh: &Mesh, kind: &Kind, wall: f64, open: Open) -> HollowResult {
             Some(prims::frustum(it, ib, y1 - y0, 48).0.translated(crate::math3::V3::new(0.0, y0, 0.0)))
         }
         Kind::Box { w: bw, d, h } => {
-            let (iw, id, ih) = ((bw - 2.0 * w).max(0.0), (d - 2.0 * w).max(0.0), (h - 2.0 * w).max(0.0));
+            let (iw, id, _ih) = ((bw - 2.0 * w).max(0.0), (d - 2.0 * w).max(0.0), (h - 2.0 * w).max(0.0));
             let (y0, y1) = match open {
                 Open::Top => (w, h + 2.0 * w),
                 Open::Bottom => (-2.0 * w, h - w),

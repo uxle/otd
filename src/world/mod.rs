@@ -36,5 +36,18 @@ pub mod astro;
 pub mod particles;
 // P2260 — atoms & nuclei: the periodic table, shells, binding, decay
 pub mod atom;
+// ---- OTD6: the motor + circuit simulation ----
+pub mod motor;
+// ---- OTD4: the dynamics expansion (P2300 series) ----
+// P2300 — aerodynamics: drag, lift, terminal velocity, Reynolds, Mach
+pub mod aerodynamics;
+// P2310 — fluid dynamics: continuity, Bernoulli, Poiseuille, Stokes
+pub mod fluiddynamics;
+// P2320 — electrodynamics: Ohm, Kirchhoff, RC/RL/LC, Maxwell's light
+pub mod electrodynamics;
+// P2330 — stellar dynamics: N-body, virial theorem, Jeans scale
+pub mod stellardynamics;
+// P2340 — rigid body dynamics: inertia tensor, angular momentum, gyroscopes
+pub mod rigidbody;
 
 pub use eval::{ConsoleLine, LineKind, Part, Stats, World};
