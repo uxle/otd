@@ -1,125 +1,81 @@
-# OTD 2.1 — Enhancement Roadmap & Realization Report
+# OTD 6.0 — Enhancement Roadmap & Realization Report
 
 > The question this document answers: **"How much can this project be enhanced,
-> and how?"** — Part A reports what was enhanced *now* (all delivered in this
-> build). Part B is the prioritized backlog for the next rounds.
+> and what's been done vs what's left?"**
 
----
+## Current state: OTD 6.0 "INTELLIGENCE"
 
-## PART A — Enhanced in this build (all shipped & verified)
-
-### A1. Project structure: from 15 examples → a real content library
-
-Before: `examples/` (15 files) + `tests/` + `docs/`. After:
-
-```
-otd2/
-├── library/                      ← NEW: 1,695 validated programs
-│   ├── 00-INDEX.md               ← master index (every file, one-line description)
-│   ├── materials/  (263)         ← brick.otd, water.otd, wood.otd, glass.otd, gold.otd …
-│   │   ├── 42 metal demos (one per metal × ingot/rod/sphere + plates, springs, gears)
-│   │   ├── 30+ brick demos (walls, piles, towers, arches, huts)
-│   │   ├── 30+ water demos (float tests per material, boats, buoys, islands, ice)
-│   │   └── wood/stone/glass/ceramic/soft families
-│   ├── primitives/ (293)         ← every shape & builder, parameter sweeps
-│   ├── patterns/   (149)         ← repeat/grid/ring/scatter studies + combos
-│   ├── architecture/ (160)       ← houses, towers, bridges, castles, stairs, columns
-│   ├── nature/     (141)         ← trees, terrains, crystals, space
-│   ├── furniture/  (118)         ← tables, chairs, shelves, lamps
-│   ├── machines/   (137)         ← gears, robots, vehicles, tools
-│   ├── art/        (115)         ← sculptures, spirals, mosaics, jewelry
-│   ├── games/      (83)          ← chess, dice, dominoes, toys, sports
-│   ├── physics/    (87)          ← drop / float / collapse experiments
-│   ├── lessons/    (92)          ← 46 numbered lessons + labs & exercises
-│   └── showcase/   (57)          ← harbors, cities, wind farms, orbit studies
-├── tests/library_parses.rs       ← NEW: cargo test walks all 1,695 files every run
-└── README.md                     ← updated with library section
-```
-
-**Every one of the 1,695 files passes `otd --check`** (full parse + evaluate +
-world build — not just syntax). Test totals: **268 tests, 0 failures**
-(157 unit + 74 syntax + 23 bughunt + 6 validation + content/integration/perf/render + library).
-
-### A2. Seven new findings from mass-generation testing (B8–B14)
-
-Generating 1,695 programs exercised the engine far beyond the original corpus
-and surfaced **7 documentation/implementation drift bugs** (all worked around in
-the library; fixes queued in Part B):
-
-| ID | Severity | Finding |
+| Category | Done | Count |
 |---|---|---|
-| B8 | HIGH | Docs/spec show `metaball [(x,y,z,r)…]` 4-tuples — engine only accepts 3-tuple positions + separate `r:` parameter (deep-blob.otd is correct, spec is wrong) |
-| B9 | HIGH | Spec's `sweep(path: […], r: 2cm)` form does not parse; the parser's own error hint `sweep […] path: […]` also does not parse. Working form: `sweep(profile: […3+ corners…], path: […])` |
-| B10 | HIGH | Spec's `loft [(r,h)…]` form does not parse. Working form: `loft(sections: [[profile1], [profile2]])` with equal corner counts |
-| B11 | MEDIUM | Docs show `grid(…, spacing: 5cm)` — engine requires a tuple: `spacing: (5cm, 5cm)` |
-| B12 | LOW | `rebeccapurple` is listed in spec Appendix A (147 colors) but rejected by the engine (146 actually work) |
-| B13 | MEDIUM | **Engine bug:** a length stored in a variable inside a `for` loop loses its unit tag when multiplied by a trig result — `r = 2cm + i*0.5cm` then `at (r * cos(a), …)` errors "at wants lengths, not angles". The identical inline expression works. Staircase-style literal form is unaffected |
-| B14 | MEDIUM | `use name` only works on `define`d templates, never on assigned shapes — friendly error exists but docs never state the rule |
+| **Keywords** | scene, unit, version, gravity, camera, hide, show, temperature, particle, include, magnetize, strict, overlap, connect, 14 primitives, 11 builders, smooth, subdiv, add, subtract, intersect, at, rotate, scale, mirror, repeat, grid, ring, scatter, define, use, material, color, simulate, ask, export, print, mm, cm, m, in, ft, deg, and, or, not, true, false, is, mod, if, else, end, for, to, by, while, break, continue, assert, tolerance, validate, explain, quality, array, layer, macro, measure, profile, benchmark, snapshot, print_json | 83 |
+| **Functions** | cos, sin, tan, sqrt, abs, min, max, round, floor, ceil, pow, log, ln, exp, sign, hypot, atan, atan2, asin, acos, lerp, clamp, count, sum, avg, help, functions, materials, keywords, shapes, sims, ohm_v, ohm_i, ohm_r, power_vi, power_ir, cap_energy, ind_energy, rc_tau, lc_omega | 40 |
+| **Shapes** | sphere, cube, cylinder, cone, torus, pyramid, prism, capsule, wedge, plane, tube, helix, rope, thread, gear, spring, bolt, nut, extrude, revolve, sweep, loft, text, terrain, metaball, import, blend, hollow, group | 29 |
+| **Materials** | iron, steel, stainless, aluminum, copper, brass, bronze, gold, silver, titanium, zinc, lead, chrome, tungsten, wood, oak, pine, teak, glass, plastic, rubber, ceramic, concrete, marble, fabric, carbon, ice, foam, water, oil, mercury, ethanol, acetone, glycerin, hydrogen, helium, methane, ammonia, nitrogen, air, oxygen, steam, carbon_dioxide, chlorine, uranium, plutonium, thorium, lithium, coal, gasoline | 50 |
+| **Simulate domains** | drop, float, collapse, splash, settle, solidity, gas, mix, energy, heat, magnet, sound, light, time, learn, stats, orbit, atom, decay, particles, aero, fluid, electro, stellar, rigid, motor, circuit | 27 |
+| **Colors** | 147 named CSS/SVG colors + #rrggbb hex | 147 |
+| **Units** | mm, cm, m, km, in, ft, yd, um, deg, rad | 10 |
 
-### A3. Screenshots
+## Enhancement history
 
-18 sample renders shipped in `screenshots-library/` (also visible in the repo):
-brick, water, glass, 3D text, flowers, house, lighthouse, pine, desk lamp,
-gears, car, sculpture, chess pawn, float demo, first cup, harbor, skyline,
-wind farm.
+### OTD 6.0 "INTELLIGENCE" — self-describing, single-source version, callable electrodynamics, electrical connectivity, expression interpolation
 
----
+- **Self-describing:** `--list-*` CLI flags + in-script `help()/functions()/materials()/keywords()/shapes()/sims()`
+- **Version reporting:** `env!("CARGO_PKG_VERSION")` everywhere — single source of truth
+- **Callable electrodynamics:** 9 functions wired up (ohm_v, ohm_i, ohm_r, power_vi, power_ir, cap_energy, ind_energy, rc_tau, lc_omega)
+- **Electrical connectivity:** `connect: A B` + `simulate: circuit` (real winding resistance, I=V/R)
+- **Motor simulation:** `simulate: motor` (F=B·I·L, τ=N·B·I·A, "WILL IT MOVE?")
+- **Expression interpolation:** `print "{a+b}"` evaluates expressions
+- **Min Rust version:** 1.85+ documented
 
-## PART B — The full enhancement backlog (how much more is possible)
+### OTD 4.0 "DYNAMICS" — aerodynamics, fluid dynamics, electrodynamics, stellar dynamics, rigid body dynamics, multi-part assembly, magnetize, strict-overlap
 
-Ranked by impact ÷ effort. The engine's phase plan (P0000–P1299 done of 10,000)
-means there is **deliberate headroom for ~100× more growth** — this list is the
-practical slice.
+- 5 new physics domains, 4 new keywords (include, magnetize, strict, overlap)
+- 5 silent-wrongness fixes (hollow, group, rotate pivot, print interpolation, overlap detection)
+- 18 corrective error templates
+- Blender-like editor (menu bar, toolbar, outliner, properties, timeline, gizmo, console, status bar)
+- Command palette (Ctrl+P), find/replace (Ctrl+F), 3 themes
+- Parallel downsample, FxHash, mesh-level overlap SAT
+- 4 new shapes (gear, spring, bolt, nut), 2 new physics (vibration, optics)
 
-### Tier 1 — fix the drift (hours, do first)
+### OTD 3.x — energy, thermodynamics, magnetism, waves, relativity, PerceptAudio, AVC video, OTD-Burn, Standard Model
 
-1. **B8–B12 doc fixes**: correct the spec/cheatsheet for metaball, sweep, loft,
-   grid-spacing, and the color table (or implement the documented forms —
-   both are small parser changes).
-2. **B13 unit-tag bug**: in the VM/interpreter, propagate the length unit tag
-   through loop-scoped variables used in `*` with trig results. Add a
-   regression test: `for` + variable + `cos(a)` in `at(...)`.
-3. **B14 doc note**: one paragraph in 04-SPECIFICATION.md §Parts — "`use`
-   works on `define`d templates; to copy an assigned shape use a template."
+- Complete energy taxonomy (2 categories, 9 forms)
+- Thermodynamics (temperature, heat, phase, the four laws)
+- Magnetism (fields, forces, Faraday, Ampère, Earth)
+- Sound & light (Doppler, Snell, Wien)
+- Time & motion (free-fall, pendulum, relativity)
+- PerceptAudio native (VAD, YIN pitch, speaker clustering, Wiener denoise)
+- AVC video studio (H.264 encoder + MP4 muxer, 8-camera panel)
+- Self-made nn.rs + OTD-Burn deep learning
+- Statistics, astronomy, program synthesizer
+- Standard Model (17 particles, quark model, Weizsäcker binding energy)
 
-### Tier 2 — content & docs (days)
+### OTD 2.x — Solidity, syntax expansion, deep tier
 
-4. **Renderer packs**: render every library file to PNG (≈35 min at ~1.2 s
-   each with -P8) and ship a `docs/img/library/` contact sheet — turns the
-   index into a visual catalog.
-5. **Library → web viewer**: load `library/` categories into the viewer's
-   lesson picker (assets/index.html already has a lessons list — extend it).
-6. **Per-category quizzes**: each lesson gains a `#[ try changing … ]#`
-   exercise footer; auto-checkable via `assert`.
-7. **Localization pass**: the friendly error strings are the product — ship
-   translated error tables as data files.
+- Real solidity (settle + interpenetration audit)
+- Environments (buoyancy + drag)
+- Chemistry (liquid miscibility, gas mixing, reactions)
+- if/for/while/break/continue, compound assignment, comparisons, logic
+- DEC cotan-Laplacian smooth, Loop subdivision, SDF blend, XPBD rope
+- VM (OTD-ASM: 32-byte vector ISA)
 
-### Tier 3 — engine (weeks, matches the phase plan)
+### OTD 1.0 — the base
 
-8. **T-junction stitching pass** (the one HIGH bug left from the first audit,
-   B4): after BSP booleans, weld T-vertices to make hollow/subtract watertight
-   and honest against `ask "watertight?"`.
-9. **Named-arg validation**: unknown named parameters (e.g. `sphere(bogus: 3)`)
-   are silently ignored today — emit a warning listing near-miss names.
-10. **`import` local files + drag-drop** (Phase 2 promise in the spec).
-11. **Animation keywords** (`simulate` already runs XPBD — add `for t in
-    0..60` frames export) → GIF/APNG via the existing PNG writer.
-12. **Sub-category tags**: a `tags: architecture, gothic` header the viewer
-    can filter on (machine-readable, no new keywords in programs).
+- 14 primitives, BSP CSG, analytic hollow
+- 27 materials, 147 colors, 75 keywords
+- SIMD renderer (z-buffer, GGX, ray-traced shadows, AO)
+- HTTP server, PNG encoder, STL/OBJ export
+- Zero external crates — the constraint that started it all
 
-### Growth ceiling
+## What's left (future enhancements)
 
-The 10,000-phase roadmap targets ~100 keyword budget, a GPU-tier renderer,
-full CSG watertightness, and a plugin-free AR export path. With 1,695 programs
-+ 268 tests + 7 documented drift findings, the project now has the *content
-mass* and the *safety net* to absorb all of Tier 3 without regressions.
-
----
-
-## Verification commands (everything in Part A)
-
-```bash
-cargo test --release            # 268 tests incl. library_parses (1,695 files)
-find library -name "*.otd" | wc -l                    # 1695
-find library -name "*.otd" -exec otd --check {} \;   # 0 errors (use xargs -P8)
-```
+- **BLDC commutation:** `simulate: motor` currently models a brushed DC motor; a BLDC needs commutation timing
+- **Multi-select in the outliner:** currently single-select only
+- **Node-based material editor:** the "Nodes" tab is a placeholder
+- **Sculpt mode:** the "Sclpt" toolbar button is a placeholder
+- **Edit mode:** vertex-level editing is a placeholder
+- **Restore snapshots:** `snapshot:` saves but `restore:` is not yet implemented
+- **Macro expansion:** `macro` defines but `use` expansion is not yet wired
+- **More materials:** composites, semiconductors, superconductors
+- **More shapes:** bevel, chamfer, fillet, boolean patterns
+- **GPU rendering:** currently CPU-only (the constraint is zero external deps)

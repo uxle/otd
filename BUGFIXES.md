@@ -1,4 +1,70 @@
-# BUGFIXES — OTD 2.2.0 "MECHANICS"
+# BUGFIXES — OTD 6.0 "INTELLIGENCE"
+
+## B22–B27 — six fixes from an AI user's real experience (fixed in OTD 6.0)
+
+### B22 — tool was not self-describing (fixed)
+
+**Symptom:** No way to ask OTD what it can do; required `grep`ping Rust source.
+
+**Fix:** Added `--list-functions`, `--list-materials`, `--list-keywords`,
+`--list-shapes`, `--list-simulate`, `--list-colors`, `--list-all` CLI flags,
+plus in-script `help()`, `functions()`, `materials()`, `keywords()`,
+`shapes()`, `sims()`. All dump from source tables, never hand-maintained.
+
+### B23 — four different version strings disagreed (fixed)
+
+**Symptom:** `Cargo.toml` said 4.0.0, `--version` said 3.3.0 "QUARK",
+the banner said 3.1, the phase banner said "63/10000 phases".
+
+**Fix:** `Cargo.toml` is now the single source of truth via
+`env!("CARGO_PKG_VERSION")`. `--version`, the ASCII art banner, and the
+phase banner all read from it. No more hardcoded version strings.
+
+### B24 — electrodynamics functions advertised but not callable (fixed)
+
+**Symptom:** `ohm_i`/`ohm_v`/`ohm_r`/etc. existed in
+`src/world/electrodynamics.rs` and were listed in the changelog, but
+calling `ohm_i(12, 5)` from a script failed with "unknown function".
+
+**Fix:** Wired up 9 functions in `eval_func`: `ohm_v`, `ohm_i`, `ohm_r`,
+`power_vi`, `power_ir`, `cap_energy`, `ind_energy`, `rc_tau`, `lc_omega`.
+Added them to the `FUNCS` table in `keywords.rs`. A changelog entry now
+means "usable from a script."
+
+### B25 — minimum Rust version not documented (fixed)
+
+**Symptom:** A plain build on an older toolchain failed with a cryptic
+manifest error from `vendor/avc` (needs edition2024 via transitive dep
+`pxfm`).
+
+**Fix:** `run.sh` now states: "Minimum Rust version is 1.85+ (edition2024
+via vendor/avc transitive dep pxfm). If you have an older toolchain, run
+`rustup update` first."
+
+### B26 — no electrical connectivity layer (fixed)
+
+**Symptom:** The motor simulation asked "will it move?" but had no way
+to model the actual electrical circuit — the user had to calculate
+resistance/current outside the tool.
+
+**Fix:** New keyword `connect: A B` declares electrical paths. New
+`simulate: circuit` walks the connections, computes real resistance from
+each part's material resistivity × wire geometry (R = ρL/A), and reports
+total R, current I=V/R, power P=VI, and the verdict. New `simulate: motor`
+does the full motor analysis (F=B·I·L, τ=N·B·I·A, back-EMF, stall torque,
+RPM, efficiency, "WILL IT MOVE?").
+
+### B27 — expression interpolation only did bare names (fixed)
+
+**Symptom:** `print "{a+b}"` left the literal text `{a+b}` — only bare
+`{name}` substitutions worked.
+
+**Fix:** The interpolate function now tries bare name first, then falls
+back to parsing+evaluating as an expression. If both fail, it warns (not
+errors). Error rollback ensures failed expression eval doesn't pollute
+the error list. Verified: `print "v+r = {v+r}"` → `v+r = 9`.
+
+---
 
 ## B17–B21 — silent-wrongness bugs reported by an AI user (fixed in OTD4.0)
 
@@ -11,100 +77,46 @@ compatibility — every existing OTD3 file still compiles unchanged.
 **Symptom:** `sphere 4cm - hollow(wall: 2mm)` quietly opens the top of the
 sphere, surprising the user who expected a sealed shell.
 
-**Fix (P2400, `src/world/eval.rs::eval_hollow`):** every `hollow()` call
-without an explicit `open:` argument now emits an INFO line:
-`hollow() default: open top (write open: none for a sealed shell, or open: bottom to breach the base)`.
-The default itself is unchanged (backward compat).
+**Fix:** every `hollow()` call without an explicit `open:` argument now
+emits an INFO line telling the user the default is "open top" and how to
+override. The default itself is unchanged (backward compat).
 
 ### B18 — `group()` silently double-counts mass (7.0g → 14.0g)
 
-**Symptom:** `g = group(a, b)` produces a group whose mass equals `a.mass + b.mass`,
-but `a` and `b` are still in the scene as separate parts — so `total_mass_g`
-double-counts them.
-
-**Fix (P2410, `src/world/eval.rs::eval_call`):** when `group()` is called with
-an Ident argument referring to an existing entry, that entry is now marked
-hidden. An INFO line reports the re-parenting: `group() re-parented a, b —
-they are now hidden as separate parts (the group is the single combined part)`.
+**Fix:** `group()` now re-parents: Ident args referring to existing entries
+are marked hidden. An INFO line reports the re-parenting.
 
 ### B19 — `rotate()` pivots on the bbox center, undocumented
 
-**Symptom:** `tooth = cube(2cm, 0.5cm, 5cm) rotate (0, 60deg, 0) at (5cm, 0, 0)`
-in a ring of 8 produces "petals" instead of radial teeth — because the pivot
-is the tooth's bbox center, not the world origin where the ring center is.
-
-**Fix (P2420, `src/lang/parser.rs::parse_mods`, `src/world/eval.rs::apply_mod`):**
-the parser now accepts `rotate (angles) pivot (x, y, z) | pivot: origin | pivot: center`.
-A new `Mod::RotateWithPivot` variant + `PivotSpec` enum carry the explicit
-pivot. When `pivot:` is NOT specified, an INFO line reports the default:
-`rotate: pivot = bounding-box center (X, Y, Z) mm — write pivot (0,0,0) to
-pivot around the origin, or pivot: center to be explicit`.
+**Fix:** Parser now accepts `rotate (...) pivot (x, y, z)`. An INFO line
+reports the default pivot when `pivot:` is not specified.
 
 ### B20 — string interpolation silently leaves `{expr}` as literal text
 
-**Symptom:** `print "the radius is {r}"` with `r` undefined prints the literal
-string `the radius is {r}` — no error, no warning.
-
-**Fix (P2430, `src/world/eval.rs::interpolate`):** an unrecognized `{name}`
-now emits a WARN line: `print interpolation 'r' is not a known variable —
-left as literal text. Define it first (r = 5cm) or fix the typo.` The text
-is still emitted (backward compat) so existing programs that depend on the
-literal-output behavior still work.
+**Fix:** Unrecognized `{name}` now emits a WARN. (Further fixed in B27
+above — expression interpolation now actually evaluates expressions.)
 
 ### B21 — overlapping shapes only emit a vague warning (no fix suggestion)
 
-**Symptom:** two cubes placed at overlapping positions produce the warning
-`objects overlap each other — mass counts the overlap twice until you fuse
-them with add`. No specific pair, no depth, no axis, no fix.
-
-**Fix (P2440, `src/world/eval.rs::finalize_stats` + new `overlap_audit`):**
-the warning now names the pair and the depth:
-`objects a and b overlap by 25.00 mm — mass counts the overlap twice until
-you fuse them with add (run strict: overlap to make this an error, or
-simulate: settle / simulate: solidity to fix/check)`. The new `strict:
-overlap` mode turns this into a hard Error. The new `overlap: check`
-statement runs an explicit audit that reports every interpenetrating pair
-with the penetration depth, the shallowest escape axis (X/Y/Z), and a
-concrete fix: `move b along X by 25.00 mm, or fuse with add a, b if they
-are meant to be one part`.
+**Fix:** Warning now names the pair and depth. `strict: overlap` turns it
+into a hard Error. `overlap: check` runs an explicit audit with axis +
+depth + fix suggestion.
 
 ---
 
 ## B15 — CSG cut loses `material:` / `color:` (fixed in 2.2.0)
 
-**Symptom:** `hull = cube(...) - hollow(wall: 5mm, open: top) at (0, 8cm, 0) material: wood`
-reported **plastic** and the flagship wooden boat *sank* (1050 kg/m³ default density
-instead of 700).
-
-**Root cause:** the postfix-modifier parser binds trailing `material:`/`color:`
-to the nearest shape term — the cutting TOOL on the right of `-`. The tool is
-consumed by the subtraction and its material never reaches the result.
-
-**Fix (P1415, `src/world/eval.rs`):** for `-` and `&`, finish mods (Material/Color)
-found on a postfix tool are hoisted and applied to the RESULT; the tool itself is
-evaluated without them. The `a - hollow(...)` sugar also matches through tool
-modifiers now (e.g. `a - hollow(wall: 2mm) at (0, 2cm, 0) material: glass`).
-
-**Verify:** the wooden boat now reports 101.1 g (wood) and floats with 70% submerged.
+**Fix:** for `-` and `&`, finish mods (Material/Color) found on a postfix
+tool are hoisted and applied to the RESULT.
 
 ## B16 — metals render almost black (fixed in 2.2.0)
 
-**Symptom:** every metal material (steel, aluminum, gold, …) rendered as a
-near-black shape with a single highlight. Visible in the 2.1.1 gallery renders
-too (`screenshots-library/gear-pair.png`) — pre-existing, not caused by 2.2 work.
-
-**Root cause:** Cook-Torrance gives metals kd = 0 (no diffuse). The renderer has
-no environment map, and its ambient + fill light terms only multiplied the
-diffuse (kd) path — so metals received no ambient/fill energy at all.
-
-**Fix (P1430, `src/render/raster.rs`):** metals now receive a sky-tinted
-environment term `metal_env = amb·2.2 + d2·2.5 + 0.07` multiplied by their base
-color, alongside the GGX highlight. Iron is grey, brass golden, copper orange,
-gold yellow, steel bright. Material chart verified with an 8-metal side-by-side.
+**Fix:** metals now receive a sky-tinted environment term alongside the GGX
+highlight.
 
 ## Legacy bugs B1–B14
 
-B1–B7 (near-plane clipping, cube argument order, weight/weigh matching, CSG open
-edges, deferred simulate, float formatting, `box` alias) and B8–B14
+B1–B7 (near-plane clipping, cube argument order, weight/weigh matching, CSG
+open edges, deferred simulate, float formatting, `box` alias) and B8–B14
 (documentation drift found by mass generation) are documented in the 2.1.0 /
-2.1.1 sections of `CHANGELOG.md` and in `BUGFIXES.md` of the release archives.
+2.1.1 sections of `CHANGELOG.md`.

@@ -1,87 +1,80 @@
+// OTD6 website — smooth scroll + nav highlighting
 (function () {
   "use strict";
 
-  /* ---- mobile nav toggle ---- */
-  var toggle = document.getElementById("nav-toggle");
-  var links = document.getElementById("nav-links");
-  if (toggle && links) {
-    toggle.addEventListener("click", function () {
-      var open = links.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-    links.querySelectorAll(".nav-link").forEach(function (link) {
-      link.addEventListener("click", function () {
-        links.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
-
-  /* ---- copy-to-clipboard for the terminal commands + code sample ---- */
-  document.querySelectorAll(".copy-btn").forEach(function (btn) {
-    var targetId = btn.getAttribute("data-copy-target");
-    var target = targetId ? document.getElementById(targetId) : null;
-    if (!target) return;
-    var defaultLabel = btn.textContent;
-    btn.addEventListener("click", function () {
-      var text = target.textContent;
-      var done = function () {
-        btn.textContent = "Copied";
-        btn.classList.add("copied");
-        setTimeout(function () {
-          btn.textContent = defaultLabel;
-          btn.classList.remove("copied");
-        }, 1400);
-      };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(done).catch(function () {
-          fallbackCopy(text);
-          done();
-        });
-      } else {
-        fallbackCopy(text);
-        done();
+  // Smooth scroll for nav links
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        var offset = 70; // nav height
+        var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
       }
     });
   });
 
-  function fallbackCopy(text) {
-    var ta = document.createElement("textarea");
-    ta.value = text;
-    ta.style.position = "fixed";
-    ta.style.opacity = "0";
-    document.body.appendChild(ta);
-    ta.select();
-    try { document.execCommand("copy"); } catch (e) { /* ignore */ }
-    document.body.removeChild(ta);
+  // Nav link highlighting on scroll
+  var sections = document.querySelectorAll('section[id]');
+  var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  window.addEventListener('scroll', function () {
+    var scrollPos = window.pageYOffset + 100;
+    sections.forEach(function (section) {
+      var top = section.offsetTop;
+      var height = section.offsetHeight;
+      var id = section.getAttribute('id');
+      if (scrollPos >= top && scrollPos < top + height) {
+        navLinks.forEach(function (link) {
+          if (link.getAttribute('href') === '#' + id) {
+            link.style.color = 'var(--accent)';
+          } else {
+            link.style.color = '';
+          }
+        });
+      }
+    });
+  });
+
+  // Animate hero code typing effect (optional, subtle)
+  var heroCode = document.querySelector('.hero-code pre');
+  if (heroCode) {
+    heroCode.style.opacity = '0';
+    heroCode.style.transform = 'translateY(20px)';
+    heroCode.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    setTimeout(function () {
+      heroCode.style.opacity = '1';
+      heroCode.style.transform = 'translateY(0)';
+    }, 300);
   }
 
-  /* ---- eight-camera ring diagram: real geometry, not a static image ---- */
-  var ringGroup = document.querySelector(".ring-cams");
-  if (ringGroup) {
-    var cx = 140, cy = 140, r = 96, count = 8, size = 14;
-    var svgNS = "http://www.w3.org/2000/svg";
-    for (var i = 0; i < count; i++) {
-      var angle = (i / count) * Math.PI * 2 - Math.PI / 2;
-      var x = cx + r * Math.cos(angle);
-      var y = cy + r * Math.sin(angle);
-
-      var line = document.createElementNS(svgNS, "line");
-      line.setAttribute("x1", cx);
-      line.setAttribute("y1", cy);
-      line.setAttribute("x2", x.toFixed(1));
-      line.setAttribute("y2", y.toFixed(1));
-      line.setAttribute("class", "ring-line");
-      ringGroup.appendChild(line);
-
-      var rect = document.createElementNS(svgNS, "rect");
-      rect.setAttribute("x", (x - size / 2).toFixed(1));
-      rect.setAttribute("y", (y - size / 2).toFixed(1));
-      rect.setAttribute("width", size);
-      rect.setAttribute("height", size);
-      rect.setAttribute("rx", 3);
-      rect.setAttribute("class", "ring-cam");
-      ringGroup.appendChild(rect);
+  // Animate stat numbers counting up
+  var stats = document.querySelectorAll('.stat-num');
+  var animated = false;
+  function animateStats() {
+    if (animated) return;
+    var heroStats = document.querySelector('.hero-stats');
+    if (!heroStats) return;
+    var rect = heroStats.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      animated = true;
+      stats.forEach(function (stat) {
+        var target = parseInt(stat.textContent, 10);
+        if (isNaN(target) || target === 0) return;
+        var current = 0;
+        var step = Math.max(1, Math.ceil(target / 30));
+        var interval = setInterval(function () {
+          current += step;
+          if (current >= target) {
+            stat.textContent = target;
+            clearInterval(interval);
+          } else {
+            stat.textContent = current;
+          }
+        }, 30);
+      });
     }
   }
+  window.addEventListener('scroll', animateStats);
+  animateStats(); // also try on load
 })();

@@ -1,4 +1,4 @@
-# OTD 2.1 — Grammar (EBNF)
+# OTD 6.0 — Grammar (EBNF)
 
 Notation: ISO/IEC 14977-style EBNF. `"…"` are literal terminals. Statements are
 **line-based** — semicolons optional (`;` also separates, 2.1). A statement

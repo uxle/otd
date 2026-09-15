@@ -1,4 +1,4 @@
-# OTD 2.1 — Full Language Specification
+# OTD 6.0 — Full Language Specification
 
 This is the normative reference for every OTD construct: parameters, defaults,
 semantics, and examples. Defaults are chosen so that **every command works with

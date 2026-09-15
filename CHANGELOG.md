@@ -1,5 +1,89 @@
 # Changelog
 
+## 6.0.0 "INTELLIGENCE" — self-describing, single-source version, callable electrodynamics, electrical connectivity, expression interpolation
+
+> Six concrete fixes, each grounded in an AI's real experience using the tool:
+
+### #1 — Self-describing (`--list-*` flags + in-script `help()`/`functions()`)
+
+The tool can now tell you what it can do — no more `grep`ping Rust source.
+
+**CLI flags** (all dump from source tables, never hand-maintained):
+- `--list-functions` — 40 callable functions from `keywords.rs FUNCS`
+- `--list-materials` — 50 materials from `materials.rs MATERIALS`, split by metal/non-metal
+- `--list-keywords` — 83 keywords from `keywords.rs KEYWORDS`
+- `--list-shapes` — 14 primitives + 11 builders
+- `--list-simulate` — all simulate domains grouped by category
+- `--list-colors` — 147 named colors with hex values
+- `--list-all` — everything at once
+
+**In-script functions** (callable from any .otd file):
+- `help()` — prints CLI flag hints
+- `functions()` — lists all 40 callable functions to console
+- `materials()` — lists all 50 materials
+- `keywords()` — lists all 83 keywords
+- `shapes()` — lists all primitives + builders
+- `sims()` — lists all simulate domains
+
+### #2 — Version reporting (single source of truth)
+
+Four different version strings used to disagree. Now `Cargo.toml` is the
+ONE source; all others read `env!("CARGO_PKG_VERSION")`:
+- `--version` → `OTD 6.0.0 — Open Three-Dimensional Language`
+- Banner ASCII art → `6.0.0`
+- Phase banner → `OTD v6.0.0 — 63 / 10000 phases ready`
+
+### #3 — Electrodynamics functions wired up
+
+9 functions were advertised in the changelog but not callable from scripts.
+Now they are:
+- `ohm_v(i, r)` — V = IR
+- `ohm_i(v, r)` — I = V/R
+- `ohm_r(v, i)` — R = V/I
+- `power_vi(v, i)` — P = VI
+- `power_ir(i, r)` — P = I²R
+- `cap_energy(c, v)` — U = ½CV²
+- `ind_energy(l, i)` — U = ½LI²
+- `rc_tau(r, c)` — τ = RC
+- `lc_omega(l, c)` — ω = 1/√(LC)
+
+### #4 — Minimum Rust version documented
+
+`run.sh` now states: "Minimum Rust version is 1.85+ (edition2024 via
+vendor/avc transitive dep pxfm)."
+
+### #5 — Electrical connectivity layer
+
+New keyword: `connect: A B` — declares an electrical path between two
+named parts. Stored on `World::connections`.
+
+New simulate: `simulate: circuit` — walks the connections, computes the
+real resistance of each part from its material's resistivity × wire
+geometry (volume / wire cross-section → wire length → R = ρL/A), sums
+the total, and reports:
+- Total resistance (Ω)
+- Current I = V/R (A)
+- Power P = VI (W)
+- Verdict: "current flows" or "circuit is open"
+
+New simulate: `simulate: motor` — full DC motor analysis:
+- Finds coil parts (copper/aluminum), stator parts (iron/steel/magnetized),
+  rotor parts (named "rotor"/"shaft"/"wheel")
+- Computes: stall current I=V/R, stall torque τ=N·B·I·A, no-load speed
+  ω₀=V/(N·B·A), back-EMF, operating current/speed/power/efficiency
+- Delivers the verdict: "YES ✓ — stall torque exceeds load by Nx" or
+  "NO ✗ — stall torque < load"
+
+### #6 — Expression interpolation
+
+`print "{a+b}"` now evaluates expressions, not just bare names.
+Implementation: tries bare name lookup → if miss, parses as expression
+→ if parse succeeds and eval succeeds, substitutes the result → if
+both fail, warns and leaves as literal text. Error rollback ensures
+failed expression eval doesn't pollute the error list.
+
+---
+
 ## 4.0.0 "DYNAMICS" — the dynamics + assembly edition: aerodynamics, fluid dynamics, electrodynamics, stellar dynamics, rigid body dynamics, multi-part assembly, magnetize, strict-overlap
 
 > The user said: "you made good but not all science here." OTD3 had

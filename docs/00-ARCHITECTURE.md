@@ -1,4 +1,4 @@
-# OTD 2.0 "DEEP" — Architecture Document
+# OTD 6.0 — Architecture Document
 
 **OTD** = *Open Three-Dimensional Language*. **2.0 "DEEP"** = the second
 generation, inspired by the OTDL v5 tiered design: a **Lite → Deep → ASM**

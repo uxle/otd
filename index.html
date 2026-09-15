@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OTD3 — a physics engine you write in sentences</title>
-<meta name="description" content="OTD3 compiles plain-text scenes into watertight, physics-checked 3D models. Zero external crates, own renderer, own HTTP server, own video encoder.">
+<title>OTD6 — a physics engine you write in sentences</title>
+<meta name="description" content="OTD6 compiles plain-text scenes into watertight, physics-checked 3D models. Self-describing, electrical connectivity, motor simulation, Blender-like editor. Zero external crates.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,357 +12,205 @@
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
+<nav class="nav">
+  <div class="nav-logo">▲ OTD<span class="nav-version">6.0</span></div>
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#physics">Physics</a>
+    <a href="#language">Language</a>
+    <a href="#motor">Motor</a>
+    <a href="#editor">Editor</a>
+    <a href="#self">Self-describing</a>
+    <a href="https://github.com" target="_blank">GitHub</a>
+  </div>
+</nav>
 
-<header class="nav-bar" id="nav">
-  <div class="nav-inner">
-    <a class="wordmark" href="#top">otd<span class="wordmark-sup">3</span></a>
-    <nav class="nav-links" id="nav-links">
-      <a class="nav-link" href="#language">Language</a>
-      <a class="nav-link" href="#physics">Physics</a>
-      <a class="nav-link" href="#ai">AI</a>
-      <a class="nav-link" href="#video">Video</a>
-      <a class="nav-link" href="#code">Docs</a>
-    </nav>
-    <div class="nav-actions">
-      <a class="btn btn-ghost-sm" href="#code">Read the docs</a>
-      <a class="btn btn-primary-sm" href="#get-started">Get started</a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
-        <span></span><span></span><span></span>
-      </button>
+<section class="hero">
+  <h1>Write a sentence, hold a thing.</h1>
+  <p class="hero-sub">OTD6 compiles plain-text scenes into watertight, physics-checked 3D models. Pure Rust + assembly. Zero external libraries. Self-describing. Electrically aware.</p>
+  <div class="hero-code">
+<pre><span class="kw">scene</span> <span class="str">"Electric Motor"</span>
+rotor = <span class="kw">cylinder</span>(r: <span class="num">1.5cm</span>, h: <span class="num">4cm</span>) <span class="kw">at</span> (<span class="num">0</span>, <span class="num">2cm</span>, <span class="num">0</span>) <span class="kw">material</span>: copper
+stator_n = <span class="kw">cube</span>(w: <span class="num">2cm</span>, d: <span class="num">4cm</span>, h: <span class="num">4cm</span>) <span class="kw">at</span> (-<span class="num">3cm</span>, <span class="num">2cm</span>, <span class="num">0</span>) <span class="kw">material</span>: iron
+<span class="kw">magnetize</span>: stator_n
+<span class="kw">connect</span>: battery rotor
+<span class="kw">simulate</span>: motor
+<span class="cmt"># → YES ✓ — stall torque exceeds load by 56.5×</span>
+<span class="cmt"># → The motor WILL spin at 4899 RPM under load.</span></pre>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">83</span><span class="stat-label">keywords</span></div>
+    <div class="stat"><span class="stat-num">40</span><span class="stat-label">functions</span></div>
+    <div class="stat"><span class="stat-num">29</span><span class="stat-label">shapes</span></div>
+    <div class="stat"><span class="stat-num">50</span><span class="stat-label">materials</span></div>
+    <div class="stat"><span class="stat-num">27</span><span class="stat-label">simulate domains</span></div>
+    <div class="stat"><span class="stat-num">0</span><span class="stat-label">external crates</span></div>
+  </div>
+</section>
+
+<section id="features" class="section">
+  <h2>What's new in OTD 6.0</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <h3>Self-describing</h3>
+      <p><code>otd --list-all</code> dumps every function, material, keyword, shape, color, and simulate domain — straight from source, never hand-maintained. In-script: <code>functions()</code>, <code>materials()</code>, <code>keywords()</code>.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Single-source version</h3>
+      <p><code>Cargo.toml</code> is the ONE source of truth. <code>--version</code>, the banner, and the phase banner all read <code>env!("CARGO_PKG_VERSION")</code>. No more four different version strings.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Callable electrodynamics</h3>
+      <p>9 functions now usable from scripts: <code>ohm_v(i,r)</code>, <code>ohm_i(v,r)</code>, <code>ohm_r(v,i)</code>, <code>power_vi(v,i)</code>, <code>power_ir(i,r)</code>, <code>cap_energy(c,v)</code>, <code>ind_energy(l,i)</code>, <code>rc_tau(r,c)</code>, <code>lc_omega(l,c)</code>.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Electrical connectivity</h3>
+      <p><code>connect: A B</code> declares electrical paths. <code>simulate: circuit</code> walks the real resistance of modeled windings (R = ρL/A) and reports current, voltage drop, and power.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Motor simulation</h3>
+      <p><code>simulate: motor</code> — F=B·I·L, τ=N·B·I·A, back-EMF, stall torque, RPM, efficiency. Delivers the verdict: <strong>"WILL IT MOVE? YES ✓"</strong></p>
+    </div>
+    <div class="feature-card">
+      <h3>Expression interpolation</h3>
+      <p><code>print "{a+b}"</code> now evaluates expressions, not just bare names. Falls back gracefully with a warning if the expression is invalid.</p>
     </div>
   </div>
-</header>
+</section>
 
-<main id="main">
-
-  <!-- ============ HERO ============ -->
-  <section class="hero-band" id="top">
-    <div class="mesh-gradient" aria-hidden="true"></div>
-    <div class="container hero-inner">
-      <p class="eyebrow reveal">ZERO EXTERNAL CRATES · PURE RUST</p>
-      <h1 class="display-xl reveal">Write a sentence.<br>Hold a thing.</h1>
-      <p class="body-lg hero-sub reveal">
-        OTD3 compiles eight lines of plain text into a watertight,
-        physics-checked 3D model — measured mass, verified solidity,
-        rendered by an engine with no GPU dependency, no JavaScript 3D
-        library, and nothing in <code>[dependencies]</code>.
-      </p>
-      <div class="hero-actions reveal">
-        <a class="btn btn-primary" id="get-started" href="#code">Get started</a>
-        <a class="btn btn-secondary" href="#physics">See what it simulates</a>
-      </div>
-      <div class="hero-command reveal" role="group" aria-label="Terminal command">
-        <span class="hero-command-prompt">$</span>
-        <code id="hero-command-text">cargo run --release -- --png examples/cup.otd cup.png --view iso</code>
-        <button class="copy-btn" id="hero-copy" data-copy-target="hero-command-text" aria-label="Copy command">Copy</button>
-      </div>
+<section id="physics" class="section section-alt">
+  <h2>27 simulate domains</h2>
+  <div class="physics-grid">
+    <div class="physics-group">
+      <h3>Basic</h3>
+      <p>drop · float · collapse · splash · settle · solidity · gas · mix</p>
     </div>
-  </section>
-
-  <!-- ============ DOMAIN STRIP ============ -->
-  <section class="logo-strip" aria-label="Physics domains OTD3 simulates">
-    <div class="container logo-strip-inner">
-      <span class="domain">MECHANICS</span>
-      <span class="domain">THERMODYNAMICS</span>
-      <span class="domain">MAGNETISM</span>
-      <span class="domain">ACOUSTICS</span>
-      <span class="domain">OPTICS</span>
-      <span class="domain">CHEMISTRY</span>
-      <span class="domain">RELATIVITY</span>
-      <span class="domain">FLUID BUOYANCY</span>
+    <div class="physics-group">
+      <h3>Science</h3>
+      <p>energy · heat · magnet · sound · light · time</p>
     </div>
-  </section>
-
-  <!-- ============ FEATURES ============ -->
-  <section class="section" id="physics">
-    <div class="container">
-      <p class="eyebrow">WHAT'S UNDER THE SYNTAX</p>
-      <h2 class="heading-lg">The physics is real, not decorative</h2>
-      <p class="body-lg section-sub">
-        Every scene is measured, not just drawn. Mass comes from the mesh
-        volume and the material density; nothing floats or overlaps unless
-        the numbers say it should.
-      </p>
-
-      <div class="card-grid">
-        <article class="feature-card">
-          <h3 class="heading-md">Nothing overlaps</h3>
-          <p class="body-md"><code>simulate: settle</code> drops every
-            body under gravity until it rests on the ground or another
-            part, then <code>simulate: solidity</code> audits the result.
-            Contacts are checked to under <strong>0.05&nbsp;mm</strong> of
-            interpenetration.</p>
-        </article>
-
-        <article class="feature-card">
-          <h3 class="heading-md">A real energy ledger</h3>
-          <p class="body-md">Kinetic and potential energy, each broken
-            into its own forms — mechanical, thermal, radiant, chemical,
-            nuclear, elastic — computed with the textbook law for each:
-            PE&nbsp;=&nbsp;mgh, E&nbsp;=&nbsp;mc², U&nbsp;=&nbsp;½kx².</p>
-        </article>
-
-        <article class="feature-card">
-          <h3 class="heading-md">Chemistry that reacts</h3>
-          <p class="body-md">Liquids mix or refuse each other by polarity
-            and settle into density-sorted layers; gases diffuse into one
-            phase; reactive pairs don't mix — they burn, with a balanced,
-            independently verified equation.</p>
-        </article>
-
-        <article class="feature-card">
-          <h3 class="heading-md">Waves, fields, and light</h3>
-          <p class="body-md">Doppler shift, echo ranging, Snell
-            refraction, Wien's law, magnetic dipole forces and Faraday
-            EMF — each keyed to the material actually in the scene, not a
-            generic constant.</p>
-        </article>
-
-        <article class="feature-card">
-          <h3 class="heading-md">It knows what you're made of</h3>
-          <p class="body-md"><code>simulate: atom</code> turns every part's
-            measured mass into a particle census — protons, neutrons,
-            electrons, counted for real — and <code>simulate: decay</code>
-            reports the live radioactivity in becquerels. The quarks in a
-            proton weigh 9.1 MeV; the proton weighs 938.3:
-            <strong>99% of mass is gluon field energy.</strong></p>
-        </article>
-
-        <article class="feature-card">
-          <h3 class="heading-md">An AI that abstains</h3>
-          <p class="body-md">The vendored reasoning engine answers
-            physics questions in plain language — <code>otd --ai "why
-            does a ship float?"</code> — and every answer is verification-gated:
-            <strong>VERIFIED</strong> or <strong>ABSTAINED</strong>, never a guess.</p>
-        </article>
-
-        <article class="feature-card">
-          <h3 class="heading-md">It can see its own scene</h3>
-          <p class="body-md"><code>otd --perceive bench.otd</code> renders
-            a stereo pair and reports what's there — object positions,
-            distances, and relations — with honest uncertainty on every
-            number, not false precision.</p>
-        </article>
-      </div>
+    <div class="physics-group">
+      <h3>Dynamics</h3>
+      <p>aero · fluid · electro · stellar · rigid</p>
     </div>
-  </section>
-
-  <!-- ============ THREE-TIER PIPELINE ============ -->
-  <section class="section section-tint" id="language">
-    <div class="container">
-      <p class="eyebrow">THE ENGINE, NOT THE SURFACE</p>
-      <h2 class="heading-lg">Three tiers. One friendly language.</h2>
-      <p class="body-lg section-sub">
-        The syntax stays simple on purpose — under 60 keywords, learnable
-        in five minutes — while the engine underneath does real
-        computational geometry and runs on a bytecode virtual machine.
-      </p>
-
-      <div class="tier-flow">
-        <div class="tier">
-          <span class="tier-index">Lite</span>
-          <h3 class="heading-md">What you type</h3>
-          <p class="body-md">Scenes, shapes, materials, <code>if</code> /
-            <code>for</code> / <code>while</code>, comparisons and logic,
-            ranges, and <code>assert</code> — plain sentences a beginner
-            can read back.</p>
-        </div>
-        <div class="tier-arrow" aria-hidden="true">→</div>
-        <div class="tier">
-          <span class="tier-index">Deep</span>
-          <h3 class="heading-md">The computational core</h3>
-          <p class="body-md">Half-edge topology, Discrete Exterior
-            Calculus, signed-distance blending, and an XPBD solver turn
-            those sentences into a closed, measurable mesh.</p>
-        </div>
-        <div class="tier-arrow" aria-hidden="true">→</div>
-        <div class="tier">
-          <span class="tier-index">ASM</span>
-          <h3 class="heading-md">Real bytecode</h3>
-          <p class="body-md">Your arithmetic compiles to a 32-byte vector
-            bytecode and runs on a hand-written virtual machine — inspect
-            it directly with <code>--vm-dump</code>.</p>
-        </div>
-      </div>
+    <div class="physics-group">
+      <h3>OTD6</h3>
+      <p><strong>motor</strong> · <strong>circuit</strong></p>
     </div>
-  </section>
-
-  <!-- ============ CODE + RESULT ============ -->
-  <section class="section" id="code">
-    <div class="container">
-      <p class="eyebrow">EIGHT LINES, MEASURED</p>
-      <h2 class="heading-lg">A coffee cup, weighed for real</h2>
-      <div class="code-demo">
-        <div class="code-block">
-          <div class="code-block-head">
-            <span class="code-dot"></span><span class="code-dot"></span><span class="code-dot"></span>
-            <span class="code-filename">cup.otd</span>
-            <button class="copy-btn copy-btn-inline" id="cup-copy" data-copy-target="cup-code" aria-label="Copy code">Copy</button>
-          </div>
-          <pre><code id="cup-code">scene "Coffee Cup"
-cup = cylinder(top: 40mm, bottom: 30mm, height: 100mm) - hollow(wall: 3mm)
-handle = torus(radius: 20mm, tube: 6mm) rotate (90deg, 0, 0) at (35mm, 25mm, 0)
-add cup, handle
-material cup: ceramic
-color cup: ivory
-ask "mass?"</code></pre>
-        </div>
-        <div class="result-panel">
-          <p class="eyebrow">OUTPUT</p>
-          <p class="result-line"><span class="result-label">Volume</span><span class="result-value">91.9 cm³</span></p>
-          <p class="result-line"><span class="result-label">Density (ceramic)</span><span class="result-value">2.40 g/cm³</span></p>
-          <p class="result-line result-line-total"><span class="result-label">Mass</span><span class="result-value">220.7 g</span></p>
-          <p class="result-line"><span class="result-label">Buoyancy</span><span class="result-value">sinks</span></p>
-          <p class="body-sm result-note">Every number here is measured
-            from the actual mesh — not looked up, not approximated.</p>
-        </div>
-      </div>
+    <div class="physics-group">
+      <h3>Subatomic</h3>
+      <p>atom · decay · particles</p>
     </div>
-  </section>
-
-  <!-- ============ VIDEO / OCTOCAM ============ -->
-  <section class="section section-tint" id="video">
-    <div class="container video-grid">
-      <div>
-        <p class="eyebrow">THE VIDEO STUDIO</p>
-        <h2 class="heading-lg">Eight cameras. A real H.264 file.</h2>
-        <p class="body-lg section-sub">
-          <code>--video out.mp4 --cams 8</code> renders eight views around
-          the scene and encodes them into an actual Baseline H.264
-          bitstream, muxed into MP4 by a hand-written ISO-BMFF writer —
-          validated bit-exact against reference decoders. No video
-          library, no GPU encoder, no external dependency.
-        </p>
-        <a class="btn btn-secondary" href="#get-started">Try the nut &amp; bolt demo</a>
-      </div>
-      <div class="octocam-diagram" role="img" aria-label="Eight cameras arranged in a ring around the scene, forty-five degrees apart">
-        <svg viewBox="0 0 280 280" width="280" height="280">
-          <circle cx="140" cy="140" r="96" class="ring-guide" />
-          <rect x="122" y="122" width="36" height="36" rx="6" class="ring-center" />
-          <g class="ring-cams"></g>
-        </svg>
-      </div>
+    <div class="physics-group">
+      <h3>AI</h3>
+      <p>learn · stats · orbit</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============ FORGE / SELF MAKE ANYTHING ============ -->
-  <section class="section" id="ai">
-    <div class="container">
-      <p class="eyebrow">THE FORGE UPDATE</p>
-      <h2 class="heading-lg">Self make anything</h2>
-      <p class="body-lg section-sub">
-        One plain-language goal in, a complete .otd program out — written,
-        compiled, and repaired by the engine itself until it passes. The
-        neural network library and the deep-learning framework that do the
-        learning were self-made too, in the project's own zero-dependency
-        tradition.
-      </p>
+<section id="motor" class="section">
+  <h2>Make a motor, connect it, check will it move</h2>
+  <div class="motor-demo">
+    <div class="motor-code">
+<pre><span class="cmt"># build the motor</span>
+rotor = cylinder(r: <span class="num">1.5cm</span>, h: <span class="num">4cm</span>) material: copper
+stator_n = cube(<span class="num">2cm</span>) material: iron
+<span class="kw">magnetize</span>: stator_n
+battery = cylinder(r: <span class="num">1.5cm</span>, h: <span class="num">5cm</span>) material: lithium
 
-      <div class="code-demo">
-        <div class="code-block">
-          <div class="code-block-head">
-            <span class="code-dot"></span><span class="code-dot"></span><span class="code-dot"></span>
-            <span class="code-filename">terminal</span>
-            <button class="copy-btn copy-btn-inline" id="make-copy" data-copy-target="make-code" aria-label="Copy command">Copy</button>
-          </div>
-          <pre><code id="make-code">otd --make "a titanium ball dropping into water from 1m"</code></pre>
-        </div>
-        <div class="result-panel">
-          <p class="eyebrow">SYNTHESIZED OUTPUT</p>
-          <pre class="body-sm"><code>scene "Titanium ball — dropping in water"
+<span class="cmt"># connect the electricity</span>
+<span class="kw">connect</span>: battery rotor
 
-environment: water
+<span class="cmt"># check the circuit</span>
+<span class="kw">simulate</span>: circuit
+<span class="cmt"># → current: I = V/R = 0.003 A</span>
+<span class="cmt"># → VERDICT: current flows — circuit is closed</span>
 
-titaniumBall = sphere(r: 3cm) at (0mm, 1m, 0)
-              material: titanium
-
-simulate: drop
-simulate: time
-ask "impact speed?"</code></pre>
-          <p class="body-sm result-note">1 solid part, 506.0&nbsp;g, zero repair
-            rounds — then it films itself: <code>--cams 8 --video</code>.</p>
-        </div>
-      </div>
-
-      <div class="card-grid">
-        <article class="feature-card">
-          <h3 class="heading-md">A synthesizer with a safety net</h3>
-          <p class="body-md"><code>--make</code> scans the goal for materials,
-            shapes, sizes and motion, plans the physics, and emits idiomatic
-            OTD — then compiles its own output and repairs it (safe sizes,
-            fallback materials) until the engine accepts it.</p>
-        </article>
-
-        <article class="feature-card">
-          <h3 class="heading-md">nn.rs — a neural net, self-made</h3>
-          <p class="body-md">A single-file library: tensors with cache-blocked
-            matrix multiplication, ReLU/GELU/CELU activations, softmax
-            cross-entropy with analytic gradients, and Sgd/Adam/AdamW
-            optimizers with bias correction.</p>
-        </article>
-
-        <article class="feature-card">
-          <h3 class="heading-md">OTD-Burn — a framework in miniature</h3>
-          <p class="body-md">Backend trait, reverse-mode autodiff tape — every
-            gradient checked against finite differences — modules with
-            checkpoints, and a Learner with early stopping.
-            <code>otd --train</code> learns freefall: v&nbsp;=&nbsp;√(2gh).</p>
-        </article>
-
-        <article class="feature-card">
-          <h3 class="heading-md">The scene is the dataset</h3>
-          <p class="body-md">Statistics and astronomy joined the engine:
-            Lanczos log-gamma, the normal CDF and its inverse, Kepler's
-            equation by Newton's method, Hohmann transfers — the parts of a
-            scene become samples, heights become orbital altitudes.</p>
-        </article>
-      </div>
+<span class="cmt"># check will it move</span>
+<span class="kw">simulate</span>: motor
+<span class="cmt"># → stall torque: 0.0565 N·m</span>
+<span class="cmt"># → no-load speed: 6366 RPM</span>
+<span class="cmt"># → ==== WILL IT MOVE? ====</span>
+<span class="cmt"># → YES ✓ — exceeds load by 56.5×</span>
+<span class="cmt"># → The motor WILL spin at 4899 RPM</span></pre>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============ CTA ============ -->
-  <section class="cta-band">
-    <div class="container cta-inner">
-      <h2 class="display-xl">Write a sentence.<br>Hold a thing.</h2>
-      <div class="hero-command cta-command" role="group" aria-label="Terminal command">
-        <span class="hero-command-prompt">$</span>
-        <code id="cta-command-text">cargo run --release</code>
-        <button class="copy-btn" data-copy-target="cta-command-text" aria-label="Copy command">Copy</button>
-      </div>
-      <p class="body-md cta-note">Serves the viewer at <code>http://127.0.0.1:6830</code>. No install step beyond the Rust toolchain.</p>
+<section id="self" class="section section-alt">
+  <h2>Self-describing — the tool tells you what it can do</h2>
+  <div class="self-grid">
+    <div class="self-card">
+      <h3>CLI</h3>
+      <pre>otd --list-functions
+otd --list-materials
+otd --list-keywords
+otd --list-shapes
+otd --list-simulate
+otd --list-colors
+otd --list-all</pre>
     </div>
-  </section>
+    <div class="self-card">
+      <h3>In-script</h3>
+      <pre>help()
+functions()
+materials()
+keywords()
+shapes()
+sims()</pre>
+    </div>
+  </div>
+</section>
 
-</main>
+<section id="editor" class="section">
+  <h2>Blender-like editor</h2>
+  <p class="section-sub">Six-region studio: menu bar, toolbar, scene outliner, properties panel, viewport with gizmo, timeline, code editor, console, status bar. Plus command palette (Ctrl+P), find & replace (Ctrl+F), and 3 themes.</p>
+  <div class="editor-features">
+    <div class="editor-feature">📐 29 shapes (sphere, cube, gear, spring, bolt, nut, ...)</div>
+    <div class="editor-feature">🔬 27 simulate domains</div>
+    <div class="editor-feature">🎨 50 materials, 147 colors</div>
+    <div class="editor-feature">⌨️ 15 keyboard shortcuts</div>
+    <div class="editor-feature">🔍 Command palette (Ctrl+P)</div>
+    <div class="editor-feature">🔄 Find & replace (Ctrl+F)</div>
+    <div class="editor-feature">🌓 3 themes (dark/light/high-contrast)</div>
+    <div class="editor-feature">↩️ 50-deep undo/redo stack</div>
+  </div>
+</section>
+
+<section id="language" class="section section-alt">
+  <h2>The language in 30 seconds</h2>
+  <div class="lang-grid">
+    <div class="lang-card">
+      <h3>Shapes</h3>
+      <p><code>sphere cube cylinder cone torus pyramid prism capsule wedge plane tube helix rope thread gear spring bolt nut</code></p>
+    </div>
+    <div class="lang-card">
+      <h3>Booleans</h3>
+      <p><code>a + b</code> fuse · <code>a - b</code> cut · <code>a & b</code> overlap · <code>hollow(wall: 3mm)</code></p>
+    </div>
+    <div class="lang-card">
+      <h3>Science</h3>
+      <p><code>material: gold</code> · <code>ask "mass?"</code> · <code>simulate: motor</code> · <code>connect: A B</code></p>
+    </div>
+    <div class="lang-card">
+      <h3>Functions</h3>
+      <p><code>sqrt(16)</code> · <code>ohm_i(12, 5)</code> · <code>functions()</code> · <code>materials()</code></p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Constraints we keep, forever</h2>
+  <ol class="constraints">
+    <li><strong>Zero external crates.</strong> If a phase needs a library, the phase is redesigned — not the constraint.</li>
+    <li><strong>Rust + assembly only</strong> on the backend; the browser stays a dumb terminal.</li>
+    <li><strong>&lt; 100 keywords.</strong> New capabilities are new words only if the budget allows; otherwise they are parameters.</li>
+    <li><strong>Old .otd files never break</strong> (forward-compatibility policy).</li>
+  </ol>
+</section>
 
 <footer class="footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <a class="wordmark" href="#top">otd<span class="wordmark-sup">3</span></a>
-      <p class="body-sm footer-tagline">Open Three-Dimensional Language.<br>Zero dependencies, forever.</p>
-    </div>
-    <div class="footer-col">
-      <p class="label-sm footer-heading">Language</p>
-      <a class="footer-link" href="#language">Three-tier engine</a>
-      <a class="footer-link" href="#code">Syntax by example</a>
-      <a class="footer-link" href="#get-started">Quickstart</a>
-    </div>
-    <div class="footer-col">
-      <p class="label-sm footer-heading">Physics</p>
-      <a class="footer-link" href="#physics">Energy &amp; thermodynamics</a>
-      <a class="footer-link" href="#physics">Chemistry &amp; solidity</a>
-      <a class="footer-link" href="#video">Video &amp; perception</a>
-    </div>
-    <div class="footer-col">
-      <p class="label-sm footer-heading">Project</p>
-      <a class="footer-link" href="#top">cargo test — 160+ checks</a>
-      <a class="footer-link" href="#top">Every 1.0 file still compiles</a>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <p class="body-sm">OTD3 — Open Three-Dimensional Language.</p>
-  </div>
+  <p>OTD 6.0 "INTELLIGENCE" — MIT license. Pure Rust + assembly. Zero external crates. Forever.</p>
 </footer>
 
 <script src="script.js"></script>

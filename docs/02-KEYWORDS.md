@@ -1,4 +1,4 @@
-# OTD 2.1 — Complete Keyword List
+# OTD 6.0 — Complete Keyword List (83 keywords + 40 functions)
 
 ## Counting Methodology
 
@@ -7,7 +7,7 @@ elements); **parameter names are attributes** (like SVG's hundreds of
 attributes); and **materials, colors, units are value libraries** (like SVG's
 147 named colors, which nobody counts as keywords).
 
-> **OTD 2.1 ships 75 structural keywords + 25 math functions.** The 2.1
+> **OTD 6.0 ships 83 structural keywords + 40 callable functions.** The 2.1
 > syntax expansion added 17 control-flow and logic words and raised the hard
 > budget from 60 to 100 — the cheat sheet grew its second side.
 

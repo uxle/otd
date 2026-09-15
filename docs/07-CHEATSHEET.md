@@ -1,4 +1,4 @@
-# OTD Cheat Sheet — one page, that's all
+# OTD 6.0 Cheat Sheet — one page, that's all
 
 > **Type on the left. Watch the right. Everything has a default — start anywhere.**
 
@@ -132,7 +132,7 @@ ask "cable sag?"   ask "inertia?"   ask "watertight?"
 
 
 ---
-## OTD 2.1 "SYNTAX" — decide, repeat, check (75 keywords + 25 functions)
+## OTD 2.1 "SYNTAX" — decide, repeat, check (83 keywords + 40 functions)
 
 ```otd
 # decide
