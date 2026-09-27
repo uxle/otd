@@ -281,7 +281,7 @@ fn robust_edges() {
     // OTD4 added include + magnetize + strict + overlap;
     // OTD6 added connect)
     assert!(otd::lang::keywords::KEYWORDS.len() < 100);
-    assert_eq!(otd::lang::keywords::KEYWORDS.len(), 83);
+    assert_eq!(otd::lang::keywords::KEYWORDS.len(), 87);
 }
 
 // ------------------------------------------------------------------

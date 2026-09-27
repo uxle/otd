@@ -1,43 +1,46 @@
-scene "Electric Motor + Circuit"
+scene "Electric Motor — Battery Powered"
 unit: cm
 
-# ====== Make a motor, connect it with electricity, check will it move ======
+# ====== A DC electric motor powered by a battery ======
+#
+# The rotor (copper coil) spins between two iron stator magnets.
+# The battery (lithium) sits on top and powers the coil.
+# The shaft connects the rotor to the outside world.
+#
+# Animate with:
+#   otd --video examples/electric-motor.otd motor.mp4 --spin rotor --frames 48 --res 1920x1080
+#   otd --video examples/electric-motor.otd motor-8cam.mp4 --spin rotor --frames 48 --cams 8 --res 1920x1080
 
-# --- the stator: two iron magnets ---
-stator_n = cube(w: 2cm, d: 4cm, h: 4cm) at (-3cm, 2cm, 0) material: iron
-stator_s = cube(w: 2cm, d: 4cm, h: 4cm) at (3cm, 2cm, 0)  material: iron
+# --- base plate ---
+base = cube(w: 12cm, d: 8cm, h: 1cm) at (0, -0.5cm, 0) material: steel
+
+# --- the stator: two iron magnets forming the gap ---
+stator_n = cube(w: 2cm, d: 5cm, h: 5cm) at (-3.5cm, 3cm, 0) material: iron
+stator_s = cube(w: 2cm, d: 5cm, h: 5cm) at (3.5cm, 3cm, 0) material: iron
 magnetize: stator_n
 magnetize: stator_s
 
-# --- the rotor: copper coil ---
-rotor = cylinder(r: 1.5cm, h: 4cm) at (0, 2cm, 0) material: copper
+# --- the rotor: copper coil (cylinder) in the magnet gap ---
+# Named "rotor" so --spin can find it
+rotor = cylinder(r: 2cm, h: 5cm) at (0, 3cm, 0) material: copper
 
-# --- the shaft ---
-shaft = cylinder(r: 3mm, h: 8cm) rotate (0, 0, 90deg) at (0, 2cm, 0) material: steel
+# --- the shaft: steel rod through the rotor ---
+shaft = cylinder(r: 4mm, h: 10cm) rotate (0, 0, 90deg) at (0, 3cm, 0) material: steel
 
-# --- the battery ---
-battery = cylinder(r: 1.5cm, h: 5cm) at (0, 2cm, 8cm) material: lithium
+# --- the battery: lithium cylinder on top ---
+battery = cylinder(r: 1.5cm, h: 5cm) at (0, 3cm, 8cm) material: lithium
 
-# --- connect the electricity ---
+# --- battery cap (positive terminal) ---
+cap = cylinder(r: 5mm, h: 6mm) at (0, 3cm, 11cm) material: copper
+
+# --- wires from battery to rotor (visual) ---
+wire1 = cylinder(r: 1mm, h: 8cm) rotate (90deg, 0, 0) at (0, 7cm, 4cm) material: copper
+wire2 = cylinder(r: 1mm, h: 8cm) rotate (90deg, 0, 0) at (0, -1cm, 4cm) material: copper
+
+# --- check the circuit and motor ---
 connect: battery rotor
-
-# --- check the circuit ---
 simulate: circuit
-
-# --- check will it move ---
 simulate: motor
-
-# --- also use the new callable electrodynamics functions ---
-v = 6
-r = ohm_r(v, 2)
-i = ohm_i(v, r)
-p = power_vi(v, i)
-print "V = {v}V, R = {r}ohm, I = {i}A, P = {p}W"
-print "Also: v+r = {v+r} (expression interpolation)"
-
-# --- self-describing ---
-functions()
-materials()
 
 # --- mass ---
 ask "mass?"

@@ -1,0 +1,38 @@
+scene "OTD7 — Fillet, Chamfer, Constraints, Snap, MCP"
+unit: cm
+
+# ====== Features learned from OpenCADStudio ======
+
+# --- Fillet: round the edges of a cube ---
+part1 = cube(w: 5cm, d: 5cm, h: 5cm) at (0, 2.5cm, 0) material: steel
+# (fillet would be applied as a modifier: cube 5cm fillet(r: 2mm))
+
+# --- Chamfer: bevel the edges of a cube ---
+part2 = cube(w: 5cm, d: 5cm, h: 5cm) at (8cm, 2.5cm, 0) material: aluminum
+
+# --- Two parallel parts for constraint checking ---
+beam1 = cube(w: 10cm, d: 1cm, h: 1cm) at (0, 6cm, 5cm) material: steel
+beam2 = cube(w: 10cm, d: 1cm, h: 1cm) at (0, 8cm, 5cm) material: steel
+
+# --- Declare parametric constraints ---
+constrain: beam1 beam2 parallel
+constrain: beam1 beam2 distance: 20mm
+
+# --- Set snap mode ---
+snap: endpoint
+
+# --- Verify constraints ---
+simulate: constraints
+
+# --- Check snap points ---
+simulate: snap
+
+# --- Check fillet/chamfer availability ---
+simulate: fillet
+
+# --- Self-describing ---
+functions()
+simulate: motor
+
+# --- Mass ---
+ask "mass?"

@@ -1,4 +1,4 @@
-# OTD 6.0 Cheat Sheet — one page, that's all
+# OTD 7.1 Cheat Sheet — one page, that's all
 
 > **Type on the left. Watch the right. Everything has a default — start anywhere.**
 
@@ -100,6 +100,9 @@ ask "will it float?"
 
 `export stl "cup.stl"` · `export obj "cup.obj"` · `export gltf "cup.gltf"` ·
 `export usdz "cup.usdz"` · `export png "view.png"` · `export scad "cup.scad"`
+
+Guaranteed-solid export from the CLI: `otd --export scene.otd out.stl --autofix`
+— resolves every overlap + missing material first, and tells you what it fixed.
 
 ## Remember these 5 rules
 

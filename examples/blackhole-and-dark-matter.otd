@@ -1,0 +1,37 @@
+# blackhole-and-dark-matter.otd — OTD7.2
+#
+# Two new things, both built on real physics rather than a "dense mixed
+# matter" stand-in for dark matter, or a "made of visible elements" stand-in
+# for a black hole:
+#
+#   material: dark_matter  — real local density (~6e-22 kg/m³, about twenty
+#                             orders of magnitude below hydrogen gas) and
+#                             opacity 0.0 (zero electromagnetic interaction —
+#                             fully invisible, not just faint). Its block
+#                             below will report a mass so small it's
+#                             effectively zero — that's the actual physics,
+#                             not a bug: dark matter's gravity only adds up
+#                             at the scale of a whole galactic halo.
+#
+#   simulate: blackhole     — takes the heaviest part in the scene and asks
+#                             "how small would this exact mass need to be
+#                             compressed to become a black hole?" (its
+#                             Schwarzschild radius), then reports what that
+#                             hypothetical hole's photon sphere, innermost
+#                             stable orbit, and Hawking temperature would be.
+#
+# Try it:
+#   otd --check examples/blackhole-and-dark-matter.otd
+
+scene "A tungsten sphere, and the dark matter you can't see next to it"
+
+# the heaviest thing in the scene — everyday-dense, not remotely close to
+# collapsing, which is exactly the point: `simulate: blackhole` reports how
+# absurdly far from a black hole any buildable object actually is
+core = sphere(r: 15cm) at (0, 15cm, 0) material: tungsten
+
+# invisible on purpose (opacity: 0.0) — you'll see almost nothing rendered
+# here, and its reported mass will round to zero at this scale
+halo = cube(w: 2m, d: 2m, h: 2m) at (0, 1m, 0) material: dark_matter
+
+simulate: blackhole

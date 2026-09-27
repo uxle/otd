@@ -1,0 +1,43 @@
+# autofix-demo.otd — OTD7.1: located overlap errors + `otd --autofix`
+#
+# block_b is placed 5cm from block_a's center, but both are 8cm cubes —
+# 3cm too close, so they interpenetrate by exactly 30mm along X. This is
+# the easiest mistake to make in any scene assembled from separate parts:
+# a copy-pasted `at (...)` that doesn't leave quite enough room.
+#
+# Run it as-is (strict mode is off below, so this is a warning, not a
+# hard error) and the message now names a real 3D location, not just a
+# distance:
+#
+#   otd --check examples/autofix-demo.otd
+#     block_a and block_b interpenetrate by 30.00 mm — centered at
+#     (25.0, 40.0, 0.0) mm, shallowest escape axis X — mass counts the
+#     overlap twice until you fuse them with add (run `strict: overlap`
+#     to make this a hard error, `otd --autofix` to fix it, or
+#     `simulate: solidity` to audit)
+#
+# Then let the tool fix it instead of hand-editing coordinates: it moves
+# both blocks apart along X, mass-weighted (the denser steel block moves
+# less, the lighter aluminum block moves more), until they clear by a
+# hair over 30mm combined, and reports exactly what changed:
+#
+#   otd --check examples/autofix-demo.otd --autofix
+#     [fix] AUTOFIX: applied 2 fix(es)
+#     [fix] moved block_a ... mm along X to clear block_b — now at (...) mm, was (...) mm
+#     [fix] moved block_b ... mm along X to clear block_a — now at (...) mm, was (...) mm
+#
+# Uncomment the next line to make the overlap a hard compilation error
+# instead of a warning (this is what an AI-driven pipeline should
+# probably always turn on — a scene that's silently wrong is worse than
+# one that fails loudly):
+# strict: overlap
+
+scene "Autofix demo — two blocks placed too close"
+
+block_a = cube(w: 8cm, d: 8cm, h: 8cm) at (0, 0, 0) material: steel
+block_b = cube(w: 8cm, d: 8cm, h: 8cm) at (5cm, 0, 0) material: aluminum
+
+color block_a: steelblue
+color block_b: crimson
+
+simulate: solidity
